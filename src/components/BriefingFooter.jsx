@@ -119,7 +119,7 @@ function BriefingFooter() {
               <p className="text-sm text-[#515a6a]" style={{ marginTop: "24px" }}>Dr Raghavendra also practices at <span className="font-semibold text-[#1A355D]">Manipal Hospital</span> (Hebbal and Yelahanka)</p>
             </div>
           </div>
-          <div className="flex-shrink-0 flex flex-col items-end">
+          <div className="flex-shrink-0 flex flex-col items-center lg:items-end">
             <Link to="/" className="inline-flex items-center mb-4" aria-label="Omni Rheuma home">
               <img src="/logo.png" alt="Omni Rheuma logo" className="h-32 w-32 object-contain" />
             </Link>
@@ -137,26 +137,26 @@ function BriefingFooter() {
                 <Linkedin fill="currentColor" strokeWidth={0} size={20} />
               </a>
             </div>
-            <p className="text-xs font-bold text-[#1A355D] mb-1 text-right">For appointments, please call</p>
-            <a href="tel:+918290638358" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-right">+91 82906 38358</a>
-            <a href="mailto:omnirheuma@gmail.com" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-right">omnirheuma@gmail.com</a>
+            <p className="text-xs font-bold text-[#1A355D] mb-1 text-center lg:text-right">For appointments, please call</p>
+            <a href="tel:+918290638358" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-right">+91 82906 38358</a>
+            <a href="mailto:omnirheuma@gmail.com" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-right">omnirheuma@gmail.com</a>
           </div>
         </div>
 
         {/* Bottom Legal */}
         <div className="border-t border-gray-200 pt-8 text-[#515a6a]">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 text-center md:text-left">
             <p className="leading-relaxed text-[12px] md:max-w-[65%]">
               Omni Rheuma delivers personalized, whole-person medical care to people living with rheumatic conditions. Testimonials reflect individual patient experiences and results may vary.
             </p>
-            <div className="flex flex-wrap gap-x-5 gap-y-3 text-[12px] underline decoration-gray-300 underline-offset-4 md:text-right">
+            <div className="flex flex-wrap justify-center md:justify-end gap-x-5 gap-y-3 text-[12px] underline decoration-gray-300 underline-offset-4 md:text-right">
               <a href="#" className="hover:text-[#1A355D]">Privacy Policy</a>
               <a href="#" className="hover:text-[#1A355D]">Terms of Use</a>
               <a href="#" className="hover:text-[#1A355D]">Informed Consent</a>
               <a href="#" className="hover:text-[#1A355D]">Notice of Privacy Practices</a>
             </div>
           </div>
-          <p className="text-[12px] mt-8">&copy; 2026 Omni Rheuma, Inc.</p>
+          <p className="text-[12px] mt-8 text-center md:text-left">&copy; 2026 Omni Rheuma, Inc.</p>
         </div>
       </div>
     </footer>
