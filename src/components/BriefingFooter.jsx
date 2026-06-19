@@ -87,8 +87,7 @@ function BriefingFooter() {
 
           {/* RIGHT: form */}
           <div style={{ width: "360px", flexShrink: 0, backgroundColor: "#fff", borderRadius: "16px", padding: "1.75rem", border: "1px solid #e2e8f0", alignSelf: "flex-start", marginTop: "0" }}>
-            <p style={{ fontWeight: 700, fontSize: "17px", color: "#0f616e", marginBottom: "4px", fontFamily: "var(--font-display)" }}>Book a Consultation</p>
-            <p style={{ fontSize: "12px", color: "#888", marginBottom: "1.25rem", fontFamily: "var(--font-base)" }}>We'll call back within 24 hours.</p>
+            <p style={{ fontWeight: 700, fontSize: "17px", color: "#0f616e", marginBottom: "1.25rem", fontFamily: "var(--font-base)", textAlign: "center" }}>Book Your Consultation</p>
             {done ? (
               <div style={{ textAlign: "center", padding: "1.5rem 0" }}>
                 <div style={{ width: "48px", height: "48px", borderRadius: "50%", backgroundColor: "#e8f4f6", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
@@ -101,10 +100,11 @@ function BriefingFooter() {
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                 <input ref={nameRef} type="text" placeholder="Name" required style={{ width: "100%", padding: "11px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
                 <input ref={phoneRef} type="tel" placeholder="Phone Number" required style={{ width: "100%", padding: "11px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
-                <textarea ref={messageRef} placeholder="Message" rows={3} style={{ width: "100%", padding: "11px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", resize: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
-                <button type="submit" disabled={loading} style={{ width: "100%", padding: "12px", backgroundColor: loading ? "#a0a4ac" : "#e86531", color: "#fff", border: "none", borderRadius: "8px", fontWeight: 700, fontSize: "13px", cursor: loading ? "not-allowed" : "pointer", fontFamily: "var(--font-base)" }}>
-                  {loading ? "Sending..." : "Send Message"}
+                <textarea ref={messageRef} placeholder="Post Your Problem (optional)" rows={3} style={{ width: "100%", padding: "11px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", resize: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
+                <button type="submit" disabled={loading} style={{ width: "100%", padding: "12px", backgroundColor: loading ? "#a0a4ac" : "#e86531", color: "#fff", border: "none", borderRadius: "24px", fontWeight: 700, fontSize: "13px", cursor: loading ? "not-allowed" : "pointer", fontFamily: "var(--font-base)" }}>
+                  {loading ? "Sending..." : "Book Appointment"}
                 </button>
+                <p style={{ textAlign: "center", fontSize: "11px", color: "#aaa", marginTop: "4px", fontFamily: "var(--font-base)" }}>We call back within 1 hour · No spam</p>
               </form>
             )}
           </div>
