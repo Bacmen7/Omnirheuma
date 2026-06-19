@@ -1,0 +1,124 @@
+@import url("https://use.typekit.net/cry8bnw.css");
+@import "tailwindcss";
+
+/* @font-face {
+  font-family: "Ro Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://ro.co/weight-loss/wegovy-results/fonts/Ro_Sans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ro Sans";
+  font-weight: 600;
+  font-style: normal;
+  src: url("https://ro.co/weight-loss/wegovy-results/fonts/Ro_Sans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ro Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://ro.co/weight-loss/wegovy-results/fonts/Ro_Sans-Bold.woff") format("woff");
+} */
+
+@theme {
+  --font-sans: "usual", system-ui, sans-serif;
+  --font-serif: "loretta", Georgia, serif;
+  --color-primary: #1AA3B5;
+  --color-primary-hover: #0F616E;
+  --color-accent: #fa885a;
+  --color-accent-strong: #e07048;
+  --color-sky: #1AA3B5;
+  --color-sky-soft: #b3e0e6;
+  --color-sky-faint: #e0f3f5;
+  --color-ghost: #F5F5F5;
+  --color-surface: #ffffff;
+  --color-background-light: #F5F5F5;
+  --color-background-dark: #0f616e;
+  --color-navy-deep: #0f616e;
+  --color-navy-muted: #5E5E5E;
+  --color-gray: #a0a4ac;
+  --color-border: #e0e0e0;
+  --color-rheuma-blue: #0F616E;
+  --color-teal-soft: #0F616E;
+  --color-amber: #FCB900;
+  --font-base: "usual", system-ui, sans-serif;
+  --font-display: "loretta", Georgia, serif;
+}
+
+:root {
+  color: var(--color-navy-deep);
+  background: var(--color-background-light);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  background: var(--color-background-light);
+  color: var(--color-navy-deep);
+  letter-spacing: 0.015em;
+  overflow-x: hidden;
+}
+
+/* Global heading font -outside @layer so it always wins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-variant-numeric: lining-nums proportional-nums;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  color: inherit;
+}
+
+p {
+  font-family: var(--font-base);
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  line-height: calc(1.75);
+  margin: 0;
+}
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+@layer base {
+  h1 {
+    font-size: calc(3.5rem);
+    letter-spacing: -0.8px;
+    line-height: calc(1.07143);
+  }
+
+  h2 {
+    font-size: calc(2.625rem);
+    font-weight: 400;
+    letter-spacing: -0.4px;
+    line-height: calc(1.14286);
+  }
+
+  h3 {
+    font-size: calc(2rem);
+    letter-spacing: -0.2px;
+    line-height: calc(1.25);
+  }
+}
+
+.muted-text {
+  color: var(--color-navy-muted);
+}
+
+@media (max-width: 768px) {
+  .footer-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
