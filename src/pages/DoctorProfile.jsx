@@ -271,9 +271,6 @@ function DoctorProfile() {
 
               {/* Background / Experience */}
               <section id="background">
-                <h2 className="text-[#0f616e]" style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(28px, 4vw, 34px)", lineHeight: "40px", marginBottom: "20px" }}>Experience & Qualifications</h2>
-
-
                 <div>
                   <h3 className="text-[#0f616e]" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "16px", lineHeight: "24px", marginBottom: "12px" }}>Languages Spoken</h3>
                   <div className="flex flex-wrap gap-2">
@@ -352,30 +349,6 @@ function DoctorProfile() {
                       fee: "₹1200",
                       bookingUrl: "https://www.practo.com/bangalore/doctor/raghavendra-h-rheumatologist/info",
                       featured: true,
-                    },
-                    {
-                      name: "Manipal Hospital - Hebbal",
-                      area: "Hebbal, Bangalore",
-                      rating: 3.5,
-                      address: "Kirloskar Business Park, Bellary Road, Landmark: Opposite Dairy Form & Near Esteem Mall, Bangalore",
-                      timings: [
-                        { days: "Mon, Wed, Fri", time: "10:00 AM - 04:00 PM" },
-                        { days: "Tue", time: "04:30 PM - 06:30 PM" },
-                        { days: "Sat", time: "09:00 AM - 10:30 AM" },
-                      ],
-                      fee: "₹1190",
-                      bookingUrl: "https://www.practo.com/bangalore/doctor/raghavendra-h-rheumatologist/info",
-                    },
-                    {
-                      name: "Manipal Hospital - Yelahanka",
-                      area: "Yelahanka, Bangalore",
-                      rating: 5.0,
-                      address: "Sy Number 23/3, Venkatala Village, Landmark: Next to Brigade Honda Showroom, Bangalore",
-                      timings: [
-                        { days: "Mon, Wed, Fri", time: "10:00 AM - 12:00 PM" },
-                      ],
-                      fee: "₹1200",
-                      bookingUrl: "https://www.practo.com/bangalore/doctor/raghavendra-h-rheumatologist/info",
                     },
                   ].map((loc, idx) => (
                     <div key={idx} className="bg-white overflow-hidden" style={{ borderRadius: "16px", border: loc.featured ? "2px solid #0f616e" : "1px solid #eaeef3", boxShadow: loc.featured ? "0 4px 24px rgba(15,97,110,0.12)" : "none" }}>

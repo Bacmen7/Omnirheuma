@@ -28,13 +28,13 @@ const specialistStats = [
 const whyUs = [
   { image: "/images/ra-treatment.webp", title: "No unnecessary procedures", desc: "We recommend treatment only when genuinely needed, with evidence-based, patient-first decision making." },
   { image: "/images/hero-doctora.webp", title: "Honest second opinions", desc: "Already advised treatment elsewhere? We provide an independent review so you can decide with clarity." },
-  { image: "/images/ultrasound.webp", title: "Transparent costs", desc: "You receive a clear estimate before treatment, with guidance on insurance and available coverage support." },
+  { image: "/images/hand.webp", title: "Transparent costs", desc: "You receive a clear estimate before treatment, with guidance on insurance and available coverage support." },
   { image: "/knowledge-hub-images/doctor-600.webp", title: "Teleconsultation available", desc: "Connect online before visiting the clinic, especially if you live outside Bangalore or need initial guidance." },
 ]
 
 const siteStats = [
   { num: "15K+", label: "Patients treated" },
-  { num: "Omni Rheuma", label: "Rachenahalli, Bangalore" },
+  { num: "1", label: "Rachenahalli, Bangalore" },
   { num: "14+", label: "Years in rheumatology" },
 ]
 
@@ -147,21 +147,21 @@ export default function AboutUs() {
       <Header />
 
       {/* ── 1. HERO ── */}
-      <section style={{ backgroundColor: "#0f616e", overflow: "hidden", position: "relative" }}>
+      <section style={{ backgroundColor: "#e0f3f5", overflow: "hidden", position: "relative" }}>
         <div style={{ display: "flex", flexWrap: "wrap", minHeight: "560px" }}>
           <div style={{ flex: "1.02 1 450px", padding: "clamp(54px, 7vw, 88px) clamp(28px, 5vw, 72px)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <h1 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "clamp(2.5rem, 4.4vw, 4rem)", fontWeight: 300, lineHeight: 1.11, letterSpacing: "-0.8px", maxWidth: "650px", marginBottom: "30px" }}>
+            <h1 style={{ fontFamily: "var(--font-display)", color: "#0f616e", fontSize: "clamp(2.5rem, 4.4vw, 4rem)", fontWeight: 300, lineHeight: 1.11, letterSpacing: "-0.8px", maxWidth: "650px", marginBottom: "30px" }}>
               Relief you can trust.{" "}
-              <span style={{ color: "#9DE5D4" }}>Care you can count on.</span>
+              <span style={{ color: "#1AA3B5" }}>Care you can count on.</span>
             </h1>
-            <p style={{ color: "rgba(255,255,255,0.82)", fontSize: "clamp(16px, 1.25vw, 18px)", lineHeight: 1.78, maxWidth: "600px", marginBottom: "42px" }}>
+            <p style={{ color: "#5a6577", fontSize: "clamp(16px, 1.25vw, 18px)", lineHeight: 1.78, maxWidth: "600px", marginBottom: "42px" }}>
               Rheumatic conditions affect millions of Indians, yet most people wait years before seeking specialist help. At Omni Rheuma, we make expert rheumatology care simple, accessible, and reassuring for every patient.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
-              <Link to="/doctors" style={{ background: "#fff", color: "#0f616e", borderRadius: "100px", padding: "12px 28px", fontWeight: 700, fontSize: "15px", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "8px" }}>
+              <Link to="/specialist/1" style={{ background: "#0f616e", color: "#fff", borderRadius: "100px", padding: "12px 28px", fontWeight: 700, fontSize: "15px", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "8px" }}>
                 Meet our specialists <ArrowRight size={16} />
               </Link>
-              <Link to="/book-appointment" style={{ border: "2px solid rgba(255,255,255,0.7)", color: "#fff", borderRadius: "100px", padding: "12px 28px", fontWeight: 700, fontSize: "15px", textDecoration: "none", display: "inline-flex", alignItems: "center" }}>
+              <Link to="/book-appointment" style={{ background: "#e86531", color: "#fff", borderRadius: "100px", padding: "12px 28px", fontWeight: 700, fontSize: "15px", textDecoration: "none", display: "inline-flex", alignItems: "center" }}>
                 Book consultation
               </Link>
             </div>
@@ -176,7 +176,7 @@ export default function AboutUs() {
       </section>
 
       {/* ── 2. STATS ── */}
-      {false && <section className="w-full overflow-hidden" style={{ background: "#0f616e", padding: "clamp(30px, 3vw, 40px) 0 clamp(36px, 4vw, 44px)" }}>
+      <section className="w-full overflow-hidden" style={{ background: "#0f616e", padding: "clamp(30px, 3vw, 40px) 0 clamp(36px, 4vw, 44px)" }}>
         <div className="max-w-[1200px]" style={{ margin: "0 auto", padding: "0 clamp(24px, 5vw, 64px)" }}>
           <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: "clamp(24px, 4vw, 48px)" }}>
             {siteStats.map((stat) => (
@@ -191,7 +191,7 @@ export default function AboutUs() {
             ))}
           </div>
         </div>
-      </section>}
+      </section>
 
       {/* ── 3. WHY TRUST US ── */}
       <section className="w-full bg-[#eef7f5]" style={{ padding: "clamp(40px, 4vw, 48px) 0" }}>

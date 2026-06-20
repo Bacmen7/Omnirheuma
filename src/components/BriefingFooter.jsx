@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Linkedin, MapPin, Phone, Mail } from 'luc
 
 function BriefingFooter() {
   return (
-    <footer className="pt-14 pb-8 px-6" style={{ backgroundColor: "#FFF8EE", fontFamily: "var(--font-base)", fontSize: "16px", lineHeight: "28px", fontWeight: 400, color: "#0F616E" }}>
+    <footer className="pt-14 pb-8 px-6" style={{ backgroundColor: "#F5F5F5", fontFamily: "var(--font-base)", fontSize: "16px", lineHeight: "28px", fontWeight: 400, color: "#0F616E" }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Row 1: Logo+Desc+Social | Quick Links | Contact */}
@@ -15,7 +15,7 @@ function BriefingFooter() {
               <img src="/logo.png" alt="Omni Rheuma logo" className="h-32 w-32 object-contain" />
             </Link>
             <p className="text-center lg:text-left" style={{ marginBottom: "32px", lineHeight: "28px", color: "#5E5E5E" }}>
-              Personalized, whole-person rheumatology care for people living with joint and autoimmune conditions.
+              Personalised care for people living with joint and autoimmune conditions. Led by a DM-qualified rheumatologist.
             </p>
             <div className="flex gap-2">
               <a href="#" className="w-8 h-8 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity" style={{ backgroundColor: "#0F616E", color: "#fff" }}>
