@@ -9,7 +9,7 @@ const locations = [
     address: "No.42 And 25, 1st Floor, 80 Feet Road, Dr Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Bengaluru 560077",
     phone: "+91 99804 45660",
     timings: [
-      { days: "Mon – Sat", time: "04:00 PM – 07:00 PM" },
+      { days: "Mon – Sat", time: "09:00 AM – 09:00 PM" },
     ],
     fee: "₹1200",
     doctor: "Dr. Raghavendra H",

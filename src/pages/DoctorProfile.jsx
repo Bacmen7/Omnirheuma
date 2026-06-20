@@ -40,7 +40,6 @@ function DoctorProfile() {
 
   const tabs = [
     { id: "overview", label: "Overview" },
-    { id: "background", label: "Background" },
     { id: "reviews", label: "Reviews" },
     { id: "clinic", label: "Clinic" },
   ]
@@ -74,7 +73,7 @@ function DoctorProfile() {
                   {doctor.name}
                 </h1>
                 <p style={{ fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "clamp(14px, 2vw, 18px)", lineHeight: "1.65", marginBottom: "14px", color: "rgba(255,255,255,0.7)", maxWidth: "900px" }}>
-                  MBBS, MD - General Medicine, DM - Clinical Immunology and Rheumatology
+                  MBBS, MD, DM Rheumatology and Clinical Immunology
                 </p>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-3" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "clamp(13px, 1.5vw, 15px)", lineHeight: "1.7", marginBottom: "16px", color: "rgba(255,255,255,0.85)" }}>
                   <span>Rheumatologist</span>
@@ -218,14 +217,14 @@ function DoctorProfile() {
           </div>
 
           {/* Tab Navigation */}
-          <div className="bg-[#F5F5F5]">
+          <div className="bg-transparent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-3 sm:pt-6 pb-2 mb-4">
             <div className="flex gap-2 sm:gap-3 overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}>
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => scrollToSection(tab.id)}
-                  className={`px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-medium whitespace-nowrap transition-colors cursor-pointer ${activeTab === tab.id ? "bg-[#0f616e] text-white" : "bg-[#EEF2F9] text-gray-500 hover:text-[#0f616e]"}`}
+                  className={`px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-medium whitespace-nowrap transition-colors cursor-pointer ${activeTab === tab.id ? "bg-[#0f616e] text-white" : "bg-transparent text-gray-500 hover:text-[#0f616e]"}`}
                   style={{ borderRadius: "25px" }}
                 >
                   {tab.label}
@@ -262,22 +261,6 @@ function DoctorProfile() {
                   <div className="flex flex-wrap gap-2">
                     {doctor.expertise.map((item, i) => (
                       <span key={i} className="text-xs sm:text-sm text-gray-600 bg-[#EEF2F9] px-3 py-1.5 rounded-full">{item}</span>
-                    ))}
-                  </div>
-                </div>
-              </section>
-
-              <hr className="border-gray-200 my-8 sm:my-10" />
-
-              {/* Background / Experience */}
-              <section id="background">
-                <div>
-                  <h3 className="text-[#0f616e]" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "16px", lineHeight: "24px", marginBottom: "12px" }}>Languages Spoken</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {doctor.languages.map((lang, i) => (
-                      <span key={i} className="text-sm text-gray-600 bg-[#EEF2F9] px-3 py-1.5" style={{ borderRadius: "25px" }}>
-                        {lang}
-                      </span>
                     ))}
                   </div>
                 </div>
@@ -344,7 +327,7 @@ function DoctorProfile() {
                       rating: 4.0,
                       address: "No.42 And 25, 1st Floor, 80 Feet Road, Dr Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Bengaluru 560077",
                       timings: [
-                        { days: "Mon - Sat", time: "04:00 PM - 07:00 PM" },
+                        { days: "Mon - Sat", time: "09:00 AM - 09:00 PM" },
                       ],
                       fee: "₹1200",
                       bookingUrl: "https://www.practo.com/bangalore/doctor/raghavendra-h-rheumatologist/info",

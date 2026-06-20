@@ -34,7 +34,7 @@ function BriefingFooter() {
           </div>
 
           {/* CENTER: Quick Links */}
-          <div className="flex flex-row gap-12 flex-1 justify-start lg:justify-start" style={{ paddingLeft: "40px" }}>
+          <div className="flex flex-row gap-12 flex-1 justify-center lg:justify-center" style={{ paddingLeft: "0" }}>
             <div>
               <h4 className="font-bold uppercase" style={{ marginBottom: "20px", letterSpacing: "0.04em", color: "#0F616E", fontSize: "20px", lineHeight: "26px", fontWeight: 700 }}>Quick Links</h4>
               <ul className="space-y-3" style={{ color: "#5E5E5E" }}>
