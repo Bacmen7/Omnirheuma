@@ -9,7 +9,7 @@ const specialists = [
     location: "Hebbal, Bengaluru",
     languages: ["Kannada", "Hindi", "Tamil", "English"],
     overview: [
-      "Dr. Raghavendra is a board-certified Rheumatologist with 14 years of clinical experience, including 6 dedicated years as a specialist in rheumatology. He focuses on diagnosing and treating conditions affecting the joints, muscles, and immune system.",
+      "Dr. Raghavendra is a board-certified Rheumatologist with 14 years of clinical experience. He focuses on diagnosing and treating conditions affecting the joints, muscles, and immune system.",
       "What sets him apart is how genuinely invested he is in the field. Over the years, he has built deep expertise across a wide range of complex rheumatic diseases.",
       "Dr. Raghavendra believes that good care goes beyond pain. He takes time to understand not just your physical symptoms, but also how your condition is affecting your daily life, your work, and your mental well-being. Many of his patients appreciate that they feel heard during consultations, not just examined.",
       "His approach centres on long-term disease management. Rather than focusing only on short-term relief, he works with patients to build realistic, sustainable plans that help them live well despite a chronic condition. He sees himself as a partner in your care, not just a treating doctor.",

@@ -79,7 +79,7 @@ function DoctorProfile() {
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-3" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "clamp(13px, 1.5vw, 15px)", lineHeight: "1.7", marginBottom: "16px", color: "rgba(255,255,255,0.85)" }}>
                   <span>Rheumatologist</span>
                   <span style={{ color: "rgba(255,255,255,0.3)" }}>|</span>
-                  <span>14 Years Exp <span style={{ fontWeight: 400, color: "rgba(255,255,255,0.5)" }}>(6 yrs specialist)</span></span>
+                  <span>14 Years Exp</span>
                   <span style={{ color: "rgba(255,255,255,0.3)" }}>|</span>
                   <span className="flex items-center gap-1">
                     <svg className="w-3 h-3 shrink-0" style={{ color: "rgba(255,255,255,0.85)" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -604,7 +604,7 @@ const patientStories = [
   { name: "Dharmaiah Chowdappa", initial: "D", verified: true, time: "a year ago", visitedFor: "Arthritis Management", tags: ["Doctor friendliness", "Treatment satisfaction", "Value for money"], text: "Dr Raghavendra H is a very Good Doctor with immense Knowledge in the field. He is so cordial and friendly. I am highly satisfied with his Treatment and the service is Exemplary." },
   { name: "Purushotham", initial: "P", verified: true, time: "a year ago", visitedFor: "Rheumatic Arthritis", tags: [], text: "Very good doctor. My rheumatic arthritis pain reduced 80%. Doctor is very friendly. I like the treatment. Now I am walking without any pain in my joint." },
   { name: "Arpita Bhunia", initial: "A", verified: true, time: "2 years ago", visitedFor: "Knee Arthritis", tags: ["Doctor friendliness", "Treatment satisfaction", "Value for money", "Wait time"], text: "Our doctor is very friendly and good human being... we are satisfied with Dr. Raghavendra sir... thank you sir." },
-  { name: "Verified Patient", initial: "V", verified: true, time: "3 years ago", visitedFor: "Lupus", tags: [], text: "It is nice talking to Dr Raghavendra, made patient comfortable to discuss the symptoms. Didn't go to review the blood test reports, rather did the complete physical examination and review all reports to explain the situation very logically and in simple language.\n\nI would definitely recommend this doctor for others and best for those who reside in North Bengaluru." },
+  { name: "Viraj S.", initial: "V", verified: true, time: "3 years ago", visitedFor: "Lupus", tags: [], text: "It is nice talking to Dr Raghavendra, made patient comfortable to discuss the symptoms. Didn't go to review the blood test reports, rather did the complete physical examination and review all reports to explain the situation very logically and in simple language.\n\nI would definitely recommend this doctor for others and best for those who reside in North Bengaluru." },
 ]
 
 /* ── Components ── */
