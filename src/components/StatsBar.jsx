@@ -1,6 +1,6 @@
 function StatsBar() {
   return (
-    <section className="py-10 md:py-24">
+    <section className="bg-white py-10 md:py-24">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] items-start gap-9 md:gap-[60px]">
         {/* Left -Heading */}
         <div className="flex-[1.5] text-center md:text-left">

@@ -11,6 +11,7 @@ import Specialists from "./components/Specialists"
 import Testimonials from "./components/Testimonials"
 import CTASection from "./components/CTASection"
 import StatsBar from "./components/StatsBar"
+import SymptomsExplorer from "./components/SymptomsExplorer"
 import InsurancePartners from "./components/InsurancePartners"
 import ConditionsGrid from "./components/ConditionsGrid"
 import PatientControl from "./components/PatientControl"
@@ -36,9 +37,9 @@ import VideoLibrary from "./components/VideoLibrary"
 
 function App() {
   return (
-    <div className="landing-page bg-background-light text-navy-deep antialiased">
+    <div className="landing-page text-navy-deep antialiased" style={{ backgroundColor: "#e0f3f5" }}>
       <Header />
-      <main>
+      <main style={{ marginTop: 0, paddingTop: 0 }}>
         {/* ═══════════════════════════════════════════════
             ZONE 1 -INTRO & DISCOVERY
         ═══════════════════════════════════════════════ */}
@@ -51,7 +52,9 @@ function App() {
 
         <WhyRheuma />
 
-        <SpecializedCare />
+        <SymptomsExplorer />
+
+        {/* <SpecializedCare /> */}
 
         <SymptomQuiz />
 

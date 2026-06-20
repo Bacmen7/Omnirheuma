@@ -62,9 +62,9 @@ const warningSignals = [
 ]
 
 const featuredArticles = [
-  { id: "understanding-blood-work-rf-anti-ccp", title: "Understanding your Blood Work: RF and Anti-CCP", image: "/images/lab-test.webp", readTime: "12 min read", category: "Diagnostics", author: "Dr. Sarah Miller", excerpt: "Learn what RF and Anti-CCP blood tests mean for your rheumatoid arthritis diagnosis and treatment plan." },
-  { id: "gentle-exercises-flaring-joints", title: "Gentle Exercises for Flaring Joints", image: "/images/exercise.webp", readTime: "8 min read", category: "Lifestyle", author: "Dr. James Chen", excerpt: "Safe, low-impact exercises that can help maintain mobility and reduce pain during RA flares." },
-  { id: "anti-inflammatory-diet", title: "The Anti-Inflammatory Diet: Truths vs Myths", image: "/images/diet.webp", readTime: "10 min read", category: "Diet & Nutrition", author: "Angela Myers", excerpt: "Separating fact from fiction when it comes to anti-inflammatory foods and their impact on symptoms." },
+  { id: "understanding-blood-work-rf-anti-ccp", title: "Understanding your Blood Work: RF and Anti-CCP", image: "/blog-articles/joint-pain-assessment.webp", readTime: "12 min read", category: "Diagnostics", author: "Dr. Raghavendra H", excerpt: "Learn what RF and Anti-CCP blood tests mean for your rheumatoid arthritis diagnosis and treatment plan." },
+  { id: "gentle-exercises-flaring-joints", title: "Gentle Exercises for Flaring Joints", image: "/blog-articles/morning-joint-stiffness.webp", readTime: "8 min read", category: "Lifestyle", author: "Dr. Priya Sharma", excerpt: "Safe, low-impact exercises that can help maintain mobility and reduce pain during RA flares." },
+  { id: "anti-inflammatory-diet", title: "The Anti-Inflammatory Diet: Truths vs Myths", image: "/blog-articles/lifestyle-flare-triggers.webp", readTime: "10 min read", category: "Diet & Nutrition", author: "Dr. Ananya Krishnan", excerpt: "Separating fact from fiction when it comes to anti-inflammatory foods and their impact on symptoms." },
 ]
 
 const faqs = [
@@ -217,7 +217,7 @@ function HealthGuide() {
         </section>
 
         {/* ═══════════ WARNING SIGNS (matching ApproachSection pattern -dark section) ═══════════ */}
-        <section className="relative bg-navy-deep pt-[100px] pb-[130px] md:pt-[120px] md:pb-[150px] text-white overflow-hidden">
+        {false && <section className="relative bg-navy-deep pt-[100px] pb-[130px] md:pt-[120px] md:pb-[150px] text-white overflow-hidden">
           <div className="relative z-10 max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-start lg:items-stretch">
               <div>
@@ -303,7 +303,7 @@ function HealthGuide() {
           <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
             <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#F5F5F5" />
           </svg>
-        </section>
+        </section>}
 
         {/* ═══════════ DIAGNOSTIC JOURNEY ═══════════ */}
         <section className="py-20 md:py-28 bg-white">
@@ -358,7 +358,7 @@ function HealthGuide() {
         </section>
 
         {/* ═══════════ TREATMENT APPROACHES (ghost bg, 2-col grid) ═══════════ */}
-        <section className="py-20 md:py-28 bg-ghost">
+        {/* <section className="py-20 md:py-28 bg-ghost">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mx-auto mb-12 flex flex-col items-center justify-center text-center">
               <h2
@@ -461,7 +461,7 @@ function HealthGuide() {
               </Link>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* ═══════════ FAQ (light ghost bg, centered) ═══════════ */}
         <section className="py-20 md:py-28 bg-ghost">

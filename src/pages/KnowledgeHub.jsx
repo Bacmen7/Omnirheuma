@@ -396,7 +396,7 @@ const treatmentCards = [
 ]
 
 const featuredArticle = {
-  img: "/images/lab-test.webp",
+  img: "/external-images/rheumacare-rheumatoid-arthritis-6.webp",
   cat: "Research",
   title: "Treat-to-Target in RA: Does Achieving Remission Actually Prevent Long-Term Joint Damage?",
   author: "Dr. Priya Menon",
@@ -405,10 +405,10 @@ const featuredArticle = {
 }
 
 const articleList = [
-  { img: "/images/hero-doctor.webp", cat: "Research", title: "IL-17 vs TNF Inhibitors in PsA", time: "6 min read" },
-  { img: "/images/medication.webp", cat: "Safety", title: "JAK Inhibitors in 2025: Updated CV Risk Data", time: "9 min read" },
-  { img: "/images/lab-test.webp", cat: "Research", title: "Belimumab + Voclosporin in Lupus Nephritis", time: "7 min read" },
-  { img: "/images/diet.webp", cat: "Lifestyle", title: "Mediterranean Diet and CRP Reduction in RA", time: "5 min read" },
+  { img: "/external-images/rheumacare-psoriatic-arthritis-4.webp", cat: "Research", title: "IL-17 vs TNF Inhibitors in PsA", time: "6 min read" },
+  { img: "/blog-articles/joint-pain-assessment.webp", cat: "Safety", title: "JAK Inhibitors in 2025: Updated CV Risk Data", time: "9 min read" },
+  { img: "/external-images/rheumacare-lupus-1.webp", cat: "Research", title: "Belimumab + Voclosporin in Lupus Nephritis", time: "7 min read" },
+  { img: "/blog-articles/lifestyle-flare-triggers.webp", cat: "Lifestyle", title: "Mediterranean Diet and CRP Reduction in RA", time: "5 min read" },
 ]
 
 /* ─────────────────────────────────────────────
@@ -690,7 +690,7 @@ function KnowledgeHub() {
           <div className="max-w-7xl mx-auto">
             <div className="mb-8 max-w-2xl">
               <h2 className="text-navy-deep mt-2" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.5px" }}>
-                Conditions We Treat
+                Know more about Your condition
               </h2>
             </div>
 

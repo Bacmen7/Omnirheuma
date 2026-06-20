@@ -1,4 +1,6 @@
 function Newsletter({ variant = "light" }) {
+  return null
+
   const isDark = variant === "dark"
 
   return (

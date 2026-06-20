@@ -4,7 +4,7 @@ import BriefingFooter from "../components/BriefingFooter"
 
 const locations = [
   {
-    name: "Sri Durga Ortho & Neuro Clinic",
+    name: "Omni Rheuma Clinics: Rachenahalli, Thanisandra",
     area: "Rachenahalli, Bangalore",
     address: "No.42 And 25, 1st Floor, 80 Feet Road, Dr Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Bengaluru 560077",
     phone: "+91 99804 45660",

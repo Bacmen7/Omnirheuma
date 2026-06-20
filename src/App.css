@@ -84,11 +84,21 @@
   padding-bottom: 4.5rem !important;
 }
 
+.landing-page main > section.home-hero {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 @media (max-width: 768px) {
   .landing-page main > div > section:not(.custom-approach-section),
   .landing-page main > section:not(.custom-approach-section) {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
+  }
+
+  .landing-page main > section.home-hero {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
 

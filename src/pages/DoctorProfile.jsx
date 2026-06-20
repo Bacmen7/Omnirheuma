@@ -377,7 +377,7 @@ function DoctorProfile() {
                 <div className="space-y-4 sm:space-y-5">
                   {[
                     {
-                      name: "Sri Durga Ortho & Neuro Clinic",
+                      name: "Omni Rheuma Clinics: Rachenahalli, Thanisandra",
                       area: "Rachenahalli, Bangalore",
                       rating: 4.0,
                       address: "No.42 And 25, 1st Floor, 80 Feet Road, Dr Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Bengaluru 560077",
