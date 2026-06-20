@@ -31,63 +31,61 @@ function BriefingFooter() {
   }
 
   return (
-    <footer className="bg-[#F5F5F5] pt-16 pb-8 px-6" style={{ fontFamily: "var(--font-base)" }}>
+    <footer className="bg-[#F5F5F5] pt-14 pb-8 px-6" style={{ fontFamily: "var(--font-base)" }}>
       <div className="max-w-7xl mx-auto">
 
-        {/* Top: links grid + right (form) */}
-        <div className="flex flex-col lg:flex-row gap-12 mb-10">
-          <div className="flex-1">
+        {/* Row 1: Logo+Contact | Links | Form */}
+        <div className="flex flex-col lg:flex-row gap-10 mb-10">
 
-        {/* Link Columns - 2-col on mobile, 4-col on desktop */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
-          <div>
-            <h4 className="bg-blue-100 text-blue-900 text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-full inline-block" style={{ marginBottom: "28px", fontFamily: "usual, Arial, Helvetica, sans-serif", fontWeight: 700, fontSize: "10px", lineHeight: "15px" }}>Who We Serve</h4>
-            <ul className="space-y-4 text-sm font-semibold text-[#1A355D]">
-              <li><a href="#" className="hover:text-[#515a6a]">Individuals</a></li>
-              <li><a href="#" className="hover:text-[#515a6a]">Employers</a></li>
-              <li><a href="#" className="hover:text-[#515a6a]">Health Plans</a></li>
-              <li><a href="#" className="hover:text-[#515a6a]">Providers</a></li>
-            </ul>
+          {/* LEFT: Logo + Social + Contact */}
+          <div className="flex flex-col items-center lg:items-start flex-shrink-0">
+            <Link to="/" className="inline-flex items-center mb-3" aria-label="Omni Rheuma home">
+              <img src="/logo.png" alt="Omni Rheuma logo" className="h-28 w-28 object-contain" />
+            </Link>
+            <div className="flex gap-3 mb-4">
+              <a href="#" className="w-9 h-9 rounded-full bg-[#1AA3B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+                <Facebook fill="currentColor" strokeWidth={0} size={18} />
+              </a>
+              <a href="#" className="w-9 h-9 rounded-full bg-[#1AA3B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+                <Instagram size={18} strokeWidth={2.5} />
+              </a>
+              <a href="#" className="w-9 h-9 rounded-full bg-[#1AA3B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+                <Twitter fill="currentColor" strokeWidth={0} size={18} />
+              </a>
+              <a href="#" className="w-9 h-9 rounded-full bg-[#1AA3B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+                <Linkedin fill="currentColor" strokeWidth={0} size={18} />
+              </a>
+            </div>
+            <p className="text-xs font-bold text-[#1A355D] mb-1 text-center lg:text-left">For appointments, please call</p>
+            <a href="tel:+918290638358" className="block text-[15px] font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-left">+91 82906 38358</a>
+            <a href="mailto:omnirheuma@gmail.com" className="block text-[15px] font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-left">omnirheuma@gmail.com</a>
           </div>
 
-          <div>
-            <h4 className="bg-blue-100 text-blue-900 text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-full inline-block" style={{ marginBottom: "28px", fontFamily: "usual, Arial, Helvetica, sans-serif", fontWeight: 700, fontSize: "10px", lineHeight: "15px" }}>What We Treat</h4>
-            <ul className="space-y-4 text-sm font-semibold text-[#1A355D]">
-              <li><Link to="/arthritis" className="hover:text-[#515a6a]">Arthritis</Link></li>
-              <li><Link to="/Rheumatoid-Arthritis" className="hover:text-[#515a6a]">Rheumatoid Arthritis</Link></li>
-              <li><Link to="/osteoarthritis" className="hover:text-[#515a6a]">Osteoarthritis</Link></li>
-            </ul>
+          {/* CENTER: Nav Links + Address */}
+          <div className="flex flex-row gap-12 flex-1 justify-center lg:justify-start lg:pl-10">
+            <div>
+              <h4 className="bg-blue-100 text-blue-900 text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-full inline-block" style={{ marginBottom: "20px" }}>Resources</h4>
+              <ul className="space-y-3 text-[15px] font-semibold text-[#1A355D]">
+                <li><Link to="/knowledge-hub" className="hover:text-[#515a6a]">Knowledge Hub</Link></li>
+                <li><Link to="/treatment-guides" className="hover:text-[#515a6a]">Treatment Guide</Link></li>
+                <li><Link to="/blog" className="hover:text-[#515a6a]">Blog</Link></li>
+                <li><Link to="/about" className="hover:text-[#515a6a]">About Us</Link></li>
+                <li><Link to="/arthritis" className="hover:text-[#515a6a]">Arthritis</Link></li>
+                <li><Link to="/Rheumatoid-Arthritis" className="hover:text-[#515a6a]">Rheumatoid Arthritis</Link></li>
+                <li><Link to="/osteoarthritis" className="hover:text-[#515a6a]">Osteoarthritis</Link></li>
+              </ul>
+            </div>
+            <div style={{ maxWidth: "380px" }}>
+              <h4 className="bg-blue-100 text-blue-900 text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-full inline-block" style={{ marginBottom: "20px" }}>Our Clinic</h4>
+              <p className="text-xs font-bold text-[#1A355D] mb-1">Omni Rheuma Clinics: Rachenahalli, Thanisandra</p>
+              <p className="text-sm text-[#515a6a] leading-relaxed">No. 42 &amp; 25, 1st Floor, 80 Feet Road, Dr. Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Thanisandra, above Pepperfry Furniture, RK Hegde Nagar, Bengaluru – 560077</p>
+              <p className="text-sm text-[#515a6a] mt-2">Dr Raghavendra also practices at <span className="font-semibold text-[#1A355D]">Manipal Hospital</span> (Hebbal and Yelahanka)</p>
+            </div>
           </div>
 
-          <div>
-            <h4 className="bg-blue-100 text-blue-900 text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-full inline-block" style={{ marginBottom: "28px", fontFamily: "usual, Arial, Helvetica, sans-serif", fontWeight: 700, fontSize: "10px", lineHeight: "15px" }}>Resources</h4>
-            <ul className="space-y-4 text-sm font-semibold text-[#1A355D]">
-              <li><Link to="/knowledge-hub" className="hover:text-[#515a6a]">Knowledge Hub</Link></li>
-              <li><Link to="/treatment-guides" className="hover:text-[#515a6a]">Treatment Guide</Link></li>
-              <li><Link to="/blog" className="hover:text-[#515a6a]">Blog</Link></li>
-              <li><a href="#" className="hover:text-[#515a6a]">Research Articles</a></li>
-              <li><a href="#" className="hover:text-[#515a6a]">Book Consultation</a></li>
-              <li><Link to="/about" className="hover:text-[#515a6a]">About Us</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="bg-blue-100 text-blue-900 text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-full inline-block" style={{ marginBottom: "28px", fontFamily: "usual, Arial, Helvetica, sans-serif", fontWeight: 700, fontSize: "10px", lineHeight: "15px" }}>Company</h4>
-            <ul className="space-y-4 text-sm font-semibold text-[#1A355D]">
-              <li><Link to="/about" className="hover:text-[#515a6a]">About Us</Link></li>
-              <li><Link to="/our-approach" className="hover:text-[#515a6a]">Our Approach</Link></li>
-              <li><a href="#" className="hover:text-[#515a6a]">Our Providers</a></li>
-              <li><a href="#" className="hover:text-[#515a6a]">Careers</a></li>
-              <li><a href="#" className="hover:text-[#515a6a]">Newsroom</a></li>
-              <li><a href="#" className="hover:text-[#515a6a]">FAQs</a></li>
-            </ul>
-          </div>
-        </div>
-          </div>{/* end left */}
-
-          {/* RIGHT: form */}
-          <div style={{ width: "360px", flexShrink: 0, backgroundColor: "#fff", borderRadius: "16px", padding: "1.75rem", border: "1px solid #e2e8f0", alignSelf: "flex-start", marginTop: "0" }}>
-            <p style={{ fontWeight: 700, fontSize: "17px", color: "#0f616e", marginBottom: "1.25rem", fontFamily: "var(--font-base)", textAlign: "center" }}>Book Your Consultation</p>
+          {/* RIGHT: Form */}
+          <div style={{ width: "320px", flexShrink: 0, backgroundColor: "#fff", borderRadius: "16px", padding: "1.5rem", border: "1px solid #e2e8f0", alignSelf: "flex-start" }}>
+            <p style={{ fontWeight: 700, fontSize: "16px", color: "#0f616e", marginBottom: "1rem", fontFamily: "var(--font-base)", textAlign: "center" }}>Book Your Consultation</p>
             {done ? (
               <div style={{ textAlign: "center", padding: "1.5rem 0" }}>
                 <div style={{ width: "48px", height: "48px", borderRadius: "50%", backgroundColor: "#e8f4f6", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
@@ -98,53 +96,21 @@ function BriefingFooter() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                <input ref={nameRef} type="text" placeholder="Name" required style={{ width: "100%", padding: "11px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
-                <input ref={phoneRef} type="tel" placeholder="Phone Number" required style={{ width: "100%", padding: "11px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
-                <textarea ref={messageRef} placeholder="Post Your Problem (optional)" rows={3} style={{ width: "100%", padding: "11px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", resize: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
-                <button type="submit" disabled={loading} style={{ width: "100%", padding: "12px", backgroundColor: loading ? "#a0a4ac" : "#e86531", color: "#fff", border: "none", borderRadius: "24px", fontWeight: 700, fontSize: "13px", cursor: loading ? "not-allowed" : "pointer", fontFamily: "var(--font-base)" }}>
+                <input ref={nameRef} type="text" placeholder="Name" required style={{ width: "100%", padding: "10px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
+                <input ref={phoneRef} type="tel" placeholder="Phone Number" required style={{ width: "100%", padding: "10px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
+                <textarea ref={messageRef} placeholder="Post Your Problem (optional)" rows={3} style={{ width: "100%", padding: "10px 14px", border: "1.5px solid #e2e8f0", borderRadius: "8px", fontSize: "13px", color: "#1a3a4a", outline: "none", resize: "none", boxSizing: "border-box", fontFamily: "var(--font-base)", backgroundColor: "#fff" }} />
+                <button type="submit" disabled={loading} style={{ width: "100%", padding: "11px", backgroundColor: loading ? "#a0a4ac" : "#e86531", color: "#fff", border: "none", borderRadius: "24px", fontWeight: 700, fontSize: "13px", cursor: loading ? "not-allowed" : "pointer", fontFamily: "var(--font-base)" }}>
                   {loading ? "Sending..." : "Book Appointment"}
                 </button>
-                <p style={{ textAlign: "center", fontSize: "11px", color: "#aaa", marginTop: "4px", fontFamily: "var(--font-base)" }}>We call back within 1 hour · No spam</p>
+                <p style={{ textAlign: "center", fontSize: "11px", color: "#aaa", marginTop: "2px", fontFamily: "var(--font-base)" }}>We call back within 1 hour · No spam</p>
               </form>
             )}
           </div>
-        </div>{/* end flex row */}
-
-        {/* Logo + Social + Address row */}
-        <div className="flex flex-col lg:flex-row lg:justify-between gap-10 mb-10 pt-10 border-t border-gray-200 lg:items-start">
-          <div className="flex-shrink-0 flex flex-col items-center lg:items-start">
-            <Link to="/" className="inline-flex items-center mb-2" aria-label="Omni Rheuma home">
-              <img src="/logo.png" alt="Omni Rheuma logo" className="h-36 w-36 object-contain" />
-            </Link>
-            <div className="flex gap-4 mb-3">
-              <a href="#" className="w-10 h-10 rounded-full bg-[#1AA3B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
-                <Facebook fill="currentColor" strokeWidth={0} size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#1AA3B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
-                <Instagram size={20} strokeWidth={2.5} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#1AA3B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
-                <Twitter fill="currentColor" strokeWidth={0} size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#1AA3B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
-                <Linkedin fill="currentColor" strokeWidth={0} size={20} />
-              </a>
-            </div>
-            <p className="text-xs font-bold text-[#1A355D] mb-1 text-center lg:text-left">For appointments, please call</p>
-            <a href="tel:+918290638358" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-left">+91 82906 38358</a>
-            <a href="mailto:omnirheuma@gmail.com" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-left">omnirheuma@gmail.com</a>
-          </div>
-          <div className="flex-shrink-0 text-left" style={{ maxWidth: "340px" }}>
-            <p className="text-xs font-bold text-[#1A355D] mb-1">Omni Rheuma Clinics: Rachenahalli, Thanisandra</p>
-            <p className="text-sm text-[#515a6a] leading-relaxed">No. 42 &amp; 25, 1st Floor, 80 Feet Road, Dr. Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Thanisandra, above Pepperfry Furniture, RK Hegde Nagar, Bengaluru – 560077</p>
-            <p className="text-sm text-[#515a6a]" style={{ marginTop: "24px" }}>Dr Raghavendra also practices at <span className="font-semibold text-[#1A355D]">Manipal Hospital</span> (Hebbal and Yelahanka)</p>
-          </div>
         </div>
 
-
-        {/* Bottom Legal */}
-        <div className="border-t border-gray-200 pt-8 text-[#515a6a]">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 text-center md:text-left">
+        {/* Row 2: Legal */}
+        <div className="border-t border-gray-200 pt-6 text-[#515a6a]">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 text-center md:text-left">
             <p className="leading-relaxed text-[12px] md:max-w-[65%]">
               Omni Rheuma delivers personalized, whole-person medical care to people living with rheumatic conditions. Testimonials reflect individual patient experiences and results may vary.
             </p>
@@ -155,8 +121,9 @@ function BriefingFooter() {
               <a href="#" className="hover:text-[#1A355D]">Notice of Privacy Practices</a>
             </div>
           </div>
-          <p className="text-[12px] mt-8 text-center md:text-left">&copy; 2026 Omni Rheuma, Inc.</p>
+          <p className="text-[12px] mt-6 text-center md:text-left">&copy; 2026 Omni Rheuma, Inc.</p>
         </div>
+
       </div>
     </footer>
   )
