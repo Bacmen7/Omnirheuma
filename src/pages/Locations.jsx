@@ -13,34 +13,8 @@ const locations = [
     ],
     fee: "₹1200",
     doctor: "Dr. Raghavendra H",
-    bookingUrl: "https://www.practo.com/bangalore/doctor/raghavendra-h-rheumatologist/info",
+    bookingUrl: "/book-appointment",
     featured: true,
-  },
-  {
-    name: "Manipal Hospital - Hebbal",
-    area: "Hebbal, Bangalore",
-    address: "Kirloskar Business Park, Bellary Road, Landmark: Opposite Dairy Form & Near Esteem Mall, Bangalore",
-    phone: "+91 80 2222 4444",
-    timings: [
-      { days: "Mon, Wed, Fri", time: "10:00 AM – 04:00 PM" },
-      { days: "Tue", time: "04:30 PM – 06:30 PM" },
-      { days: "Sat", time: "09:00 AM – 10:30 AM" },
-    ],
-    fee: "₹1190",
-    doctor: "Dr. Raghavendra H",
-    bookingUrl: "https://www.practo.com/bangalore/doctor/raghavendra-h-rheumatologist/info",
-  },
-  {
-    name: "Manipal Hospital - Yelahanka",
-    area: "Yelahanka, Bangalore",
-    address: "Sy Number 23/3, Venkatala Village, Landmark: Next to Brigade Honda Showroom, Bangalore",
-    phone: "+91 80 3333 5555",
-    timings: [
-      { days: "Mon, Wed, Fri", time: "10:00 AM – 12:00 PM" },
-    ],
-    fee: "₹1200",
-    doctor: "Dr. Raghavendra H",
-    bookingUrl: "https://www.practo.com/bangalore/doctor/raghavendra-h-rheumatologist/info",
   },
 ]
 
@@ -65,7 +39,7 @@ function Locations() {
               Our Clinics
             </h1>
             <p style={{ fontSize: "18px", lineHeight: 1.7, color: "rgba(255,255,255,0.75)", fontFamily: "var(--font-base)", margin: 0, maxWidth: "600px" }}>
-              Three convenient locations across Bengaluru — walk in or book an appointment online.
+              Our clinic in Rachenahalli, Thanisandra — walk in or book an appointment online.
             </p>
           </div>
           <div style={{ lineHeight: 0, backgroundColor: "#0f616e" }}>

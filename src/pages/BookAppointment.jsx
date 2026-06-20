@@ -1,20 +1,8 @@
 import { useState } from "react"
+
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwUDPYes__c1Zt8e_DM7Q5kgdiBIfFfPLrTr8MouZa1je8uGW8LgO6j83uE0qO_3RU0/exec"
 import Header from "../components/Header"
 import BriefingFooter from "../components/BriefingFooter"
-
-const conditions = [
-  "Rheumatoid Arthritis",
-  "Osteoarthritis",
-  "Gout",
-  "Ankylosing Spondylitis",
-  "Lupus (SLE)",
-  "Osteoporosis",
-  "Psoriatic Arthritis",
-  "Fibromyalgia",
-  "Juvenile Idiopathic Arthritis",
-  "Not sure / Need a diagnosis",
-  "Other",
-]
 
 const fieldStyle = {
   width: "100%",
@@ -26,6 +14,7 @@ const fieldStyle = {
   borderRadius: "8px",
   background: "#ffffff",
   outline: "none",
+  boxSizing: "border-box",
   transition: "border-color 0.2s, box-shadow 0.2s",
 }
 
@@ -41,16 +30,31 @@ function Field({ label, required, children }) {
 }
 
 export default function BookAppointment() {
-  const [form, setForm] = useState({ name: "", age: "", phone: "", condition: "", message: "" })
+  const [form, setForm] = useState({ name: "", phone: "", message: "" })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const update = (key, val) => setForm(f => ({ ...f, [key]: val }))
 
-  const handleSubmit = () => {
-    if (!form.name || !form.age || !form.phone || !form.condition) {
-      alert("Please fill in your name, age, phone number and condition.")
+  const handleSubmit = async () => {
+    if (!form.name || !form.phone) {
+      alert("Please fill in your name and phone number.")
       return
     }
+    if (loading) return
+    setLoading(true)
+    try {
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          message: form.message,
+          source: "book-appointment",
+        }),
+      })
+    } catch (_) {}
+    setLoading(false)
     setSubmitted(true)
   }
 
@@ -65,14 +69,14 @@ export default function BookAppointment() {
             Book a Consultation
           </h1>
           <p style={{ color: "#d4ebeb", fontSize: "1.06rem", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
-            Request an appointment with our rheumatology team in Hebbal, Bengaluru. Share your details and we will get in touch to confirm your visit.
+            Share your details and we will get in touch to confirm your visit.
           </p>
         </div>
       </section>
 
       {/* Card */}
-      <main style={{ maxWidth: "960px", margin: "0 auto", padding: "0 32px 60px" }}>
-        <div style={{ background: "#ffffff", border: "1px solid #d9e4e4", borderRadius: "14px", padding: "clamp(36px, 5vw, 64px)", marginTop: "-36px", boxShadow: "0 10px 30px rgba(13,115,119,0.08)" }}>
+      <main style={{ maxWidth: "640px", margin: "0 auto", padding: "0 24px 60px" }}>
+        <div style={{ background: "#ffffff", border: "1px solid #d9e4e4", borderRadius: "14px", padding: "clamp(36px, 5vw, 56px)", marginTop: "-36px", boxShadow: "0 10px 30px rgba(13,115,119,0.08)" }}>
 
           {!submitted ? (
             <>
@@ -80,70 +84,39 @@ export default function BookAppointment() {
                 Tell Us About You
               </h2>
               <p style={{ color: "#5c6b6b", fontSize: "0.99rem", marginBottom: "36px", lineHeight: 1.65, textAlign: "center" }}>
-                Fill in a few details below and our team will reach out shortly to arrange a time that works for you.
+                Fill in a few details and our team will reach out shortly.
               </p>
 
-              {/* Row 1 — Full Name + Age */}
-              <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "20px" }} className="sm:grid">
-                <Field label="Full Name" required>
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    value={form.name}
-                    onChange={e => update("name", e.target.value)}
-                    style={fieldStyle}
-                    onFocus={e => { e.target.style.borderColor = "#0f616e"; e.target.style.boxShadow = "0 0 0 3px #e6f2f2" }}
-                    onBlur={e => { e.target.style.borderColor = "#d9e4e4"; e.target.style.boxShadow = "none" }}
-                  />
-                </Field>
-                <Field label="Age" required>
-                  <input
-                    type="number"
-                    min="1" max="120"
-                    placeholder="e.g. 42"
-                    value={form.age}
-                    onChange={e => update("age", e.target.value)}
-                    style={fieldStyle}
-                    onFocus={e => { e.target.style.borderColor = "#0f616e"; e.target.style.boxShadow = "0 0 0 3px #e6f2f2" }}
-                    onBlur={e => { e.target.style.borderColor = "#d9e4e4"; e.target.style.boxShadow = "none" }}
-                  />
-                </Field>
-              </div>
+              <Field label="Full Name" required>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  value={form.name}
+                  onChange={e => update("name", e.target.value)}
+                  style={fieldStyle}
+                  onFocus={e => { e.target.style.borderColor = "#0f616e"; e.target.style.boxShadow = "0 0 0 3px #e6f2f2" }}
+                  onBlur={e => { e.target.style.borderColor = "#d9e4e4"; e.target.style.boxShadow = "none" }}
+                />
+              </Field>
 
-              {/* Row 2 — Phone + Condition */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
-                <Field label="Phone Number" required>
-                  <input
-                    type="tel"
-                    placeholder="10-digit mobile number"
-                    value={form.phone}
-                    onChange={e => update("phone", e.target.value)}
-                    style={fieldStyle}
-                    onFocus={e => { e.target.style.borderColor = "#0f616e"; e.target.style.boxShadow = "0 0 0 3px #e6f2f2" }}
-                    onBlur={e => { e.target.style.borderColor = "#d9e4e4"; e.target.style.boxShadow = "none" }}
-                  />
-                </Field>
-                <Field label="Condition" required>
-                  <select
-                    value={form.condition}
-                    onChange={e => update("condition", e.target.value)}
-                    style={fieldStyle}
-                    onFocus={e => { e.target.style.borderColor = "#0f616e"; e.target.style.boxShadow = "0 0 0 3px #e6f2f2" }}
-                    onBlur={e => { e.target.style.borderColor = "#d9e4e4"; e.target.style.boxShadow = "none" }}
-                  >
-                    <option value="">Select a condition</option>
-                    {conditions.map(c => <option key={c}>{c}</option>)}
-                  </select>
-                </Field>
-              </div>
+              <Field label="Phone Number" required>
+                <input
+                  type="tel"
+                  placeholder="10-digit mobile number"
+                  value={form.phone}
+                  onChange={e => update("phone", e.target.value)}
+                  style={fieldStyle}
+                  onFocus={e => { e.target.style.borderColor = "#0f616e"; e.target.style.boxShadow = "0 0 0 3px #e6f2f2" }}
+                  onBlur={e => { e.target.style.borderColor = "#d9e4e4"; e.target.style.boxShadow = "none" }}
+                />
+              </Field>
 
-              {/* Row 3 — Message full width */}
-              <Field label="Message to the Doctor">
+              <Field label="Message (optional)">
                 <textarea
-                  placeholder="Briefly describe your symptoms, how long you have had them, and any questions you would like to ask."
+                  placeholder="Briefly describe your symptoms or any questions for the doctor."
                   value={form.message}
                   onChange={e => update("message", e.target.value)}
-                  style={{ ...fieldStyle, minHeight: "120px", resize: "vertical", padding: "12px 14px" }}
+                  style={{ ...fieldStyle, minHeight: "120px", resize: "vertical" }}
                   onFocus={e => { e.target.style.borderColor = "#0f616e"; e.target.style.boxShadow = "0 0 0 3px #e6f2f2" }}
                   onBlur={e => { e.target.style.borderColor = "#d9e4e4"; e.target.style.boxShadow = "none" }}
                 />
@@ -152,14 +125,15 @@ export default function BookAppointment() {
               <button
                 type="button"
                 onClick={handleSubmit}
-                style={{ background: "#e86531", color: "#ffffff", border: "none", fontFamily: "var(--font-base)", fontSize: "1rem", fontWeight: 700, padding: "12px 40px", borderRadius: "100px", cursor: "pointer", transition: "background 0.2s", display: "block", margin: "0 auto" }}
-                onMouseOver={e => e.target.style.background = "#d06020"}
-                onMouseOut={e => e.target.style.background = "#e86531"}
+                disabled={loading}
+                style={{ background: loading ? "#a0a4ac" : "#e86531", color: "#ffffff", border: "none", fontFamily: "var(--font-base)", fontSize: "1rem", fontWeight: 700, padding: "12px 40px", borderRadius: "100px", cursor: loading ? "not-allowed" : "pointer", transition: "background 0.2s", display: "block", width: "100%" }}
+                onMouseOver={e => { if (!loading) e.target.style.background = "#d06020" }}
+                onMouseOut={e => { if (!loading) e.target.style.background = "#e86531" }}
               >
-                Request My Consultation
+                {loading ? "Sending..." : "Request My Consultation"}
               </button>
               <p style={{ fontSize: "0.86rem", color: "#5c6b6b", marginTop: "14px", textAlign: "center" }}>
-                Your details are kept private and used only to arrange your appointment.
+                We call back within 1 hour · No spam
               </p>
             </>
           ) : (

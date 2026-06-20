@@ -17,17 +17,17 @@ const conditions = [
     image: "/condition/Rheumatoid Arthritis (RA).webp",
   },
   {
-    eyebrow: "Crystal arthritis",
-    title: "Gout",
-    subtitle: "Sudden joint pain caused by a build-up of uric acid",
+    eyebrow: "Degenerative",
+    title: "Osteoarthritis",
+    subtitle: "Wear and tear of the joints over time",
     description:
-      "Gout happens when excess uric acid builds up in the body and forms crystals in the joints. It most commonly affects the big toe, but it can also affect the ankles, feet, knees, and other joints. Gout attacks can come on suddenly and may last for several days.",
+      "Osteoarthritis occurs when the protective cushioning between the joints gradually wears down over time. It is more common with ageing. It affects the knees, hips, hands, and spine. Early care can help reduce discomfort and keep the joints moving comfortably.",
     symptoms: [
-      "Sudden severe pain in a joint",
-      "Redness and swelling around the joint",
-      "Difficulty walking or moving the affected area",
+      "Joint pain that worsens with activity",
+      "Stiffness after resting or sitting for a long time",
+      "A cracking or grinding feeling while moving a joint",
     ],
-    image: "/condition/Gout.webp",
+    image: "/condition/Osteoarthritis.webp",
   },
   {
     eyebrow: "Spine inflammation",
@@ -69,17 +69,17 @@ const conditions = [
     image: "/condition/Fibromyalgia.webp",
   },
   {
-    eyebrow: "Degenerative",
-    title: "Osteoarthritis",
-    subtitle: "Wear and tear of the joints over time",
+    eyebrow: "Crystal arthritis",
+    title: "Gout",
+    subtitle: "Sudden joint pain caused by a build-up of uric acid",
     description:
-      "Osteoarthritis occurs when the protective cushioning between the joints gradually wears down over time. It is more common with ageing. It affects the knees, hips, hands, and spine. Early care can help reduce discomfort and keep the joints moving comfortably.",
+      "Gout happens when excess uric acid builds up in the body and forms crystals in the joints. It most commonly affects the big toe, but it can also affect the ankles, feet, knees, and other joints. Gout attacks can come on suddenly and may last for several days.",
     symptoms: [
-      "Joint pain that worsens with activity",
-      "Stiffness after resting or sitting for a long time",
-      "A cracking or grinding feeling while moving a joint",
+      "Sudden severe pain in a joint",
+      "Redness and swelling around the joint",
+      "Difficulty walking or moving the affected area",
     ],
-    image: "/condition/Osteoarthritis.webp",
+    image: "/condition/Gout.webp",
   },
 ]
 
@@ -132,7 +132,7 @@ function SymptomsExplorer() {
               <h3 className="text-[1.8rem] leading-[1.1] text-navy-deep md:text-[2.35rem]" style={{ fontFamily: "var(--font-display)", letterSpacing: 0, marginBottom: "14px" }}>
                 {activeCondition.title}
               </h3>
-              <p className="mt-2 text-[14px] leading-[1.6] text-navy-muted md:text-[16px]" style={{ letterSpacing: 0, fontStyle: "normal" }}>
+              <p className="mt-2 text-[14px] leading-[1.6] text-navy-muted md:text-[16px]" style={{ letterSpacing: 0, fontStyle: "italic", marginBottom: "12px" }}>
                 {activeCondition.subtitle}
               </p>
               <p className="mt-5 text-[14px] leading-[1.75] text-navy-muted md:text-[15px]" style={{ letterSpacing: 0 }}>

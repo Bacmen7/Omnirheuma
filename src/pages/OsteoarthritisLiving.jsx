@@ -441,7 +441,7 @@ function OsteoarthritisLiving() {
                     Managing osteoarthritis well requires a plan that fits your life. A rheumatologist can review your symptoms, adjust your treatment, and guide you through the daily habits that matter most for your specific condition.
                   </p>
                   <a
-                    href="#"
+                    href="/book-appointment"
                     style={{ display: "inline-block", backgroundColor: "#E86531", color: "#ffffff", fontWeight: 700, fontSize: "15px", padding: "12px 28px", borderRadius: "9999px", textDecoration: "none" }}
                   >
                     Book Your First Visit
@@ -514,7 +514,7 @@ function OsteoarthritisLiving() {
                       Consultant Rheumatologist for osteoarthritis evaluation and long-term joint care.
                     </p>
                     <a
-                      href="#"
+                      href="/book-appointment"
                       className="group"
                       style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontSize: "13px", fontWeight: 700, padding: "11px 16px 11px 18px", borderRadius: "9999px", textDecoration: "none" }}
                     >

@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react"
+import { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
 import { ArrowRight, ChevronLeft, ChevronRight, MessageCircle, Search, Zap, MapPin } from "lucide-react"
 import Header from "../components/Header"
@@ -12,7 +12,7 @@ const trustCards = [
 ]
 
 const steps = [
-  { num: 1, title: "Book a consultation", desc: "Call us, WhatsApp, or book online. We usually respond within 24 hours and schedule your visit at your convenience." },
+  { num: 1, title: "Book a consultation", desc: "Call us, WhatsApp, or book online. We usually respond within 1 hour and schedule your visit at your convenience." },
   { num: 2, title: "Diagnosis & evaluation", desc: "Your specialist reviews your symptoms, orders relevant tests, and performs a detailed joint and autoimmune evaluation." },
   { num: 3, title: "Treatment & follow-up", desc: "A personalised treatment plan is created. We monitor your progress and adjust therapy for the best long-term outcome." },
 ]
@@ -20,9 +20,9 @@ const steps = [
 const qualifications = ["MBBS", "MD — Internal Medicine", "DM — Rheumatology"]
 
 const specialistStats = [
-  { num: "15+", label: "Years experience" },
-  { num: "5,000+", label: "Patients treated" },
-  { num: "3", label: "Clinic locations" },
+  { num: "14+", label: "Years experience" },
+  { num: "15K+", label: "Patients treated" },
+  { num: "1", label: "Clinic, Rachenahalli" },
 ]
 
 const whyUs = [
@@ -33,9 +33,9 @@ const whyUs = [
 ]
 
 const siteStats = [
-  { num: "5,000+", label: "Patients treated" },
-  { num: "3", label: "Clinic locations, Bangalore" },
-  { num: "15+", label: "Years in rheumatology" },
+  { num: "15K+", label: "Patients treated" },
+  { num: "Omni Rheuma", label: "Rachenahalli, Bangalore" },
+  { num: "14+", label: "Years in rheumatology" },
 ]
 
 const conditions = [
@@ -136,19 +136,11 @@ function GoogleIcon() {
 }
 
 export default function AboutUs() {
-  const conditionsRef = useRef(null)
   const [reviewIndex, setReviewIndex] = useState(0)
   const visibleReviews = useMemo(
     () => [0, 1, 2].map((offset) => patientReviews[(reviewIndex + offset) % patientReviews.length]),
     [reviewIndex],
   )
-  const scrollConditions = (direction) => {
-    const track = conditionsRef.current
-    if (!track) return
-    const card = track.querySelector("[data-condition-card]")
-    const distance = card ? card.getBoundingClientRect().width + 20 : 340
-    track.scrollBy({ left: direction === "left" ? -distance : distance, behavior: "smooth" })
-  }
 
   return (
     <div className="min-h-screen bg-background-light" style={{ fontFamily: "var(--font-base)" }}>
@@ -184,7 +176,7 @@ export default function AboutUs() {
       </section>
 
       {/* ── 2. STATS ── */}
-      <section className="w-full overflow-hidden" style={{ background: "#0f616e", padding: "clamp(30px, 3vw, 40px) 0 clamp(36px, 4vw, 44px)" }}>
+      {false && <section className="w-full overflow-hidden" style={{ background: "#0f616e", padding: "clamp(30px, 3vw, 40px) 0 clamp(36px, 4vw, 44px)" }}>
         <div className="max-w-[1200px]" style={{ margin: "0 auto", padding: "0 clamp(24px, 5vw, 64px)" }}>
           <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: "clamp(24px, 4vw, 48px)" }}>
             {siteStats.map((stat) => (
@@ -199,7 +191,7 @@ export default function AboutUs() {
             ))}
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* ── 3. WHY TRUST US ── */}
       <section className="w-full bg-[#eef7f5]" style={{ padding: "clamp(40px, 4vw, 48px) 0" }}>
@@ -274,7 +266,7 @@ export default function AboutUs() {
                 ))}
               </div>
               <p className="text-base leading-relaxed text-gray-600" style={{ marginBottom: "16px" }}>
-                Dr. Raghavendra H is a consultant rheumatologist with a focused practice in inflammatory arthritis, autoimmune disorders, and musculoskeletal conditions. He has treated over 5,000 patients across leading hospitals in Bangalore.
+                Dr. Raghavendra H is a consultant rheumatologist with a focused practice in inflammatory arthritis, autoimmune disorders, and musculoskeletal conditions. He has treated over 15,000 patients across leading hospitals in Bangalore.
               </p>
               <p className="text-base leading-relaxed text-gray-600" style={{ marginBottom: "16px" }}>
                 His approach is thorough, patient-first, and built around helping people understand their condition before any treatment decision is made. Every consultation is unhurried, evidence-based, and focused on finding the right path for each individual.
@@ -282,8 +274,8 @@ export default function AboutUs() {
               <p className="text-base leading-relaxed text-gray-600" style={{ marginBottom: "32px" }}>
                 Dr. Raghavendra believes that no patient should feel rushed or confused during their care. He takes the time to explain diagnoses clearly, in language patients can understand.
               </p>
-              <Link to="/book-appointment" className="inline-flex items-center rounded-full bg-[#0f616e] text-sm font-semibold text-white transition-opacity hover:opacity-90" style={{ gap: "8px", padding: "12px 28px" }}>
-                Book a consultation with Dr. Raghavendra <ArrowRight size={16} />
+              <Link to="/book-appointment" className="inline-flex items-center rounded-full bg-[#e86531] text-sm font-semibold text-white transition-opacity hover:opacity-90" style={{ gap: "8px", padding: "12px 28px" }}>
+                Book a consultation <ArrowRight size={16} />
               </Link>
             </div>
           </div>
@@ -301,52 +293,26 @@ export default function AboutUs() {
           <p className="w-full text-base leading-relaxed text-gray-600 lg:text-lg" style={{ marginBottom: "40px" }}>
             Our specialists care for major inflammatory, autoimmune and degenerative rheumatic conditions that affect joints, movement and quality of life.
           </p>
-          <div
-            ref={conditionsRef}
-            className="scrollbar-hide flex overflow-x-auto"
-            style={{ gap: "20px", paddingBottom: "8px", scrollSnapType: "x mandatory" }}
-          >
-            {conditions.map((condition) => (
-              <article
+          <div className="rounded-2xl bg-white" style={{ border: "1px solid #e4eef0", overflow: "hidden", boxShadow: "0 4px 24px rgba(15,97,110,0.07)" }}>
+            {conditions.map((condition, idx) => (
+              <div
                 key={condition.title}
-                data-condition-card
-                className="flex shrink-0 flex-col rounded-2xl border border-gray-200 bg-white transition-colors hover:border-[#0f616e]/45"
-                style={{ flexBasis: "clamp(285px, calc((100% - 40px) / 3), 386px)", height: "525px", padding: "clamp(22px, 2vw, 28px)", scrollSnapAlign: "start" }}
+                className="group flex items-center transition-colors hover:bg-[#f0fafa]"
+                style={{
+                  padding: "20px 32px",
+                  borderBottom: idx < conditions.length - 1 ? "1px solid #edf4f5" : "none",
+                  gap: "20px",
+                }}
               >
-                <div className="flex items-start" style={{ gap: "10px", marginBottom: "12px", minHeight: "34px" }}>
-                  <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#1AA3B5]" style={{ marginTop: "9px" }} />
-                  <h3 className="text-xl font-normal text-[#0f2e33]" style={{ lineHeight: 1.25 }}>{condition.title}</h3>
-                </div>
-                <p className="text-sm italic leading-relaxed text-gray-500" style={{ minHeight: "58px", marginBottom: "16px" }}>&quot;{condition.prompt}&quot;</p>
-                <p className="text-sm leading-relaxed text-gray-600" style={{ minHeight: "148px", marginBottom: "24px" }}>{condition.description}</p>
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500" style={{ marginBottom: "10px" }}>Common symptoms</p>
-                  <div className="flex flex-wrap" style={{ gap: "7px" }}>
-                    {condition.symptoms.slice(0, 4).map((symptom) => (
-                      <span key={symptom} className="rounded-full bg-[#e0f3f5] text-xs font-semibold text-[#0f616e]" style={{ padding: "5px 10px" }}>{symptom}</span>
-                    ))}
-                  </div>
-                </div>
-              </article>
+                <span style={{ fontFamily: "var(--font-display)", fontSize: "28px", fontWeight: 700, color: "#c8e8eb", minWidth: "48px", lineHeight: 1, flexShrink: 0 }}>
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+                <span style={{ fontSize: "16px", fontWeight: 600, color: "#0f2e33", lineHeight: 1.3, flex: 1 }}>{condition.title}</span>
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: "#1AA3B5", flexShrink: 0 }}>
+                  <ArrowRight size={18} />
+                </span>
+              </div>
             ))}
-          </div>
-          <div className="flex justify-center" style={{ gap: "12px", marginTop: "32px" }}>
-            <button
-              type="button"
-              aria-label="Previous condition"
-              onClick={() => scrollConditions("left")}
-              className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200 bg-white text-[#0f2e33] transition-colors hover:border-[#0f616e] hover:text-[#0f616e]"
-            >
-              <ChevronLeft size={22} />
-            </button>
-            <button
-              type="button"
-              aria-label="Next condition"
-              onClick={() => scrollConditions("right")}
-              className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200 bg-white text-[#0f2e33] transition-colors hover:border-[#0f616e] hover:text-[#0f616e]"
-            >
-              <ChevronRight size={22} />
-            </button>
           </div>
         </div>
       </section>
@@ -380,9 +346,9 @@ export default function AboutUs() {
         <div className="max-w-[1360px]" style={{ margin: "0 auto", padding: "0 16px" }}>
           <p className="text-sm font-semibold uppercase tracking-wider text-[#1AA3B5]" style={{ marginBottom: "12px" }}>Patient Stories</p>
           <h2 className="text-3xl font-normal text-[#0f2e33] lg:text-4xl" style={{ marginBottom: "16px" }}>
-            5,000+ patients.
+            15,000+ patients.
             <br />
-            5,000+ reasons to seek care earlier.
+            15,000+ reasons to seek care earlier.
           </h2>
           <p className="w-full text-lg leading-relaxed text-gray-600" style={{ marginBottom: "40px" }}>
             Here is what some of our patients have shared about their experience at Omni Rheuma. Real words, real progress.

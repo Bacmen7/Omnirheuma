@@ -642,7 +642,7 @@ function Osteoarthritis() {
                     If the symptoms discussed in this article sound familiar, a proper diagnosis is the need of the hour. Joint pain that is persistent, limiting, or getting worse is not something to be ignored. A rheumatologist can give you clarity on what's happening to your joints and a plan for managing it. The earlier you take action, the healthier your life can be.
                   </p>
                   <a
-                    href="#"
+                    href="/book-appointment"
                     className="group"
                     style={{
                       display: "inline-flex",
@@ -733,7 +733,7 @@ function Osteoarthritis() {
                       Consultant Rheumatologist for osteoarthritis evaluation and long-term joint care.
                     </p>
                     <a
-                      href="#"
+                      href="/book-appointment"
                       className="group"
                       style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontSize: "13px", fontWeight: 700, padding: "11px 16px 11px 18px", borderRadius: "9999px", textDecoration: "none" }}
                     >

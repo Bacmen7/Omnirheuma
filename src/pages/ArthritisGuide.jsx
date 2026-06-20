@@ -581,7 +581,7 @@ function ArthritisGuide() {
                     </ul>
 
                     <a
-                      href="#"
+                      href="/book-appointment"
                       className="group"
                       style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none" }}
                     >
@@ -642,7 +642,7 @@ function ArthritisGuide() {
                       Consultant Rheumatologist for rheumatoid arthritis evaluation and long-term joint care.
                     </p>
                     <a
-                      href="#"
+                      href="/book-appointment"
                       className="group"
                       style={{ fontFamily: "var(--font-base)", display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontSize: "13px", fontWeight: 700, padding: "11px 16px 11px 18px", borderRadius: "9999px", textDecoration: "none" }}
                     >
@@ -720,7 +720,7 @@ function ArthritisGuide() {
                   </h2>
                   <div className="flex flex-col sm:flex-row items-center sm:items-center gap-7 md:gap-6">
                     <a
-                      href="#"
+                      href="/book-appointment"
                       className="inline-block rounded-full font-semibold text-[15px] transition-all hover:opacity-90 text-center"
                       style={{ backgroundColor: "#1AA3B5", color: "#ffffff", padding: "16px 32px" }}
                     >
@@ -729,7 +729,7 @@ function ArthritisGuide() {
                     <div className="flex items-center gap-2 text-white">
                       <span className="text-[15px] text-gray-100 opacity-90">or</span>
                       <a
-                        href="#"
+                        href="/book-appointment"
                         className="text-[15px] font-semibold underline underline-offset-[6px] hover:opacity-80 transition-opacity"
                         style={{ color: "#ffffff", textDecorationThickness: "2px" }}
                       >

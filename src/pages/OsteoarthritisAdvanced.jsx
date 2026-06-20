@@ -500,7 +500,7 @@ function OsteoarthritisAdvanced() {
                       Consultant Rheumatologist for osteoarthritis evaluation and long-term joint care.
                     </p>
                     <a
-                      href="#"
+                      href="/book-appointment"
                       className="group"
                       style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontSize: "13px", fontWeight: 700, padding: "11px 16px 11px 18px", borderRadius: "9999px", textDecoration: "none" }}
                     >

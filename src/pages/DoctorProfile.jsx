@@ -273,41 +273,6 @@ function DoctorProfile() {
               <section id="background">
                 <h2 className="text-[#0f616e]" style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(28px, 4vw, 34px)", lineHeight: "40px", marginBottom: "20px" }}>Experience & Qualifications</h2>
 
-                <div style={{ marginBottom: "32px" }}>
-                  <h3 className="text-[#0f616e]" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "16px", lineHeight: "24px", marginBottom: "12px" }}>Education</h3>
-                  <ul className="space-y-2.5 sm:space-y-3">
-                    {doctor.education.map((item, i) => (
-                      <li key={i} className="flex gap-2.5 sm:gap-3">
-                        <div className="w-1.5 h-1.5 bg-[#0f616e] rounded-full mt-1.5 sm:mt-2 shrink-0" />
-                        <span className="text-sm sm:text-base" style={{ fontFamily: "var(--font-base)", fontWeight: 400, lineHeight: "1.75", color: "rgb(24, 36, 57)" }}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div style={{ marginBottom: "32px" }}>
-                  <h3 className="text-[#0f616e]" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "16px", lineHeight: "24px", marginBottom: "12px" }}>Awards & Achievements</h3>
-                  <ul className="space-y-2">
-                    {doctor.awards.map((item, i) => (
-                      <li key={i} className="flex gap-2.5 sm:gap-3">
-                        <div className="w-1.5 h-1.5 bg-[#0f616e] rounded-full mt-1.5 sm:mt-2 shrink-0" />
-                        <span className="text-sm sm:text-base" style={{ fontFamily: "var(--font-base)", fontWeight: 400, lineHeight: "1.75", color: "rgb(24, 36, 57)" }}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div style={{ marginBottom: "32px" }}>
-                  <h3 className="text-[#0f616e]" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "16px", lineHeight: "24px", marginBottom: "12px" }}>Talks & Publications</h3>
-                  <ul className="space-y-2">
-                    {doctor.publications.map((item, i) => (
-                      <li key={i} className="flex gap-2.5 sm:gap-3">
-                        <div className="w-1.5 h-1.5 bg-[#0f616e] rounded-full mt-1.5 sm:mt-2 shrink-0" />
-                        <span className="text-sm sm:text-base" style={{ fontFamily: "var(--font-base)", fontWeight: 400, lineHeight: "1.75", color: "rgb(24, 36, 57)" }}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
 
                 <div>
                   <h3 className="text-[#0f616e]" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "16px", lineHeight: "24px", marginBottom: "12px" }}>Languages Spoken</h3>
