@@ -111,19 +111,12 @@ function BriefingFooter() {
         </div>{/* end flex row */}
 
         {/* Logo + Social + Address row */}
-        <div className="flex flex-col lg:flex-row gap-10 mb-10 pt-10 border-t border-gray-200 items-center">
-          <div className="flex flex-col lg:flex-row gap-8 flex-1">
-            <div className="flex-1">
-              <p className="text-xs font-bold text-[#1A355D] mb-1">Omni Rheuma Clinics: Rachenahalli, Thanisandra</p>
-              <p className="text-sm text-[#515a6a] leading-relaxed" style={{ maxWidth: "340px" }}>No. 42 &amp; 25, 1st Floor, 80 Feet Road, Dr. Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Thanisandra, above Pepperfry Furniture, RK Hegde Nagar, Bengaluru – 560077</p>
-              <p className="text-sm text-[#515a6a]" style={{ marginTop: "24px" }}>Dr Raghavendra also practices at <span className="font-semibold text-[#1A355D]">Manipal Hospital</span> (Hebbal and Yelahanka)</p>
-            </div>
-          </div>
-          <div className="flex-shrink-0 flex flex-col items-center lg:items-end">
-            <Link to="/" className="inline-flex items-center mb-4" aria-label="Omni Rheuma home">
-              <img src="/logo.png" alt="Omni Rheuma logo" className="h-32 w-32 object-contain" />
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-10 mb-10 pt-10 border-t border-gray-200 lg:items-start">
+          <div className="flex-shrink-0 flex flex-col items-center lg:items-start">
+            <Link to="/" className="inline-flex items-center mb-2" aria-label="Omni Rheuma home">
+              <img src="/logo.png" alt="Omni Rheuma logo" className="h-36 w-36 object-contain" />
             </Link>
-            <div className="flex gap-4 mb-4">
+            <div className="flex gap-4 mb-3">
               <a href="#" className="w-10 h-10 rounded-full bg-[#1AA3B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
                 <Facebook fill="currentColor" strokeWidth={0} size={20} />
               </a>
@@ -137,11 +130,17 @@ function BriefingFooter() {
                 <Linkedin fill="currentColor" strokeWidth={0} size={20} />
               </a>
             </div>
-            <p className="text-xs font-bold text-[#1A355D] mb-1 text-center lg:text-right">For appointments, please call</p>
-            <a href="tel:+918290638358" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-right">+91 82906 38358</a>
-            <a href="mailto:omnirheuma@gmail.com" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-right">omnirheuma@gmail.com</a>
+            <p className="text-xs font-bold text-[#1A355D] mb-1 text-center lg:text-left">For appointments, please call</p>
+            <a href="tel:+918290638358" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-left">+91 82906 38358</a>
+            <a href="mailto:omnirheuma@gmail.com" className="block text-sm font-semibold text-[#1A355D] hover:text-[#0f616e] text-center lg:text-left">omnirheuma@gmail.com</a>
+          </div>
+          <div className="flex-shrink-0 text-left" style={{ maxWidth: "340px" }}>
+            <p className="text-xs font-bold text-[#1A355D] mb-1">Omni Rheuma Clinics: Rachenahalli, Thanisandra</p>
+            <p className="text-sm text-[#515a6a] leading-relaxed">No. 42 &amp; 25, 1st Floor, 80 Feet Road, Dr. Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Thanisandra, above Pepperfry Furniture, RK Hegde Nagar, Bengaluru – 560077</p>
+            <p className="text-sm text-[#515a6a]" style={{ marginTop: "24px" }}>Dr Raghavendra also practices at <span className="font-semibold text-[#1A355D]">Manipal Hospital</span> (Hebbal and Yelahanka)</p>
           </div>
         </div>
+
 
         {/* Bottom Legal */}
         <div className="border-t border-gray-200 pt-8 text-[#515a6a]">
