@@ -122,3 +122,63 @@ p {
   }
 }
 
+
+.floating-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 640px) {
+  .floating-whatsapp {
+    width: 52px;
+    height: 52px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+.mobile-bottom-tabs {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+  z-index: 9998;
+  padding: 4px 4px calc(4px + env(safe-area-inset-bottom));
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-tabs {
+    display: flex;
+  }
+
+  body {
+    padding-bottom: 76px;
+  }
+
+  .floating-whatsapp {
+    bottom: 80px;
+    display: none;
+  }
+}

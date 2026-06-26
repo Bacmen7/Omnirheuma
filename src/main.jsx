@@ -23,6 +23,8 @@ import Doctors from "./pages/Doctors.jsx"
 import Locations from "./pages/Locations.jsx"
 import Conditions from "./pages/Conditions.jsx"
 import BookAppointment from "./pages/BookAppointment.jsx"
+import FloatingWhatsApp from "./components/FloatingWhatsApp.jsx"
+import MobileBottomTabs from "./components/MobileBottomTabs.jsx"
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -59,6 +61,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/conditions" element={<Conditions />} />
         <Route path="/book-appointment" element={<BookAppointment />} />
       </Routes>
+      <FloatingWhatsApp />
+      <MobileBottomTabs />
     </BrowserRouter>
   </StrictMode>,
 )

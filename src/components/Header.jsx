@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react"
 import { Link } from "react-router-dom"
-import { ArrowUpRight, ArrowRight } from "lucide-react"
+import { ArrowUpRight, ArrowRight, Phone } from "lucide-react"
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -196,6 +196,16 @@ function Header() {
               <ArrowRight size={14} />
             </span>
           </Link>
+
+          {/* Mobile Phone Call */}
+          <a
+            href="tel:+918290638358"
+            aria-label="Call clinic"
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border-2 transition-colors"
+            style={{ borderColor: "#e86531", color: "#e86531" }}
+          >
+            <Phone size={16} strokeWidth={2.5} />
+          </a>
 
           {/* Mobile Menu Toggle */}
           <button

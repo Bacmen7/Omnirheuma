@@ -10,11 +10,11 @@ function BriefingFooter() {
         <div className="flex flex-col lg:flex-row gap-8 mb-7 items-start">
 
           {/* LEFT: Logo + tagline + social */}
-          <div className="flex flex-col items-center lg:items-start" style={{ width: "240px", flexShrink: 0 }}>
+          <div className="flex flex-col items-start w-full lg:w-[240px] lg:flex-shrink-0">
             <Link to="/" className="inline-flex items-center mb-2" aria-label="Omni Rheuma home">
-              <img src="/logo.png" alt="Omni Rheuma logo" className="h-20 w-20 object-contain" />
+              <img src="/logo.png" alt="Omni Rheuma logo" className="h-28 w-28 lg:h-20 lg:w-20 object-contain" />
             </Link>
-            <p className="text-center lg:text-left" style={{ marginBottom: "18px", lineHeight: "24px", color: "#5E5E5E" }}>
+            <p className="text-left" style={{ marginBottom: "18px", lineHeight: "24px", color: "#5E5E5E" }}>
               Personalised care for people living with joint and autoimmune conditions. Led by a DM-qualified rheumatologist.
             </p>
             <div className="flex gap-2">
@@ -34,21 +34,19 @@ function BriefingFooter() {
           </div>
 
           {/* CENTER: Quick Links */}
-          <div className="flex flex-row gap-12 flex-1 justify-center lg:justify-center" style={{ paddingLeft: "0" }}>
-            <div>
-              <h4 className="font-bold uppercase" style={{ marginBottom: "14px", letterSpacing: "0.04em", color: "#0F616E", fontSize: "16px", lineHeight: "22px", fontWeight: 700 }}>Quick Links</h4>
-              <ul className="space-y-2" style={{ color: "#5E5E5E" }}>
-                <li><Link to="/specialist/1" className="hover:text-[#0F616E] transition-colors">Doctor Profile</Link></li>
-                <li><Link to="/about" className="hover:text-[#0F616E] transition-colors">About Us</Link></li>
-                <li><Link to="/health-guide" className="hover:text-[#0F616E] transition-colors">Patient Education</Link></li>
-              </ul>
-            </div>
+          <div className="flex flex-col items-start flex-1">
+            <h4 className="font-bold uppercase text-left" style={{ marginBottom: "14px", letterSpacing: "0.04em", color: "#0F616E", fontSize: "16px", lineHeight: "22px", fontWeight: 700 }}>Quick Links</h4>
+            <ul className="space-y-2 text-left" style={{ color: "#5E5E5E" }}>
+              <li><Link to="/specialist/1" className="hover:text-[#0F616E] transition-colors">Doctor Profile</Link></li>
+              <li><Link to="/about" className="hover:text-[#0F616E] transition-colors">About Us</Link></li>
+              <li><Link to="/health-guide" className="hover:text-[#0F616E] transition-colors">Patient Education</Link></li>
+            </ul>
           </div>
 
           {/* RIGHT: Contact Us */}
-          <div className="flex flex-col items-center lg:items-start flex-shrink-0" style={{ width: "420px", maxWidth: "100%" }}>
-            <h4 className="font-bold uppercase text-center lg:text-left" style={{ marginBottom: "14px", letterSpacing: "0.04em", color: "#0F616E", fontSize: "16px", lineHeight: "22px", fontWeight: 700 }}>Contact Us</h4>
-            <div className="space-y-3">
+          <div className="flex flex-col items-start flex-shrink-0 w-full lg:w-[420px]" style={{ maxWidth: "100%" }}>
+            <h4 className="font-bold uppercase text-left" style={{ marginBottom: "14px", letterSpacing: "0.04em", color: "#0F616E", fontSize: "16px", lineHeight: "22px", fontWeight: 700 }}>Contact Us</h4>
+            <div className="space-y-3 text-left w-full">
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0" style={{ color: "#1AA3B5" }} />
                 <div>
