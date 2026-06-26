@@ -34,7 +34,7 @@ function BriefingFooter() {
           </div>
 
           {/* CENTER: Quick Links */}
-          <div className="flex flex-col items-start flex-1">
+          <div className="flex flex-col items-start lg:items-center flex-1">
             <h4 className="font-bold uppercase text-left" style={{ marginBottom: "14px", letterSpacing: "0.04em", color: "#0F616E", fontSize: "16px", lineHeight: "22px", fontWeight: 700 }}>Quick Links</h4>
             <ul className="space-y-2 text-left" style={{ color: "#5E5E5E" }}>
               <li><Link to="/specialist/1" className="hover:text-[#0F616E] transition-colors">Doctor Profile</Link></li>
