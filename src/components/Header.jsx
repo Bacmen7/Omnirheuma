@@ -17,7 +17,7 @@ function Header() {
     { label: "Patient Education", to: "/health-guide" },
     { label: "Doctors", to: "/doctors" },
     { label: "Locations", to: "/locations" },
-    { label: "Blog", to: "/blog" },
+    { label: "About Us", to: "/about" },
   ]
 
   const mobileQuickLinks = [

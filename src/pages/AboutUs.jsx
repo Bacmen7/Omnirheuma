@@ -1,8 +1,11 @@
 import { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
-import { ArrowRight, ChevronLeft, ChevronRight, MessageCircle, Search, Zap, MapPin } from "lucide-react"
+import { ArrowRight, ChevronLeft, ChevronRight, MessageCircle, Search, Zap, MapPin, Clock, ClipboardList, ShieldCheck, CalendarDays, FileText, Pill, Phone, Mail, Bone, Activity, Droplet, Spline, Shield, HeartPulse, Hand, Sparkles } from "lucide-react"
 import Header from "../components/Header"
 import BriefingFooter from "../components/BriefingFooter"
+import Testimonials from "../components/Testimonials"
+
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwUDPYes__c1Zt8e_DM7Q5kgdiBIfFfPLrTr8MouZa1je8uGW8LgO6j83uE0qO_3RU0/exec"
 
 const trustCards = [
   { icon: MessageCircle, title: "Clear & Simple Communication", desc: "We explain your condition in plain language, answer your questions patiently, and help you feel confident about your treatment plan." },
@@ -16,6 +19,56 @@ const steps = [
   { num: 2, title: "Diagnosis & evaluation", desc: "Your specialist reviews your symptoms, orders relevant tests, and performs a detailed joint and autoimmune evaluation." },
   { num: 3, title: "Treatment & follow-up", desc: "A personalised treatment plan is created. We monitor your progress and adjust therapy for the best long-term outcome." },
 ]
+
+const symptomSigns = [
+  "Waking up with stiff joints",
+  "Pain that gets worse with rest",
+  "Swelling that comes and goes",
+  "Years of inconclusive tests",
+  "Multiple specialists, no answers",
+  'Told it is "just arthritis" or "your age"',
+  "Painkillers no longer helping",
+  "Fatigue alongside joint pain",
+]
+
+const approachCards = [
+  { icon: Clock, title: "Early Diagnosis Matters", desc: "Getting the right diagnosis early can help prevent long-term joint damage. Our focus is on finding the underlying cause, rather than symptoms." },
+  { icon: ClipboardList, title: "Thorough Assessment", desc: "We take a complete look at you - Your symptoms, medical history, test results, and imaging studies to understand what is causing your joint problems." },
+  { icon: ShieldCheck, title: "Clear, Simple Guidance", desc: "No complicated medical jargon. We explain what you have, what causes it, and what your treatment options are — in simple language." },
+  { icon: MapPin, title: "Convenient Access in Bengaluru", desc: "Consultations are available at Omni Rheuma Clinic." },
+]
+
+const specialiseConditions = [
+  { icon: Bone, title: "Rheumatoid Arthritis", desc: "An immune system condition causing joint swelling, stiffness, and pain — especially in the mornings.", href: "/Rheumatoid-Arthritis" },
+  { icon: Activity, title: "Osteoarthritis", desc: "Wear of the cartilage cushioning your joints, leading to pain, stiffness, and reduced movement over time.", href: "/osteoarthritis" },
+  { icon: Droplet, title: "Gout", desc: "Sudden, severe pain (often in the big toe) caused by uric acid crystals building up in a joint.", href: "/gout" },
+  { icon: Spline, title: "Ankylosing Spondylitis", desc: "A condition mainly affecting the spine and lower back, causing inflammation and progressive stiffness.", href: "/conditions" },
+  { icon: Shield, title: "Lupus (SLE)", desc: "A complex immune condition that can affect joints, skin, kidneys, and other organs throughout the body.", href: "/conditions" },
+  { icon: HeartPulse, title: "Osteoporosis", desc: "A gradual weakening of bones that increases the risk of fractures, often without early warning signs.", href: "/conditions" },
+  { icon: Hand, title: "Psoriatic Arthritis", desc: "Joint inflammation linked to the skin condition psoriasis, affecting fingers, toes, and the spine.", href: "/conditions" },
+  { icon: Sparkles, title: "Fibromyalgia", desc: "Widespread body pain, fatigue, and tenderness — often dismissed, always real, and fully treatable.", href: "/conditions" },
+]
+
+const meetCredentials = "MBBS · MD (Internal Medicine) · DM Clinical Immunology & Rheumatology"
+
+const meetTags = [
+  { label: "DM Gold Medalist", highlight: true },
+  { label: "Clinical Immunology", highlight: false },
+  { label: "Rheumatology", highlight: false },
+  { label: "Autoimmune Disorders", highlight: false },
+  { label: "Joint Disease Management", highlight: false },
+  { label: "TN MGR University", highlight: true },
+]
+
+const journeySteps = [
+  { num: 1, icon: CalendarDays, title: "Book Your Slot", desc: "Fill the form below or call us directly. Choose a clinic location that works for you." },
+  { num: 2, icon: FileText, title: "Share Your History", desc: "Bring any past reports, prescriptions, or test results. Even partial information helps us understand your journey." },
+  { num: 3, icon: Search, title: "Your Consultation", desc: "Dr. Raghavendra H will examine you, review your history, and explain exactly what is happening with your joints." },
+  { num: 4, icon: Pill, title: "Your Care Plan", desc: "You leave with a clear diagnosis, a treatment plan, and answers to the questions you have been carrying for years." },
+]
+
+const fieldLabel = { display: "block", fontSize: "13px", fontWeight: 600, color: "#0f2e33", marginBottom: "8px" }
+const fieldInput = { width: "100%", borderRadius: "10px", border: "1px solid #dde3e4", padding: "12px 14px", fontSize: "14px", color: "#0f2e33", outline: "none", boxSizing: "border-box", background: "#fff", fontFamily: "var(--font-base)" }
 
 const qualifications = ["MBBS", "MD — Internal Medicine", "DM — Rheumatology"]
 
@@ -137,6 +190,37 @@ function GoogleIcon() {
 
 export default function AboutUs() {
   const [reviewIndex, setReviewIndex] = useState(0)
+  const [form, setForm] = useState({ name: "", phone: "", message: "" })
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const updateForm = (key, val) => setForm(f => ({ ...f, [key]: val }))
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault()
+    if (!form.name || !form.phone) {
+      alert("Please fill in your name and phone number.")
+      return
+    }
+    if (loading) return
+    setLoading(true)
+    try {
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          message: form.message,
+          source: "about-us-contact",
+        }),
+      })
+    } catch (_) {}
+    setLoading(false)
+    setSubmitted(true)
+    setForm({ name: "", phone: "", message: "" })
+    setTimeout(() => setSubmitted(false), 3000)
+  }
+
   const visibleReviews = useMemo(
     () => [0, 1, 2].map((offset) => patientReviews[(reviewIndex + offset) % patientReviews.length]),
     [reviewIndex],
@@ -181,10 +265,8 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: "clamp(24px, 4vw, 48px)" }}>
             {siteStats.map((stat) => (
               <div key={stat.label} className="overflow-hidden" style={{ textAlign: "center" }}>
-                <div className="relative" style={{ height: "clamp(130px, 12vw, 160px)" }}>
-                  <span className="absolute select-none whitespace-nowrap font-bold leading-none tracking-tight" style={{ left: "50%", top: 0, transform: "translateX(-50%)", fontSize: "clamp(52px, 5.5vw, 80px)", color: "rgba(255,255,255,0.07)" }}>{stat.num}</span>
-                  <span className="absolute select-none whitespace-nowrap font-bold leading-none tracking-tight" style={{ left: "50%", top: "clamp(28px, 2.7vw, 38px)", transform: "translateX(-50%)", fontSize: "clamp(52px, 5.5vw, 80px)", color: "rgba(255,255,255,0.14)" }}>{stat.num}</span>
-                  <span className="absolute whitespace-nowrap font-bold leading-none tracking-tight" style={{ left: "50%", top: "clamp(56px, 5.2vw, 72px)", transform: "translateX(-50%)", fontSize: "clamp(52px, 5.5vw, 80px)", color: "rgba(255,255,255,0.94)" }}>{stat.num}</span>
+                <div style={{ height: "clamp(80px, 8vw, 110px)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <span className="whitespace-nowrap font-bold leading-none tracking-tight" style={{ fontSize: "clamp(52px, 5.5vw, 80px)", color: "rgba(255,255,255,0.94)" }}>{stat.num}</span>
                 </div>
                 <p className="font-semibold uppercase" style={{ color: "rgba(255,255,255,0.68)", fontSize: "clamp(12px, 1vw, 14px)", letterSpacing: "0.14em", lineHeight: 1.35, margin: "12px 0 0" }}>{stat.label}</p>
               </div>
@@ -193,13 +275,13 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* ── 3. WHY TRUST US ── */}
+      {/* ── 3 & 4 HIDDEN (Our Approach / How It Works) — commented out per request ──
       <section className="w-full bg-[#eef7f5]" style={{ padding: "clamp(40px, 4vw, 48px) 0" }}>
         <div className="max-w-[1320px]" style={{ margin: "0 auto", padding: "0 clamp(16px, 3vw, 28px)" }}>
           <p className="text-sm font-semibold uppercase tracking-wider text-[#1AA3B5]" style={{ marginBottom: "12px" }}>Our Approach</p>
           <h2 className="text-3xl font-normal text-[#0f2e33] lg:text-4xl" style={{ marginBottom: "16px" }}>Why patients trust Omni Rheuma</h2>
           <p className="w-full text-base leading-relaxed text-[#5e5e5e] lg:text-lg" style={{ marginBottom: "32px" }}>
-            We believe good care starts with understanding your concerns. That&apos;s why we give every patient enough time to talk, understand their situation, and get a treatment plan that&apos;s clear and easy to follow. No rushed visits. No complicated medical terms. Just honest advice from specialists you can trust.
+            We believe good care starts with understanding your concerns. That's why we give every patient enough time to talk, understand their situation, and get a treatment plan that's clear and easy to follow. No rushed visits. No complicated medical terms. Just honest advice from specialists you can trust.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "24px" }}>
             {trustCards.map((item) => (
@@ -215,7 +297,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* ── 4. HOW IT WORKS ── */}
       <section className="w-full bg-[#f9f9f9]" style={{ padding: "clamp(48px, 5vw, 64px) 0" }}>
         <div className="max-w-[1200px]" style={{ margin: "0 auto", padding: "0 16px" }}>
           <p className="text-center text-sm font-semibold uppercase tracking-wider text-[#1AA3B5]" style={{ marginBottom: "12px" }}>How It Works</p>
@@ -234,7 +315,298 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+      ── end hidden 3 & 4 ── */}
 
+      {/* ── A. SOUND FAMILIAR / SYMPTOMS ── */}
+      <section className="w-full" style={{ background: "#fbfaf8", padding: "clamp(56px, 6vw, 88px) 0" }}>
+        <div className="max-w-[920px]" style={{ margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "clamp(1.7rem, 3.2vw, 2.5rem)", fontWeight: 400, lineHeight: 1.18, marginBottom: "32px" }}>
+            If any of these sound familiar,{" "}
+            <span style={{ fontStyle: "italic", color: "#1AA3B5" }}>you are in the right place</span>
+          </h2>
+          <div className="flex flex-wrap justify-center" style={{ gap: "12px", marginBottom: "32px" }}>
+            {symptomSigns.map((sign) => (
+              <span key={sign} style={{ display: "inline-flex", alignItems: "center", background: "#e0f3f5", color: "#0f616e", borderRadius: "100px", padding: "10px 20px", fontSize: "14px", fontWeight: 600, border: "1px solid #cfe9ec" }}>
+                {sign}
+              </span>
+            ))}
+          </div>
+          <p style={{ color: "#5e5e5e", fontSize: "15px", lineHeight: 1.7, maxWidth: "640px", margin: "0 auto" }}>
+            These are not things you have to simply live with. A rheumatologist can find the cause, give it a name, and help you build a plan that actually works.
+          </p>
+        </div>
+      </section>
+
+      {/* ── B. OUR APPROACH / CARE THAT STARTS WITH LISTENING ── */}
+      <section className="w-full bg-white" style={{ padding: "clamp(56px, 6vw, 96px) 0" }}>
+        <div className="max-w-[1200px]" style={{ margin: "0 auto", padding: "0 clamp(20px, 4vw, 48px)" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "clamp(32px, 4vw, 56px)", alignItems: "center" }}>
+
+            {/* Left: doctor-with-patient image + quote card */}
+            <div className="relative">
+              <div style={{ background: "#e0f3f5", borderRadius: "24px", minHeight: "460px", overflow: "hidden" }}>
+                <img src="/images/hero-consult.webp" alt="Rheumatologist in consultation with a patient" style={{ width: "100%", height: "100%", minHeight: "460px", objectFit: "cover", objectPosition: "center", display: "block" }} />
+              </div>
+              <div className="bg-white" style={{ position: "relative", marginTop: "-64px", marginLeft: "auto", marginRight: "16px", maxWidth: "300px", borderRadius: "16px", padding: "24px", boxShadow: "0 18px 50px rgba(15,97,110,0.14)" }}>
+                <span style={{ color: "#e86531", fontSize: "34px", fontFamily: "var(--font-display)", lineHeight: 1, display: "block", marginBottom: "6px" }}>&ldquo;</span>
+                <p style={{ fontStyle: "italic", color: "#0f2e33", fontSize: "15px", lineHeight: 1.6, marginBottom: "14px" }}>
+                  Every joint condition has a name, a cause, and a treatment. My job is to find all three.
+                </p>
+                <p style={{ fontWeight: 700, color: "#0f2e33", fontSize: "13px" }}>Dr. Raghavendra H</p>
+              </div>
+            </div>
+
+            {/* Right: content */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider" style={{ color: "#e86531", marginBottom: "12px" }}>Our Approach</p>
+              <h2 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "clamp(2rem, 3.6vw, 3rem)", fontWeight: 400, lineHeight: 1.12, marginBottom: "20px" }}>Care that starts with listening</h2>
+              <p style={{ color: "#5e5e5e", fontSize: "16px", lineHeight: 1.7, marginBottom: "28px" }}>
+                We know most patients arrive here after a long, frustrating journey. At Omni Rheuma, we take the time to understand your full history before anything else.
+              </p>
+              <div className="flex flex-col" style={{ gap: "14px" }}>
+                {approachCards.map((card) => (
+                  <div key={card.title} className="flex" style={{ gap: "16px", background: "#fff", border: "1px solid #ececec", borderRadius: "14px", padding: "20px 22px", boxShadow: "0 2px 12px rgba(0,0,0,0.03)" }}>
+                    <span className="flex shrink-0 items-center justify-center" style={{ width: "40px", height: "40px", borderRadius: "10px", background: "#e0f3f5", color: "#0f616e" }}>
+                      <card.icon size={20} strokeWidth={1.6} />
+                    </span>
+                    <div>
+                      <h3 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "18px", fontWeight: 500, marginBottom: "4px" }}>{card.title}</h3>
+                      <p style={{ color: "#7a8590", fontSize: "14px", lineHeight: 1.6 }}>{card.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── C. WHAT WE TREAT / CONDITIONS WE SPECIALISE IN ── */}
+      <section className="w-full" style={{ background: "#0F616E", padding: "clamp(56px, 6vw, 96px) 0" }}>
+        <div className="max-w-[1200px]" style={{ margin: "0 auto", padding: "0 clamp(20px, 4vw, 48px)" }}>
+          <div style={{ textAlign: "center", marginBottom: "48px" }}>
+            <p className="text-sm font-semibold uppercase tracking-wider" style={{ color: "#1AA3B5", marginBottom: "14px" }}>What We Treat</p>
+            <h2 style={{ fontFamily: "var(--font-display)", color: "#ffffff", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 400, lineHeight: 1.12, marginBottom: "16px" }}>Conditions we specialise in</h2>
+            <p style={{ color: "rgba(255,255,255,0.72)", fontSize: "16px", lineHeight: 1.7, maxWidth: "640px", margin: "0 auto" }}>
+              Rheumatic diseases affect your joints, muscles, and immune system. Many go undiagnosed for years. We help you find clarity.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "20px" }}>
+            {specialiseConditions.map((c) => {
+              const Icon = c.icon
+              return (
+                <div key={c.title} className="flex flex-col" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: "16px", padding: "28px 24px" }}>
+                  <span className="flex items-center justify-center" style={{ width: "44px", height: "44px", borderRadius: "12px", background: "rgba(26,163,181,0.18)", marginBottom: "18px" }}>
+                    <Icon size={22} color="#1AA3B5" />
+                  </span>
+                  <h3 style={{ fontFamily: "var(--font-display)", color: "#ffffff", fontSize: "20px", fontWeight: 500, marginBottom: "10px" }}>{c.title}</h3>
+                  <p style={{ color: "rgba(255,255,255,0.68)", fontSize: "14px", lineHeight: 1.65, marginBottom: "18px", flex: 1 }}>{c.desc}</p>
+                  <Link to={c.href} style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "#1AA3B5", fontWeight: 700, fontSize: "13px", textDecoration: "none" }}>
+                    Learn more →
+                  </Link>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── D. MEET YOUR RHEUMATOLOGIST ── */}
+      <section className="w-full bg-white" style={{ padding: "clamp(56px, 6vw, 96px) 0" }}>
+        <div className="max-w-[1200px]" style={{ margin: "0 auto", padding: "0 clamp(20px, 4vw, 48px)" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr]" style={{ gap: "clamp(28px, 4vw, 48px)", alignItems: "start" }}>
+
+            {/* Left: photo + location */}
+            <div className="flex flex-col" style={{ gap: "14px" }}>
+              <div style={{ background: "#e0f3f5", borderRadius: "20px", overflow: "hidden", aspectRatio: "3 / 4" }}>
+                <img src="/raghav.webp" alt="Dr. Raghavendra H" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
+              </div>
+              <div className="flex items-start" style={{ gap: "12px", background: "#eef7f5", borderRadius: "16px", padding: "16px 18px" }}>
+                <span className="flex items-center justify-center shrink-0" style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#0f616e", color: "#fff", marginTop: "2px" }}>
+                  <MapPin size={14} />
+                </span>
+                <div>
+                  <p style={{ color: "#0f2e33", fontSize: "14px", fontWeight: 700, marginBottom: "3px" }}>Omni Rheuma Clinic, Rachenahalli, Thanisandra</p>
+                  <p style={{ color: "#5e5e5e", fontSize: "12.5px", lineHeight: 1.55 }}>No. 42 &amp; 25, 1st Floor, 80 Feet Road, Dr. Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Thanisandra, above Pepperfry Furniture, RK Hegde Nagar, Bengaluru – 560077</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: details */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider" style={{ color: "#e86531", marginBottom: "12px" }}>Meet Your Rheumatologist</p>
+              <h2 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 400, lineHeight: 1.1, marginBottom: "12px" }}>Dr. Raghavendra H</h2>
+              <p style={{ color: "#5e5e5e", fontSize: "14px", lineHeight: 1.6 }}>{meetCredentials}</p>
+              <p style={{ color: "#5e5e5e", fontSize: "14px", lineHeight: 1.6, marginBottom: "24px" }}>DM Gold Medalist, TN MGR University</p>
+
+              <div style={{ background: "#e8f4f6", borderLeft: "3px solid #0f616e", borderRadius: "8px", padding: "22px 24px", marginBottom: "28px" }}>
+                <p style={{ fontStyle: "italic", color: "#3f5258", fontSize: "15px", lineHeight: 1.7, marginBottom: "12px" }}>
+                  &ldquo;Most patients who come to me have spent years being told their pain is normal. It is not. Every joint condition has a name, a cause, and a treatment. My job is to find all three.&rdquo;
+                </p>
+                <p style={{ fontWeight: 700, color: "#0f2e33", fontSize: "13px" }}>Dr. Raghavendra H, DM Rheumatology</p>
+              </div>
+
+              <div className="flex flex-wrap" style={{ gap: "10px", marginBottom: "12px" }}>
+                {meetTags.filter((tag) => !tag.highlight).map((tag) => (
+                  <span key={tag.label} style={{ borderRadius: "100px", padding: "8px 18px", fontSize: "13px", fontWeight: 600, border: "1px solid #dfe5e7", background: "#fff", color: "#5e6b6e" }}>
+                    {tag.label}
+                  </span>
+                ))}
+              </div>
+              <div className="flex flex-wrap" style={{ gap: "10px", marginBottom: "28px" }}>
+                {meetTags.filter((tag) => tag.highlight).map((tag) => (
+                  <span key={tag.label} style={{ borderRadius: "100px", padding: "8px 18px", fontSize: "13px", fontWeight: 600, border: "1px solid #f0b890", background: "#fdeee5", color: "#e86531" }}>
+                    {tag.label}
+                  </span>
+                ))}
+              </div>
+
+              <Link to="/book-appointment" className="inline-flex items-center rounded-full bg-[#0f616e] text-sm font-semibold text-white transition-opacity hover:opacity-90" style={{ gap: "8px", padding: "14px 28px" }}>
+                <CalendarDays size={16} /> Book a Consultation
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── E. HOW IT WORKS ── */}
+      <section className="w-full" style={{ background: "#fbfaf8", padding: "clamp(56px, 6vw, 88px) 0" }}>
+        <div className="max-w-[1100px]" style={{ margin: "0 auto", padding: "0 24px" }}>
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+            <p className="text-sm font-semibold uppercase tracking-wider" style={{ color: "#e86531", marginBottom: "12px" }}>How It Works</p>
+            <h2 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "clamp(2rem, 4vw, 2.8rem)", fontWeight: 400, lineHeight: 1.12, marginBottom: "14px" }}>Simple, from start to finish</h2>
+            <p style={{ color: "#5e5e5e", fontSize: "15px", lineHeight: 1.7, maxWidth: "560px", margin: "0 auto" }}>
+              Getting specialist care does not have to be complicated. Here is what to expect when you reach out to us.
+            </p>
+          </div>
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "32px" }}>
+            <div className="absolute hidden lg:block" style={{ left: "12.5%", right: "12.5%", top: "32px", height: "1px", background: "#cfe2e1" }} />
+            {journeySteps.map((step) => {
+              const active = step.num === 2
+              return (
+                <div key={step.num} className="relative flex flex-col items-center text-center" style={{ padding: "0 8px" }}>
+                  <div className="flex items-center justify-center" style={{ width: "64px", height: "64px", borderRadius: "50%", background: active ? "#0f616e" : "#fff", border: active ? "none" : "1.5px solid #cfe2e1", color: active ? "#fff" : "#0f616e", marginBottom: "18px" }}>
+                    <step.icon size={24} strokeWidth={1.6} />
+                  </div>
+                  <p style={{ color: "#1AA3B5", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px" }}>Step {step.num}</p>
+                  <h3 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "18px", fontWeight: 500, marginBottom: "8px" }}>{step.title}</h3>
+                  <p style={{ color: "#7a8590", fontSize: "13px", lineHeight: 1.6 }}>{step.desc}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── G. GET IN TOUCH / BOOK ── */}
+      <section className="w-full" style={{ background: "#fbfaf8", padding: "clamp(56px, 6vw, 96px) 0" }}>
+        <div className="max-w-[1160px]" style={{ margin: "0 auto", padding: "0 24px" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "clamp(32px, 4vw, 56px)", alignItems: "start" }}>
+
+            {/* Left: contact */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider" style={{ color: "#e86531", marginBottom: "12px" }}>Get In Touch</p>
+              <h2 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 400, lineHeight: 1.12, marginBottom: "18px" }}>Ready to get some answers?</h2>
+              <p style={{ color: "#5e5e5e", fontSize: "15px", lineHeight: 1.75, marginBottom: "28px" }}>
+                You do not need a referral to see Dr. Raghavendra. Simply book a slot that suits you and come in. If you are not sure whether what you are experiencing falls under rheumatology, reach out anyway — we will help you figure that out.
+              </p>
+              <div className="flex flex-col" style={{ gap: "14px", marginBottom: "24px" }}>
+                {[
+                  { icon: Phone, label: "Phone", value: "+91 82906 38358", href: "tel:+918290638358" },
+                  { icon: Mail, label: "Email", value: "omnirheuma@gmail.com", href: "mailto:omnirheuma@gmail.com" },
+                  { icon: Clock, label: "Clinic Hours", value: "9:00 AM – 9:00 PM", href: null },
+                ].map((c) => (
+                  <div key={c.label} className="flex items-center" style={{ gap: "16px", background: "#fff", border: "1px solid #ececec", borderRadius: "14px", padding: "16px 20px" }}>
+                    <span className="flex shrink-0 items-center justify-center" style={{ width: "40px", height: "40px", borderRadius: "10px", background: "#e0f3f5", color: "#0f616e" }}>
+                      <c.icon size={18} strokeWidth={1.6} />
+                    </span>
+                    <div>
+                      <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "#9aa4a6", marginBottom: "2px" }}>{c.label}</p>
+                      {c.href ? (
+                        <a href={c.href} style={{ fontSize: "15px", fontWeight: 600, color: "#0f2e33", textDecoration: "none" }}>{c.value}</a>
+                      ) : (
+                        <p style={{ fontSize: "15px", fontWeight: 600, color: "#0f2e33" }}>{c.value}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <a href="https://wa.me/918290638358" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full font-semibold text-white hover:opacity-90 transition-opacity" style={{ gap: "8px", padding: "12px 24px", background: "#25D366" }}>
+                <MessageCircle size={18} /> Chat on WhatsApp
+              </a>
+            </div>
+
+            {/* Right: form */}
+            <div className="bg-white" style={{ borderRadius: "20px", padding: "clamp(28px, 3vw, 40px)", border: "1px solid #ececec", boxShadow: "0 18px 50px rgba(15,97,110,0.08)" }}>
+              <h3 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "24px", fontWeight: 500, marginBottom: "6px" }}>Book a Consultation</h3>
+              <p style={{ color: "#9aa4a6", fontSize: "14px", marginBottom: "24px" }}>Fill in a few details and we will confirm your appointment shortly.</p>
+              {submitted && (
+                <div style={{ backgroundColor: "#d4edda", color: "#155724", padding: "12px 16px", borderRadius: "8px", marginBottom: "16px", fontSize: "14px", textAlign: "center", fontWeight: 500 }}>
+                  ✓ Thank you! We will contact you shortly.
+                </div>
+              )}
+              <form onSubmit={handleFormSubmit} className="flex flex-col" style={{ gap: "18px" }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "16px" }}>
+                  <div>
+                    <label style={fieldLabel}>Your Name</label>
+                    <input
+                      type="text"
+                      placeholder="Full name"
+                      style={fieldInput}
+                      value={form.name}
+                      onChange={(e) => updateForm("name", e.target.value)}
+                      disabled={loading}
+                    />
+                  </div>
+                  <div>
+                    <label style={fieldLabel}>Phone Number</label>
+                    <input
+                      type="tel"
+                      placeholder="+91 XXXXX XXXXX"
+                      style={fieldInput}
+                      value={form.phone}
+                      onChange={(e) => updateForm("phone", e.target.value)}
+                      disabled={loading}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label style={fieldLabel}>Message</label>
+                  <textarea
+                    rows={4}
+                    placeholder="E.g. duration of symptoms, any past diagnoses, questions you have..."
+                    style={{ ...fieldInput, resize: "vertical" }}
+                    value={form.message}
+                    onChange={(e) => updateForm("message", e.target.value)}
+                    disabled={loading}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="rounded-full font-semibold text-white hover:opacity-90 transition-opacity"
+                  style={{
+                    background: "#0f616e",
+                    padding: "14px",
+                    fontSize: "15px",
+                    border: "none",
+                    cursor: loading ? "not-allowed" : "pointer",
+                    opacity: loading ? 0.6 : 1,
+                  }}
+                >
+                  {loading ? "Submitting..." : "Confirm Appointment Request"}
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5, 6, 7 HIDDEN (Our Specialist / What We Treat / Why Patients Choose Us) ── */}
+      {false && (<>
       {/* ── 5. SPECIALIST ── */}
       <section className="relative w-full bg-white" style={{ padding: "clamp(48px, 5vw, 64px) 0 96px" }}>
         <div className="max-w-[1200px]" style={{ margin: "0 auto", padding: "0 16px" }}>
@@ -340,19 +712,18 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+      </>)}
 
       {/* ── 8. PATIENT STORIES ── */}
+      {false && (
       <section className="relative w-full bg-[#f9f9f9]" style={{ padding: "clamp(48px, 5vw, 64px) 0 clamp(112px, 9vw, 128px)" }}>
         <div className="max-w-[1360px]" style={{ margin: "0 auto", padding: "0 16px" }}>
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#1AA3B5]" style={{ marginBottom: "12px" }}>Patient Stories</p>
-          <h2 className="text-3xl font-normal text-[#0f2e33] lg:text-4xl" style={{ marginBottom: "16px" }}>
-            15,000+ patients.
-            <br />
-            15,000+ reasons to seek care earlier.
-          </h2>
-          <p className="w-full text-lg leading-relaxed text-gray-600" style={{ marginBottom: "40px" }}>
-            Here is what some of our patients have shared about their experience at Omni Rheuma. Real words, real progress.
-          </p>
+          <div style={{ textAlign: "center", marginBottom: "48px" }}>
+            <h2 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "clamp(2rem, 4vw, 2.8rem)", fontWeight: 400, lineHeight: 1.12, marginBottom: "14px" }}>What our patients say</h2>
+            <p style={{ color: "#5e5e5e", fontSize: "15px", lineHeight: 1.7, maxWidth: "640px", margin: "0 auto" }}>
+              Here is what some of our patients have shared about their experience at Omni Rheuma. Real words, real progress.
+            </p>
+          </div>
           <div className="grid grid-cols-1 items-stretch md:grid-cols-3" style={{ gap: "24px" }}>
             {visibleReviews.map((review) => (
               <div key={`${review.name}-${review.location}`} className="flex min-h-[370px] flex-col rounded-2xl border border-gray-200 bg-white" style={{ gap: "16px", padding: "24px" }}>
@@ -395,6 +766,9 @@ export default function AboutUs() {
           <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#0f616e" />
         </svg>
       </section>
+      )}
+
+      <Testimonials />
 
       {/* ── 9. CTA ── */}
       <section className="w-full bg-[#0f616e] text-center" style={{ padding: "80px 0 96px" }}>

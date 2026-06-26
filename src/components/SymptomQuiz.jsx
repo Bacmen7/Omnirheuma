@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const questions = [
   {
@@ -119,12 +120,12 @@ function SymptomQuiz() {
                       : "However, if symptoms persist or worsen, consider consulting a rheumatologist for a thorough evaluation."}
                   </p>
                   <div className="flex gap-3 justify-center">
-                    <a
-                      href="/book-appointment"
+                    <Link
+                      to="/book-appointment"
                       style={{ backgroundColor: "#e8fa6d", color: "#0f616e", padding: "12px 28px", borderRadius: "9999px", fontSize: "14px", fontWeight: 600, fontFamily: "var(--font-base)", textDecoration: "none" }}
                     >
                       Book Consultation
-                    </a>
+                    </Link>
                     <button
                       onClick={reset}
                       style={{ backgroundColor: "transparent", color: "#ffffff", padding: "12px 28px", borderRadius: "9999px", fontSize: "14px", fontWeight: 600, fontFamily: "var(--font-base)", border: "2px solid rgba(255,255,255,0.5)", cursor: "pointer" }}

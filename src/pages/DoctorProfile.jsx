@@ -73,12 +73,14 @@ function DoctorProfile() {
                   {doctor.name}
                 </h1>
                 <p style={{ fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "clamp(14px, 2vw, 18px)", lineHeight: "1.65", marginBottom: "14px", color: "rgba(255,255,255,0.7)", maxWidth: "900px" }}>
-                  MBBS, MD, DM Rheumatology and Clinical Immunology
+                  MBBS, MD Internal Medicine, DM Rheumatology and Clinical Immunology
                 </p>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-3" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "clamp(13px, 1.5vw, 15px)", lineHeight: "1.7", marginBottom: "16px", color: "rgba(255,255,255,0.85)" }}>
-                  <span>Rheumatologist</span>
+                  <span>Senior Rheumatologist</span>
                   <span style={{ color: "rgba(255,255,255,0.3)" }}>|</span>
                   <span>14 Years Exp</span>
+                  <span style={{ color: "rgba(255,255,255,0.3)" }}>|</span>
+                  <span>15K+ Patients Treated</span>
                   <span style={{ color: "rgba(255,255,255,0.3)" }}>|</span>
                   <span className="flex items-center gap-1">
                     <svg className="w-3 h-3 shrink-0" style={{ color: "rgba(255,255,255,0.85)" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -201,9 +203,11 @@ function DoctorProfile() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="text-[#0f616e] truncate" style={{ fontFamily: "var(--font-display)", fontWeight: 300, fontSize: "18px", lineHeight: "1.2", marginBottom: "4px" }}>{doctor.name}</h3>
-                  <p style={{ fontFamily: "var(--font-base)", fontWeight: 500, fontSize: "12px", color: "#5a6577", marginBottom: "8px" }}>Rheumatologist</p>
+                  <p style={{ fontFamily: "var(--font-base)", fontWeight: 500, fontSize: "12px", color: "#5a6577", marginBottom: "4px" }}>Senior Rheumatologist</p>
+                  <p style={{ fontFamily: "var(--font-base)", fontWeight: 500, fontSize: "11px", lineHeight: 1.5, color: "#5a6577", marginBottom: "8px" }}>MBBS, MD Internal Medicine, DM Rheumatology and Clinical Immunology</p>
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
                     <span style={{ fontFamily: "var(--font-base)", fontSize: "12px", color: "#0f616e" }}><span style={{ fontWeight: 600 }}>14 Years</span> <span style={{ fontWeight: 400, color: "#5a6577" }}>Experience</span></span>
+                    <span style={{ fontFamily: "var(--font-base)", fontSize: "12px", color: "#0f616e" }}><span style={{ fontWeight: 600 }}>15K+</span> <span style={{ fontWeight: 400, color: "#5a6577" }}>Patients Treated</span></span>
                     <span style={{ fontFamily: "var(--font-base)", fontSize: "12px", color: "#0f616e" }}><span style={{ fontWeight: 600 }}>Hebbal,</span> <span style={{ fontWeight: 400, color: "#5a6577" }}>Bengaluru</span></span>
                     <span style={{ fontFamily: "var(--font-base)", fontSize: "11px", fontWeight: 500, color: "#16a34a" }}>Verified Profile</span>
                   </div>
@@ -253,7 +257,7 @@ function DoctorProfile() {
                 <div style={{ marginTop: "32px" }}>
                   <h3 className="text-[#0f616e]" style={{ fontFamily: "var(--font-base)", fontWeight: 600, fontSize: "16px", lineHeight: "24px", marginBottom: "12px" }}>Specializations</h3>
                   <div className="flex flex-wrap gap-2" style={{ marginBottom: "24px" }}>
-                    {["Rheumatologist"].map((spec, i) => (
+                    {["Senior Rheumatologist"].map((spec, i) => (
                       <span key={i} className="text-xs sm:text-sm text-gray-600 bg-[#EEF2F9] px-3 py-1.5 rounded-full">{spec}</span>
                     ))}
                   </div>
@@ -400,7 +404,8 @@ function DoctorProfile() {
                   {/* Info */}
                   <div className="p-5 sm:p-6">
                     <h3 className="text-[#0f616e]" style={{ fontFamily: "var(--font-display)", fontWeight: 300, fontSize: "24px", lineHeight: "1.2", marginBottom: "6px" }}>{doctor.name}</h3>
-                    <p style={{ fontFamily: "var(--font-base)", fontWeight: 500, fontSize: "13px", color: "#5a6577", marginBottom: "16px" }}>Rheumatologist</p>
+                    <p style={{ fontFamily: "var(--font-base)", fontWeight: 500, fontSize: "13px", color: "#5a6577", marginBottom: "8px" }}>Senior Rheumatologist</p>
+                    <p style={{ fontFamily: "var(--font-base)", fontWeight: 500, fontSize: "12px", lineHeight: 1.5, color: "#5a6577", marginBottom: "16px" }}>MBBS, MD Internal Medicine, DM Rheumatology and Clinical Immunology</p>
 
                     <div className="space-y-3" style={{ marginBottom: "20px" }}>
                       <div className="flex items-center gap-2.5">
@@ -408,6 +413,13 @@ function DoctorProfile() {
                           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                         </svg>
                         <span style={{ fontFamily: "var(--font-base)", fontSize: "13px", color: "#0f616e" }}><span style={{ fontWeight: 600 }}>14 Years</span> <span style={{ fontWeight: 400, color: "#5a6577" }}>Experience</span></span>
+                      </div>
+                      <div className="flex items-center gap-2.5">
+                        <svg className="w-[16px] h-[16px] text-[#0f616e] shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M20 13a8 8 0 10-16 0 8 8 0 0016 0zm-8-7a7 7 0 110 14 7 7 0 010-14z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M16 11l-4 4-2-2" />
+                        </svg>
+                        <span style={{ fontFamily: "var(--font-base)", fontSize: "13px", color: "#0f616e" }}><span style={{ fontWeight: 600 }}>15K+</span> <span style={{ fontWeight: 400, color: "#5a6577" }}>Patients Treated</span></span>
                       </div>
                       <div className="flex items-center gap-2.5">
                         <svg className="w-[16px] h-[16px] text-[#0f616e] shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">

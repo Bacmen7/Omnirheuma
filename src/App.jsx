@@ -12,6 +12,7 @@ import Testimonials from "./components/Testimonials"
 import CTASection from "./components/CTASection"
 import StatsBar from "./components/StatsBar"
 import SymptomsExplorer from "./components/SymptomsExplorer"
+import MeetRheumatologist from "./components/MeetRheumatologist"
 import InsurancePartners from "./components/InsurancePartners"
 import ConditionsGrid from "./components/ConditionsGrid"
 import PatientControl from "./components/PatientControl"
@@ -52,6 +53,7 @@ function App() {
 
         <WhyRheuma />
 
+        <MeetRheumatologist />
         <SymptomsExplorer />
 
         {/* <SpecializedCare /> */}
@@ -69,7 +71,7 @@ function App() {
         {/* ═══════════════════════════════════════════════
             ZONE 2 -HEALTH GUIDE & CONDITIONS
         ═══════════════════════════════════════════════ */}
-        <HealthGuideHero />
+        {/* <HealthGuideHero /> */}
         {/* <QuickLinks /> */}
 
         {/* <div className="bg-white">

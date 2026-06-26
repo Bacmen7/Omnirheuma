@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import Header from "../components/Header"
 import Newsletter from "../components/Newsletter"
@@ -68,13 +68,46 @@ const featuredArticles = [
 ]
 
 const faqs = [
-  { q: "What does a rheumatologist do?", a: "A rheumatologist is a board-certified internist with additional fellowship training in autoimmune and musculoskeletal diseases. We diagnose and treat over 200 conditions affecting joints, muscles, bones, and the immune system, from common conditions like osteoarthritis to complex systemic diseases like lupus and vasculitis." },
-  { q: "When should I see a rheumatologist vs. my primary care doctor?", a: "See a rheumatologist if you have joint swelling lasting more than 6 weeks, morning stiffness exceeding 30 minutes, an elevated inflammatory marker (ESR or CRP), a positive ANA or RF test, or symptoms that haven't responded to basic treatments. Early referral leads to better outcomes, and the first 12 weeks after symptom onset is a critical treatment window." },
-  { q: "Are rheumatic diseases hereditary?", a: "Genetics contribute to risk, but they're not the whole story. Having the HLA-B27 gene increases ankylosing spondylitis risk, and family history of RA raises yours 3-5x. However, environmental triggers such as infections, smoking, hormonal changes, and stress interact with genetic predisposition to activate disease. Most people with genetic risk factors never develop rheumatic disease." },
+  { q: "What does a rheumatologist do?", a: "A rheumatologist is a doctor who specializes in conditions affecting the joints, muscles, bones, and immune system. They diagnose and treat more than 200 conditions, ranging from common problems like osteoarthritis, rheumatoid arthritis to more complex autoimmune diseases such as lupus and vasculitis." },
+  { q: "When should I see a rheumatologist vs. my primary care doctor?", a: "Your primary care doctor can treat many common joint, muscle, and back problems. You should see a rheumatologist if your symptoms last longer, seem inflammatory, or don't improve with basic treatment." },
+  { q: "Are rheumatic diseases hereditary?", a: "Yes, genetics can increase your risk of rheumatic diseases, but they are not the only cause.\n\nHaving certain genes, like HLA-B27, can raise the risk of conditions such as ankylosing spondylitis. A family history of rheumatoid arthritis (RA) can increase your risk 3 to 5 times.\n\nHowever, genes alone do not cause these diseases. Environmental factors such as infections, smoking, hormonal changes, and stress can trigger the disease in people who are genetically sensitive.\n\nMost people with a genetic risk do not develop rheumatic disease." },
   { q: "Can rheumatic conditions be cured?", a: "Most autoimmune rheumatic conditions cannot be cured, but they can be effectively controlled. Modern treatments achieve clinical remission in up to 50-60% of RA patients. 'Remission' means minimal to no symptoms, normal inflammatory markers, and no ongoing joint damage -essentially living as if you don't have the disease. Early, aggressive treatment gives the best chance of remission." },
-  { q: "What lifestyle changes actually help with inflammatory arthritis?", a: "Evidence supports: (1) regular low-impact exercise (swimming, cycling, yoga) -150 min/week reduces inflammation and pain, (2) Mediterranean diet -shown to lower CRP by 20-30%, (3) adequate sleep (7-9 hours), (4) stress management, (5) smoking cessation -smoking doubles RA severity, and (6) maintaining healthy weight -every 5 lbs of excess weight increases knee osteoarthritis risk by 36%." },
-  { q: "How long does it take for treatment to work?", a: "DMARDs like methotrexate typically take 6-12 weeks to reach full effect. Biologics can work faster -some patients notice improvement within 2-4 weeks. Corticosteroids provide relief within hours to days but aren't long-term solutions. Your rheumatologist will monitor progress and adjust medications at 3-month intervals until you reach your treatment target." },
+  { q: "What lifestyle changes actually help with inflammatory arthritis?", a: "Yes. Healthy lifestyle habits can help reduce inflammation, ease joint pain, and improve overall well-being. Regular exercise, a balanced diet, good sleep, stress management, avoiding smoking, and maintaining a healthy weight can all support better symptom control. However, these measures work best alongside the treatment plan recommended by your rheumatologist." },
+  { q: "How long does it take for treatment to work?", a: "The timeline depends on how severe the condition is and the type of arthritis being treated. In milder cases, people may start noticing improvement within a few weeks, while more severe or long-standing arthritis may take 2–3 months or longer before symptoms are well controlled. Regular follow-up with a rheumatologist is important, as treatment may need to be adjusted over time to achieve the best results." },
 ]
+
+/* Condition tiles -mirrors the Knowledge Hub "Know more about Your condition" section */
+const arthritisConditions = [
+  { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune" },
+  { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative" },
+  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune" },
+  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune" },
+]
+
+const otherConditions = [
+  { key: "gout", name: "Gout" },
+  { key: "ctd", name: "Connective Tissue Disease" },
+  { key: "fibro", name: "Fibromyalgia" },
+  { key: "vasculitis", name: "Vasculitis" },
+  { key: "lupus", name: "Lupus (SLE)" },
+  { key: "reactive", name: "Reactive Arthritis" },
+  { key: "sjogrens", name: "Sjögren's Syndrome" },
+  { key: "jia", name: "Juvenile Idiopathic Arthritis" },
+  { key: "pmr", name: "Polymyalgia Rheumatica" },
+  { key: "scleroderma", name: "Systemic Sclerosis" },
+  { key: "osteoporosis", name: "Osteoporosis" },
+  { key: "septic", name: "Septic Arthritis" },
+  { key: "cppd", name: "Crystal Arthropathies (CPPD)" },
+  { key: "mctd", name: "Mixed Connective Tissue Disease" },
+  { key: "raynauds", name: "Raynaud's Phenomenon" },
+]
+
+const BookIcon = ({ size = 28, color = "#0f616e" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+  </svg>
+)
 
 /* ─────────────────────────────────────────────
    COMPONENT
@@ -83,6 +116,8 @@ const faqs = [
 function HealthGuide() {
   const scrollRef = useRef(null)
   const conditionsRef = useRef(null)
+  const [activeCondition, setActiveCondition] = useState(null)
+  const [showAllConditions, setShowAllConditions] = useState(false)
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -165,6 +200,66 @@ function HealthGuide() {
         </section>
         */}
 
+        {/* ═══════════ WHAT IS RHEUMATOLOGY (from Knowledge Hub) ═══════════ */}
+        <section style={{ backgroundColor: "#ffffff", padding: "clamp(64px, 8vw, 120px) 0" }}>
+          <div style={{ width: "90vw", maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
+
+            {/* Top: Heading + Description -left aligned */}
+            <div className="text-left" style={{ marginBottom: "clamp(48px, 5vw, 80px)" }}>
+              <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(1.85rem, 3.6vw, 2.9rem)", lineHeight: 1.12, letterSpacing: "-0.6px", color: "#0f616e", marginBottom: "20px" }}>
+                What Is Rheumatology?
+              </h2>
+              <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#5E5E5E", fontFamily: "var(--font-base)", marginBottom: "18px" }}>
+                Rheumatology is a branch of medicine that focuses on conditions affecting your joints, muscles, and bones. These include everyday problems like joint, bone or muscle pain and stiffness. It also comprises conditions where the body's immune system mistakenly attacks its own tissues.
+              </p>
+              <p style={{ fontSize: "16px", lineHeight: 1.75, color: "#5E5E5E", fontFamily: "var(--font-base)" }}>
+                A doctor who specialises in this field is called a rheumatologist. They are trained to diagnose, treat, and manage conditions such as Rheumatoid Arthritis, Gout, Lupus, Osteoporosis, and Ankylosing Spondylitis, among others.
+              </p>
+            </div>
+
+            {/* Bottom: Two info cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "clamp(16px, 2vw, 32px)" }}>
+
+              {/* Card 1 -When Should You See */}
+              <div style={{ backgroundColor: "#e8f4f8", borderRadius: "16px", padding: "clamp(32px, 3vw, 48px)", transition: "box-shadow 0.3s ease" }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = "0px 36px 60px 0px rgba(0,0,0,0.06)"} onMouseLeave={(e) => e.currentTarget.style.boxShadow = "none"}>
+                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(1.2rem, 2.1vw, 1.55rem)", color: "#0f616e", lineHeight: 1.22, marginBottom: "18px" }}>
+                  When Should You See a Rheumatologist?
+                </h3>
+                <p style={{ fontSize: "15px", lineHeight: 1.75, color: "#5E5E5E", fontFamily: "var(--font-base)", marginBottom: "22px" }}>
+                  You should consider a visit if you notice any of the following:
+                </p>
+                <div className="flex flex-col" style={{ gap: "20px" }}>
+                  {[
+                    "Joint pain or swelling that lasts more than a few weeks",
+                    "Morning stiffness that takes more than 30 minutes to ease",
+                    "Unexplained fatigue along with joint or muscle pain",
+                    "Joints that feel warm or look red",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-4">
+                      <div className="shrink-0 mt-1" style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "#1AA3B5" }} />
+                      <p style={{ fontSize: "15px", lineHeight: 1.7, color: "#5E5E5E", fontFamily: "var(--font-base)" }}>{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Card 2 -Why Early Care Matters */}
+              <div style={{ backgroundColor: "#e8f4f8", borderRadius: "16px", padding: "clamp(32px, 3vw, 48px)", transition: "box-shadow 0.3s ease" }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = "0px 36px 60px 0px rgba(0,0,0,0.06)"} onMouseLeave={(e) => e.currentTarget.style.boxShadow = "none"}>
+                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(1.2rem, 2.1vw, 1.55rem)", color: "#0f616e", lineHeight: 1.22, marginBottom: "18px" }}>
+                  Why Early Care Matters
+                </h3>
+                <p style={{ fontSize: "15px", lineHeight: 1.75, color: "#5E5E5E", fontFamily: "var(--font-base)", marginBottom: "22px" }}>
+                  Many joint and immune conditions get worse over time if left untreated. Seeing a specialist early can prevent permanent joint damage, help you stay active, and improve your quality of life significantly.
+                </p>
+                <p style={{ fontSize: "15px", lineHeight: 1.75, color: "#5E5E5E", fontFamily: "var(--font-base)" }}>
+                  The good news is that with the right diagnosis and treatment plan, most patients are able to manage their condition well and continue living a normal, fulfilling life.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* ═══════════ CONDITIONS CAROUSEL ═══════════ */}
         <section id="conditions" className="py-20 md:py-28 bg-ghost">
           <div className="max-w-7xl mx-auto px-6">
@@ -212,6 +307,72 @@ function HealthGuide() {
                   </div>
                 </Link>
               ))}
+            </div>
+
+            {/* ─── Know more about Your condition (inside Explore by Condition) ─── */}
+            <div className="mt-16 md:mt-20">
+              {/* Arthritis group label */}
+              <div className="text-xs font-bold uppercase text-navy-muted border-b border-[#dde6ee] pb-2 mb-4 tracking-[0.08em]">
+                Arthritis Conditions
+              </div>
+
+              {/* Big tiles -2 column */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#dde6ee] overflow-hidden mb-8">
+                {arthritisConditions.map((c) => (
+                  <button
+                    key={c.key}
+                    onClick={() => setActiveCondition(activeCondition === c.key ? null : c.key)}
+                    className={`condition-tile flex min-h-[124px] gap-6 items-center px-7 py-7 md:min-h-[138px] md:px-8 md:py-8 border-none cursor-pointer text-left transition-colors ${
+                      activeCondition === c.key ? "bg-white" : "bg-[#e0f3f5] hover:bg-[#d4ebf8]"
+                    }`}
+                    style={{ fontFamily: "var(--font-base)" }}
+                  >
+                    <BookIcon size={30} color="#0f616e" />
+                    <div className="flex-1">
+                      <div className="text-[1.15rem] font-bold leading-snug text-navy-deep mb-1">{c.name}</div>
+                      <div className="text-[13px] text-navy-muted">{c.typeLabel}</div>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-navy-deep text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              {/* Other conditions label */}
+              <div className="text-xs font-bold uppercase text-navy-muted border-b border-[#dde6ee] pb-2 mb-4 tracking-[0.08em]">
+                Other Conditions
+              </div>
+
+              {/* Small tiles */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-[#dde6ee] overflow-hidden mb-4">
+                {otherConditions.map((c, idx) => (
+                  <button
+                    key={c.key}
+                    onClick={() => setActiveCondition(activeCondition === c.key ? null : c.key)}
+                    className={`condition-tile flex gap-3 items-center p-5 border-none cursor-pointer text-left transition-colors ${
+                      activeCondition === c.key ? "bg-white" : "bg-[#e0f3f5] hover:bg-[#d4ebf8]"
+                    } ${!showAllConditions && idx >= 5 ? "hidden sm:flex" : ""}`}
+                    style={{ fontFamily: "var(--font-base)" }}
+                  >
+                    <BookIcon size={22} color="#0f616e" />
+                    <div className="flex-1">
+                      <div className="text-sm font-semibold text-navy-deep">{c.name}</div>
+                    </div>
+                    <div className="w-7 h-7 rounded-full text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              <button
+                onClick={() => setShowAllConditions(!showAllConditions)}
+                className="text-[14px] font-semibold cursor-pointer sm:hidden mb-6"
+                style={{ color: "#1AA3B5", background: "none", border: "none", padding: 0 }}
+              >
+                {showAllConditions ? "See less ↑" : "See more ↓"}
+              </button>
             </div>
           </div>
         </section>
@@ -305,7 +466,8 @@ function HealthGuide() {
           </svg>
         </section>}
 
-        {/* ═══════════ DIAGNOSTIC JOURNEY ═══════════ */}
+        {/* ═══════════ DIAGNOSTIC JOURNEY (hidden) ═══════════ */}
+        {false && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12 md:mb-14 max-w-3xl mx-auto">
@@ -356,6 +518,7 @@ function HealthGuide() {
             </div>
           </div>
         </section>
+        )}
 
         {/* ═══════════ TREATMENT APPROACHES (ghost bg, 2-col grid) ═══════════ */}
         {/* <section className="py-20 md:py-28 bg-ghost">
@@ -406,7 +569,7 @@ function HealthGuide() {
           </div>
         </section>
 
-        {/* ═══════════ FEATURED ARTICLES (matching RAArticles carousel) ═══════════ */}
+           ═══════════ FEATURED ARTICLES (matching RAArticles carousel) ═══════════
         <section className="pt-8 pb-20 max-w-7xl mx-auto px-6">
           <div className="flex items-end justify-between mb-8">
             <div>
@@ -484,7 +647,9 @@ function HealthGuide() {
                     </span>
                   </summary>
                   <div className="px-5 md:px-6 pb-5 md:pb-6 -mt-1">
-                    <p className="text-sm text-navy-muted leading-relaxed">{faq.a}</p>
+                    {faq.a.split("\n\n").map((para, idx) => (
+                      <p key={idx} className="text-sm text-navy-muted leading-relaxed" style={{ marginBottom: idx < faq.a.split("\n\n").length - 1 ? "12px" : 0 }}>{para}</p>
+                    ))}
                   </div>
                 </details>
               ))}

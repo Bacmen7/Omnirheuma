@@ -70,11 +70,16 @@
   transition: transform 0.3s ease;
 }
 
-.landing-page button:not(.faq-btn),
+.landing-page button:not(.faq-btn):not(.condition-tile),
 .landing-page input[type="button"],
 .landing-page input[type="submit"],
 .landing-page input[type="reset"] {
   border-radius: 9999px !important;
+}
+
+/* Condition tiles must stay square (override pill rule above) */
+.landing-page button.condition-tile {
+  border-radius: 0 !important;
 }
 
 /* Keep section spacing tighter across landing page */

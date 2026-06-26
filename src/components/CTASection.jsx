@@ -24,14 +24,14 @@ function CTASection() {
             </h2>
             <div className="flex flex-wrap items-center gap-5">
               <a
-                href="#"
+                href="/book-appointment"
                 className="inline-block bg-primary hover:bg-primary-hover text-white px-7 py-3.5 rounded-full font-semibold text-base transition-colors"
               >
                 Schedule An Appointment
               </a>
               <span className="text-white/70 text-base">
                 or{" "}
-                <a href="#" className="text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors">
+                <a href="/book-appointment" className="text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors">
                   let&apos;s get in touch
                 </a>
               </span>

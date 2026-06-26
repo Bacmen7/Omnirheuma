@@ -24,20 +24,6 @@ const videos = [
   { image: "/content-thumbs/fibromyalgia-video.webp", title: "How to recognise rheumatic disease: Key warning signs" },
 ]
 
-const subtypes = [
-  "Rheumatoid Arthritis",
-  "Psoriatic Arthritis",
-  "Ankylosing Spondylitis",
-  "Osteoarthritis",
-  "Lupus",
-  "Gout",
-  "Fibromyalgia",
-  "Back & Neck Pain",
-  "Sjögren's Syndrome",
-  "Vasculitis",
-  "Scleroderma",
-]
-
 const conditionCards = [
   { name: "Rheumatoid Arthritis", image: "/condition/Rheumatoid Arthritis (RA).webp", desc: "Autoimmune joint inflammation affecting 1.3M+ Americans. Learn about early diagnosis and modern treatments.", href: "/Rheumatoid-Arthritis" },
   { name: "Psoriatic Arthritis", image: "/condition/Psoriatic Arthritis.webp", desc: "Where skin meets joints. Understanding the psoriasis-arthritis connection and targeted therapies.", href: "#" },
@@ -49,9 +35,44 @@ const conditionCards = [
   { name: "Back & Neck Pain", image: "/condition/back.webp", desc: "Identifying whether spinal pain is mechanical or inflammatory is a critical distinction for treatment.", href: "#" },
 ]
 
+/* Condition tiles -mirrors the Knowledge Hub "Know more about Your condition" section */
+const arthritisConditions = [
+  { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune" },
+  { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative" },
+  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune" },
+  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune" },
+]
+
+const otherConditions = [
+  { key: "gout", name: "Gout" },
+  { key: "ctd", name: "Connective Tissue Disease" },
+  { key: "fibro", name: "Fibromyalgia" },
+  { key: "vasculitis", name: "Vasculitis" },
+  { key: "lupus", name: "Lupus (SLE)" },
+  { key: "reactive", name: "Reactive Arthritis" },
+  { key: "sjogrens", name: "Sjögren's Syndrome" },
+  { key: "jia", name: "Juvenile Idiopathic Arthritis" },
+  { key: "pmr", name: "Polymyalgia Rheumatica" },
+  { key: "scleroderma", name: "Systemic Sclerosis" },
+  { key: "osteoporosis", name: "Osteoporosis" },
+  { key: "septic", name: "Septic Arthritis" },
+  { key: "cppd", name: "Crystal Arthropathies (CPPD)" },
+  { key: "mctd", name: "Mixed Connective Tissue Disease" },
+  { key: "raynauds", name: "Raynaud's Phenomenon" },
+]
+
+const BookIcon = ({ size = 28, color = "#0f616e" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+  </svg>
+)
+
 function Conditions() {
   const [query, setQuery] = useState("")
   const [current, setCurrent] = useState(0)
+  const [activeCondition, setActiveCondition] = useState(null)
+  const [showAllConditions, setShowAllConditions] = useState(false)
   const carouselRef = useRef(null)
   const scrollCarousel = (dir) => {
     if (carouselRef.current) carouselRef.current.scrollBy({ left: dir === "left" ? -300 : 300, behavior: "smooth" })
@@ -219,22 +240,77 @@ function Conditions() {
           </div>
         </section>
 
-        {/* ── 8. EXPLORE BY SUBTYPE ── */}
-        <section style={{ padding: "56px 0 64px", background: "#ffffff" }}>
-          <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
-            <h2 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "clamp(1.8rem,3.5vw,2.5rem)", fontWeight: 400, marginBottom: "32px" }}>Explore by subtype</h2>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
-              {subtypes.map((subtype, i) => (
-                <Link key={i} to="/health-guide"
-                  style={{ display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "50px", borderRadius: "100px", border: "1.5px solid #dde8e7", background: "#fff", padding: "0 22px", fontSize: "16px", color: "#0f2e33", textDecoration: "none", fontFamily: "var(--font-base)", transition: "all 0.15s", boxShadow: "0 1px 3px rgba(15,97,110,0.05)" }}
-                  onMouseOver={e => { e.currentTarget.style.borderColor = "#0f616e"; e.currentTarget.style.color = "#0f616e" }}
-                  onMouseOut={e => { e.currentTarget.style.borderColor = "#dde8e7"; e.currentTarget.style.color = "#0f2e33" }}
+        {/* ── 8. KNOW MORE ABOUT YOUR CONDITION (square tiles) ── */}
+        <section id="conditions" className="py-12 md:py-16 px-6" style={{ backgroundColor: "#ffffff" }}>
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-8 max-w-2xl">
+              <h2 className="text-navy-deep mt-2" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.5px" }}>
+                Know more about Your condition
+              </h2>
+            </div>
+
+            {/* Arthritis group label */}
+            <div className="text-xs font-bold uppercase text-navy-muted border-b border-[#dde6ee] pb-2 mb-4 tracking-[0.08em]">
+              Arthritis Conditions
+            </div>
+
+            {/* Big tiles -2 column */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#dde6ee] rounded-lg overflow-hidden mb-8">
+              {arthritisConditions.map((c) => (
+                <button
+                  key={c.key}
+                  onClick={() => setActiveCondition(activeCondition === c.key ? null : c.key)}
+                  className={`flex min-h-[124px] gap-6 items-center px-7 py-7 md:min-h-[138px] md:px-8 md:py-8 border-none cursor-pointer text-left transition-colors ${
+                    activeCondition === c.key ? "bg-white" : "bg-[#e0f3f5] hover:bg-[#d4ebf8]"
+                  }`}
+                  style={{ fontFamily: "var(--font-base)" }}
                 >
-                  <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#9DE5D4", flexShrink: 0 }} />
-                  {subtype}
-                </Link>
+                  <BookIcon size={30} color="#0f616e" />
+                  <div className="flex-1">
+                    <div className="text-[1.15rem] font-bold leading-snug text-navy-deep mb-1">{c.name}</div>
+                    <div className="text-[13px] text-navy-muted">{c.typeLabel}</div>
+                  </div>
+                  <div className="w-10 h-10 rounded-lg bg-navy-deep text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                  </div>
+                </button>
               ))}
             </div>
+
+            {/* Other conditions label */}
+            <div className="text-xs font-bold uppercase text-navy-muted border-b border-[#dde6ee] pb-2 mb-4 tracking-[0.08em]">
+              Other Conditions
+            </div>
+
+            {/* Small tiles */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-[#dde6ee] rounded-lg overflow-hidden mb-4">
+              {otherConditions.map((c, idx) => (
+                <button
+                  key={c.key}
+                  onClick={() => setActiveCondition(activeCondition === c.key ? null : c.key)}
+                  className={`flex gap-3 items-center p-5 border-none cursor-pointer text-left transition-colors ${
+                    activeCondition === c.key ? "bg-white" : "bg-[#e0f3f5] hover:bg-[#d4ebf8]"
+                  } ${!showAllConditions && idx >= 5 ? "hidden sm:flex" : ""}`}
+                  style={{ fontFamily: "var(--font-base)" }}
+                >
+                  <BookIcon size={22} color="#0f616e" />
+                  <div className="flex-1">
+                    <div className="text-sm font-semibold text-navy-deep">{c.name}</div>
+                  </div>
+                  <div className="w-7 h-7 rounded-md text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={() => setShowAllConditions(!showAllConditions)}
+              className="text-[14px] font-semibold cursor-pointer sm:hidden mb-6"
+              style={{ color: "#1AA3B5", background: "none", border: "none", padding: 0 }}
+            >
+              {showAllConditions ? "See less ↑" : "See more ↓"}
+            </button>
           </div>
         </section>
 

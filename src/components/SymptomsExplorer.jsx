@@ -14,7 +14,7 @@ const conditions = [
       "Swelling in the hands, wrists, or feet",
       "Tiredness and low energy levels",
     ],
-    image: "/condition/Rheumatoid Arthritis (RA).webp",
+    image: "/condition/symptom-rheumatoid-arthritis.webp",
   },
   {
     eyebrow: "Degenerative",
@@ -27,7 +27,7 @@ const conditions = [
       "Stiffness after resting or sitting for a long time",
       "A cracking or grinding feeling while moving a joint",
     ],
-    image: "/condition/Osteoarthritis.webp",
+    image: "/condition/symptom-osteoarthritis.webp",
   },
   {
     eyebrow: "Spine inflammation",
@@ -40,7 +40,7 @@ const conditions = [
       "Stiffness, especially in the morning",
       "Pain that improves with movement and exercise",
     ],
-    image: "/condition/Ankylosing Spondylitis (AS).webp",
+    image: "/condition/symptom-ankylosing-spondylitis.webp",
   },
   {
     eyebrow: "Skin and joints",
@@ -53,7 +53,7 @@ const conditions = [
       "Swelling in the fingers or toes",
       "Scaly skin patches along with joint symptoms",
     ],
-    image: "/condition/Psoriatic Arthritis.webp",
+    image: "/condition/symptom-psoriatic-arthritis.webp",
   },
   {
     eyebrow: "Pain sensitivity",
@@ -66,7 +66,7 @@ const conditions = [
       "Constant tiredness or low energy",
       "Difficulty sleeping or feeling rested",
     ],
-    image: "/condition/Fibromyalgia.webp",
+    image: "/condition/symptom-fibromyalgia.webp",
   },
   {
     eyebrow: "Crystal arthritis",
@@ -79,7 +79,7 @@ const conditions = [
       "Redness and swelling around the joint",
       "Difficulty walking or moving the affected area",
     ],
-    image: "/condition/Gout.webp",
+    image: "/condition/symptom-gout.webp",
   },
 ]
 

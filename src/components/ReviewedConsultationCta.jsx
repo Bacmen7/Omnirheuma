@@ -26,7 +26,7 @@ export default function ReviewedConsultationCta({ style = {} }) {
           Get a personal review from Dr. Raghavendra. Most patients leave their first visit with clarity on what's happening and a plan for next steps.
         </p>
         <a
-          href="#"
+          href="/book-appointment"
           style={{
             display: "inline-block",
             backgroundColor: "#E86531",

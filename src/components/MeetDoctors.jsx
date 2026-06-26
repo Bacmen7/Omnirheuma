@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const doctors = [
   // { name: "Dr. Priya Menon", title: "Senior Consultant Rheumatologist", img: "/images/dr-elena.webp" },
-  { name: "Dr. Raghavendra H", title: "Rheumatologist", img: "/raghav.webp" },
+  { name: "Dr. Raghavendra H", title: "Senior Rheumatologist", img: "/raghav.webp" },
   // { name: "Dr. Sarah Miller", title: "Clinical Rheumatologist", img: "/images/dr-sarah-miller.webp" },
   // { name: "Dr. James Chen", title: "Rheumatologist & Researcher", img: "/images/dr-james.webp" },
 ]
