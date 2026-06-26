@@ -22,34 +22,12 @@ function MeetRheumatologist() {
             <div style={{ background: "#e0f3f5", borderRadius: "20px", overflow: "hidden", aspectRatio: "3 / 4" }}>
               <img src="/raghav.webp" alt="Dr. Raghavendra H" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
             </div>
-            <div style={{ background: "#eef7f5", borderRadius: "16px", padding: "20px 22px" }}>
-              <div className="flex items-start" style={{ gap: "12px", marginBottom: "16px", paddingBottom: "16px", borderBottom: "1px solid #d8e7e4" }}>
-                <span className="flex items-center justify-center shrink-0" style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#0f616e", color: "#fff", marginTop: "2px" }}>
-                  <MapPin size={14} />
-                </span>
-                <div>
-                  <p style={{ color: "#0f2e33", fontSize: "14px", fontWeight: 700 }}>Omni Rheuma Clinic, Rachenahalli, Thanisandra</p>
-                </div>
-              </div>
-
-              <div className="flex items-start" style={{ gap: "12px", marginBottom: "16px", paddingBottom: "16px", borderBottom: "1px solid #d8e7e4" }}>
-                <span className="flex items-center justify-center shrink-0" style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#0f616e", color: "#fff", marginTop: "2px" }}>
-                  <Award size={14} />
-                </span>
-                <div>
-                  <p style={{ color: "#0f2e33", fontSize: "14px", fontWeight: 700, marginBottom: "4px" }}>Experience</p>
-                  <p style={{ color: "#5e5e5e", fontSize: "13px", lineHeight: 1.55 }}>14+ Years in Rheumatology · 15K+ Patients Treated</p>
-                </div>
-              </div>
-
-              <div className="flex items-start" style={{ gap: "12px" }}>
-                <span className="flex items-center justify-center shrink-0" style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#0f616e", color: "#fff", marginTop: "2px" }}>
-                  <Stethoscope size={14} />
-                </span>
-                <div>
-                  <p style={{ color: "#0f2e33", fontSize: "14px", fontWeight: 700, marginBottom: "4px" }}>Diseases Covered</p>
-                  <p style={{ color: "#5e5e5e", fontSize: "13px", lineHeight: 1.55 }}>Rheumatoid Arthritis, Osteoarthritis, Gout, Lupus (SLE), Ankylosing Spondylitis, Psoriatic Arthritis, Fibromyalgia, Osteoporosis</p>
-                </div>
+            <div className="flex items-start" style={{ gap: "12px", background: "#eef7f5", borderRadius: "16px", padding: "16px 18px" }}>
+              <span className="flex items-center justify-center shrink-0" style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#0f616e", color: "#fff", marginTop: "2px" }}>
+                <MapPin size={14} />
+              </span>
+              <div>
+                <p style={{ color: "#0f2e33", fontSize: "14px", fontWeight: 700 }}>Omni Rheuma Clinic, Rachenahalli, Thanisandra</p>
               </div>
             </div>
           </div>
@@ -67,23 +45,33 @@ function MeetRheumatologist() {
               <p style={{ fontWeight: 700, color: "#0f2e33", fontSize: "13px" }}>Dr. Raghavendra H, DM Rheumatology</p>
             </div>
 
-            <div className="flex flex-wrap" style={{ gap: "10px", marginBottom: "12px" }}>
-              {meetTags.filter((tag) => !tag.highlight).map((tag) => (
-                <span key={tag.label} style={{ borderRadius: "100px", padding: "8px 18px", fontSize: "13px", fontWeight: 600, border: "1px solid #dfe5e7", background: "#fff", color: "#5e6b6e" }}>
-                  {tag.label}
-                </span>
-              ))}
+            <div className="grid grid-cols-3" style={{ gap: "12px", marginBottom: "24px" }}>
+              <div style={{ background: "#fdeee5", borderRadius: "12px", padding: "20px 12px", textAlign: "center" }}>
+                <p style={{ fontFamily: "var(--font-display)", color: "#e86531", fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 500, lineHeight: 1, marginBottom: "6px" }}>14+</p>
+                <p style={{ color: "#5e5e5e", fontSize: "12px", fontWeight: 500 }}>Years of Experience</p>
+              </div>
+              <div style={{ background: "#fdeee5", borderRadius: "12px", padding: "20px 12px", textAlign: "center" }}>
+                <p style={{ fontFamily: "var(--font-display)", color: "#e86531", fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 500, lineHeight: 1, marginBottom: "6px" }}>DM</p>
+                <p style={{ color: "#5e5e5e", fontSize: "12px", fontWeight: 500 }}>Gold Medalist</p>
+              </div>
+              <div style={{ background: "#fdeee5", borderRadius: "12px", padding: "20px 12px", textAlign: "center" }}>
+                <p style={{ fontFamily: "var(--font-display)", color: "#e86531", fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 500, lineHeight: 1, marginBottom: "6px" }}>15K+</p>
+                <p style={{ color: "#5e5e5e", fontSize: "12px", fontWeight: 500 }}>Patients Treated</p>
+              </div>
             </div>
-            <div className="flex flex-wrap" style={{ gap: "10px", marginBottom: "28px" }}>
-              {meetTags.filter((tag) => tag.highlight).map((tag) => (
-                <span key={tag.label} style={{ borderRadius: "100px", padding: "8px 18px", fontSize: "13px", fontWeight: 600, border: "1px solid #f0b890", background: "#fdeee5", color: "#e86531" }}>
-                  {tag.label}
+
+            <p className="text-xs font-bold uppercase tracking-wider" style={{ color: "#0f2e33", marginBottom: "12px", letterSpacing: "0.08em" }}>Conditions He Treats</p>
+            <div className="flex flex-wrap" style={{ gap: "8px", marginBottom: "28px" }}>
+              {["Rheumatoid Arthritis", "Osteoarthritis", "Lupus", "Gout", "Ankylosing Spondylitis", "Psoriatic Arthritis", "Fibromyalgia", "Osteoporosis", "Juvenile Arthritis", "Autoimmune Disorders"].map((cond) => (
+                <span key={cond} className="inline-flex items-center" style={{ gap: "6px", borderRadius: "100px", padding: "6px 14px", fontSize: "13px", fontWeight: 500, border: "1px solid #dfe5e7", background: "#fff", color: "#0f2e33" }}>
+                  <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#1AA3B5" }} />
+                  {cond}
                 </span>
               ))}
             </div>
 
-            <Link to="/book-appointment" className="inline-flex items-center rounded-full bg-[#0f616e] text-sm font-semibold text-white transition-opacity hover:opacity-90" style={{ gap: "8px", padding: "14px 28px" }}>
-              <CalendarDays size={16} /> Book a Consultation
+            <Link to="/book-appointment" className="inline-flex items-center rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90" style={{ gap: "8px", padding: "12px 24px", background: "#e86531" }}>
+              <CalendarDays size={15} /> Book a Consultation
             </Link>
           </div>
 
