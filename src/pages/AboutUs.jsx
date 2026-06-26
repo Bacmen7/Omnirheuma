@@ -34,7 +34,7 @@ const symptomSigns = [
 const approachCards = [
   { icon: Clock, title: "Early Diagnosis Matters", desc: "Getting the right diagnosis early can help prevent long-term joint damage. Our focus is on finding the underlying cause, rather than symptoms." },
   { icon: ClipboardList, title: "Thorough Assessment", desc: "We take a complete look at you - Your symptoms, medical history, test results, and imaging studies to understand what is causing your joint problems." },
-  { icon: ShieldCheck, title: "Clear, Simple Guidance", desc: "No complicated medical jargon. We explain what you have, what causes it, and what your treatment options are — in simple language." },
+  { icon: ShieldCheck, title: "Clear, Simple Guidance", desc: "No complicated medical jargon. We explain what you have, what causes it, and what your treatment options are in simple language." },
   { icon: MapPin, title: "Convenient Access in Bengaluru", desc: "Consultations are available at Omni Rheuma Clinic." },
 ]
 

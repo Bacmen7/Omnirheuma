@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { MapPin, CalendarDays } from "lucide-react"
+import { MapPin, CalendarDays, Award, Stethoscope } from "lucide-react"
 
 const meetCredentials = "MBBS · MD (Internal Medicine) · DM Clinical Immunology & Rheumatology"
 
@@ -22,13 +22,34 @@ function MeetRheumatologist() {
             <div style={{ background: "#e0f3f5", borderRadius: "20px", overflow: "hidden", aspectRatio: "3 / 4" }}>
               <img src="/raghav.webp" alt="Dr. Raghavendra H" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
             </div>
-            <div className="flex items-start" style={{ gap: "12px", background: "#eef7f5", borderRadius: "16px", padding: "16px 18px" }}>
-              <span className="flex items-center justify-center shrink-0" style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#0f616e", color: "#fff", marginTop: "2px" }}>
-                <MapPin size={14} />
-              </span>
-              <div>
-                <p style={{ color: "#0f2e33", fontSize: "14px", fontWeight: 700, marginBottom: "3px" }}>Omni Rheuma Clinic, Rachenahalli, Thanisandra</p>
-                <p style={{ color: "#5e5e5e", fontSize: "12.5px", lineHeight: 1.55 }}>No. 42 &amp; 25, 1st Floor, 80 Feet Road, Dr. Shiva Ram Karanth Nagar, MCEHS Layout, Rachenahalli, Thanisandra, above Pepperfry Furniture, RK Hegde Nagar, Bengaluru – 560077</p>
+            <div style={{ background: "#eef7f5", borderRadius: "16px", padding: "20px 22px" }}>
+              <div className="flex items-start" style={{ gap: "12px", marginBottom: "16px", paddingBottom: "16px", borderBottom: "1px solid #d8e7e4" }}>
+                <span className="flex items-center justify-center shrink-0" style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#0f616e", color: "#fff", marginTop: "2px" }}>
+                  <MapPin size={14} />
+                </span>
+                <div>
+                  <p style={{ color: "#0f2e33", fontSize: "14px", fontWeight: 700 }}>Omni Rheuma Clinic, Rachenahalli, Thanisandra</p>
+                </div>
+              </div>
+
+              <div className="flex items-start" style={{ gap: "12px", marginBottom: "16px", paddingBottom: "16px", borderBottom: "1px solid #d8e7e4" }}>
+                <span className="flex items-center justify-center shrink-0" style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#0f616e", color: "#fff", marginTop: "2px" }}>
+                  <Award size={14} />
+                </span>
+                <div>
+                  <p style={{ color: "#0f2e33", fontSize: "14px", fontWeight: 700, marginBottom: "4px" }}>Experience</p>
+                  <p style={{ color: "#5e5e5e", fontSize: "13px", lineHeight: 1.55 }}>14+ Years in Rheumatology · 15K+ Patients Treated</p>
+                </div>
+              </div>
+
+              <div className="flex items-start" style={{ gap: "12px" }}>
+                <span className="flex items-center justify-center shrink-0" style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#0f616e", color: "#fff", marginTop: "2px" }}>
+                  <Stethoscope size={14} />
+                </span>
+                <div>
+                  <p style={{ color: "#0f2e33", fontSize: "14px", fontWeight: 700, marginBottom: "4px" }}>Diseases Covered</p>
+                  <p style={{ color: "#5e5e5e", fontSize: "13px", lineHeight: 1.55 }}>Rheumatoid Arthritis, Osteoarthritis, Gout, Lupus (SLE), Ankylosing Spondylitis, Psoriatic Arthritis, Fibromyalgia, Osteoporosis</p>
+                </div>
               </div>
             </div>
           </div>

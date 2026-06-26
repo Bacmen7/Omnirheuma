@@ -87,7 +87,7 @@ function App() {
         ═══════════════════════════════════════════════ */}
         <ApproachSection />
 
-        <Specialists />
+        {/* <Specialists /> */}
 
         <Testimonials />
 
