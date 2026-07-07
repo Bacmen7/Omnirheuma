@@ -1,21 +1,23 @@
 import { useEffect, useRef, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useSearchParams } from "react-router-dom"
 import { ChevronLeft, ChevronRight, Search } from "lucide-react"
 import Header from "../components/Header"
 import BriefingFooter from "../components/BriefingFooter"
 
-const featured = [
-  { href: "/Rheumatoid-Arthritis", category: "Get started", title: "What is Rheumatoid Arthritis?", image: "/c1.webp" },
-  { href: "/Rheumatoid-Arthritis", category: "Early signs", title: "Could morning stiffness be Rheumatoid Arthritis?", image: "/c2.webp" },
-  { href: "/Rheumatoid-Arthritis", category: "Diagnosis", title: "How is Rheumatoid Arthritis diagnosed?", image: "/c1.webp" },
+const defaultConditionName = "Rheumatoid Arthritis"
+
+const buildFeatured = (name) => [
+  { href: "/Rheumatoid-Arthritis", category: "Get started", title: `What is ${name}?`, image: "/c1.webp" },
+  { href: "/Rheumatoid-Arthritis", category: "Early signs", title: `Could morning stiffness be ${name}?`, image: "/c2.webp" },
+  { href: "/Rheumatoid-Arthritis", category: "Diagnosis", title: `How is ${name} diagnosed?`, image: "/c1.webp" },
 ]
 
-const categoryLinks = [
+const buildCategoryLinks = (name) => [
   { label: "An overview", href: "/Rheumatoid-Arthritis" },
   { label: "Symptoms and Warning Signs", href: "/Rheumatoid-Arthritis" },
   { label: "Treatment options", href: "/Rheumatoid-Arthritis" },
   { label: "Specialised treatment options", href: "/Rheumatoid-Arthritis" },
-  { label: "Living with Rheumatoid arthritis", href: "/Rheumatoid-Arthritis" },
+  { label: `Living with ${name}`, href: "/Rheumatoid-Arthritis" },
 ]
 
 const videos = [
@@ -68,7 +70,27 @@ const BookIcon = ({ size = 28, color = "#0f616e" }) => (
   </svg>
 )
 
+const conditionNameMap = {
+  "arthritis": "Rheumatoid Arthritis",
+  "rheumatoid-arthritis": "Rheumatoid Arthritis",
+  "psoriatic-arthritis": "Psoriatic Arthritis",
+  "osteoarthritis": "Osteoarthritis",
+  "lupus": "Lupus",
+  "gout": "Gout",
+  "ankylosing-spondylitis": "Ankylosing Spondylitis",
+  "fibromyalgia": "Fibromyalgia",
+  "back-neck-pain": "Back & Neck Pain",
+  "vasculitis": "Vasculitis",
+}
+
 function Conditions() {
+  const [searchParams] = useSearchParams()
+  const conditionSlug = searchParams.get("c")
+  const conditionName = conditionSlug ? conditionNameMap[conditionSlug] : null
+  const displayName = conditionName || defaultConditionName
+  const featured = buildFeatured(displayName)
+  const categoryLinks = buildCategoryLinks(displayName)
+
   const [query, setQuery] = useState("")
   const [current, setCurrent] = useState(0)
   const [activeCondition, setActiveCondition] = useState(null)
@@ -98,8 +120,17 @@ function Conditions() {
         {/* ── 1. HERO SEARCH ── */}
         <section style={{ background: "#0f616e", padding: "40px 24px 72px", textAlign: "center" }}>
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+            {conditionName && (
+              <p style={{ color: "#a0e2e4", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "14px" }}>
+                {conditionName}
+              </p>
+            )}
             <h1 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "clamp(2.2rem,3.5vw,3rem)", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.3px", margin: "0 auto 52px" }}>
-              Browse rheumatic conditions<br/>reviewed by experts
+              {conditionName ? (
+                <>Browse {conditionName}<br/>reviewed by experts</>
+              ) : (
+                <>Browse rheumatic conditions<br/>reviewed by experts</>
+              )}
             </h1>
             <div style={{ position: "relative", maxWidth: "540px", margin: "0 auto" }}>
               <input

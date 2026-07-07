@@ -286,7 +286,7 @@ function HealthGuide() {
               {conditions.map((c) => (
                 <Link
                   key={c.name}
-                  to="/conditions"
+                  to={`/conditions?c=${c.slug}`}
                   style={{ textDecoration: "none", flexShrink: 0, width: "280px", scrollSnapAlign: "start" }}
                 >
                   <div style={{ background: "#fff", borderRadius: "20px", padding: "28px 20px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "12px", border: "1.5px solid #e8ecf2", transition: "border-color 0.2s", cursor: "pointer", height: "100%" }}
