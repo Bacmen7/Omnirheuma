@@ -15,6 +15,8 @@ const locations = [
     doctor: "Dr. Raghavendra H",
     bookingUrl: "/book-appointment",
     featured: true,
+    mapLink: "https://www.google.com/maps/place/Dr.+Raghavendra+H+-+Omni+Rheuma+%7C+Best+Rheumatologist+in+Bangalore/@13.0214533,77.628922,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1758579f5923:0xfd8ae6df090cbbfb!8m2!3d13.0214533!4d77.628922!16s%2Fg%2F11zg354l1f",
+    mapEmbed: "https://maps.google.com/maps?q=Dr.+Raghavendra+H+-+Omni+Rheuma+Best+Rheumatologist+in+Bangalore&ll=13.0214533,77.628922&z=17&output=embed",
   },
 ]
 
@@ -116,14 +118,14 @@ function Locations() {
 
                   {/* Right - Google Maps embed (reused from DoctorProfile) */}
                   <a
-                    href={`https://www.google.com/maps/search/${encodeURIComponent(loc.name + ", Bangalore")}`}
+                    href={loc.mapLink || `https://www.google.com/maps/search/${encodeURIComponent(loc.name + ", Bangalore")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block shrink-0 relative group w-full sm:w-[260px] h-52 sm:h-auto min-h-[180px]"
                   >
                     <iframe
                       title={loc.name}
-                      src={`https://maps.google.com/maps?q=${encodeURIComponent(loc.name + ", Bangalore")}&output=embed&z=14`}
+                      src={loc.mapEmbed || `https://maps.google.com/maps?q=${encodeURIComponent(loc.name + ", Bangalore")}&output=embed&z=14`}
                       className="w-full h-full absolute inset-0 pointer-events-none"
                       style={{ border: 0 }}
                       loading="lazy"

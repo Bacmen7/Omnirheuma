@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import Header from "../components/Header"
 import GoutNewsletter from "../components/GoutNewsletter"
 import BriefingFooter from "../components/BriefingFooter"
@@ -440,12 +441,12 @@ function OsteoarthritisLiving() {
                   <p style={{ fontSize: "16px", lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: "28px" }}>
                     Managing osteoarthritis well requires a plan that fits your life. A rheumatologist can review your symptoms, adjust your treatment, and guide you through the daily habits that matter most for your specific condition.
                   </p>
-                  <a
-                    href="/book-appointment"
+                  <Link
+                    to="/book-appointment"
                     style={{ display: "inline-block", backgroundColor: "#E86531", color: "#ffffff", fontWeight: 700, fontSize: "15px", padding: "12px 28px", borderRadius: "9999px", textDecoration: "none" }}
                   >
                     Book Your First Visit
-                  </a>
+                  </Link>
                 </div>
 
                 {/* ── NEWSLETTER ── */}
@@ -513,8 +514,8 @@ function OsteoarthritisLiving() {
                     <p style={{ fontSize: "13px", lineHeight: 1.55, color: "rgba(255,255,255,0.78)", marginBottom: "14px" }}>
                       Consultant Rheumatologist for osteoarthritis evaluation and long-term joint care.
                     </p>
-                    <a
-                      href="/book-appointment"
+                    <Link
+                      to="/book-appointment"
                       className="group"
                       style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontSize: "13px", fontWeight: 700, padding: "11px 16px 11px 18px", borderRadius: "9999px", textDecoration: "none" }}
                     >
@@ -522,7 +523,7 @@ function OsteoarthritisLiving() {
                       <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
                         <ArrowRight size={14} />
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </aside>

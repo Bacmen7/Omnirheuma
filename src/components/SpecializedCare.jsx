@@ -1,4 +1,5 @@
 import { useState, useRef } from "react"
+import { Link } from "react-router-dom"
 import { ChevronLeft, ChevronRight, ArrowUpRight, Play, FileText, ArrowRight } from "lucide-react"
 
 const diseasesData = [
@@ -138,14 +139,14 @@ function SpecializedCare() {
             className="flex items-center gap-2 md:gap-3 overflow-x-auto scrollbar-hide py-1 scroll-smooth mx-0 md:mx-3"
             ref={tabContainerRef}
           >
-            <a
-              href="/health-guide"
+            <Link
+              to="/health-guide"
               className="shrink-0 px-6 py-2.5 rounded-full border flex items-center gap-2 transition-colors"
               style={{ backgroundColor: "#ffffff", borderColor: "#0f616e", color: "#0f616e", fontWeight: 500, fontSize: "14px", fontFamily: "var(--font-base)" }}
             >
               View all
               <ArrowUpRight size={14} />
-            </a>
+            </Link>
 
             {diseasesData.map((disease, index) => (
               <button
@@ -197,7 +198,7 @@ function SpecializedCare() {
 
                   {/* Image Left */}
                   <div className="w-full lg:w-[50%] shrink-0 flex justify-center px-4 md:px-0">
-                    <a href={disease.url} className="block overflow-hidden rounded-[2rem] md:rounded-[2.5rem] w-full max-w-[320px] md:max-w-none">
+                    <Link to={disease.url} className="block overflow-hidden rounded-[2rem] md:rounded-[2.5rem] w-full max-w-[320px] md:max-w-none">
                       <img
                         src={disease.image}
                         alt={disease.title}
@@ -205,7 +206,7 @@ function SpecializedCare() {
                         style={{ borderRadius: "2rem" }}
                         loading="lazy"
                       />
-                    </a>
+                    </Link>
                   </div>
 
                   {/* Content Right */}
@@ -217,14 +218,14 @@ function SpecializedCare() {
                       {disease.description}
                     </p>
 
-                    <a
-                      href={disease.url}
+                    <Link
+                      to={disease.url}
                       className="inline-flex items-center gap-2 transition-colors"
                       style={{ color: "#1AA3B5", fontWeight: 700, fontSize: "15px", marginBottom: "40px", fontFamily: "var(--font-base)" }}
                     >
                       Know more
                       <ArrowUpRight size={18} style={{ color: "#1AA3B5" }} />
-                    </a>
+                    </Link>
 
                     {/* Video & Article -desktop only */}
                     <div className="hidden md:flex flex-col sm:flex-row justify-start gap-6 w-full max-w-xl">

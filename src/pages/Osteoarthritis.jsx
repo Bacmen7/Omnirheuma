@@ -641,8 +641,8 @@ function Osteoarthritis() {
                   <p style={{ fontSize: "16px", lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: "28px" }}>
                     If the symptoms discussed in this article sound familiar, a proper diagnosis is the need of the hour. Joint pain that is persistent, limiting, or getting worse is not something to be ignored. A rheumatologist can give you clarity on what's happening to your joints and a plan for managing it. The earlier you take action, the healthier your life can be.
                   </p>
-                  <a
-                    href="/book-appointment"
+                  <Link
+                    to="/book-appointment"
                     className="group"
                     style={{
                       display: "inline-flex",
@@ -662,7 +662,7 @@ function Osteoarthritis() {
                     <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
                       <ArrowRight size={14} />
                     </span>
-                  </a>
+                  </Link>
                 </div>
 
                 {/* ── NEWSLETTER ── */}
@@ -732,8 +732,8 @@ function Osteoarthritis() {
                     <p style={{ fontSize: "13px", lineHeight: 1.55, color: "rgba(255,255,255,0.78)", marginBottom: "14px" }}>
                       Consultant Rheumatologist for osteoarthritis evaluation and long-term joint care.
                     </p>
-                    <a
-                      href="/book-appointment"
+                    <Link
+                      to="/book-appointment"
                       className="group"
                       style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontSize: "13px", fontWeight: 700, padding: "11px 16px 11px 18px", borderRadius: "9999px", textDecoration: "none" }}
                     >
@@ -741,7 +741,7 @@ function Osteoarthritis() {
                       <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
                         <ArrowRight size={14} />
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </aside>

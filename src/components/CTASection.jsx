@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function CTASection() {
   return (
     <section className="relative overflow-hidden">
@@ -23,17 +25,17 @@ function CTASection() {
               Ready to get started?
             </h2>
             <div className="flex flex-wrap items-center gap-5">
-              <a
-                href="/book-appointment"
+              <Link
+                to="/book-appointment"
                 className="inline-block bg-primary hover:bg-primary-hover text-white px-7 py-3.5 rounded-full font-semibold text-base transition-colors"
               >
                 Schedule An Appointment
-              </a>
+              </Link>
               <span className="text-white/70 text-base">
                 or{" "}
-                <a href="/book-appointment" className="text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors">
+                <Link to="/book-appointment" className="text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors">
                   let&apos;s get in touch
-                </a>
+                </Link>
               </span>
             </div>
           </div>

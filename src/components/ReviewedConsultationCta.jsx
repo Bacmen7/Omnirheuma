@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function ReviewedConsultationCta({ style = {} }) {
   return (
     <div
@@ -25,8 +27,8 @@ export default function ReviewedConsultationCta({ style = {} }) {
         <p style={{ fontFamily: "var(--font-base)", fontSize: "14px", color: "rgba(255,255,255,0.82)", lineHeight: 1.65, maxWidth: "560px", marginBottom: "18px" }}>
           Get a personal review from Dr. Raghavendra. Most patients leave their first visit with clarity on what's happening and a plan for next steps.
         </p>
-        <a
-          href="/book-appointment"
+        <Link
+          to="/book-appointment"
           style={{
             display: "inline-block",
             backgroundColor: "#E86531",
@@ -42,7 +44,7 @@ export default function ReviewedConsultationCta({ style = {} }) {
           }}
         >
           Book Visit
-        </a>
+        </Link>
       </div>
       <div className="hidden md:block" style={{ width: "200px", flexShrink: 0, overflow: "hidden" }}>
         <img src="/images/12hero-slide-1.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} />

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import Header from "../components/Header"
 import GoutNewsletter from "../components/GoutNewsletter"
 import BriefingFooter from "../components/BriefingFooter"
@@ -499,8 +500,8 @@ function OsteoarthritisAdvanced() {
                     <p style={{ fontSize: "13px", lineHeight: 1.55, color: "rgba(255,255,255,0.78)", marginBottom: "14px" }}>
                       Consultant Rheumatologist for osteoarthritis evaluation and long-term joint care.
                     </p>
-                    <a
-                      href="/book-appointment"
+                    <Link
+                      to="/book-appointment"
                       className="group"
                       style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontSize: "13px", fontWeight: 700, padding: "11px 16px 11px 18px", borderRadius: "9999px", textDecoration: "none" }}
                     >
@@ -508,7 +509,7 @@ function OsteoarthritisAdvanced() {
                       <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
                         <ArrowRight size={14} />
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </aside>

@@ -11,6 +11,7 @@ import Blog from "./pages/Blog.jsx"
 import DoctorProfile from "./pages/DoctorProfile.jsx"
 import HealthGuide from "./pages/HealthGuide.jsx"
 import ArthritisGuide from "./pages/ArthritisGuide.jsx"
+import ArthritisGuide2 from "./pages/ArthritisGuide2.jsx"
 import Arthritis from "./pages/Arthritis.jsx"
 import KnowledgeHub from "./pages/KnowledgeHub.jsx"
 import TreatmentGuides from "./pages/TreatmentGuides.jsx"
@@ -46,6 +47,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/specialist/:id" element={<DoctorProfile />} />
         <Route path="/health-guide" element={<HealthGuide />} />
         <Route path="/Rheumatoid-Arthritis" element={<ArthritisGuide />} />
+        <Route path="/Rheumatoid-Arthritis-2" element={<ArthritisGuide2 />} />
         <Route path="/rheumatoid-arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/health-guide/Rheumatoid-Arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/arthritis" element={<Arthritis />} />

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import Header from "../components/Header"
 import Newsletter from "../components/Newsletter"
 import GoutNewsletter from "../components/GoutNewsletter"
@@ -580,8 +581,8 @@ function ArthritisGuide() {
                       ))}
                     </ul>
 
-                    <a
-                      href="/book-appointment"
+                    <Link
+                      to="/book-appointment"
                       className="group"
                       style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none" }}
                     >
@@ -589,13 +590,13 @@ function ArthritisGuide() {
                       <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
                         <ArrowRight size={14} />
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
-                <div style={{ marginBottom: "4rem" }}>
+                {/* <div style={{ marginBottom: "4rem" }}>
                   <GoutNewsletter />
-                </div>
+                </div> */}
 
                 {/* ── REVIEWER ── */}
 
@@ -641,8 +642,8 @@ function ArthritisGuide() {
                     <p style={{ fontFamily: "var(--font-base)", fontSize: "13px", lineHeight: 1.55, color: "rgba(255,255,255,0.78)", marginBottom: "14px" }}>
                       Consultant Rheumatologist for rheumatoid arthritis evaluation and long-term joint care.
                     </p>
-                    <a
-                      href="/book-appointment"
+                    <Link
+                      to="/book-appointment"
                       className="group"
                       style={{ fontFamily: "var(--font-base)", display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontSize: "13px", fontWeight: 700, padding: "11px 16px 11px 18px", borderRadius: "9999px", textDecoration: "none" }}
                     >
@@ -650,7 +651,7 @@ function ArthritisGuide() {
                       <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
                         <ArrowRight size={14} />
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </aside>
@@ -719,22 +720,22 @@ function ArthritisGuide() {
                     Ready to get started?
                   </h2>
                   <div className="flex flex-col sm:flex-row items-center sm:items-center gap-7 md:gap-6">
-                    <a
-                      href="/book-appointment"
+                    <Link
+                      to="/book-appointment"
                       className="inline-block rounded-full font-semibold text-[15px] transition-all hover:opacity-90 text-center"
                       style={{ backgroundColor: "#1AA3B5", color: "#ffffff", padding: "16px 32px" }}
                     >
                       Schedule An Appointment
-                    </a>
+                    </Link>
                     <div className="flex items-center gap-2 text-white">
                       <span className="text-[15px] text-gray-100 opacity-90">or</span>
-                      <a
-                        href="/book-appointment"
+                      <Link
+                        to="/book-appointment"
                         className="text-[15px] font-semibold underline underline-offset-[6px] hover:opacity-80 transition-opacity"
                         style={{ color: "#ffffff", textDecorationThickness: "2px" }}
                       >
                         let&apos;s get in touch
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

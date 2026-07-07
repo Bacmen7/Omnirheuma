@@ -11,11 +11,11 @@ const featured = [
 ]
 
 const categoryLinks = [
-  { label: "Common subtypes & symptoms", href: "/Rheumatoid-Arthritis" },
-  { label: "Treatment options", href: "/health-guide" },
-  { label: "Rheumatology stats & science", href: "/blog" },
-  { label: "Living with arthritis", href: "/health-guide" },
-  { label: "Related symptoms & conditions", href: "/health-guide" },
+  { label: "An overview", href: "/Rheumatoid-Arthritis" },
+  { label: "Symptoms and Warning Signs", href: "/Rheumatoid-Arthritis" },
+  { label: "Treatment options", href: "/Rheumatoid-Arthritis" },
+  { label: "Specialised treatment options", href: "/Rheumatoid-Arthritis" },
+  { label: "Living with Rheumatoid arthritis", href: "/Rheumatoid-Arthritis" },
 ]
 
 const videos = [
@@ -37,28 +37,28 @@ const conditionCards = [
 
 /* Condition tiles -mirrors the Knowledge Hub "Know more about Your condition" section */
 const arthritisConditions = [
-  { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune" },
-  { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative" },
-  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune" },
-  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune" },
+  { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
+  { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative", href: "/osteoarthritis" },
+  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
+  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
 ]
 
 const otherConditions = [
-  { key: "gout", name: "Gout" },
-  { key: "ctd", name: "Connective Tissue Disease" },
-  { key: "fibro", name: "Fibromyalgia" },
-  { key: "vasculitis", name: "Vasculitis" },
-  { key: "lupus", name: "Lupus (SLE)" },
-  { key: "reactive", name: "Reactive Arthritis" },
-  { key: "sjogrens", name: "Sjögren's Syndrome" },
-  { key: "jia", name: "Juvenile Idiopathic Arthritis" },
-  { key: "pmr", name: "Polymyalgia Rheumatica" },
-  { key: "scleroderma", name: "Systemic Sclerosis" },
-  { key: "osteoporosis", name: "Osteoporosis" },
-  { key: "septic", name: "Septic Arthritis" },
-  { key: "cppd", name: "Crystal Arthropathies (CPPD)" },
-  { key: "mctd", name: "Mixed Connective Tissue Disease" },
-  { key: "raynauds", name: "Raynaud's Phenomenon" },
+  { key: "gout", name: "Gout", href: "/gout" },
+  { key: "ctd", name: "Connective Tissue Disease", href: "/Rheumatoid-Arthritis" },
+  { key: "fibro", name: "Fibromyalgia", href: "/Rheumatoid-Arthritis" },
+  { key: "vasculitis", name: "Vasculitis", href: "/Rheumatoid-Arthritis" },
+  { key: "lupus", name: "Lupus (SLE)", href: "/Rheumatoid-Arthritis" },
+  { key: "reactive", name: "Reactive Arthritis", href: "/Rheumatoid-Arthritis" },
+  { key: "sjogrens", name: "Sjögren's Syndrome", href: "/Rheumatoid-Arthritis" },
+  { key: "jia", name: "Juvenile Idiopathic Arthritis", href: "/Rheumatoid-Arthritis" },
+  { key: "pmr", name: "Polymyalgia Rheumatica", href: "/Rheumatoid-Arthritis" },
+  { key: "scleroderma", name: "Systemic Sclerosis", href: "/Rheumatoid-Arthritis" },
+  { key: "osteoporosis", name: "Osteoporosis", href: "/Rheumatoid-Arthritis" },
+  { key: "septic", name: "Septic Arthritis", href: "/Rheumatoid-Arthritis" },
+  { key: "cppd", name: "Crystal Arthropathies (CPPD)", href: "/Rheumatoid-Arthritis" },
+  { key: "mctd", name: "Mixed Connective Tissue Disease", href: "/Rheumatoid-Arthritis" },
+  { key: "raynauds", name: "Raynaud's Phenomenon", href: "/Rheumatoid-Arthritis" },
 ]
 
 const BookIcon = ({ size = 28, color = "#0f616e" }) => (
@@ -193,7 +193,7 @@ function Conditions() {
         </section>
 
         {/* ── 4. EXPLORE VIDEOS ── */}
-        <section style={{ padding: "48px 0", background: "#f5f5f5" }}>
+        {/* <section style={{ padding: "48px 0", background: "#f5f5f5" }}>
           <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
             <h2 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "2.8rem", fontWeight: 400, textAlign: "center", marginBottom: "28px" }}>Explore videos</h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px" }}>
@@ -218,7 +218,7 @@ function Conditions() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
 
         {/* ── 7. EDITORIAL PROCESS ── */}
@@ -257,12 +257,10 @@ function Conditions() {
             {/* Big tiles -2 column */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#dde6ee] rounded-lg overflow-hidden mb-8">
               {arthritisConditions.map((c) => (
-                <button
+                <Link
                   key={c.key}
-                  onClick={() => setActiveCondition(activeCondition === c.key ? null : c.key)}
-                  className={`flex min-h-[124px] gap-6 items-center px-7 py-7 md:min-h-[138px] md:px-8 md:py-8 border-none cursor-pointer text-left transition-colors ${
-                    activeCondition === c.key ? "bg-white" : "bg-[#e0f3f5] hover:bg-[#d4ebf8]"
-                  }`}
+                  to={c.href}
+                  className="flex min-h-[124px] gap-6 items-center px-7 py-7 md:min-h-[138px] md:px-8 md:py-8 border-none cursor-pointer text-left transition-colors bg-[#e0f3f5] hover:bg-[#d4ebf8] no-underline"
                   style={{ fontFamily: "var(--font-base)" }}
                 >
                   <BookIcon size={30} color="#0f616e" />
@@ -273,7 +271,7 @@ function Conditions() {
                   <div className="w-10 h-10 rounded-lg bg-navy-deep text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
                   </div>
-                </button>
+                </Link>
               ))}
             </div>
 
@@ -285,12 +283,12 @@ function Conditions() {
             {/* Small tiles */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-[#dde6ee] rounded-lg overflow-hidden mb-4">
               {otherConditions.map((c, idx) => (
-                <button
+                <Link
                   key={c.key}
-                  onClick={() => setActiveCondition(activeCondition === c.key ? null : c.key)}
-                  className={`flex gap-3 items-center p-5 border-none cursor-pointer text-left transition-colors ${
-                    activeCondition === c.key ? "bg-white" : "bg-[#e0f3f5] hover:bg-[#d4ebf8]"
-                  } ${!showAllConditions && idx >= 5 ? "hidden sm:flex" : ""}`}
+                  to={c.href}
+                  className={`flex gap-3 items-center p-5 border-none cursor-pointer text-left transition-colors bg-[#e0f3f5] hover:bg-[#d4ebf8] no-underline ${
+                    !showAllConditions && idx >= 5 ? "hidden sm:flex" : ""
+                  }`}
                   style={{ fontFamily: "var(--font-base)" }}
                 >
                   <BookIcon size={22} color="#0f616e" />
@@ -300,7 +298,7 @@ function Conditions() {
                   <div className="w-7 h-7 rounded-md text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
                   </div>
-                </button>
+                </Link>
               ))}
             </div>
 
