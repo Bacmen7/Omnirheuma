@@ -12,6 +12,12 @@ import DoctorProfile from "./pages/DoctorProfile.jsx"
 import HealthGuide from "./pages/HealthGuide.jsx"
 import ArthritisGuide from "./pages/ArthritisGuide.jsx"
 import ArthritisGuide2 from "./pages/ArthritisGuide2.jsx"
+import RAVariation1 from "./pages/RAVariation1.jsx"
+import RAVariation2 from "./pages/RAVariation2.jsx"
+import RAVariation3 from "./pages/RAVariation3.jsx"
+import RAVariation4 from "./pages/RAVariation4.jsx"
+import RAVariation5 from "./pages/RAVariation5.jsx"
+import RAVariation6 from "./pages/RAVariation6.jsx"
 import Arthritis from "./pages/Arthritis.jsx"
 import KnowledgeHub from "./pages/KnowledgeHub.jsx"
 import TreatmentGuides from "./pages/TreatmentGuides.jsx"
@@ -48,6 +54,12 @@ createRoot(document.getElementById('root')).render(
         <Route path="/health-guide" element={<HealthGuide />} />
         <Route path="/Rheumatoid-Arthritis" element={<ArthritisGuide />} />
         <Route path="/Rheumatoid-Arthritis-2" element={<ArthritisGuide2 />} />
+        <Route path="/Rheumatoid-Arthritis-v1" element={<RAVariation1 />} />
+        <Route path="/Rheumatoid-Arthritis-v2" element={<RAVariation2 />} />
+        <Route path="/Rheumatoid-Arthritis-v3" element={<RAVariation3 />} />
+        <Route path="/Rheumatoid-Arthritis-v4" element={<RAVariation4 />} />
+        <Route path="/Rheumatoid-Arthritis-v5" element={<RAVariation5 />} />
+        <Route path="/Rheumatoid-Arthritis-v6" element={<RAVariation6 />} />
         <Route path="/rheumatoid-arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/health-guide/Rheumatoid-Arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/arthritis" element={<Arthritis />} />

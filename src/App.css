@@ -70,7 +70,7 @@
   transition: transform 0.3s ease;
 }
 
-.landing-page button:not(.faq-btn):not(.condition-tile),
+.landing-page button:not(.faq-btn):not(.condition-tile):not(.nav-tab),
 .landing-page input[type="button"],
 .landing-page input[type="submit"],
 .landing-page input[type="reset"] {
@@ -78,7 +78,8 @@
 }
 
 /* Condition tiles must stay square (override pill rule above) */
-.landing-page button.condition-tile {
+.landing-page button.condition-tile,
+.landing-page button.nav-tab {
   border-radius: 0 !important;
 }
 
