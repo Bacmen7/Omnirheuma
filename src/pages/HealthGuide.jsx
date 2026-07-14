@@ -80,26 +80,26 @@ const faqs = [
 const arthritisConditions = [
   { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
   { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative", href: "/osteoarthritis" },
-  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
-  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
+  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune", href: null },
+  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: null },
 ]
 
 const otherConditions = [
   { key: "gout", name: "Gout", href: "/gout" },
-  { key: "ctd", name: "Connective Tissue Disease", href: "/Rheumatoid-Arthritis" },
-  { key: "fibro", name: "Fibromyalgia", href: "/Rheumatoid-Arthritis" },
-  { key: "vasculitis", name: "Vasculitis", href: "/Rheumatoid-Arthritis" },
-  { key: "lupus", name: "Lupus (SLE)", href: "/Rheumatoid-Arthritis" },
-  { key: "reactive", name: "Reactive Arthritis", href: "/Rheumatoid-Arthritis" },
-  { key: "sjogrens", name: "Sjögren's Syndrome", href: "/Rheumatoid-Arthritis" },
-  { key: "jia", name: "Juvenile Idiopathic Arthritis", href: "/Rheumatoid-Arthritis" },
-  { key: "pmr", name: "Polymyalgia Rheumatica", href: "/Rheumatoid-Arthritis" },
-  { key: "scleroderma", name: "Systemic Sclerosis", href: "/Rheumatoid-Arthritis" },
-  { key: "osteoporosis", name: "Osteoporosis", href: "/Rheumatoid-Arthritis" },
-  { key: "septic", name: "Septic Arthritis", href: "/Rheumatoid-Arthritis" },
-  { key: "cppd", name: "Crystal Arthropathies (CPPD)", href: "/Rheumatoid-Arthritis" },
-  { key: "mctd", name: "Mixed Connective Tissue Disease", href: "/Rheumatoid-Arthritis" },
-  { key: "raynauds", name: "Raynaud's Phenomenon", href: "/Rheumatoid-Arthritis" },
+  { key: "ctd", name: "Connective Tissue Disease", href: null },
+  { key: "fibro", name: "Fibromyalgia", href: null },
+  { key: "vasculitis", name: "Vasculitis", href: null },
+  { key: "lupus", name: "Lupus (SLE)", href: null },
+  { key: "reactive", name: "Reactive Arthritis", href: null },
+  { key: "sjogrens", name: "Sjögren's Syndrome", href: null },
+  { key: "jia", name: "Juvenile Idiopathic Arthritis", href: null },
+  { key: "pmr", name: "Polymyalgia Rheumatica", href: null },
+  { key: "scleroderma", name: "Systemic Sclerosis", href: null },
+  { key: "osteoporosis", name: "Osteoporosis", href: null },
+  { key: "septic", name: "Septic Arthritis", href: null },
+  { key: "cppd", name: "Crystal Arthropathies (CPPD)", href: null },
+  { key: "mctd", name: "Mixed Connective Tissue Disease", href: null },
+  { key: "raynauds", name: "Raynaud's Phenomenon", href: null },
 ]
 
 const BookIcon = ({ size = 28, color = "#0f616e" }) => (
@@ -318,23 +318,33 @@ function HealthGuide() {
 
               {/* Big tiles -2 column */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#dde6ee] overflow-hidden mb-8">
-                {arthritisConditions.map((c) => (
-                  <Link
-                    key={c.key}
-                    to={c.href}
-                    className="condition-tile flex min-h-[124px] gap-6 items-center px-7 py-7 md:min-h-[138px] md:px-8 md:py-8 border-none cursor-pointer text-left transition-colors bg-[#e0f3f5] hover:bg-[#d4ebf8] no-underline"
-                    style={{ fontFamily: "var(--font-base)" }}
-                  >
-                    <BookIcon size={30} color="#0f616e" />
-                    <div className="flex-1">
-                      <div className="text-[1.15rem] font-bold leading-snug text-navy-deep mb-1">{c.name}</div>
-                      <div className="text-[13px] text-navy-muted">{c.typeLabel}</div>
+                {arthritisConditions.map((c) => {
+                  const inner = (
+                    <>
+                      <BookIcon size={30} color="#0f616e" />
+                      <div className="flex-1">
+                        <div className="text-[1.15rem] font-bold leading-snug text-navy-deep mb-1">{c.name}</div>
+                        <div className="text-[13px] text-navy-muted">{c.typeLabel}</div>
+                      </div>
+                      {c.href ? (
+                        <div className="w-10 h-10 rounded-full text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                        </div>
+                      ) : (
+                        <span className="text-[11px] font-semibold text-navy-muted shrink-0" style={{ opacity: 0.6 }}>Coming soon</span>
+                      )}
+                    </>
+                  )
+                  return c.href ? (
+                    <Link key={c.key} to={c.href} className="condition-tile flex min-h-[124px] gap-6 items-center px-7 py-7 md:min-h-[138px] md:px-8 md:py-8 border-none cursor-pointer text-left transition-colors bg-[#e0f3f5] hover:bg-[#d4ebf8] no-underline" style={{ fontFamily: "var(--font-base)" }}>
+                      {inner}
+                    </Link>
+                  ) : (
+                    <div key={c.key} className="condition-tile flex min-h-[124px] gap-6 items-center px-7 py-7 md:min-h-[138px] md:px-8 md:py-8 text-left bg-[#e0f3f5]" style={{ fontFamily: "var(--font-base)", cursor: "default", opacity: 0.7 }}>
+                      {inner}
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-navy-deep text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
-                    </div>
-                  </Link>
-                ))}
+                  )
+                })}
               </div>
 
               {/* Other conditions label */}
@@ -344,24 +354,31 @@ function HealthGuide() {
 
               {/* Small tiles */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-[#dde6ee] overflow-hidden mb-4">
-                {otherConditions.map((c, idx) => (
-                  <Link
-                    key={c.key}
-                    to={c.href}
-                    className={`condition-tile flex gap-3 items-center p-5 border-none cursor-pointer text-left transition-colors bg-[#e0f3f5] hover:bg-[#d4ebf8] no-underline ${
-                      !showAllConditions && idx >= 5 ? "hidden sm:flex" : ""
-                    }`}
-                    style={{ fontFamily: "var(--font-base)" }}
-                  >
-                    <BookIcon size={22} color="#0f616e" />
-                    <div className="flex-1">
-                      <div className="text-sm font-semibold text-navy-deep">{c.name}</div>
+                {otherConditions.map((c, idx) => {
+                  const hideCls = !showAllConditions && idx >= 5 ? "hidden sm:flex" : ""
+                  const inner = (
+                    <>
+                      <BookIcon size={22} color="#0f616e" />
+                      <div className="flex-1">
+                        <div className="text-sm font-semibold text-navy-deep">{c.name}</div>
+                      </div>
+                      {c.href && (
+                        <div className="w-7 h-7 rounded-full text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                        </div>
+                      )}
+                    </>
+                  )
+                  return c.href ? (
+                    <Link key={c.key} to={c.href} className={`condition-tile flex gap-3 items-center p-5 border-none cursor-pointer text-left transition-colors bg-[#e0f3f5] hover:bg-[#d4ebf8] no-underline ${hideCls}`} style={{ fontFamily: "var(--font-base)" }}>
+                      {inner}
+                    </Link>
+                  ) : (
+                    <div key={c.key} className={`condition-tile flex gap-3 items-center p-5 text-left bg-[#e0f3f5] ${hideCls}`} style={{ fontFamily: "var(--font-base)", cursor: "default", opacity: 0.7 }}>
+                      {inner}
                     </div>
-                    <div className="w-7 h-7 rounded-full text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
-                    </div>
-                  </Link>
-                ))}
+                  )
+                })}
               </div>
 
               <button
