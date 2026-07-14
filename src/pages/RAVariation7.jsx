@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Header from "../components/Header"
 import BriefingFooter from "../components/BriefingFooter"
@@ -66,9 +66,22 @@ const tabs = ["Overview", "Symptoms", "Diagnosis", "Treatment", "Living With RA"
 const tabTargets = { Overview: "overview", Symptoms: "symptoms", Diagnosis: "diagnosis", Treatment: "treatment", "Living With RA": "managing-ra" }
 
 function RAVariation7() {
+  const [progress, setProgress] = useState(0)
+
   useEffect(() => {
     document.title = "Rheumatoid Arthritis Guide | Omni Rheuma"
     return () => { document.title = "Omni Rheuma" }
+  }, [])
+
+  useEffect(() => {
+    const onScroll = () => {
+      const h = document.documentElement
+      const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight)
+      setProgress(Math.min(100, Math.max(0, scrolled * 100)))
+    }
+    window.addEventListener("scroll", onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
   const scrollTo = (id) => {
@@ -82,6 +95,12 @@ function RAVariation7() {
   return (
     <div className="landing-page bg-white text-navy-deep antialiased">
       <Header />
+
+      {/* Reading progress bar — orange line at top */}
+      <div style={{ position: "fixed", top: 0, left: 0, right: 0, height: "3px", zIndex: 60, backgroundColor: "transparent" }}>
+        <div style={{ height: "100%", width: `${progress}%`, backgroundColor: "#E86531", transition: "width 0.1s linear" }} />
+      </div>
+
       <main>
 
         {/* ═══════════ HERO — light, centered, doctor card + stats ═══════════ */}
@@ -91,29 +110,20 @@ function RAVariation7() {
             <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(38px, 7vw, 68px)", fontWeight: 400, lineHeight: 1.05, letterSpacing: "-1px", color: "#0f616e", marginBottom: "1rem" }}>
               Rheumatoid Arthritis
             </h1>
-            <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2rem", maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
+            <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
               What it is, symptoms, causes and treatment options — explained for patients and caregivers
             </p>
 
-            {/* Tab pills */}
-            <div className="flex flex-wrap justify-center gap-2.5 mb-12">
-              {tabs.map((t) => (
-                <button key={t} onClick={() => scrollTo(tabTargets[t])} className="nav-tab transition-colors" style={{ backgroundColor: "transparent", border: "1px solid rgba(15,97,110,0.3)", color: "#0f616e", padding: "9px 20px", borderRadius: "9999px", fontSize: "13px", fontWeight: 600, cursor: "pointer" }}>
-                  {t}
-                </button>
-              ))}
-            </div>
-
-            {/* Doctor gradient card + overlapping stats */}
+            {/* Disease image gradient card + overlapping stats */}
             <div style={{ position: "relative", paddingBottom: "52px" }}>
-              <div style={{ background: "linear-gradient(135deg, #0f616e 0%, #1AA3B5 100%)", borderRadius: "6px", padding: "48px 32px 76px", position: "relative", overflow: "hidden" }}>
-                <img
-                  src="/raghav.webp"
-                  alt="Dr. Raghavendra H"
-                  style={{ width: "180px", height: "180px", borderRadius: "50%", objectFit: "cover", objectPosition: "center top", margin: "0 auto", border: "4px solid rgba(255,255,255,0.4)", display: "block", backgroundColor: "#e8f4f8" }}
-                />
-                <p style={{ color: "#ffffff", fontSize: "18px", fontWeight: 700, marginTop: "20px", fontFamily: "var(--font-base)" }}>Reviewed by Dr. Raghavendra H</p>
-                <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "13px", marginTop: "4px" }}>Consultant Rheumatologist</p>
+              <div style={{ background: "linear-gradient(135deg, #0f616e 0%, #1AA3B5 100%)", borderRadius: "6px", padding: "40px 32px 76px", position: "relative", overflow: "hidden" }}>
+                <div style={{ width: "clamp(200px, 40vw, 300px)", height: "clamp(200px, 40vw, 300px)", borderRadius: "50%", margin: "0 auto", overflow: "hidden", border: "5px solid rgba(255,255,255,0.35)", backgroundColor: "rgba(255,255,255,0.95)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <img
+                    src="/condition/Rheumatoid Arthritis (RA).webp"
+                    alt="Rheumatoid Arthritis"
+                    style={{ width: "82%", height: "82%", objectFit: "contain", display: "block" }}
+                  />
+                </div>
               </div>
 
               {/* Overlapping stat cards */}
@@ -129,6 +139,15 @@ function RAVariation7() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Tab pills — below the card */}
+            <div className="flex flex-wrap justify-center gap-2.5 pb-10">
+              {tabs.map((t) => (
+                <button key={t} onClick={() => scrollTo(tabTargets[t])} className="nav-tab transition-colors" style={{ backgroundColor: "transparent", border: "1px solid rgba(15,97,110,0.3)", color: "#0f616e", padding: "9px 20px", borderRadius: "9999px", fontSize: "13px", fontWeight: 600, cursor: "pointer" }}>
+                  {t}
+                </button>
+              ))}
             </div>
           </div>
         </header>
