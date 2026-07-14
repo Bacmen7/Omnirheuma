@@ -18,6 +18,7 @@ import RAVariation3 from "./pages/RAVariation3.jsx"
 import RAVariation4 from "./pages/RAVariation4.jsx"
 import RAVariation5 from "./pages/RAVariation5.jsx"
 import RAVariation6 from "./pages/RAVariation6.jsx"
+import RAVariation7 from "./pages/RAVariation7.jsx"
 import Arthritis from "./pages/Arthritis.jsx"
 import KnowledgeHub from "./pages/KnowledgeHub.jsx"
 import TreatmentGuides from "./pages/TreatmentGuides.jsx"
@@ -60,6 +61,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Rheumatoid-Arthritis-v4" element={<RAVariation4 />} />
         <Route path="/Rheumatoid-Arthritis-v5" element={<RAVariation5 />} />
         <Route path="/Rheumatoid-Arthritis-v6" element={<RAVariation6 />} />
+        <Route path="/Rheumatoid-Arthritis-v7" element={<RAVariation7 />} />
         <Route path="/rheumatoid-arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/health-guide/Rheumatoid-Arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/arthritis" element={<Arthritis />} />
