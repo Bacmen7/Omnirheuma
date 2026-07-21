@@ -126,7 +126,7 @@ function OsteoarthritisOverview() {
 
         {/* ═══════════ CONTENT ═══════════ */}
         <section className="bg-white">
-          <div className="max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
+          <div className="overview-content max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
 
             {/* INTRO */}
             <div id="overview" style={{ scrollMarginTop: "80px" }}>
@@ -154,7 +154,7 @@ function OsteoarthritisOverview() {
                 One can imagine it as a door hinge that has lost its oil. It still works, but every movement feels very rough and uncomfortable. Osteoarthritis usually develops slowly, but with the right care, most people can manage their symptoms and continue to lead active lives.
               </p>
 
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>How Common Is Osteoarthritis in India?</h3>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>How Common Is Osteoarthritis in India?</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Osteoarthritis has now become very common in India. Studies estimate that around 22% to 39% of adults over 40 are affected. This roughly means one in three to four adults being affected.
               </p>
@@ -162,7 +162,7 @@ function OsteoarthritisOverview() {
                 Knee osteoarthritis is the most common type, especially among women after menopause. Daily habits like squatting and sitting for long periods on the floor for a meal or during prayers can increase stress on the knees. This often adds to the risk, making osteoarthritis one of the leading causes of mobility issues in the country. Among all joints, the knee is the most commonly affected, especially in older adults.
               </p>
 
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Who Is More Likely to Get Osteoarthritis?</h3>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Who Is More Likely to Get Osteoarthritis?</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>People with increased chances of osteoarthritis include:</p>
               <ul className="space-y-1 mb-5" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Obese and aged above 45 years</li>
@@ -205,12 +205,12 @@ function OsteoarthritisOverview() {
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What Causes Osteoarthritis?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>Osteoarthritis doesn&apos;t usually have a single cause. It develops over time due to a variety of factors.</p>
 
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Age and Wear Over Time</h3>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Age and Wear Over Time</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 Cartilage becomes less flexible as age advances and loses its capacity to repair or heal on its own. However, aging alone does not contribute to the disease. Poor lifestyle with a lack of exercise and unhealthy diet patterns are also major reasons.
               </p>
 
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Lifestyle and Physical Factors</h3>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Lifestyle and Physical Factors</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>The lifestyle and physical factors have a lot to do with the disease condition.</p>
               <ul className="space-y-1 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Excess body weight puts extra pressure on the joints, making them wear in due course.</li>
@@ -218,7 +218,7 @@ function OsteoarthritisOverview() {
                 <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Healed injuries can sometimes become the silent villain, increasing the risk even years later.</li>
               </ul>
 
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Risk Factors Common in India</h3>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Risk Factors Common in India</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 An adequate amount of vitamin D is received from the sun. But India, despite being in the tropical region, sees widespread vitamin D deficiency. This deficiency affects bone and joint health, influencing bone integrity and strength.
               </p>
@@ -237,17 +237,17 @@ function OsteoarthritisOverview() {
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Signs and Symptoms of Osteoarthritis</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>Osteoarthritis usually develops gradually. There are a few early signs you might notice.</p>
 
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>The early signs</h3>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>The early signs</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 Tiredness starts initially. Slowly, small activities become great tasks. The joints start becoming stiff. These symptoms often improve with movement. Gradually, grinding and creaking sounds will be heard.
               </p>
 
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>As the condition progresses</h3>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>As the condition progresses</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 As the condition becomes worse, the pain refuses to disappear even after rest. The joints become swollen and red. The knees wouldn&apos;t let you climb stairs, and your fingers would request help opening a tight jar.
               </p>
 
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>When should you see a doctor?</h3>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>When should you see a doctor?</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Early visits to specialists help you diagnose the condition as early as possible. A rheumatologist is the specialist who can properly evaluate the joint problems and guide you through the treatment.
               </p>
@@ -264,20 +264,14 @@ function OsteoarthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 Osteoarthritis is diagnosed by physical examination, imaging tests, and blood tests. The doctor asks the duration of pain and discomfort, if there was any injury to that same joint in the past, and if any family members suffer from this condition. This conversation helps the doctor rule out other joint conditions like rheumatoid arthritis or gout that mimic osteoarthritis.
               </p>
-              <div className="grid grid-cols-1 gap-5">
-                <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e" }}>Physical Examination</h3>
-                  <p className="text-[16px] leading-[1.75] text-navy-deep">Initially, the doctor checks if there is any obvious swelling or redness in the affected site. They observe the pain while touching the joint, the extent of movement of the joint, and its flexibility.</p>
-                </div>
-                <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e" }}>Imaging Tests</h3>
-                  <p className="text-[16px] leading-[1.75] text-navy-deep">Once the doctor examines the affected site completely, they proceed with imaging tests, commonly used to look for cartilage loss and bone changes. MRI is not routine for osteoarthritis; it is used when the situation needs a closer, more detailed picture beyond what an X-ray can show — usually in early cases where symptoms don&apos;t match the site, or after prior surgeries.</p>
-                </div>
-                <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e" }}>Blood Tests</h3>
-                  <p className="text-[16px] leading-[1.75] text-navy-deep">There is no specific blood test for osteoarthritis. Tests are mainly done to rule out other conditions like rheumatoid arthritis.</p>
-                </div>
-              </div>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Physical Examination</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>Initially, the doctor checks if there is any obvious swelling or redness in the affected site. They observe the pain while touching the joint, the extent of movement of the joint, and its flexibility.</p>
+
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Imaging Tests</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>Once the doctor examines the affected site completely, they proceed with imaging tests, commonly used to look for cartilage loss and bone changes. MRI is not routine for osteoarthritis; it is used when the situation needs a closer, more detailed picture beyond what an X-ray can show — usually in early cases where symptoms don&apos;t match the site, or after prior surgeries.</p>
+
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Blood Tests</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">There is no specific blood test for osteoarthritis. Tests are mainly done to rule out other conditions like rheumatoid arthritis.</p>
             </div>
 
             <DarkDivider />
@@ -287,7 +281,7 @@ function OsteoarthritisOverview() {
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>How Can Osteoarthritis Be Treated?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>While osteoarthritis cannot be reversed completely, treatment can help reduce the pain and improve the quality of life.</p>
 
-              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>Medications</h3>
+              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Medications</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>Some medicines your doctor may prescribe are:</p>
               <ul className="space-y-1 mb-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {medications.map((m, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{m}</li>))}
@@ -296,19 +290,19 @@ function OsteoarthritisOverview() {
                 Affordable generic versions are available at government Jan Aushadhi stores. But medicines should be consumed only based on the doctor&apos;s prescription.
               </p>
 
-              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>Physiotherapy and Exercise</h3>
+              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Physiotherapy and Exercise</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>
                 Physiotherapy is one of the most effective yet underused treatments. Exercises help strengthen muscles around the joint, reducing stress on it. Activities like walking, swimming, and yoga are especially helpful.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2.5rem" }}>Rest alone is not the solution. Gentle, regular movement is always essential.</p>
 
-              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>Advanced Treatment Options</h3>
+              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Advanced Treatment Options</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>If basic treatments are not enough, the doctor may prescribe alternate treatments in the later stages.</p>
               <ul className="space-y-1 mb-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {advancedTreatments.map((t, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{t}</li>))}
               </ul>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                Knee replacement surgeries are covered under government schemes like PM-JAY for eligible patients. Consult your doctor to know more.
+                Knee replacement surgeries are covered under government schemes like PM-JAY for eligible patients, such as central government employees. Consult your doctor to know more.
               </p>
             </div>
 

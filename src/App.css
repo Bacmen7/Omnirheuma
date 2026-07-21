@@ -83,6 +83,17 @@
   border-radius: 0 !important;
 }
 
+/* ─── Overview pages: consistent heading sizes across all conditions ─── */
+.overview-content h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem) !important;
+  line-height: 1.2 !important;
+}
+.overview-content h3 {
+  font-size: clamp(1.15rem, 2vw, 1.3rem) !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+}
+
 /* Keep section spacing tighter across landing page */
 .landing-page main > div > section:not(.custom-approach-section),
 .landing-page main > section:not(.custom-approach-section) {

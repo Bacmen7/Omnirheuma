@@ -136,7 +136,7 @@ function GoutOverview() {
 
         {/* ═══════════ CONTENT ═══════════ */}
         <section className="bg-white">
-          <div className="max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
+          <div className="overview-content max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
 
             {/* INTRO */}
             <div id="overview" style={{ scrollMarginTop: "80px" }}>
@@ -153,13 +153,15 @@ function GoutOverview() {
             {/* QUICK ANSWER */}
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {quickAnswers.map((q, i) => (
-                  <div key={i} style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "16px 18px", display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                    <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "5px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    <span className="text-[15px] leading-[1.6] text-navy-deep">{q}</span>
-                  </div>
-                ))}
+              <div style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "22px 26px" }}>
+                <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {quickAnswers.map((q, i) => (
+                    <li key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                      <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "6px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <span className="text-[16px] leading-[1.7] text-navy-deep">{q}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -281,11 +283,11 @@ function GoutOverview() {
               </p>
               <div className="grid grid-cols-1 gap-5">
                 <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e" }}>Physical Examination and Blood Tests</h3>
+                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Physical Examination and Blood Tests</h3>
                   <p className="text-[16px] leading-[1.75] text-navy-deep">The doctor examines the affected joint for swelling, redness, warmth, and hard lumps, and asks about attack patterns, diet, alcohol use, medicines, and family history. A blood test measures uric acid levels and kidney function — high uric acid can damage the kidneys, and poorly functioning kidneys make gout worse.</p>
                 </div>
                 <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e" }}>Confirming the Diagnosis</h3>
+                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Confirming the Diagnosis</h3>
                   <p className="text-[16px] leading-[1.75] text-navy-deep">Sometimes gout is confused with a joint infection. A fine needle aspiration test — taking a small amount of fluid from the joint and checking for uric acid crystals — is the most reliable test to confirm gout. Ultrasound detects crystals in early stages, and X-ray checks bone damage in advanced stages.</p>
                 </div>
               </div>

@@ -120,7 +120,7 @@ function AnkylosingSpondylitisOverview() {
 
         {/* ═══════════ CONTENT ═══════════ */}
         <section className="bg-white">
-          <div className="max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
+          <div className="overview-content max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
 
             {/* INTRO */}
             <div id="overview" style={{ scrollMarginTop: "80px" }}>
@@ -137,13 +137,15 @@ function AnkylosingSpondylitisOverview() {
             {/* QUICK ANSWER */}
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {quickAnswers.map((q, i) => (
-                  <div key={i} style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "16px 18px", display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                    <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "5px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    <span className="text-[15px] leading-[1.6] text-navy-deep">{q}</span>
-                  </div>
-                ))}
+              <div style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "22px 26px" }}>
+                <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {quickAnswers.map((q, i) => (
+                    <li key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                      <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "6px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <span className="text-[16px] leading-[1.7] text-navy-deep">{q}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -241,7 +243,7 @@ function AnkylosingSpondylitisOverview() {
                 There is no single test to diagnose ankylosing spondylitis. The rheumatologist detects it based on symptoms, physical checkup, X-rays, MRI, and blood tests together. Doctors assess how the back and hip move and measure chest expansion during breathing. They ask about back pain patterns, any eye or bowel problems, and family history, and assess pain while resting and moving.
               </p>
               <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e" }}>Imaging and Blood Tests</h3>
+                <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Imaging and Blood Tests</h3>
                 <p className="text-[16px] leading-[1.75] text-navy-deep">A blood test measures inflammation through ESR and CRP. X-rays detect changes in bone structure, especially in advanced cases. The HLA-B27 gene test checks for the presence of this gene. MRI is the most important test to detect the condition early — it can spot swelling and irritation before X-ray changes are visible.</p>
               </div>
             </div>

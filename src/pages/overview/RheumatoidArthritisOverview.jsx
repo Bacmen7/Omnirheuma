@@ -36,7 +36,10 @@ const diagnosisImaging = ["X-rays", "Ultrasounds", "Magnetic Resonance Imaging (
 
 const medications = [
   { title: "NSAIDs and Corticosteroids", desc: "They are used to relieve short-term symptoms. But neither of them stops disease progression." },
-  { title: "DMARDs", desc: "They alter the body's immune response. Methotrexate is the most common and widely used in India. Hydroxychloroquine, Sulfasalazine, and Leflunomide are the alternative drugs used." },
+  { title: "DMARDs", desc: "They alter the body's immune response.", subPoints: [
+    "Methotrexate is the most common and widely used in India.",
+    "Hydroxychloroquine, Sulfasalazine, and Leflunomide are the alternative drugs used.",
+  ] },
   { title: "Biologic DMARDs", desc: "When traditional DMARDs fail, their modified forms are used. It includes drugs like TNF inhibitors, IL-6 inhibitors, and Rituximab." },
   { title: "JAK inhibitors", desc: "They can be used if the biologic DMARDs were found not to work in patients." },
 ]
@@ -157,7 +160,7 @@ function RheumatoidArthritisOverview() {
 
         {/* ═══════════ CONTENT — original UI, dark green dividers ═══════════ */}
         <section className="bg-white">
-          <div className="max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
+          <div className="overview-content max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
 
             {/* OVERVIEW */}
             <div id="overview" style={{ scrollMarginTop: "80px" }}>
@@ -178,13 +181,13 @@ function RheumatoidArthritisOverview() {
             <div id="what-is-ra" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What is Rheumatoid Arthritis?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Joints are where two bones meet, such as your knuckles, knees, or wrists. Inside each joint is a thin lining called the synovium. The synovium produces fluid that helps your joints move smoothly and stay healthy.
+                Joints are where two bones meet, such as knuckles, knees, or wrists. Joints help in the movement. Inside each joint is a thin lining called the synovium. The synovium produces fluid, which helps joints move smoothly and stay healthy.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                In rheumatoid arthritis (RA), your body becomes confused and starts attacking its own joints rather than protecting them. This is called an autoimmune condition. It often affects joints on both sides of your body, like both hands or both feet at the same time. Rheumatoid arthritis can also affect other parts of your body, like your skin, eyes, lungs, heart, and blood vessels.
+                In rheumatoid arthritis (RA), the body starts attacking its own joints rather than protecting them. This is called an autoimmune condition. It often affects joints on both sides of the body, like both hands or both feet at the same time. Rheumatoid arthritis can also affect other parts of the body, like skin, eyes, lungs, heart, and blood vessels.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                Rheumatoid arthritis is different from osteoarthritis, which happens due to wear and tear as people age. Osteoarthritis often affects just one side of the body and does not cause tiredness like RA does.
+                Rheumatoid arthritis is different from osteoarthritis, which happens due to wear and tear as in old aged people. Osteoarthritis often affects just one side of the body and does not cause tiredness like Rheumatoid Arthritis does.
               </p>
             </div>
 
@@ -247,8 +250,8 @@ function RheumatoidArthritisOverview() {
             <div id="causes" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What are the causes of Rheumatoid Arthritis?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep mb-5">The exact cause of rheumatoid arthritis is unknown. Researchers think it is caused by a combination of genetics, hormones, and environmental factors.</p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep mb-8">Your immune system normally protects your body from infections. In rheumatoid arthritis, it gets confused and starts attacking your own joints instead. Certain factors, like smoking or infections, may trigger this response.</p>
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Risk Factors of Rheumatoid Arthritis</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep mb-8">Your immune system normally protects your body from infections. In rheumatoid arthritis, the immune system becomes triggered and starts attacking your own joints instead. Certain factors, like smoking or infections, may trigger this response.</p>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Risk Factors of Rheumatoid Arthritis</h3>
               <ul className="space-y-1 mb-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {riskFactors.map((r, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1"><strong className="font-bold">{r.factor}.</strong> {r.detail}</li>))}
               </ul>
@@ -264,14 +267,14 @@ function RheumatoidArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2.5rem" }}>There is no single test that confirms rheumatoid arthritis. Rheumatologists recommend blood and imaging tests to reach a final diagnosis.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "1rem", color: "#0f616e" }}>Main blood tests include</h3>
+                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Main blood tests include</h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.75rem" }}>Rheumatologists usually recommend blood tests such as:</p>
                   <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                     {diagnosisBloodTests.map((test, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{test}</li>))}
                   </ul>
                 </div>
                 <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "1rem", color: "#0f616e" }}>Imaging test</h3>
+                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Imaging test</h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.75rem" }}>The various imaging techniques help to understand how bad the disease has progressed.</p>
                   <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                     {diagnosisImaging.map((test, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{test}</li>))}
@@ -285,19 +288,29 @@ function RheumatoidArthritisOverview() {
             {/* TREATMENT */}
             <div id="treatment" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What are the treatment options available for Rheumatoid Arthritis?</h2>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>The main aim of treatment is to reduce the symptoms. Once treatment begins, you will be evaluated every 3-6 months to monitor the disease&apos;s progression. If it does not improve, your doctor will increase the medication dosage or implement other methodologies.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>The main aim of treatment is to reduce the symptoms. Once treatment begins, every 3-6 months an evaluation is done to monitor the disease&apos;s progression. If it does not improve, doctors increase the medication dosage or implement other treatment methodologies.</p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2.5rem" }}>Doctors usually begin the treatment with medications and other non-medicated options. If the disease progression is not improved, surgery would be the last option.</p>
-              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>Common medications used in Rheumatoid Arthritis</h3>
+              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Common medications used in Rheumatoid Arthritis</h3>
               <ul className="space-y-2" style={{ listStyleType: "decimal", paddingLeft: "1.5rem", marginBottom: "2.5rem" }}>
-                {medications.map((med, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1"><strong className="font-semibold">{med.title}:</strong> {med.desc}</li>))}
+                {medications.map((med, i) => (
+                  <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
+                    <strong className="font-semibold">{med.title}:</strong> {med.desc}
+                    {med.subPoints && (
+                      <ul className="space-y-1 mt-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                        {med.subPoints.map((sp, j) => (<li key={j} className="text-[16px] leading-[1.7] text-navy-muted">{sp}</li>))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
               </ul>
-              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>Non-Medication Approaches</h3>
+              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Non-Medication Approaches</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>There are treatment options other than medications alone. Few are listed below:</p>
               <ul className="space-y-1" style={{ listStyleType: "disc", paddingLeft: "1.5rem", marginBottom: "2.5rem" }}>
                 {nonMedApproaches.map((item, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1"><strong className="font-semibold">{item.title}:</strong> {item.desc}</li>))}
               </ul>
-              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>Surgery</h3>
+              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Surgery</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.5rem" }}>Last resort for severe deformity unresponsive to medication.</p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.5rem" }}>Types of surgeries include: synovectomy, tendon repair, and joint replacement. Surgery does not replace DMARDs.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.5rem" }}>Types of surgeries include: synovectomy, tendon repair, and joint replacement. Surgery does not replace medications.</p>
             </div>
 
             <DarkDivider />
@@ -306,7 +319,7 @@ function RheumatoidArthritisOverview() {
             <div id="managing-ra" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Managing Rheumatoid Arthritis on a Day-to-Day Basis</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep mb-10">With appropriate treatment and supportive therapy, many people are leading an active life despite the disease having a lifelong predilection.</p>
-              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem" }}>Importance of Diet and Nutrition</h3>
+              <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Importance of Diet and Nutrition</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep mb-4">The diet plays an important role in our daily lives. In rheumatoid arthritis, it plays a major role in keeping our body healthy, without any nutrient restrictions. Several anti-inflammatory foods, such as turmeric, ginger, black pepper, amla, flax seeds, spinach, and fenugreek, should be incorporated into daily meals.</p>
               <p className="text-[17px] leading-[1.8] text-navy-deep mb-4">Vegetarian options such as dal, paneer, curd, and soya should be incorporated to meet protein requirements.</p>
             </div>

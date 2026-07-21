@@ -138,7 +138,7 @@ function PsoriaticArthritisOverview() {
 
         {/* ═══════════ CONTENT ═══════════ */}
         <section className="bg-white">
-          <div className="max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
+          <div className="overview-content max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
 
             {/* INTRO */}
             <div id="overview" style={{ scrollMarginTop: "80px" }}>
@@ -161,13 +161,15 @@ function PsoriaticArthritisOverview() {
             {/* QUICK ANSWER */}
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {quickAnswers.map((q, i) => (
-                  <div key={i} style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "16px 18px", display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                    <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "5px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    <span className="text-[15px] leading-[1.6] text-navy-deep">{q}</span>
-                  </div>
-                ))}
+              <div style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "22px 26px" }}>
+                <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {quickAnswers.map((q, i) => (
+                    <li key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                      <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "6px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <span className="text-[16px] leading-[1.7] text-navy-deep">{q}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -205,7 +207,7 @@ function PsoriaticArthritisOverview() {
               <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {geneticFactors.map((g, i) => (
                   <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                    <strong className="font-bold">{g.title}:</strong> {g.desc}
+                    <strong className="font-bold" style={{ color: "#0a4f5a" }}>{g.title}:</strong> {g.desc}
                   </li>
                 ))}
               </ul>
@@ -214,7 +216,7 @@ function PsoriaticArthritisOverview() {
               <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {triggers.map((t, i) => (
                   <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                    <strong className="font-bold">{t.title}:</strong> {t.desc}
+                    <strong className="font-bold" style={{ color: "#0a4f5a" }}>{t.title}:</strong> {t.desc}
                   </li>
                 ))}
               </ul>
@@ -246,7 +248,7 @@ function PsoriaticArthritisOverview() {
               <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {jointSymptoms.map((s, i) => (
                   <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                    <strong className="font-bold">{s.title}:</strong> {s.desc}
+                    <strong className="font-bold" style={{ color: "#0a4f5a" }}>{s.title}:</strong> {s.desc}
                   </li>
                 ))}
               </ul>

@@ -151,7 +151,7 @@ function LupusOverview() {
 
         {/* ═══════════ CONTENT ═══════════ */}
         <section className="bg-white">
-          <div className="max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
+          <div className="overview-content max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
 
             {/* INTRO */}
             <div id="overview" style={{ scrollMarginTop: "80px" }}>
@@ -168,13 +168,15 @@ function LupusOverview() {
             {/* QUICK ANSWER */}
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {quickAnswers.map((q, i) => (
-                  <div key={i} style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "16px 18px", display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                    <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "5px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    <span className="text-[15px] leading-[1.6] text-navy-deep">{q}</span>
-                  </div>
-                ))}
+              <div style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "22px 26px" }}>
+                <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {quickAnswers.map((q, i) => (
+                    <li key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                      <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "6px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <span className="text-[16px] leading-[1.7] text-navy-deep">{q}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -319,10 +321,8 @@ function LupusOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 There is no single test to diagnose lupus. A rheumatologist checks symptoms, clinical examination, and blood test results. They look for skin rashes, joint swelling, and hair loss, and ask about the symptom pattern and any family history of autoimmune disease. They rule out other diseases that can cause these symptoms before detecting lupus.
               </p>
-              <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem", marginBottom: "1.5rem" }}>
-                <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e" }}>Blood tests for lupus include</h3>
-                <p className="text-[16px] leading-[1.75] text-navy-deep">ANA, Anti-dsDNA, Full blood count, ESR, CRP, and Urine protein.</p>
-              </div>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "1.5rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Blood tests for lupus include</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>ANA, Anti-dsDNA, Full blood count, ESR, CRP, and Urine protein.</p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 A positive ANA alone cannot confirm lupus. A kidney or skin biopsy may be required to assess organ involvement. Rheumatologists use the SLICC (Systemic Lupus International Collaborating Clinics) criteria — an internationally accepted checklist — to confirm the diagnosis.
               </p>
