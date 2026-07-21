@@ -24,6 +24,7 @@ import LupusOverview from "./pages/overview/LupusOverview.jsx"
 import PsoriaticArthritisOverview from "./pages/overview/PsoriaticArthritisOverview.jsx"
 import AnkylosingSpondylitisOverview from "./pages/overview/AnkylosingSpondylitisOverview.jsx"
 import GoutOverview from "./pages/overview/GoutOverview.jsx"
+import FibromyalgiaOverview from "./pages/overview/FibromyalgiaOverview.jsx"
 import Arthritis from "./pages/Arthritis.jsx"
 import KnowledgeHub from "./pages/KnowledgeHub.jsx"
 import TreatmentGuides from "./pages/TreatmentGuides.jsx"
@@ -72,6 +73,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Psoriatic-Arthritis-overview" element={<PsoriaticArthritisOverview />} />
         <Route path="/Ankylosing-Spondylitis-overview" element={<AnkylosingSpondylitisOverview />} />
         <Route path="/Gout-overview" element={<GoutOverview />} />
+        <Route path="/Fibromyalgia-overview" element={<FibromyalgiaOverview />} />
         <Route path="/rheumatoid-arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/health-guide/Rheumatoid-Arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/arthritis" element={<Arthritis />} />

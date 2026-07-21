@@ -87,7 +87,7 @@ const arthritisConditions = [
 const otherConditions = [
   { key: "gout", name: "Gout", href: "/Gout-overview" },
   { key: "ctd", name: "Connective Tissue Disease", href: null },
-  { key: "fibro", name: "Fibromyalgia", href: null },
+  { key: "fibro", name: "Fibromyalgia", href: "/Fibromyalgia-overview" },
   { key: "vasculitis", name: "Vasculitis", href: null },
   { key: "lupus", name: "Lupus (SLE)", href: "/Lupus-overview" },
   { key: "reactive", name: "Reactive Arthritis", href: null },
