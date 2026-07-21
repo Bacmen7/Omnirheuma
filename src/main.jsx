@@ -18,7 +18,12 @@ import RAVariation3 from "./pages/RAVariation3.jsx"
 import RAVariation4 from "./pages/RAVariation4.jsx"
 import RAVariation5 from "./pages/RAVariation5.jsx"
 import RAVariation6 from "./pages/RAVariation6.jsx"
-import RAVariation7 from "./pages/RAVariation7.jsx"
+import RheumatoidArthritisOverview from "./pages/overview/RheumatoidArthritisOverview.jsx"
+import OsteoarthritisOverview from "./pages/overview/OsteoarthritisOverview.jsx"
+import LupusOverview from "./pages/overview/LupusOverview.jsx"
+import PsoriaticArthritisOverview from "./pages/overview/PsoriaticArthritisOverview.jsx"
+import AnkylosingSpondylitisOverview from "./pages/overview/AnkylosingSpondylitisOverview.jsx"
+import GoutOverview from "./pages/overview/GoutOverview.jsx"
 import Arthritis from "./pages/Arthritis.jsx"
 import KnowledgeHub from "./pages/KnowledgeHub.jsx"
 import TreatmentGuides from "./pages/TreatmentGuides.jsx"
@@ -61,7 +66,12 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Rheumatoid-Arthritis-v4" element={<RAVariation4 />} />
         <Route path="/Rheumatoid-Arthritis-v5" element={<RAVariation5 />} />
         <Route path="/Rheumatoid-Arthritis-v6" element={<RAVariation6 />} />
-        <Route path="/Rheumatoid-Arthritis-v7" element={<RAVariation7 />} />
+        <Route path="/Rheumatoid-Arthritis-overview" element={<RheumatoidArthritisOverview />} />
+        <Route path="/Osteoarthritis-overview" element={<OsteoarthritisOverview />} />
+        <Route path="/Lupus-overview" element={<LupusOverview />} />
+        <Route path="/Psoriatic-Arthritis-overview" element={<PsoriaticArthritisOverview />} />
+        <Route path="/Ankylosing-Spondylitis-overview" element={<AnkylosingSpondylitisOverview />} />
+        <Route path="/Gout-overview" element={<GoutOverview />} />
         <Route path="/rheumatoid-arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/health-guide/Rheumatoid-Arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/arthritis" element={<Arthritis />} />

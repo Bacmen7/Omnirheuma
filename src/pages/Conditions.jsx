@@ -12,12 +12,23 @@ const buildFeatured = (name) => [
   { href: "/Rheumatoid-Arthritis", category: "Diagnosis", title: `How is ${name} diagnosed?`, image: "/c1.webp" },
 ]
 
-const buildCategoryLinks = (name) => [
-  { label: "An overview", href: "/Rheumatoid-Arthritis" },
-  { label: "Symptoms and Warning Signs", href: "/Rheumatoid-Arthritis" },
-  { label: "Treatment options", href: "/Rheumatoid-Arthritis" },
-  { label: "Specialised treatment options", href: "/Rheumatoid-Arthritis" },
-  { label: `Living with ${name}`, href: "/Rheumatoid-Arthritis" },
+/* slug (from ?c=) → overview page route */
+const overviewRouteMap = {
+  "arthritis": "/Rheumatoid-Arthritis-overview",
+  "rheumatoid-arthritis": "/Rheumatoid-Arthritis-overview",
+  "osteoarthritis": "/Osteoarthritis-overview",
+  "lupus": "/Lupus-overview",
+  "psoriatic-arthritis": "/Psoriatic-Arthritis-overview",
+  "ankylosing-spondylitis": "/Ankylosing-Spondylitis-overview",
+  "gout": "/Gout-overview",
+}
+
+const buildCategoryLinks = (name, overviewHref) => [
+  { label: "An overview", href: overviewHref },
+  { label: "Symptoms and Warning Signs", href: overviewHref },
+  { label: "Treatment options", href: overviewHref },
+  { label: "Specialised treatment options", href: overviewHref },
+  { label: `Living with ${name}`, href: overviewHref },
 ]
 
 const videos = [
@@ -88,8 +99,9 @@ function Conditions() {
   const conditionSlug = searchParams.get("c")
   const conditionName = conditionSlug ? conditionNameMap[conditionSlug] : null
   const displayName = conditionName || defaultConditionName
+  const overviewHref = (conditionSlug && overviewRouteMap[conditionSlug]) || "/Rheumatoid-Arthritis-overview"
   const featured = buildFeatured(displayName)
-  const categoryLinks = buildCategoryLinks(displayName)
+  const categoryLinks = buildCategoryLinks(displayName, overviewHref)
 
   const [query, setQuery] = useState("")
   const [current, setCurrent] = useState(0)
