@@ -21,6 +21,7 @@ const overviewRouteMap = {
   "psoriatic-arthritis": "/Psoriatic-Arthritis-overview",
   "ankylosing-spondylitis": "/Ankylosing-Spondylitis-overview",
   "gout": "/Gout-overview",
+  "fibromyalgia": "/Fibromyalgia-overview",
 }
 
 const buildCategoryLinks = (name, overviewHref) => [

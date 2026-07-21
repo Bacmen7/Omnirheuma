@@ -14,22 +14,22 @@ const quickAnswers = [
   "Women aged between 15 to 45 years are at most risk.",
   "Common symptoms include butterfly-shaped facial rash, joint pain, fatigue, hair loss, and mouth ulcers.",
   "Complications include kidney involvement, known as lupus nephritis.",
-  "Treatment includes Hydroxychloroquine plus daily sun protection for almost all patients.",
+  "Treatments include: Hydroxychloroquine plus daily sun protection for almost all patients.",
 ]
 
 const lupusTypes = [
-  { title: "Systemic Lupus Erythematosus (SLE)", desc: "The most common and serious type. It affects multiple organs. This article mainly focuses on SLE." },
-  { title: "Cutaneous Lupus", desc: "Mainly affects the skin. It does not usually involve internal organs such as the stomach, lungs, etc." },
-  { title: "Drug-Induced Lupus", desc: "When a medicine triggers lupus, it is called drug-induced lupus. The symptoms usually resolve when the medication is stopped." },
-  { title: "Neonatal Lupus", desc: "A rare condition in newborn babies, usually in those whose mothers have abnormal antibodies. Mostly cured within a few months." },
+  { title: "Systemic Lupus Erythematosus (SLE)", desc: "The most common and serious type. This affects multiple organs. This article will mainly focus on SLE." },
+  { title: "Cutaneous Lupus", desc: "It mainly affects the skin. Cutaneous lupus does not usually involve internal organs such as stomach, lungs etc." },
+  { title: "Drug-Induced Lupus", desc: "When any medicine triggers lupus, it is called drug-induced lupus. The symptoms usually resolve when the medication is stopped." },
+  { title: "Neonatal Lupus", desc: "It is a rare condition in newborn babies. They usually develop in those babies whose mothers have abnormal antibodies. Mostly, they are cured within a few months." },
 ]
 
 const envTriggers = [
-  { title: "Sunlight", desc: "One of the most common triggers. It causes rashes, which activate the immune system." },
-  { title: "Infections", desc: "Infections increase lupus activity among people prone to this condition." },
-  { title: "Stress", desc: "Physical or emotional stress is one of the most commonly reported triggering factors." },
-  { title: "Certain medications", desc: "Blood pressure medicines, seizure medicines, and some antibiotics can lead to drug-induced lupus." },
-  { title: "Smoking", desc: "Smoking makes lupus symptoms severe and makes treatment less effective." },
+  { title: "Sunlight", desc: "This is one of the most common triggers. It causes rashes. These rashes activate the immune system." },
+  { title: "Infections", desc: "Infections increase lupus activity among people who are prone to this condition." },
+  { title: "Stress", desc: "Physical or emotional stress is one of the most commonly reported triggering factors of lupus." },
+  { title: "Certain medications", desc: "Blood pressure medicines, seizure medicine and some antibiotics lead to drug-induced lupus." },
+  { title: "Smoking", desc: "Smoking makes the lupus symptoms severe and also makes treatment less effective." },
 ]
 
 const riskFactors = [
@@ -40,20 +40,20 @@ const riskFactors = [
 ]
 
 const earlySigns = [
-  { title: "Malar rash (butterfly rash)", desc: "A rash across both cheeks and the nose bridge. On Indian skin tones, it looks like a dark discolouration rather than a clear red flush — one reason it is ignored." },
+  { title: "Malar rash (butterfly rash)", desc: "A rash develops across both cheeks and the nose bridge. On Indian skin tones, it looks like a dark skin discolouration rather than a clear red flush, which is one reason it is ignored." },
   { title: "Joint pain and stiffness", desc: "Pain mostly occurs in the hand, wrist, and knee joints." },
   { title: "Fatigue", desc: "Continuous heavy tiredness that does not improve even after rest." },
-  { title: "Hair loss", desc: "Hair may thin overall or fall out in patches." },
-  { title: "Fever", desc: "Low-grade fever with no obvious infection, often accompanying a flare." },
+  { title: "Hair loss", desc: "Hair may thin overall or can fall out in patches." },
+  { title: "Fever", desc: "Low-grade fever with no obvious infection. Fever often accompanies a flare." },
   { title: "Oral ulcers", desc: "Painless sores inside the mouth or nose." },
 ]
 
 const organInvolvement = [
-  { organ: "Kidneys", watch: "Swelling in the ankles; foamy or dark-coloured urine; passing less urine than usual" },
-  { organ: "Heart", watch: "Chest pain; shortness of breath; racing or irregular heartbeat" },
-  { organ: "Lungs", watch: "Sharp chest pain that worsens when taking a deep breath" },
-  { organ: "Brain", watch: "Continuous headaches; confusion; memory loss; seizures" },
-  { organ: "Blood", watch: "Unusual tiredness from low blood levels; bruising easily; bleeding that takes long to stop" },
+  { organ: "Kidneys", watch: "Swelling in the ankles, Urine: foamy or dark coloured, passing less urine than usual" },
+  { organ: "Heart", watch: "Pain in the chest, Shortness of breath, Racing or irregular heartbeat" },
+  { organ: "Lungs", watch: "Sharp pain in the chest that worsen by taking a deep breath" },
+  { organ: "Brain", watch: "Continuous headaches, Confusion, Memory loss, Seizures" },
+  { organ: "Blood", watch: "Unusual tiredness from low blood levels, bruising easily, or bleeding that takes a long time to stop" },
 ]
 
 const medTiers = [
@@ -134,7 +134,7 @@ function LupusOverview() {
             <div style={{ position: "relative", paddingBottom: "52px" }}>
               <div style={{ background: "linear-gradient(135deg, #0f616e 0%, #1AA3B5 100%)", borderRadius: "6px", padding: "32px clamp(16px, 4vw, 32px) 70px", position: "relative", overflow: "hidden" }}>
                 <div style={{ width: "clamp(200px, 40vw, 300px)", height: "clamp(200px, 40vw, 300px)", borderRadius: "50%", margin: "0 auto", overflow: "hidden", border: "5px solid rgba(255,255,255,0.35)", backgroundColor: "rgba(255,255,255,0.95)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <img src="/condition/Lupus.webp" alt="Lupus (SLE)" style={{ width: "82%", height: "82%", objectFit: "contain", display: "block" }} />
+                  <img src="/overvIew/Lupus.png" alt="Lupus (SLE)" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
                 </div>
               </div>
 
@@ -145,6 +145,11 @@ function LupusOverview() {
                   </button>
                 ))}
               </div>
+
+              {/* Medically reviewed by */}
+              <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
+                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
+              </p>
             </div>
           </div>
         </header>
@@ -156,10 +161,10 @@ function LupusOverview() {
             {/* INTRO */}
             <div id="overview" style={{ scrollMarginTop: "80px" }}>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                Meena, aged 20, noticed a red rash spreading across both cheeks. Later, she started experiencing pain in the joints, hair loss, and excessive tiredness. None of the specialists she visited — a general physician, a dermatologist, or a gynaecologist — could identify the cause. It took nearly a year to connect all the symptoms together and reach a final diagnosis: Lupus.
+                Meena, aged 20 years, noticed a red rash spreading across both cheeks. Later, she started experiencing pain in the joints, hair loss and excessive tiredness. None of the specialists she visited, including a general physician, dermatologist or gynaecologist could identify the main cause. It took nearly a year to connect all the symptoms together to make a final diagnosis as Lupus.
               </p>
               <p className="text-[16px] leading-[1.8] text-navy-muted">
-                Lupus is a long-term autoimmune disease where the immune system mistakenly attacks its own tissue. It can affect the skin, joints, kidneys, heart, lungs, and brain — often all at once. Common symptoms are frequently misdiagnosed for years. There is no cure, but with the right treatment, most people can manage their symptoms and live full lives. This article will help you understand what lupus is, its symptoms, causes, how it is diagnosed, and what treatment looks like in India.
+                Lupus is a long-term autoimmune disease where the immune system mistakenly attacks its own tissue. It can affect the skin, joints, kidneys, heart, lungs, and brain, often all at once. Common symptoms are often misdiagnosed for years. There is no cure, but with the right treatment, most people can manage their symptoms and live full lives. This article will help you understand what lupus is and its symptoms, causes, how it is diagnosed, and what treatment looks like in India.
               </p>
             </div>
 
@@ -186,7 +191,7 @@ function LupusOverview() {
             <div id="what-is-lupus" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What Is Lupus?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Lupus is a long-term condition in which the body&apos;s immune system attacks its own tissues and organs. In a healthy body, the immune system makes antibodies that fight infections. But in lupus, it makes abnormal antibodies that attack the body&apos;s healthy tissues. This is called an autoimmune condition (&ldquo;auto&rdquo; means self).
+                Lupus is a long-term condition in which the body&apos;s immune system attacks its own tissues and organs. In a healthy body, the immune system makes antibodies, which fight against infections. But in lupus, it makes abnormal antibodies that attack the body&apos;s healthy tissues. This is called an autoimmune condition (&ldquo;auto&rdquo; means self).
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Lupus causes swelling and irritation. This can damage the heart, lungs, kidneys, brain cells, joints, and skin. The medical name for the most common form is systemic lupus erythematosus, or SLE.
@@ -197,10 +202,13 @@ function LupusOverview() {
 
               <h3 style={H3Style}>How Common Is Lupus in India?</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Lupus can affect 14 to 60 per 100,000 people in India, and around 92.7% of lupus patients in India are women. The female-to-male ratio is about 19:1.
+                Lupus can affect 14 to 60 per 100,000 people in India. And around 92.7% of lupus patients in India are women. The female-to-male ratio is about 19:1.
+              </p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                A study was conducted by the Indian Rheumatology Association across 14 centres. They found that lupus is mainly detected at the mean age of 32 years. But it can also occur at an early age of 23 years.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                A study by the Indian Rheumatology Association across 14 centres found that lupus is mainly detected at a mean age of 32 years, though it can occur as early as 23. The main reason it is detected late is that lupus is often confused with stress, low blood levels, or hormonal issues before the correct diagnosis is made.
+                The main reason it is detected late is that lupus is often confused with stress, low blood levels, or hormonal issues before the correct diagnosis is made.
               </p>
             </div>
 
@@ -226,11 +234,11 @@ function LupusOverview() {
             {/* CAUSES */}
             <div id="causes" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What Causes Lupus?</h2>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>Lupus develops from a combination of genes, hormonal changes, and environmental factors that work together to trigger the immune system.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>Lupus develops from a combination of genes, hormonal changes, and factors from the environment. All these factors work together to trigger the immune system.</p>
 
               <h3 style={H3Style}>Genetic and Hormonal Factors</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Lupus runs in families. The hormone estrogen — released to thicken the uterus wall before ovulation in females — affects the immune system. As a result, lupus is more common in women during childbearing age, and disease flares more often during pregnancy or around the menstrual cycle.
+                Lupus runs in families. A hormone, &lsquo;estrogen&rsquo;, is released to thicken the uterus wall before ovulation in females. This hormone affects the immune system. As a result, lupus is more common in women during childbearing age. This is why disease flares more often during pregnancy or around the menstrual cycle.
               </p>
 
               <h3 style={H3Style}>Environmental and Lifestyle Triggers</h3>
@@ -245,7 +253,7 @@ function LupusOverview() {
 
               <h3 style={H3Style}>Indian-Specific Factors</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                In India, sensitivity to sunlight is more common in lupus patients, so sun exposure can trigger the condition. When people stop going out in the sun to avoid rashes, it leads to vitamin D deficiency — which further worsens the lupus condition.
+                In India, sensitivity to sunlight is more common in lupus patients. Therefore, exposure to the sun can trigger the condition. When people stop going out in the sun to avoid rashes, it leads to vitamin D deficiency. This deficiency further worsens the lupus condition.
               </p>
             </div>
 
@@ -334,7 +342,7 @@ function LupusOverview() {
             <div id="treatment" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Treatment Options for Lupus</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                There is no cure for lupus. Treatment controls the disease from progressing rapidly — it helps reduce flares, protects organs, and manages complications. Treatment plans are modified as the disease pattern changes.
+                There is no cure for lupus. Treatment only controls the disease from progressing rapidly. It helps reduce flares, protects organs, and manages complications. Treatment plans are modified as the disease pattern changes.
               </p>
 
               <h3 style={H3Style}>Medications Overview</h3>
@@ -359,7 +367,7 @@ function LupusOverview() {
                 </table>
               </div>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2.5rem" }}>
-                Tuberculosis screening is compulsory in India before starting medicine that suppresses the immune system. Hydroxychloroquine (HCQ) is advised for almost all lupus patients — it reduces flare frequency and risk of organ damage, and is safe for long-term use. Generic HCQ is widely available through Jan Aushadhi outlets. Branded biologics are expensive and not covered under PM-JAY.
+                Tuberculosis screening is compulsory in India before starting medicine which suppresses the immune system. Hydroxychloroquine (HCQ) is advised to almost all lupus patients. It reduces flare frequency, risk of organ damage and is safe for long-term use. Generic versions of HCQ are widely available through Jan Aushadhi outlets. Branded biologics are expensive medicines and are not covered under PM-JAY coverage.
               </p>
 
               <h3 style={H3Style}>Sun Protection and Kidney Care</h3>
@@ -390,7 +398,7 @@ function LupusOverview() {
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Getting the Right Diagnosis</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Many people with lupus spend months seeing different specialists, with every doctor treating one symptom without connecting it to the others — joint pain, a rash, and fatigue that nobody can explain. When symptoms affect multiple parts of the body, especially in a young woman, lupus can be the reason. Only a rheumatologist can make the right diagnosis. Delay can worsen the condition and cause organ damage, so getting the right diagnosis early makes a real difference. Your doctor may also recommend vitamin D supplements if your levels are low.
+                Many people with lupus spend months seeing different specialists. Every doctor treats one symptom without connecting it to the others. Joint pain, a rash, and fatigue that nobody can explain. When symptoms are affecting multiple parts of the body, especially in a young woman, lupus can be a reason. Only a rheumatologist can make the right diagnosis. Delay can worsen the condition and can cause organ damage. Getting the right diagnosis early can make a real difference. Your doctor may also recommend vitamin D supplements if your levels are low.
               </p>
               <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>

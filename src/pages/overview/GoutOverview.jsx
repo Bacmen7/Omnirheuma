@@ -11,17 +11,17 @@ import { ArrowRight, Stethoscope } from "lucide-react"
 
 const quickAnswers = [
   "Gout is a painful joint condition caused by uric acid, a waste product that normally leaves the body through urine.",
-  "Poor kidney function, high blood pressure, high blood sugar, and certain foods and drinks (organ meat, seafood, sugary drinks) can cause gout.",
-  "Gout attack symptoms include sudden, intense pain, redness, and swelling — most often in the big toe, usually at night.",
-  "There is no cure, but pain attacks can be stopped completely with consistent uric acid-lowering medication.",
-  "Stopping medication once the pain goes away causes attacks to return — and each new attack is usually worse than the last.",
+  "Poor kidney function, high blood pressure, high blood sugar and certain foods and drinks, such as organ meat, seafood and sugary drinks, can cause gout.",
+  "Gout attack symptoms include sudden & intense pain, redness, and swelling. Most often it occurs in the big toe, usually at night.",
+  "There is no cure for gout. But pain attacks can be stopped completely with consistent uric acid-lowering medication.",
+  "Stopping medication once the pain goes away causes attacks to return. Every time a new attack occurs, it is usually worse than the previous ones.",
 ]
 
 const stages = [
-  { stage: "Stage 1", title: "No symptoms", desc: "Uric acid level is high in blood, but there are no symptoms yet as crystals haven't formed. Usually discovered through a routine blood test. A healthy diet and regular monitoring can prevent progression." },
-  { stage: "Stage 2", title: "The gout attack", desc: "A sudden, painful attack with swelling and redness, mostly in the big toe (may also affect ankles and knees). Pain becomes severe within 12–24 hours and usually resolves within 7–14 days, even without treatment." },
-  { stage: "Stage 3", title: "The quiet period between attacks", desc: "No pain, so everything feels normal. Many patients stop medication here, thinking they're better. But uric acid keeps accumulating, so the next attack affects more joints and is more severe." },
-  { stage: "Stage 4", title: "Long-term joint damage", desc: "Without treatment, gout causes permanent joint damage. Crystals form hard, chalky lumps called tophi around fingers, toes, elbows, and sometimes ears. Pain becomes permanent. Early consistent treatment prevents most people from reaching this stage." },
+  { stage: "Stage 1", title: "No Symptoms", desc: "The uric acid level is high in blood. But the body has no symptoms yet as the uric acid crystal has not yet formed and deposited in the joints. So there is no pain or swelling. It is usually discovered through a routine blood test. No treatment is often required in this stage. A healthy diet and regular monitoring can prevent the condition from progressing." },
+  { stage: "Stage 2", title: "The Gout Attack", desc: "This is a sudden, painful attack which causes swelling and redness. It mostly occurs in the big toe. It may also occur in the ankles and knees. Pain becomes severe within 12 to 24 hours. Even without any treatment it usually resolves within 7 to 14 days. Most people often consult a doctor after a gout attack." },
+  { stage: "Stage 3", title: "The Quiet Period Between Attacks", desc: "There is no pain, so everything feels normal. Many patients stop taking medications at this stage, thinking the disease got better. Stopping treatment at this stage causes uric acid to keep accumulating in the joints. As a result, the next gout pain attack affects more joints and can be more severe." },
+  { stage: "Stage 4", title: "Long-Term Joint Damage", desc: "Without treatment, gout causes permanent joint damage. Uric acid crystals continue to collect and form hard chalky lumps. These are called tophi, which accumulates under the skin. These lumps are mostly seen around the joints of the fingers, toes, and elbows and sometimes on the outer ears. Pain becomes permanent and does not completely go away between attacks. Starting the uric acid-lowering treatment early and taking it regularly can prevent most people from reaching this stage. Knowing what causes gout can also help slow down the progression of the disease." },
 ]
 
 const riskFactors = [
@@ -30,11 +30,11 @@ const riskFactors = [
   "People with a family history of gout",
   "People who are overweight or obese",
   "People with high sugar level, high blood pressure, or kidney disease",
-  "People taking medicines like diuretics, aspirin, and immunosuppressants",
+  "People who are taking medicines like diuretics, aspirin and immunosuppressants",
 ]
 
 const safeFoods = [
-  "Dairy — curd, milk, paneer (help lower uric acid)",
+  "Dairy: curd, milk, paneer help lower uric acid",
   "Dal, rajma, chana in moderate amounts",
   "Plenty of water",
   "Fresh fruits and vegetables",
@@ -50,11 +50,11 @@ const unsafeFoods = [
 ]
 
 const faqs = [
-  { q: "Is gout curable?", a: "Gout cannot be cured, but it can be completely controlled. With uric acid-lowering medication and the right dietary adjustments, most people prevent attacks from occurring. Treatment also prevents the condition from causing damage." },
-  { q: "Which foods should be avoided with gout in India?", a: "High-risk foods are organ meats, red meat, mutton, and shellfish. Beer also increases the risk. Packaged cold drinks, fruit juices, and sweets are lesser-known culprits because of their high sugar content. Reducing high-risk foods, staying hydrated, and taking medicine regularly help in long-term treatment." },
-  { q: "Can vegetarians get gout?", a: "Yes. Eating large amounts of packaged cold drinks, commercial juices, and sweets — along with health conditions like obesity or diabetes — increases the risk of developing gout in vegetarians." },
-  { q: "Is allopurinol safe to take for life?", a: "Yes, it is advised for most people with repeated gout attacks. The dose is adjusted based on kidney function and uric acid levels and is reviewed regularly. It can be used for long-term treatment." },
-  { q: "Can gout damage the kidneys?", a: "Yes. Consistently high uric acid levels can form crystals in the kidneys, causing kidney stones and leading to kidney damage. Kidney function should be checked regularly." },
+  { q: "Is gout curable?", a: "Gout cannot be cured, but it can be completely controlled. With uric acid-lowering medication and the right dietary adjustments, most people prevent attacks from occurring. Treatment also prevents the condition from causing any damage." },
+  { q: "Which foods should be avoided with gout in India?", a: "The high-risk foods for gout are organ meats, along with red meat, mutton, and shellfish. Beer can also increase the risk of gout. Packaged cold drinks, fruit juices, and sweets are lesser-known foods that increase the risk because of their high sugar content. Reducing high-risk foods, staying hydrated and taking medicine regularly can help in the long-term treatment of gout." },
+  { q: "Can vegetarians get gout?", a: "Yes, eating large amounts of packaged cold drinks, commercial juices, and sweets, along with health conditions like obesity or diabetes, increases the risk of developing gout in vegetarians." },
+  { q: "Is allopurinol safe to take for life?", a: "Yes, it is advised for most people who have repeated gout attacks. The dose of allopurinol is adjusted based on kidney function and uric acid levels and is reviewed regularly. It can be used for long-term treatment." },
+  { q: "Can gout damage the kidneys?", a: "Yes, consistently high uric acid levels in the body can form crystals in the kidneys. This causes kidney stones and leads to kidney damage. Therefore, kidney function should be checked regularly." },
 ]
 
 /* DARK GREEN divider between sections */
@@ -119,7 +119,7 @@ function GoutOverview() {
             <div style={{ position: "relative", paddingBottom: "52px" }}>
               <div style={{ background: "linear-gradient(135deg, #0f616e 0%, #1AA3B5 100%)", borderRadius: "6px", padding: "32px clamp(16px, 4vw, 32px) 70px", position: "relative", overflow: "hidden" }}>
                 <div style={{ width: "clamp(200px, 40vw, 300px)", height: "clamp(200px, 40vw, 300px)", borderRadius: "50%", margin: "0 auto", overflow: "hidden", border: "5px solid rgba(255,255,255,0.35)", backgroundColor: "rgba(255,255,255,0.95)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <img src="/condition/Gout.webp" alt="Gout" style={{ width: "82%", height: "82%", objectFit: "contain", display: "block" }} />
+                  <img src="/overvIew/gout.png" alt="Gout" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
                 </div>
               </div>
 
@@ -130,6 +130,11 @@ function GoutOverview() {
                   </button>
                 ))}
               </div>
+
+              {/* Medically reviewed by */}
+              <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
+                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
+              </p>
             </div>
           </div>
         </header>
@@ -141,7 +146,7 @@ function GoutOverview() {
             {/* INTRO */}
             <div id="overview" style={{ scrollMarginTop: "80px" }}>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                Sudden, extreme pain in the toe that wakes you up at night is easy to mistake for an injury. It becomes so painful that even wearing socks or the touch of a bedsheet feels unbearable. The pain may improve slowly, but without treatment, similar attacks can return and affect other joints. This condition is called gout.
+                Sudden, extreme pain in the toe that wakes you up at night is easy to be mistaken as an injury. It becomes so painful to touch that even wearing socks or the touch of a bedsheet feels unbearable. The pain may improve slowly. But without treatment, similar attacks can return and affect other joints. This condition is called gout.
               </p>
               <p className="text-[16px] leading-[1.8] text-navy-muted">
                 Gout is a painful condition that affects around 10 out of every 10,000 people in India. It happens when too much of a natural waste product called &lsquo;uric acid&rsquo; builds up in the body. Early diagnosis by a rheumatologist and the right treatment can help control symptoms, prevent future attacks, and protect the joints from long-term damage. This article will help you understand what gout is, how it progresses through four stages, what causes it, its symptoms, how it is diagnosed, and what treatments are available in India.
@@ -171,13 +176,13 @@ function GoutOverview() {
             <div id="what-is-gout" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What Is Gout?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Food items like meat, sugary food, and drinks like alcohol contain purines. When the body breaks down purines, it releases uric acid — a waste product. In a healthy body, the kidney removes uric acid via urine.
+                Food items like meat, sugary food and drinks like alcohol contain purines. When the body breaks down purines, it releases uric acid, which is a waste product. In a healthy body, the kidney removes uric acid as by product via urine.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Gout causes pain and swelling in the joints due to increased uric acid accumulation. When too much uric acid collects in the body, it slowly forms tiny, sharp, needle-like crystals that settle in and around the joints. Think of these crystals as tiny shards of glass inside the joint.
+                Gout is a condition that causes pain and swelling in the joints, which is due to increased uric acid accumulation. The condition occurs when too much uric acid collects in the body. The raised uric acid slowly starts forming tiny, sharp, needle-like crystals. These crystals settle in and around the joints. Think of these crystals as tiny shards of glass inside the joint.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Every time the joints move — standing, walking, or running — the crystals grind against the surrounding tissue. The body&apos;s protective system sees the crystals as harmful and quickly attacks them, causing pain, swelling, redness, and warmth. This sudden, painful episode is known as a gout attack.
+                Every time the joints move during activities such as standing, walking or running, the crystals grind against the surrounding tissue. The body&apos;s protective system sees the crystals as harmful and quickly attacks them. This causes pain, swelling, redness, and warmth in the joint. The sudden, painful episode is known as a gout attack.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 Gout most commonly occurs in the big toe. It can also develop in the ankles, knees, wrists, and elbows.
@@ -185,7 +190,7 @@ function GoutOverview() {
 
               <h3 style={H3Style}>How Common Is Gout in India?</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                Gout is common in India, affecting around 10 out of 10,000 people in big cities. It mainly affects men after 40 years of age, while women often develop gout after menopause. The condition progresses in stages over the years — acting in the early stages can prevent progression.
+                Gout is common in India. It affects around 10 out of 10,000 people in big cities . It mainly affects men after 40 years of age. Women often develop gout after menopause. The condition progresses in stages over the years. Acting in the early stages can prevent the disease from progressing to the next stage.
               </p>
             </div>
 
@@ -218,31 +223,31 @@ function GoutOverview() {
             <div id="causes" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What Causes Gout?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                The main cause of gout is too much uric acid in the body. Factors such as diet, genes, medications, and poor health can increase uric acid levels.
+                The main cause of gout is too much uric acid in the body. Factors such as diet, genes, medications and poor health can increase uric acid levels.
               </p>
 
               <h3 style={H3Style}>Diet and Lifestyle Factors</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Eating large amounts of organ meats (liver, kidney, brain), red meat, mutton, and shellfish can raise uric acid. Alcoholic drinks, especially beer, also increase uric acid. Sugary drinks — soft drinks, packaged fruit juices, and sweetened beverages — raise the chances of gout even in vegetarians. Drinking less water makes it harder for the kidneys to remove uric acid efficiently, so levels rise and can trigger gout.
+                What you eat and drink can affect the uric acid levels. Eating large amounts of organ meats like liver, kidney, and brain, red meat, mutton, and shellfish can raise uric acid levels. Alcoholic drinks, especially beer, also increase the uric acid level in the body. Sugary drinks, such as soft drinks, packaged fruit juices, and other sweetened beverages, can increase the chances of gout, even in vegetarians. Drinking less water can make it harder for the kidneys to remove the uric acid efficiently. As a result, the uric acid levels increase in the blood and can trigger gout.
               </p>
 
               <h3 style={H3Style}>Health Conditions Linked to Gout</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Gout mostly occurs in patients with high blood sugar, high blood pressure, and kidney disease. Overweight people are also at higher risk. Kidney disease is a main cause of gout because it becomes harder to remove uric acid from the body.
+                Gout mostly occurs in patients who have high blood sugar, high blood pressure, and kidney disease. Overweight people are also at higher risk. Kidney disease is one of the main causes of gout because it becomes harder to remove uric acid from the body.
               </p>
 
               <h3 style={H3Style}>Medications That Can Raise Uric Acid</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Some medicines increase uric acid. Thiazides (used for high blood pressure) are among the most common. Blood-thinning medicines like aspirin and immunosuppressants can also cause gout. If gout starts after beginning a new medicine or gets worse, speak to your doctor — do not stop a prescribed medicine on your own. Your doctor will review your treatment and recommend the safest option.
+                Some medicines can increase the uric acid levels in the body. Medicines like thiazides, which are used for treatment of high blood pressure are among the most common medicines which cause gout. Blood-thinning medicines like Aspirin and medicines that suppress the body&apos;s defence system (immunosuppressants) can also cause gout. If gout starts after beginning a new medicine or gout becomes worse, you should speak to your doctor. Do not stop taking your prescribed medicine on your own. Your doctor will review your treatment and recommend the safest option for you.
               </p>
 
               <h3 style={H3Style}>Indian-Specific Risk Factors</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                In India, gout is becoming more common, especially in big cities. Poorly managed high blood sugar and high blood pressure, consuming large amounts of organ meat and seafood, and a less active lifestyle all increase the risk.
+                In India, gout is becoming more common, especially in big cities. Factors such as poorly managed health conditions like high blood sugar and high blood pressure, consuming large amounts of organ meat and seafood, and a less active lifestyle can increase the risk of gout.
               </p>
 
               <h3 style={H3Style}>Who Is Most at Risk?</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>Anyone can develop gout, but certain factors make you more prone:</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>Anyone can develop gout. But certain factors, such as age, gender, family history, dietary habits, and unmanaged health conditions, make you more prone to developing it.</p>
               <ul className="space-y-1" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {riskFactors.map((r, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{r}</li>))}
               </ul>
@@ -254,22 +259,22 @@ function GoutOverview() {
             <div id="symptoms" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Symptoms of Gout</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Sudden, extreme pain in the big toe is the main feature of a gout attack. In the early stage, attacks are sudden and usually affect one joint. Without treatment, they become more frequent and involve other joints, and as the condition progresses, the pain and swelling become permanent.
+                The sudden extreme pain in the big toe is the main feature of a gout attack. Gout symptoms can change as the condition progresses. In the early stage, the attacks are sudden and usually affect one joint. Without treatment, they can become more frequent and involve other joints. As the condition progresses, the pain and swelling become permanent.
               </p>
 
               <h3 style={H3Style}>Symptoms During an Acute Attack</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                A gout attack is a sudden episode of severe joint pain that often occurs at night. The pain reaches its worst within 12–24 hours. Many people describe it as the worst joint pain they have experienced — even the weight of a bedsheet on the joint can be unbearable. It most commonly occurs in the big toe, and can also affect the ankle, knee, wrist, or elbow.
+                A gout attack is a sudden episode of severe joint pain that often occurs at night. The pain reaches its worst within 12–24 hours. Many people describe it as the worst joint pain they have experienced. Even the weight of a bedsheet resting on the joint can be unbearable. Gout pain most commonly occurs in the big toe. It can also occur in the ankle, knee, wrist, or elbow.
               </p>
 
               <h3 style={H3Style}>Symptoms in Advanced Gout</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                When gout is left untreated for years, tophi form under the skin — hard, whitish lumps around the fingers, elbows, ears, and toes. In some cases they break open, releasing a chalky white substance. The pain, swelling, and stiffness in the joint usually become permanent as the condition progresses.
+                When gout is left untreated for years, tophi forms under the skin. Tophi are hard, whitish lumps which usually form around the fingers, elbows, ears, and toes. In some cases, they break open through the skin, releasing a chalky white substance. The pain, swelling and stiffness in the joint usually become permanent as the condition progresses.
               </p>
 
               <h3 style={H3Style}>Complications of Untreated Gout</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                Without treatment, gout can affect other organs like the heart and kidneys. Uric acid kidney stones are a major problem in untreated gout — it can weaken kidney function and increase the risk of heart disease. Keeping uric acid levels under control matters not only for pain-free joints but also for preventing kidney and heart problems.
+                Without treatment, gout can lead to complications. In some people, the high uric acid level affects other organs, such as the heart and kidneys. Uric acid kidney stones are one of the major problems in untreated gout. It can also weaken kidney function and increase the risk of heart disease. Keeping the uric acid levels under control is important not only for pain-free joints but also for preventing kidney and heart problems. Diagnosing gout early can help you get the right treatment before it causes permanent pain and damage.
               </p>
             </div>
 
@@ -279,16 +284,16 @@ function GoutOverview() {
             <div id="diagnosis" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>How Is Gout Diagnosed?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                A rheumatologist confirms the diagnosis with a physical examination and blood test, and may recommend X-ray, ultrasound, and joint fluid examination to confirm.
+                A rheumatologist confirms the diagnosis with a physical examination and blood test. They may recommend X-ray, ultrasound, and joint fluid examination to confirm the condition.
               </p>
               <div className="grid grid-cols-1 gap-5">
                 <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
                   <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Physical Examination and Blood Tests</h3>
-                  <p className="text-[16px] leading-[1.75] text-navy-deep">The doctor examines the affected joint for swelling, redness, warmth, and hard lumps, and asks about attack patterns, diet, alcohol use, medicines, and family history. A blood test measures uric acid levels and kidney function — high uric acid can damage the kidneys, and poorly functioning kidneys make gout worse.</p>
+                  <p className="text-[16px] leading-[1.75] text-navy-deep">The doctor examines the affected joint for swelling, redness, and warmth and hard lumps. They also ask about your attack patterns, diet, alcohol use, medicines, and family history. The doctor may recommend a blood test to measure uric acid levels and kidney function. High uric acid levels can damage the kidneys. Poorly functioning kidneys make it harder for the body to remove uric acid, making gout worse.</p>
                 </div>
                 <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
                   <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Confirming the Diagnosis</h3>
-                  <p className="text-[16px] leading-[1.75] text-navy-deep">Sometimes gout is confused with a joint infection. A fine needle aspiration test — taking a small amount of fluid from the joint and checking for uric acid crystals — is the most reliable test to confirm gout. Ultrasound detects crystals in early stages, and X-ray checks bone damage in advanced stages.</p>
+                  <p className="text-[16px] leading-[1.75] text-navy-deep">Sometimes, gout is confused with a joint infection or other forms of joint pain and swelling. Doctors recommend a fine needle aspiration test to confirm gout. During this test, a small amount of fluid is taken from the affected joint and checked for uric acid crystals. This is the most reliable test to confirm gout. The doctor performs an ultrasound in the early stages to detect uric acid crystals in the joints. They can recommend an X-ray in advanced stages to check the bone damage. After the condition is diagnosed, the rheumatologist will start the treatment depending on the stage of your condition.</p>
                 </div>
               </div>
             </div>
@@ -299,17 +304,17 @@ function GoutOverview() {
             <div id="treatment" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Treatment Options for Gout</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                The main goal is to relieve sudden pain and swelling and prevent future attacks. Most people can manage their symptoms well with the right treatment.
+                The main goal of gout treatment is to relieve sudden pain and swelling and prevent future attacks. Most people with gout can manage their symptoms well with the right treatment.
               </p>
 
-              <h3 style={H3Style}>Medicine During an Acute Attack</h3>
+              <h3 style={H3Style}>Medicine during an acute attack</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Doctors usually prescribe NSAIDs to reduce pain and swelling. If consulted within 12–24 hours of the first attack, they may prescribe a pain-relieving medicine called &lsquo;colchicine&rsquo; for quick relief. If these don&apos;t help, a corticosteroid may be recommended to calm the body&apos;s protective system and reduce swelling.
+                Doctors usually prescribe medicines called NSAIDs to reduce pain and swelling. If a doctor is consulted within 12–24 hours of the first gout attack, they may prescribe a pain-relieving medicine called &lsquo;colchicine&rsquo; for quick relief. If these two medicines do not provide relief, then they may recommend a corticosteroid. Corticosteroids calm the body&apos;s protective system and reduce swelling.
               </p>
 
-              <h3 style={H3Style}>Medicine to Prevent Future Attacks</h3>
+              <h3 style={H3Style}>Medicine to prevent future attacks</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                To prevent future attacks, doctors prescribe the uric acid-lowering medicine &lsquo;allopurinol&rsquo; long term. <strong className="font-semibold">Do not stop allopurinol when the pain goes away</strong> — stopping is the single most common cause of repeated attacks and can worsen joint damage. Treating only the pain without managing uric acid worsens the disease. Febuxostat is a second-choice medicine when allopurinol doesn&apos;t work. Allopurinol is also available as a low-cost generic through Jan Aushadhi outlets.
+                To prevent future attacks, doctors prescribe uric acid-lowering medicine &lsquo;allopurinol&rsquo; for a long term. <strong className="font-semibold">Do not stop allopurinol when the pain goes away.</strong> Stopping the medicine is the single most common cause of repeated attacks. This can also worsen joint damage over time. Treating only the pain without managing the uric acid level can worsen the disease. Febuxostat is a second-choice medicine when allopurinol does not work. Allopurinol is also available as a low-cost generic medicine in India through Jan Aushadhi outlets.
               </p>
               <div className="flex items-start gap-3 p-4" style={{ backgroundColor: "#fff3ec", borderRadius: "10px" }}>
                 <p className="text-[14px] leading-[1.65] text-navy-deep"><strong className="font-semibold">Disclaimer:</strong> This is for informational purposes only. For medical advice or diagnosis, consult a professional doctor.</p>
@@ -317,12 +322,12 @@ function GoutOverview() {
 
               <h3 style={H3Style}>Diet and Lifestyle Changes</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                Diet changes are important alongside medicine. Avoiding foods that raise uric acid gives long-term benefit. Maintaining a healthy weight, eating fresh food and vegetables, and drinking plenty of water can prevent progression.
+                Diet changes are important in controlling gout symptoms along with medicine. Avoiding foods that can raise uric acid can provide a long-term benefit. Maintaining a healthy body weight, eating fresh food and vegetables and drinking plenty of water can prevent the condition from progressing. Here is the list of safe and unsafe foods for gout.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div style={{ border: "1px solid #cbe6ea", borderRadius: "12px", overflow: "hidden" }}>
                   <div style={{ backgroundColor: "#e0f3f5", padding: "12px 18px" }}>
-                    <span className="text-[14px] font-bold text-navy-deep">✓ SAFE — include in your diet</span>
+                    <span className="text-[14px] font-bold text-navy-deep">✓ SAFE: Include in your diet</span>
                   </div>
                   <ul className="p-4 space-y-2" style={{ listStyleType: "disc", paddingLeft: "2rem" }}>
                     {safeFoods.map((f, i) => (<li key={i} className="text-[14px] leading-[1.6] text-navy-deep">{f}</li>))}
@@ -330,13 +335,16 @@ function GoutOverview() {
                 </div>
                 <div style={{ border: "1px solid #f3d6c8", borderRadius: "12px", overflow: "hidden" }}>
                   <div style={{ backgroundColor: "#fff3ec", padding: "12px 18px" }}>
-                    <span className="text-[14px] font-bold text-navy-deep">✕ UNSAFE — reduce or avoid</span>
+                    <span className="text-[14px] font-bold text-navy-deep">✕ UNSAFE: Reduce or avoid in your diet</span>
                   </div>
                   <ul className="p-4 space-y-2" style={{ listStyleType: "disc", paddingLeft: "2rem" }}>
                     {unsafeFoods.map((f, i) => (<li key={i} className="text-[14px] leading-[1.6] text-navy-deep">{f}</li>))}
                   </ul>
                 </div>
               </div>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginTop: "1.5rem" }}>
+                Taking your medicine regularly as prescribed and maintaining a healthy lifestyle can prevent future gout attacks. This can also protect your joints from permanent damage.
+              </p>
             </div>
 
             <DarkDivider />
@@ -345,7 +353,7 @@ function GoutOverview() {
             <div id="living" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Living With Gout in India</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                Gout is one of the most controllable forms of arthritis. Living well involves taking your medicines regularly and making healthy lifestyle changes. Keeping uric acid levels under control is the best way to prevent future attacks and protect your joints. It is also important to manage diabetes and high blood pressure alongside gout. Uric acid levels, kidney function, blood pressure, and blood sugar should all be checked regularly. Many Indian patients return to the doctor only when the next attack occurs — but the goal is to prevent future attacks and control the condition before it worsens. With proper long-term treatment, most people live a normal daily life.
+                Gout is one of the most controllable forms of arthritis. Living well with gout involves taking your medicines regularly and making healthy lifestyle changes. Keeping uric acid levels under control is the best way to prevent future attacks and protect your joints over time. It is also important to manage diabetes and high blood pressure along with gout to prevent the condition from worsening. Uric acid levels, kidney function, blood pressure, and blood sugar should all be checked regularly. Many Indian patients usually return to the doctor when the next attack occurs. The goal is to prevent future attacks and control the condition before it worsens. With proper long-term treatment, most people live a normal daily life.
               </p>
             </div>
 
@@ -354,8 +362,11 @@ function GoutOverview() {
             {/* WHEN TO CONSULT + CTA */}
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>When Should a Rheumatologist Be Consulted?</h2>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                Many people manage each attack with a painkiller and get on with life. They never address the high levels of uric acid causing these attacks. As the pain reduces, they stop treatment. Then the next attack comes, which is usually worse and involves more joints. Over the years, this pattern leads to joint damage and tophi from increased duration of gout.
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Many people manage each attack with a painkiller and get on with life, never addressing the high uric acid levels causing them. As the pain reduces they stop treatment — then the next attack comes, usually worse and involving more joints. Over the years, this pattern leads to joint damage and tophi. A rheumatologist can confirm the diagnosis, start uric acid-lowering treatment at the right dose, monitor uric acid and kidney function, and manage underlying conditions. Early, consistent treatment helps most gout patients live attack-free long-term.
+                A rheumatologist can confirm the diagnosis properly and start uric acid-lowering treatment at the right dose. They will monitor uric acid levels in the body and kidney function and manage any underlying conditions. All this helps completely manage the symptoms when addressed early. Early treatment with consistency helps most gout patients live attack-free long-term.
               </p>
               <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>

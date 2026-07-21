@@ -108,7 +108,7 @@ function OsteoarthritisOverview() {
             <div style={{ position: "relative", paddingBottom: "52px" }}>
               <div style={{ background: "linear-gradient(135deg, #0f616e 0%, #1AA3B5 100%)", borderRadius: "6px", padding: "32px clamp(16px, 4vw, 32px) 70px", position: "relative", overflow: "hidden" }}>
                 <div style={{ width: "clamp(200px, 40vw, 300px)", height: "clamp(200px, 40vw, 300px)", borderRadius: "50%", margin: "0 auto", overflow: "hidden", border: "5px solid rgba(255,255,255,0.35)", backgroundColor: "rgba(255,255,255,0.95)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <img src="/condition/Osteoarthritis.webp" alt="Osteoarthritis" style={{ width: "82%", height: "82%", objectFit: "contain", display: "block" }} />
+                  <img src="/overvIew/oestoreities.png" alt="Osteoarthritis" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
                 </div>
               </div>
 
@@ -120,6 +120,11 @@ function OsteoarthritisOverview() {
                   </button>
                 ))}
               </div>
+
+              {/* Medically reviewed by */}
+              <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
+                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
+              </p>
             </div>
           </div>
         </header>
