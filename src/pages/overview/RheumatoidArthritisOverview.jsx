@@ -64,8 +64,8 @@ const DarkDivider = () => (
   <hr style={{ border: "none", borderTop: "2px solid #0a4f5a", margin: "3.5rem 0" }} />
 )
 
-const tabs = ["Overview", "Symptoms", "Diagnosis", "Treatment", "Living With RA"]
-const tabTargets = { Overview: "overview", Symptoms: "symptoms", Diagnosis: "diagnosis", Treatment: "treatment", "Living With RA": "managing-ra" }
+const tabs = ["Overview", "Symptoms", "Diagnosis", "Treatment", "Daily Living"]
+const tabTargets = { Overview: "overview", Symptoms: "symptoms", Diagnosis: "diagnosis", Treatment: "treatment", "Daily Living": "managing-ra" }
 
 function RheumatoidArthritisOverview() {
   const [progress, setProgress] = useState(0)

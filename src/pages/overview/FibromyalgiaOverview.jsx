@@ -52,8 +52,8 @@ const DarkDivider = () => (
   <hr style={{ border: "none", borderTop: "2px solid #0a4f5a", margin: "3.5rem 0" }} />
 )
 
-const tabs = ["Overview", "Symptoms", "Diagnosis", "Treatment", "Living With FM"]
-const tabTargets = { Overview: "what-is-fm", Symptoms: "symptoms", Diagnosis: "diagnosis", Treatment: "treatment", "Living With FM": "living" }
+const tabs = ["Overview", "Symptoms", "Diagnosis", "Treatment", "Daily Living"]
+const tabTargets = { Overview: "what-is-fm", Symptoms: "symptoms", Diagnosis: "diagnosis", Treatment: "treatment", "Daily Living": "living" }
 
 const H3Style = { letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }
 
