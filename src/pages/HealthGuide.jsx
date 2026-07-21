@@ -78,18 +78,18 @@ const faqs = [
 
 /* Condition tiles -mirrors the Knowledge Hub "Know more about Your condition" section */
 const arthritisConditions = [
-  { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
-  { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative", href: "/osteoarthritis" },
-  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune", href: null },
-  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: null },
+  { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis-overview" },
+  { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative", href: "/Osteoarthritis-overview" },
+  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune", href: "/Psoriatic-Arthritis-overview" },
+  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: "/Ankylosing-Spondylitis-overview" },
 ]
 
 const otherConditions = [
-  { key: "gout", name: "Gout", href: "/gout" },
+  { key: "gout", name: "Gout", href: "/Gout-overview" },
   { key: "ctd", name: "Connective Tissue Disease", href: null },
   { key: "fibro", name: "Fibromyalgia", href: null },
   { key: "vasculitis", name: "Vasculitis", href: null },
-  { key: "lupus", name: "Lupus (SLE)", href: null },
+  { key: "lupus", name: "Lupus (SLE)", href: "/Lupus-overview" },
   { key: "reactive", name: "Reactive Arthritis", href: null },
   { key: "sjogrens", name: "Sjögren's Syndrome", href: null },
   { key: "jia", name: "Juvenile Idiopathic Arthritis", href: null },
