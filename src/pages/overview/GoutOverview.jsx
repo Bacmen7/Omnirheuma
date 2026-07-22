@@ -113,7 +113,7 @@ function GoutOverview() {
               Gout
             </h1>
             <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
-              Symptoms, causes and treatment options — explained for patients and caregivers
+              Symptoms, causes and treatment options, explained for patients and caregivers
             </p>
 
             <div style={{ position: "relative", paddingBottom: "52px" }}>
@@ -203,12 +203,12 @@ function GoutOverview() {
                 Gout slowly progresses over many years. Without treatment, it moves from one stage to the next, causing more frequent and severe attacks.
               </p>
               <div className="flex flex-col gap-3">
-                {stages.map((s, i) => (
-                  <div key={s.stage} style={{ display: "flex", gap: "18px", alignItems: "flex-start", backgroundColor: i === stages.length - 1 ? "#0f616e" : "#f5f7f8", padding: "18px 22px", borderRadius: "6px" }}>
-                    <span style={{ fontFamily: "var(--font-display)", fontSize: "15px", fontWeight: 700, color: i === stages.length - 1 ? "#5fdae8" : "#0f616e", minWidth: "62px", paddingTop: "2px" }}>{s.stage}</span>
+                {stages.map((s) => (
+                  <div key={s.stage} style={{ display: "flex", gap: "18px", alignItems: "flex-start", backgroundColor: "#f5f7f8", padding: "18px 22px", borderRadius: "6px" }}>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: "15px", fontWeight: 700, color: "#0f616e", minWidth: "62px", paddingTop: "2px" }}>{s.stage}</span>
                     <div>
-                      <p className="text-[15px] leading-[1.6]" style={{ color: i === stages.length - 1 ? "#fff" : "#1a1a1a", fontWeight: 700, marginBottom: "4px" }}>{s.title}</p>
-                      <p className="text-[14px] leading-[1.65]" style={{ color: i === stages.length - 1 ? "rgba(255,255,255,0.85)" : "#5E5E5E" }}>{s.desc}</p>
+                      <p className="text-[15px] leading-[1.6]" style={{ color: "#1a1a1a", fontWeight: 700, marginBottom: "4px" }}>{s.title}</p>
+                      <p className="text-[14px] leading-[1.65]" style={{ color: "#5E5E5E" }}>{s.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -371,7 +371,7 @@ function GoutOverview() {
               <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>
                   <Stethoscope size={28} color="#E86531" strokeWidth={2} style={{ flexShrink: 0 }} />
-                  <p style={{ fontSize: "16px", fontWeight: 700, color: "#0f616e", lineHeight: 1.3, margin: 0 }}>Don&apos;t just treat the pain — control the uric acid</p>
+                  <p style={{ fontSize: "16px", fontWeight: 700, color: "#0f616e", lineHeight: 1.3, margin: 0 }}>Don&apos;t just treat the pain, control the uric acid</p>
                 </div>
                 <Link to="/book-appointment" className="group" style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none" }}>
                   Book a Specialist Visit

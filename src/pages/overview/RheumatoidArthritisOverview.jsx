@@ -113,7 +113,7 @@ function RheumatoidArthritisOverview() {
               Rheumatoid Arthritis
             </h1>
             <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
-              What it is, symptoms, causes and treatment options — explained for patients and caregivers
+              What it is, symptoms, causes and treatment options, explained for patients and caregivers
             </p>
 
             {/* Disease image gradient card + overlapping tab cards */}
@@ -348,7 +348,7 @@ function RheumatoidArthritisOverview() {
               <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>
                   <Stethoscope size={28} color="#E86531" strokeWidth={2} style={{ flexShrink: 0 }} />
-                  <p style={{ fontSize: "16px", fontWeight: 700, color: "#0f616e", lineHeight: 1.3, margin: 0 }}>Don&apos;t wait — get evaluated early</p>
+                  <p style={{ fontSize: "16px", fontWeight: 700, color: "#0f616e", lineHeight: 1.3, margin: 0 }}>Don&apos;t wait, get evaluated early</p>
                 </div>
                 <Link to="/book-appointment" className="group" style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none" }}>
                   Book a Specialist Visit

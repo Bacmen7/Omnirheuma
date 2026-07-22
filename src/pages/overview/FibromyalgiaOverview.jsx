@@ -103,7 +103,7 @@ function FibromyalgiaOverview() {
               Fibromyalgia
             </h1>
             <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
-              What it is, symptoms, causes and treatment options — explained for patients and caregivers
+              What it is, symptoms, causes and treatment options, explained for patients and caregivers
             </p>
 
             <div style={{ position: "relative", paddingBottom: "52px" }}>

@@ -115,7 +115,7 @@ function PsoriaticArthritisOverview() {
               Psoriatic Arthritis
             </h1>
             <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
-              What it is, symptoms, causes and treatment options — explained for patients and caregivers
+              What it is, symptoms, causes and treatment options, explained for patients and caregivers
             </p>
 
             <div style={{ position: "relative", paddingBottom: "52px" }}>
@@ -338,7 +338,7 @@ function PsoriaticArthritisOverview() {
                     </tr>
                     <tr className="border-b border-[#dadfe8]">
                       <td className="p-4 text-[15px] font-semibold text-navy-deep align-top">Skin/nail changes</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Present — with family history of psoriasis</td>
+                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Present, with family history of psoriasis</td>
                       <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Absent</td>
                     </tr>
                   </tbody>

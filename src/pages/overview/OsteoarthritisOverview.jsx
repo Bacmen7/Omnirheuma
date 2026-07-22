@@ -10,11 +10,11 @@ import { ArrowRight, Stethoscope } from "lucide-react"
    ───────────────────────────────────────────── */
 
 const oaTypes = [
-  { title: "Knees — the daily workhorses", desc: "This is the most commonly affected joint in India. Simple tasks like climbing stairs, squatting, or getting up from the floor can feel like a task. That stubborn pain reminds you of every step you take." },
-  { title: "Hips — the hidden troublemaker", desc: "Instead of obvious joint pain, it shows up as a deep ache in the inner thigh. Stiffness while walking or difficulty sitting cross-legged are noticed. Most people don't connect these symptoms to the hip joint directly." },
-  { title: "Hands — the silent sufferers", desc: "When hands become the victim, especially the fingers and the base of the thumb, everyday tasks become very tricky. Opening jars, buttoning clothes, or even holding a pen can feel uncomfortable. The joints may look slightly swollen over time." },
+  { title: "Knees: the daily workhorses", desc: "This is the most commonly affected joint in India. Simple tasks like climbing stairs, squatting, or getting up from the floor can feel like a task. That stubborn pain reminds you of every step you take." },
+  { title: "Hips: the hidden troublemaker", desc: "Instead of obvious joint pain, it shows up as a deep ache in the inner thigh. Stiffness while walking or difficulty sitting cross-legged are noticed. Most people don't connect these symptoms to the hip joint directly." },
+  { title: "Hands: the silent sufferers", desc: "When hands become the victim, especially the fingers and the base of the thumb, everyday tasks become very tricky. Opening jars, buttoning clothes, or even holding a pen can feel uncomfortable. The joints may look slightly swollen over time." },
   { title: "Strained spine", desc: "Sitting for long hours, the spine and neck bear the brunt. It often shows up as stiffness in the neck or lower back. Sometimes, it may even cause a radiating discomfort if nearby nerves are irritated." },
-  { title: "Feet and ankles — the collapsed support system", desc: "Feet and ankles support the entire body, so when osteoarthritis affects them, standing or walking for long periods can become very painful. You might feel stiffness, tenderness, or discomfort with every step." },
+  { title: "Feet and ankles: the collapsed support system", desc: "Feet and ankles support the entire body, so when osteoarthritis affects them, standing or walking for long periods can become very painful. You might feel stiffness, tenderness, or discomfort with every step." },
 ]
 
 const medications = [
@@ -39,7 +39,7 @@ const adapting = [
 ]
 
 const faqs = [
-  { q: "Is osteoarthritis just a part of aging?", a: "Age is one of many risk factors like obesity and lack of nutrition — aging alone does not affect your joints." },
+  { q: "Is osteoarthritis just a part of aging?", a: "Age is one of many risk factors like obesity and lack of nutrition. Aging alone does not affect your joints." },
   { q: "Can osteoarthritis be cured?", a: "Though it cannot be cured, it can be effectively managed with better treatment options and small lifestyle changes." },
   { q: "Which joints are most affected?", a: "In India, knees are the most commonly affected. This can be due to our cultural habits, like squatting or sitting on the floor." },
   { q: "How is it different from rheumatoid arthritis?", a: "Osteoarthritis is due to wear and tear, while rheumatoid arthritis is an autoimmune condition where the immune system affects its own joints. In RA, multiple joints are affected at the same time." },
@@ -101,7 +101,7 @@ function OsteoarthritisOverview() {
               Osteoarthritis
             </h1>
             <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
-              What it is, symptoms, causes and treatment options — explained for patients and caregivers
+              What it is, symptoms, causes and treatment options, explained for patients and caregivers
             </p>
 
             {/* Disease image gradient card + overlapping tab cards */}
@@ -139,7 +139,7 @@ function OsteoarthritisOverview() {
                 While walking comfortably across your home or climbing the stairs, you feel exhausted and tired. People around you become concerned, but you shrug it off, saying, &ldquo;I&apos;m just getting older.&rdquo; The pain you suffer is not something to ignore. For many Indians, this can be a first sign of osteoarthritis.
               </p>
               <p className="text-[16px] leading-[1.8] text-navy-muted" style={{ marginBottom: "1.25rem" }}>
-                Osteoarthritis is a condition that slowly affects the joints over time. Walking, sitting, or even holding objects seems like a great task to achieve. There are various treatment options, ranging from medications to complex surgical procedures. The disease progression can be managed if treatment begins early. Osteoarthritis is no longer just a condition concerned with aging — it has quietly become a major global health concern. In 2021, an estimated 374.7 million people worldwide were living with knee osteoarthritis, an increase of 234.5% since 1990.
+                Osteoarthritis is a condition that slowly affects the joints over time. Walking, sitting, or even holding objects seems like a great task to achieve. There are various treatment options, ranging from medications to complex surgical procedures. The disease progression can be managed if treatment begins early. Osteoarthritis is no longer just a condition concerned with aging. It has quietly become a major global health concern. In 2021, an estimated 374.7 million people worldwide were living with knee osteoarthritis, an increase of 234.5% since 1990.
               </p>
               <p className="text-[16px] leading-[1.8] text-navy-muted">
                 This is a practical guide that will help you understand what osteoarthritis is, why it happens to you, how you can find out if you suffer from the condition, and what treatment options are available in India.
@@ -273,7 +273,7 @@ function OsteoarthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>Initially, the doctor checks if there is any obvious swelling or redness in the affected site. They observe the pain while touching the joint, the extent of movement of the joint, and its flexibility.</p>
 
               <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Imaging Tests</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>Once the doctor examines the affected site completely, they proceed with imaging tests, commonly used to look for cartilage loss and bone changes. MRI is not routine for osteoarthritis; it is used when the situation needs a closer, more detailed picture beyond what an X-ray can show — usually in early cases where symptoms don&apos;t match the site, or after prior surgeries.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>Once the doctor examines the affected site completely, they proceed with imaging tests, commonly used to look for cartilage loss and bone changes. MRI is not routine for osteoarthritis; it is used when the situation needs a closer, more detailed picture beyond what an X-ray can show, usually in early cases where symptoms don&apos;t match the site, or after prior surgeries.</p>
 
               <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Blood Tests</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep">There is no specific blood test for osteoarthritis. Tests are mainly done to rule out other conditions like rheumatoid arthritis.</p>
@@ -343,7 +343,7 @@ function OsteoarthritisOverview() {
               <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>
                   <Stethoscope size={28} color="#E86531" strokeWidth={2} style={{ flexShrink: 0 }} />
-                  <p style={{ fontSize: "16px", fontWeight: 700, color: "#0f616e", lineHeight: 1.3, margin: 0 }}>Get evaluated early — stay active longer</p>
+                  <p style={{ fontSize: "16px", fontWeight: 700, color: "#0f616e", lineHeight: 1.3, margin: 0 }}>Get evaluated early and stay active longer</p>
                 </div>
                 <Link to="/book-appointment" className="group" style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none" }}>
                   Book a Specialist Visit

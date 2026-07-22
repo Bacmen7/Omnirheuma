@@ -69,7 +69,7 @@ const faqs = [
   { q: "Can lupus be life-threatening?", a: "When the kidneys, heart, or lungs are involved, lupus can become life-threatening. Lupus nephritis is the most serious complication. Most people diagnosed early and treated consistently live a normal life. There are risks, but it is manageable with early treatment and lifestyle changes." },
   { q: "What is the butterfly rash in lupus?", a: "A rash that spreads across both cheeks and the nose bridge. It mainly appears or worsens after sun exposure. On Indian skin tones, it appears as darkened or brownish discolouration instead of a red rash, so it often goes unnoticed." },
   { q: "Does lupus affect pregnancy?", a: "Lupus raises the risk of miscarriage, preterm birth, and high blood pressure during pregnancy. With rheumatology and obstetric care, many women with lupus have successful pregnancies." },
-  { q: "Why does sunlight make lupus worse?", a: "UV radiation triggers an immune response that can cause or worsen both skin rashes and systemic flares. This is called photosensitivity — one of the main reasons sun protection is very important in lupus management, especially in India." },
+  { q: "Why does sunlight make lupus worse?", a: "UV radiation triggers an immune response that can cause or worsen both skin rashes and systemic flares. This is called photosensitivity, which is one of the main reasons sun protection is very important in lupus management, especially in India." },
 ]
 
 /* DARK GREEN divider between sections */
@@ -128,7 +128,7 @@ function LupusOverview() {
               Lupus (SLE)
             </h1>
             <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
-              What it is, symptoms, causes and treatment options — explained for patients and caregivers
+              What it is, symptoms, causes and treatment options, explained for patients and caregivers
             </p>
 
             <div style={{ position: "relative", paddingBottom: "52px" }}>
@@ -317,7 +317,7 @@ function LupusOverview() {
                 <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Continuous joint pain with unexplained tiredness</li>
                 <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">A facial rash that worsens in sunlight</li>
                 <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Significant hair loss</li>
-                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Any warning signs of kidney involvement (swollen ankles or foamy urine) — these need an immediate same-day visit to a rheumatologist without delay</li>
+                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Any warning signs of kidney involvement (swollen ankles or foamy urine). These need an immediate same-day visit to a rheumatologist without delay</li>
               </ul>
             </div>
 
@@ -332,7 +332,7 @@ function LupusOverview() {
               <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "1.5rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Blood tests for lupus include</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>ANA, Anti-dsDNA, Full blood count, ESR, CRP, and Urine protein.</p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                A positive ANA alone cannot confirm lupus. A kidney or skin biopsy may be required to assess organ involvement. Rheumatologists use the SLICC (Systemic Lupus International Collaborating Clinics) criteria — an internationally accepted checklist — to confirm the diagnosis.
+                A positive ANA alone cannot confirm lupus. A kidney or skin biopsy may be required to assess organ involvement. Rheumatologists use the SLICC (Systemic Lupus International Collaborating Clinics) criteria, an internationally accepted checklist, to confirm the diagnosis.
               </p>
             </div>
 
@@ -378,7 +378,7 @@ function LupusOverview() {
                 <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Avoid the sun between 10 am and 4 pm</li>
               </ul>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                For kidney involvement, mycophenolate mofetil or cyclophosphamide is used along with corticosteroids — the standard approach. A nephrologist works alongside the rheumatologist. It is important to detect kidney damage early, because delay can make the damage irreversible.
+                For kidney involvement, mycophenolate mofetil or cyclophosphamide is used along with corticosteroids. This is the standard approach. A nephrologist works alongside the rheumatologist. It is important to detect kidney damage early, because delay can make the damage irreversible.
               </p>
             </div>
 
@@ -388,7 +388,7 @@ function LupusOverview() {
             <div id="living" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Living With Lupus in India</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                Lupus does not go away, but daily habits can make a real difference. Protect yourself from the sun every day, even when indoors near windows. Eat a balanced, anti-inflammatory diet rich in omega-3 fatty acids. If your kidneys are affected, reducing salt intake may also help. Counselling and support from family and friends help significantly — there is a lot of stigma around long-term illness, especially in India, which can sometimes make things harder.
+                Lupus does not go away, but daily habits can make a real difference. Protect yourself from the sun every day, even when indoors near windows. Eat a balanced, anti-inflammatory diet rich in omega-3 fatty acids. If your kidneys are affected, reducing salt intake may also help. Counselling and support from family and friends help significantly. There is a lot of stigma around long-term illness, especially in India, which can sometimes make things harder.
               </p>
             </div>
 
@@ -403,7 +403,7 @@ function LupusOverview() {
               <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>
                   <Stethoscope size={28} color="#E86531" strokeWidth={2} style={{ flexShrink: 0 }} />
-                  <p style={{ fontSize: "16px", fontWeight: 700, color: "#0f616e", lineHeight: 1.3, margin: 0 }}>Get the right diagnosis early — see a rheumatologist</p>
+                  <p style={{ fontSize: "16px", fontWeight: 700, color: "#0f616e", lineHeight: 1.3, margin: 0 }}>Get the right diagnosis early, see a rheumatologist</p>
                 </div>
                 <Link to="/book-appointment" className="group" style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none" }}>
                   Book a Specialist Visit
