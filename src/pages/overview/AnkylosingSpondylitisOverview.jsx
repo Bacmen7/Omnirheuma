@@ -164,7 +164,7 @@ function AnkylosingSpondylitisOverview() {
               </p>
 
               <h3 style={H3Style}>How Common Is Ankylosing Spondylitis in India?</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Ankylosing spondylitis mainly affects young Indian men. The condition is 3 times more common in men than in women. Studies show that the average age of developing this condition is around 21 years.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">

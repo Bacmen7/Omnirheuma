@@ -31,10 +31,21 @@ function Header() {
     "Lupus",
     "Osteoarthritis",
     "Gout",
-    "Vasculitis",
-    "Spondyloarthritis",
+    "Fibromyalgia",
+    // "Vasculitis",
+    // "Spondyloarthritis",
     "Ankylosing Spondylitis",
   ]
+
+  const conditionRoutes = {
+    "Rheumatoid Arthritis": "/Rheumatoid-Arthritis-overview",
+    "Psoriatic Arthritis": "/Psoriatic-Arthritis-overview",
+    "Lupus": "/Lupus-overview",
+    "Osteoarthritis": "/Osteoarthritis-overview",
+    "Gout": "/Gout-overview",
+    "Fibromyalgia": "/Fibromyalgia-overview",
+    "Ankylosing Spondylitis": "/Ankylosing-Spondylitis-overview",
+  }
 
   // Track scroll for header shadow
   useEffect(() => {
@@ -366,7 +377,6 @@ function Header() {
                 >
                   <div className="grid grid-cols-4 gap-x-10 gap-y-12 text-center">
                     {conditions.map((item) => {
-                      const conditionRoutes = { "Rheumatoid Arthritis": "/Rheumatoid-Arthritis", "Gout": "/gout", "Osteoarthritis": "/osteoarthritis" }
                       const to = conditionRoutes[item]
                       return (
                         <div key={item} className="flex justify-center">
@@ -495,8 +505,7 @@ function Header() {
             </p>
             <div className="space-y-1 mb-8">
               {conditions.map((item, index) => {
-                const condRoutes = { "Rheumatoid Arthritis": "/Rheumatoid-Arthritis", "Gout": "/gout", "Osteoarthritis": "/osteoarthritis" }
-                const condTo = condRoutes[item]
+                const condTo = conditionRoutes[item]
                 const condStyle = {
                   opacity: whatWeCoverVisible ? 1 : 0,
                   transform: whatWeCoverVisible ? "translateY(0)" : "translateY(12px)",
