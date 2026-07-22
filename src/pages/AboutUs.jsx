@@ -40,14 +40,14 @@ const approachCards = [
 ]
 
 const specialiseConditions = [
-  { icon: Bone, title: "Rheumatoid Arthritis", desc: "An immune system condition causing joint swelling, stiffness, and pain — especially in the mornings.", href: "/Rheumatoid-Arthritis" },
+  { icon: Bone, title: "Rheumatoid Arthritis", desc: "An immune system condition causing joint swelling, stiffness, and pain, especially in the mornings.", href: "/Rheumatoid-Arthritis" },
   { icon: Activity, title: "Osteoarthritis", desc: "Wear of the cartilage cushioning your joints, leading to pain, stiffness, and reduced movement over time.", href: "/osteoarthritis" },
   { icon: Droplet, title: "Gout", desc: "Sudden, severe pain (often in the big toe) caused by uric acid crystals building up in a joint.", href: "/gout" },
   { icon: Spline, title: "Ankylosing Spondylitis", desc: "A condition mainly affecting the spine and lower back, causing inflammation and progressive stiffness.", href: "/conditions" },
   { icon: Shield, title: "Lupus (SLE)", desc: "A complex immune condition that can affect joints, skin, kidneys, and other organs throughout the body.", href: "/conditions" },
   { icon: HeartPulse, title: "Osteoporosis", desc: "A gradual weakening of bones that increases the risk of fractures, often without early warning signs.", href: "/conditions" },
   { icon: Hand, title: "Psoriatic Arthritis", desc: "Joint inflammation linked to the skin condition psoriasis, affecting fingers, toes, and the spine.", href: "/conditions" },
-  { icon: Sparkles, title: "Fibromyalgia", desc: "Widespread body pain, fatigue, and tenderness — often dismissed, always real, and fully treatable.", href: "/conditions" },
+  { icon: Sparkles, title: "Fibromyalgia", desc: "Widespread body pain, fatigue, and tenderness. Often dismissed, always real, and fully treatable.", href: "/conditions" },
 ]
 
 const meetCredentials = "MBBS · MD (Internal Medicine) · DM Clinical Immunology & Rheumatology"
@@ -71,7 +71,7 @@ const journeySteps = [
 const fieldLabel = { display: "block", fontSize: "13px", fontWeight: 600, color: "#0f2e33", marginBottom: "8px" }
 const fieldInput = { width: "100%", borderRadius: "10px", border: "1px solid #dde3e4", padding: "12px 14px", fontSize: "14px", color: "#0f2e33", outline: "none", boxSizing: "border-box", background: "#fff", fontFamily: "var(--font-base)" }
 
-const qualifications = ["MBBS", "MD — Internal Medicine", "DM — Rheumatology"]
+const qualifications = ["MBBS", "MD - Internal Medicine", "DM - Rheumatology"]
 
 const specialistStats = [
   { num: "14+", label: "Years experience" },
@@ -455,7 +455,7 @@ export default function AboutUs() {
               <p className="text-sm font-semibold uppercase tracking-wider" style={{ color: "#e86531", marginBottom: "12px" }}>Get In Touch</p>
               <h2 style={{ fontFamily: "var(--font-display)", color: "#0f2e33", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 400, lineHeight: 1.12, marginBottom: "18px" }}>Ready to get some answers?</h2>
               <p style={{ color: "#5e5e5e", fontSize: "15px", lineHeight: 1.75, marginBottom: "28px" }}>
-                You do not need a referral to see Dr. Raghavendra. Simply book a slot that suits you and come in. If you are not sure whether what you are experiencing falls under rheumatology, reach out anyway — we will help you figure that out.
+                You do not need a referral to see Dr. Raghavendra. Simply book a slot that suits you and come in. If you are not sure whether what you are experiencing falls under rheumatology, reach out anyway. We will help you figure that out.
               </p>
               <div className="flex flex-col" style={{ gap: "14px", marginBottom: "24px" }}>
                 {[

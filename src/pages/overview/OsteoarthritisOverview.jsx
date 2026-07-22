@@ -10,11 +10,11 @@ import { ArrowRight, Stethoscope } from "lucide-react"
    ───────────────────────────────────────────── */
 
 const oaTypes = [
-  { title: "Knees: the daily workhorses", desc: "This is the most commonly affected joint in India. Simple tasks like climbing stairs, squatting, or getting up from the floor can feel like a task. That stubborn pain reminds you of every step you take." },
-  { title: "Hips: the hidden troublemaker", desc: "Instead of obvious joint pain, it shows up as a deep ache in the inner thigh. Stiffness while walking or difficulty sitting cross-legged are noticed. Most people don't connect these symptoms to the hip joint directly." },
-  { title: "Hands: the silent sufferers", desc: "When hands become the victim, especially the fingers and the base of the thumb, everyday tasks become very tricky. Opening jars, buttoning clothes, or even holding a pen can feel uncomfortable. The joints may look slightly swollen over time." },
+  { title: "Knees - the daily workhorses", desc: "This is the most commonly affected joint in India. Simple tasks like climbing stairs, squatting, or getting up from the floor can feel like a task. That stubborn pain reminds you of every step you take." },
+  { title: "Hips - the hidden troublemaker", desc: "Instead of obvious joint pain, it shows up as a deep ache in the inner thigh. Stiffness while walking or difficulty sitting cross-legged are noticed. Most people don't connect these symptoms to the hip joint directly." },
+  { title: "Hands - the silent sufferers", desc: "When hands become the victim, especially the fingers and the base of the thumb, everyday tasks become very tricky. Opening jars, buttoning clothes, or even holding a pen can feel uncomfortable. The joints may look slightly swollen over time." },
   { title: "Strained spine", desc: "Sitting for long hours, the spine and neck bear the brunt. It often shows up as stiffness in the neck or lower back. Sometimes, it may even cause a radiating discomfort if nearby nerves are irritated." },
-  { title: "Feet and ankles: the collapsed support system", desc: "Feet and ankles support the entire body, so when osteoarthritis affects them, standing or walking for long periods can become very painful. You might feel stiffness, tenderness, or discomfort with every step." },
+  { title: "Feet and ankles - the collapsed support system", desc: "Feet and ankles support the entire body, so when osteoarthritis affects them, standing or walking for long periods can become very painful. You might feel stiffness, tenderness, or discomfort with every step." },
 ]
 
 const medications = [
@@ -319,14 +319,9 @@ function OsteoarthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 Many people live active, fulfilling lives despite osteoarthritis. Small lifestyle changes can make a big difference. Some of the tiny efforts that help you take a great leap are:
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                {adapting.map((a, i) => (
-                  <div key={i} style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "16px 18px", display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                    <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "5px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    <span className="text-[15px] leading-[1.6] text-navy-deep">{a}</span>
-                  </div>
-                ))}
-              </div>
+              <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                {adapting.map((a, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{a}</li>))}
+              </ul>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Managing emotional health is absolutely important. Long-term pain can affect your mood and disturb your sleep, so seeking support when needed is always recommended.
               </p>

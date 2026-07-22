@@ -202,16 +202,11 @@ function RheumatoidArthritisOverview() {
             <div id="symptoms" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What are the symptoms of Rheumatoid Arthritis?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>The main symptoms of rheumatoid arthritis (RA) are:</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                {symptoms.map((s, i) => (
-                  <div key={i} style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "16px 18px", display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                    <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "5px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    <span className="text-[15px] leading-[1.6] text-navy-deep">{s}</span>
-                  </div>
-                ))}
-              </div>
+              <ul className="space-y-1 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                {symptoms.map((s, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{s}</li>))}
+              </ul>
               <p className="text-[17px] leading-[1.8] text-navy-deep mb-5">
-                Rheumatoid arthritis symptoms don&apos;t stay the same all the time &mdash; they can come and go. Periods when symptoms get worse are called <strong className="font-bold">flares</strong>, while times better are known as <strong className="font-bold">remission</strong>. Early diagnosis plays an important role in preventing permanent joint damage. Rheumatoid arthritis progresses slowly in stages, which is discussed below, from being a mild to severe condition.
+                Rheumatoid arthritis symptoms don&apos;t stay the same all the time. They can come and go. Periods when symptoms get worse are called <strong className="font-bold">flares</strong>, while times better are known as <strong className="font-bold">remission</strong>. Early diagnosis plays an important role in preventing permanent joint damage. Rheumatoid arthritis progresses slowly in stages, which is discussed below, from being a mild to severe condition.
               </p>
             </div>
 
@@ -270,22 +265,16 @@ function RheumatoidArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>Your doctor may refer you to a rheumatologist for the diagnosis of rheumatoid arthritis. The diagnosis is based on several factors. Your doctor performs a complete physical examination, multiple blood tests, and X-rays to diagnose.</p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>A detailed history about pain, swelling, the duration it will last, and any other medical history will be taken. The doctor will check your joint movement, colour changes, and for any palpable firm swellings.</p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2.5rem" }}>There is no single test that confirms rheumatoid arthritis. Rheumatologists recommend blood and imaging tests to reach a final diagnosis.</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Main blood tests include</h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.75rem" }}>Rheumatologists usually recommend blood tests such as:</p>
-                  <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {diagnosisBloodTests.map((test, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{test}</li>))}
-                  </ul>
-                </div>
-                <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Imaging test</h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.75rem" }}>The various imaging techniques help to understand how bad the disease has progressed.</p>
-                  <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {diagnosisImaging.map((test, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{test}</li>))}
-                  </ul>
-                </div>
-              </div>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Main blood tests include</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.75rem" }}>Rheumatologists usually recommend blood tests such as:</p>
+              <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                {diagnosisBloodTests.map((test, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{test}</li>))}
+              </ul>
+              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Imaging test</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.75rem" }}>The various imaging techniques help to understand how bad the disease has progressed.</p>
+              <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                {diagnosisImaging.map((test, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{test}</li>))}
+              </ul>
             </div>
 
             <DarkDivider />

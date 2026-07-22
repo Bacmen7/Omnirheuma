@@ -52,7 +52,7 @@ const SYMPTOMS = [
 const CAUSES = [
   { title: "Genetic factors", desc: "Certain genes (HLA-DR4) increase susceptibility to RA. Family history plays an important role." },
   { title: "Environmental triggers", desc: "Smoking, infections, and hormonal changes may trigger disease onset in genetically predisposed individuals." },
-  { title: "Autoimmune response", desc: "The immune system mistakenly attacks the synovium — the lining of joints — causing inflammation." },
+  { title: "Autoimmune response", desc: "The immune system mistakenly attacks the synovium, the lining of joints, causing inflammation." },
 ]
 
 const STAGES = [
@@ -71,9 +71,9 @@ const TREATMENTS = [
 ]
 
 const FAQS = [
-  { q: "Is Rheumatoid Arthritis curable?", a: "There is no cure yet, but early treatment can put RA into remission — meaning no active symptoms and no joint damage progression." },
+  { q: "Is Rheumatoid Arthritis curable?", a: "There is no cure yet, but early treatment can put RA into remission, meaning no active symptoms and no joint damage progression." },
   { q: "How is RA different from Osteoarthritis?", a: "RA is autoimmune and inflammatory, affecting joints symmetrically. Osteoarthritis is wear-and-tear related, usually affecting one side or specific joints." },
-  { q: "Can diet help manage RA?", a: "Yes — a Mediterranean-style diet rich in omega-3s, vegetables, and whole grains can reduce inflammation. Avoid processed foods and excess sugar." },
+  { q: "Can diet help manage RA?", a: "Yes. A Mediterranean-style diet rich in omega-3s, vegetables, and whole grains can reduce inflammation. Avoid processed foods and excess sugar." },
   { q: "When should I see a rheumatologist?", a: "If joint pain lasts more than 6 weeks, with morning stiffness over an hour or swelling in multiple joints, book an appointment immediately." },
   { q: "Is RA hereditary?", a: "There's a genetic component, but having a family history doesn't guarantee you'll develop RA. Environmental triggers also play a major role." },
 ]
@@ -282,7 +282,7 @@ function ArthritisGuide2() {
                   Rheumatoid Arthritis (RA) is a chronic autoimmune disease where the body's immune system mistakenly attacks the lining of joints (synovium), causing inflammation, pain, and eventual joint damage if untreated.
                 </p>
                 <p style={{ fontSize: "16px", lineHeight: 1.7, color: "#1a1a1a" }}>
-                  Unlike osteoarthritis, which is caused by wear-and-tear, RA is systemic — meaning it can affect the whole body including the heart, lungs, and eyes, not just joints. Early diagnosis and treatment can put the disease into remission and prevent long-term disability.
+                  Unlike osteoarthritis, which is caused by wear-and-tear, RA is systemic, meaning it can affect the whole body including the heart, lungs, and eyes, not just joints. Early diagnosis and treatment can put the disease into remission and prevent long-term disability.
                 </p>
               </section>
 
@@ -292,7 +292,7 @@ function ArthritisGuide2() {
                 <ul style={{ paddingLeft: "0", listStyle: "none", display: "flex", flexDirection: "column", gap: "12px" }}>
                   <li style={{ fontSize: "15px", lineHeight: 1.6, color: "#1a1a1a", paddingLeft: "20px", position: "relative" }}>
                     <span style={{ position: "absolute", left: 0, color: "#1AA3B5" }}>•</span>
-                    Around <strong style={{ color: "#0f616e" }}>1% of Indians</strong> live with RA — that's 13 million+ people.
+                    Around <strong style={{ color: "#0f616e" }}>1% of Indians</strong> live with RA. That's 13 million+ people.
                   </li>
                   <li style={{ fontSize: "15px", lineHeight: 1.6, color: "#1a1a1a", paddingLeft: "20px", position: "relative" }}>
                     <span style={{ position: "absolute", left: 0, color: "#1AA3B5" }}>•</span>
@@ -395,10 +395,10 @@ function ArthritisGuide2() {
                 </p>
                 <ul style={{ paddingLeft: "0", listStyle: "none", display: "flex", flexDirection: "column", gap: "8px" }}>
                   {[
-                    "Stick to your medication schedule — even during remission",
+                    "Stick to your medication schedule, even during remission",
                     "Regular low-impact exercise (walking, swimming, yoga)",
                     "Balanced diet rich in omega-3s and antioxidants",
-                    "Quit smoking — smoking worsens RA outcomes",
+                    "Quit smoking, as smoking worsens RA outcomes",
                     "Manage stress with mindfulness or therapy",
                     "Regular rheumatologist visits to monitor disease activity",
                   ].map((item, i) => (
@@ -432,7 +432,7 @@ function ArthritisGuide2() {
                   Have questions about your symptoms?
                 </h3>
                 <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.8)", marginBottom: "20px", maxWidth: "480px", marginLeft: "auto", marginRight: "auto" }}>
-                  Book a personal consultation with Dr. Raghavendra H — get clarity on your joint pain and a treatment plan tailored to you.
+                  Book a personal consultation with Dr. Raghavendra H and get clarity on your joint pain and a treatment plan tailored to you.
                 </p>
                 <Link to="/book-appointment" style={{ display: "inline-block", backgroundColor: "#F97316", color: "#ffffff", padding: "14px 32px", borderRadius: "9999px", fontSize: "15px", fontWeight: 700, textDecoration: "none" }}>
                   Book appointment

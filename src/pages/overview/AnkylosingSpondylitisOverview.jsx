@@ -132,7 +132,7 @@ function AnkylosingSpondylitisOverview() {
 
             {/* QUICK ANSWER */}
             <div style={{ scrollMarginTop: "80px" }}>
-              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers</h2>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answer Points</h2>
               <div style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "22px 26px" }}>
                 <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   {quickAnswers.map((q, i) => (
@@ -195,8 +195,11 @@ function AnkylosingSpondylitisOverview() {
               </p>
 
               <h3 style={H3Style}>Indian-Specific Risk Factors</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                In India, ankylosing spondylitis usually develops between 15–30 years of age. Most people first develop pain in joints like the knees, ankles, or elbows, even before back pain. This pattern makes it look like a sports injury or joint pain after an infection.
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                In India, ankylosing spondylitis usually develops between 15–30 years of age. Most people first develop pain in joints like the knees, ankles, or elbows, even before back pain. This pattern makes it look like a sports injury or joint pain after an infection. Due to the delay in diagnosis, the swelling and irritation remain untreated for years. As a result, the damage causes irreversible changes in the structure of bones and surrounding tissue. Therefore, it is important to consult a rheumatologist for long-term lower back pain before it causes permanent damage.
+                Due to the delay in diagnosis, the swelling and irritation remain untreated for years. As a result, the damage causes irreversible changes in the structure of bones and surrounding tissue. Therefore, it is important to consult a rheumatologist for long-term lower back pain before it causes permanent damage.
               </p>
 
               <h3 style={H3Style}>Who Is Most at Risk?</h3>
@@ -230,8 +233,11 @@ function AnkylosingSpondylitisOverview() {
               </p>
 
               <h3 style={H3Style}>How Ankylosing Spondylitis Progresses Over Time</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                When left untreated for a long time, the body tries to heal. This is by forming new bones. The new bone fills the gap between the backbones and causes them to gradually fuse together. This reduces backbone mobility.
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                When left untreated for a long time, the body tries to heal. This is by forming new bones. The new bone fills the gap between the backbones and causes them to gradually fuse together. This reduces backbone mobility. In advanced cases, the backbone loses its curves and becomes stiff. If the joint in the chest also becomes stiff, it reduces the chest expansion. This makes deep breathing more difficult. Early diagnosis and correct treatment may prevent the condition from causing stiffness and breathing problems.
+                In advanced cases, the backbone loses its curves and becomes stiff. If the joint in the chest also becomes stiff, it reduces the chest expansion. This makes deep breathing more difficult. Early diagnosis and correct treatment may prevent the condition from causing stiffness and breathing problems.
               </p>
             </div>
 
@@ -243,10 +249,8 @@ function AnkylosingSpondylitisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 There is no test to diagnose ankylosing spondylitis. The rheumatologist will detect the condition based on the symptoms, physical checkup, X-rays, MRI and blood tests together. Doctors assess how the back and hip move and measure how much the chest expands during breathing. The doctor will ask about back pain patterns, any eye or bowel problems and family history of ankylosing spondylitis. They will also assess pain while resting and moving. All these details help the doctor make an accurate diagnosis.
               </p>
-              <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Imaging and Blood Tests</h3>
-                <p className="text-[16px] leading-[1.75] text-navy-deep">A blood test is done to measure inflammation through ESR and CRP. X-rays can detect changes in the bone structure, especially when the condition has advanced. The HLA-B27 (human leukocyte antigen gene) test is done to detect the presence of this gene. MRI is the most important test to detect the condition early. It can detect swelling and irritation before X-ray changes are visible.</p>
-              </div>
+              <h3 style={H3Style}>Imaging and Blood Tests</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">A blood test is done to measure inflammation through ESR and CRP. X-rays can detect changes in the bone structure, especially when the condition has advanced. The HLA-B27 (human leukocyte antigen gene) test is done to detect the presence of this gene. MRI is the most important test to detect the condition early. It can detect swelling and irritation before X-ray changes are visible.</p>
             </div>
 
             <DarkDivider />
@@ -273,41 +277,13 @@ function AnkylosingSpondylitisOverview() {
 
             {/* AS vs regular back pain */}
             <div style={{ scrollMarginTop: "80px" }}>
-              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>How Is It Different from Regular Back Pain?</h2>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>How Is Ankylosing Spondylitis Different from Regular Back Pain?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 Mostly, back pain is caused by muscle strain, poor posture, or disc problems. But back pain in ankylosing spondylitis is caused by an overactive immune system. Knowing the difference between the two can help you get the right treatment early.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 Ankylosing spondylitis pain worsens after resting or early in the morning and improves with exercise. This is the opposite of the other type of back pain, which worsens after heavy work. Unlike normal back pain, pain from ankylosing spondylitis occurs at a very young age, often in the mid-20s.
               </p>
-              <div className="overflow-x-auto mb-4">
-                <table className="w-full border-collapse text-left min-w-[560px]">
-                  <thead>
-                    <tr style={{ backgroundColor: "#e0f3f5" }}>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">Feature</th>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">Ankylosing Spondylitis</th>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">Regular Back Pain</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-[#dadfe8]">
-                      <td className="p-4 text-[15px] font-semibold text-navy-deep align-top">Pain pattern</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Worse with rest and in the morning; improves with movement</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Worse after activity; better with rest</td>
-                    </tr>
-                    <tr className="border-b border-[#dadfe8]">
-                      <td className="p-4 text-[15px] font-semibold text-navy-deep align-top">Age of onset</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Very young, often mid-20s</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Any age, usually after strain</td>
-                    </tr>
-                    <tr className="border-b border-[#dadfe8]">
-                      <td className="p-4 text-[15px] font-semibold text-navy-deep align-top">Night pain / morning stiffness</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Wakes you at night; stiffness &gt; 30 min</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Rare</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <p className="text-[16px] leading-[1.8] text-navy-muted">If you are waking up at night due to back pain and have stiffness in the morning for more than 30 minutes, it could be ankylosing spondylitis and not normal back pain. Only a rheumatologist can diagnose this type of back pain and give proper treatment.</p>
             </div>
 
@@ -326,8 +302,11 @@ function AnkylosingSpondylitisOverview() {
             {/* WHEN TO CONSULT + CTA */}
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>When Should a Rheumatologist Be Consulted?</h2>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                You keep living with ankylosing spondylitis, spending years with back pain that never fully resolves. Keep visiting multiple specialists, but no one diagnoses the underlying cause. You may spend years without a correct diagnosis, allowing the condition to worsen. This usually changes the spine in ways that cannot be reversed.
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                You keep living with ankylosing spondylitis, spending years with back pain that never fully resolves. Keep visiting multiple specialists, but no one diagnoses the underlying cause. You may spend years without a correct diagnosis, allowing the condition to worsen. This usually changes the spine in ways that cannot be reversed. A rheumatologist is the right doctor for long-term back pain caused by an overactive immune system. Getting the right diagnosis early can change the outcome of the condition and prevent further progression.
+                A rheumatologist is the right doctor for long-term back pain caused by an overactive immune system. Getting the right diagnosis early can change the outcome of the condition and prevent further progression.
               </p>
               <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>
@@ -341,6 +320,24 @@ function AnkylosingSpondylitisOverview() {
                   </span>
                 </Link>
               </div>
+            </div>
+
+            <DarkDivider />
+
+            {/* REFERENCES */}
+            <div style={{ scrollMarginTop: "80px" }}>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Reference</h2>
+              <ul className="space-y-3" style={{ listStyleType: "decimal", paddingLeft: "1.5rem" }}>
+                <li className="text-[15px] leading-[1.7] text-navy-muted pl-1">
+                  Prakash S, Mehra NK, Bhargava S, Vaidya MC, Malaviya AN. Ankylosing spondylitis in North India: a clinical and immunogenetic study. Ann Rheum Dis. 1984;43(3):381-385. doi:10.1136/ard.43.3.381
+                </li>
+                <li className="text-[15px] leading-[1.7] text-navy-muted pl-1">
+                  Malaviya, Anand N. Spondyloarthritis in India. Indian Journal of Rheumatology 15(Suppl 1):p S2-S5, May 2020. | DOI: 10.4103/0973-3698.284742
+                </li>
+                <li className="text-[15px] leading-[1.7] text-navy-muted pl-1">
+                  <a href="https://medlineplus.gov/genetics/condition/ankylosing-spondylitis/" target="_blank" rel="noopener noreferrer" style={{ color: "#0f616e", textDecoration: "underline", wordBreak: "break-all" }}>https://medlineplus.gov/genetics/condition/ankylosing-spondylitis/</a>
+                </li>
+              </ul>
             </div>
 
           </div>

@@ -354,14 +354,9 @@ function PsoriaticArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 Psoriatic arthritis is a long-term condition. With small lifestyle and dietary changes, you can live an active life:
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                {livingTips.map((t, i) => (
-                  <div key={i} style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "16px 18px", display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                    <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "5px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    <span className="text-[15px] leading-[1.6] text-navy-deep">{t}</span>
-                  </div>
-                ))}
-              </div>
+              <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                {livingTips.map((t, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{t}</li>))}
+              </ul>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Psoriasis is still wrongly believed to be contagious in many Indian communities. As a result, people are pushed toward isolation. Counselling and support from family and friends help significantly. These can help reduce both the physical and emotional weight of managing the condition in the long term.
               </p>

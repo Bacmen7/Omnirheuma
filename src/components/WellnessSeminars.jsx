@@ -11,7 +11,7 @@ function WellnessSeminars() {
                 Join Our Wellness Seminars
               </h2>
               <p className="text-navy-muted text-base md:text-lg mb-8">
-                We host monthly sessions—both in-person and digital—to help patients manage their conditions through lifestyle and community support.
+                We host monthly sessions, both in-person and digital, to help patients manage their conditions through lifestyle and community support.
               </p>
               <div className="space-y-4 md:space-y-6">
                 {/* Event 1 */}

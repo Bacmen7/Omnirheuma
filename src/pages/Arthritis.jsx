@@ -119,13 +119,13 @@ function Arthritis() {
                   <span className="text-[11px] font-bold uppercase tracking-[0.18em]" style={{ color: "#0f616e" }}>Arthritis Overview</span>
                 </div>
                 <p className="text-[20px] md:text-[24px] leading-[1.5]" style={{ fontFamily: "var(--font-display)", fontWeight: 400, color: "#0f616e", marginBottom: "1.25rem" }}>
-                  Arthritis is not a single disease &mdash; it is an umbrella term for over 100 conditions causing joint pain, inflammation, and structural damage.
+                  Arthritis is not a single disease. It is an umbrella term for over 100 conditions causing joint pain, inflammation, and structural damage.
                 </p>
                 <p className="text-[16px] leading-[1.75]" style={{ color: "#5e5e5e", marginBottom: "1.25rem" }}>
                   In people with inflammatory arthritis, the immune system mistakenly attacks the joints, causing chronic pain, swelling, and progressive damage if left untreated.
                 </p>
                 <p className="text-[16px] leading-[1.75]" style={{ color: "#5e5e5e" }}>
-                  Read on to learn about arthritis types, symptoms, causes, risk factors, and treatment options &mdash; and how early specialist care can change outcomes.
+                  Read on to learn about arthritis types, symptoms, causes, risk factors, and treatment options, and how early specialist care can change outcomes.
                 </p>
 
               </div>

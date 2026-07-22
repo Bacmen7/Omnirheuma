@@ -146,7 +146,7 @@ const whenToSeeDoctor = [
 const faqs = [
   {
     q: "Can osteoarthritis affect people under 40?",
-    a: "Yes, it can — but not very commonly. Osteoarthritis is often linked to ageing, but younger people may develop it after a joint injury, due to joint structure issues, or from jobs that put repeated stress on their joints. So it is not only an older person's condition.",
+    a: "Yes, it can, but not very commonly. Osteoarthritis is often linked to ageing, but younger people may develop it after a joint injury, due to joint structure issues, or from jobs that put repeated stress on their joints. So it is not only an older person's condition.",
   },
   {
     q: "Why does joint pain feel worse in cold or rainy weather?",
@@ -162,7 +162,7 @@ const faqs = [
   },
   {
     q: "Can squatting or sitting on the floor worsen knee osteoarthritis?",
-    a: "Spending long periods in deep knee positions like squatting or sitting on the floor can put extra strain on the joints, especially if the muscles around them are weak. That said, it does not mean you have to avoid these positions completely — you just have to balance them with good posture and muscle strengthening.",
+    a: "Spending long periods in deep knee positions like squatting or sitting on the floor can put extra strain on the joints, especially if the muscles around them are weak. That said, it does not mean you have to avoid these positions completely. You just have to balance them with good posture and muscle strengthening.",
   },
   {
     q: "Is post-chikungunya joint pain the same as osteoarthritis?",
@@ -178,7 +178,7 @@ function Osteoarthritis() {
   const [activeSection, setActiveSection] = useState("")
 
   useEffect(() => {
-    document.title = "Osteoarthritis — Symptoms & Causes | Omni Rheuma"
+    document.title = "Osteoarthritis - Symptoms & Causes | Omni Rheuma"
     return () => { document.title = "Omni Rheuma | Professional Rheumatology Resource" }
   }, [])
 
@@ -321,7 +321,7 @@ function Osteoarthritis() {
                   </h1> */}
 
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginTop: "0.5rem", marginBottom: "0.85rem" }}>
-                    Deepa, a 45-year-old mom of two, leads a busy city life. Her mild joint discomfort gradually worsened. She was exhausted — tired of following health hacks, hitting the gym, and people's never-ending advice.
+                    Deepa, a 45-year-old mom of two, leads a busy city life. Her mild joint discomfort gradually worsened. She was exhausted, tired of following health hacks, hitting the gym, and people's never-ending advice.
                   </p>
                   <p className="text-[16px] leading-[1.8] text-navy-muted" style={{ marginBottom: "0.85rem" }}>
                     One evening, as she sat down with her coffee, her knees made a noticeable creaking sound. She paused and wondered: <em>What is my body trying to tell me? Am I the only one going through this? Why are my joints getting stiff?</em>
@@ -356,10 +356,10 @@ function Osteoarthritis() {
                     What Does Osteoarthritis Actually Feel Like?
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep mb-5">
-                    Osteoarthritis is a condition that affects both the bones and cartilage in your joints. Cartilage is a flexible and smooth tissue acting as a cushion in the joints. This cartilage, which protects bones from rubbing against each other, gradually breaks down. Over time, as the cushion wears thin, the joint and the tissues surrounding it start to react — causing pain, stiffness, and swelling.
+                    Osteoarthritis is a condition that affects both the bones and cartilage in your joints. Cartilage is a flexible and smooth tissue acting as a cushion in the joints. This cartilage, which protects bones from rubbing against each other, gradually breaks down. Over time, as the cushion wears thin, the joint and the tissues surrounding it start to react, causing pain, stiffness, and swelling.
                   </p>
                   <p className="text-[16px] leading-[1.8] text-navy-muted mb-5">
-                    Osteoarthritis can affect your knees, hips, hands, feet, and spine. Knees, hips, and hands are the most frequent sites. One of the reasons osteoarthritis often goes unnoticed early is that symptoms creep in slowly — which is why many people don't connect them to osteoarthritis until they've been living with them for many months.
+                    Osteoarthritis can affect your knees, hips, hands, feet, and spine. Knees, hips, and hands are the most frequent sites. One of the reasons osteoarthritis often goes unnoticed early is that symptoms creep in slowly, which is why many people don't connect them to osteoarthritis until they've been living with them for many months.
                   </p>
                 </div>
 
@@ -375,7 +375,7 @@ function Osteoarthritis() {
                     Daily activities like walking, climbing stairs, or squatting place repeated stress on your joints. Normally, the body can repair this everyday wear and tear.
                   </p>
                   <p className="text-[16px] leading-[1.8] text-navy-muted">
-                    However, this ability is impaired in osteoarthritis. The factors that cause this damage can vary — and over time, this leads to the gradual breakdown of cartilage. When cartilage wears off, bones start to rub against each other and wear down.
+                    However, this ability is impaired in osteoarthritis. The factors that cause this damage can vary, and over time, this leads to the gradual breakdown of cartilage. When cartilage wears off, bones start to rub against each other and wear down.
                   </p>
                 </div>
 

@@ -311,8 +311,14 @@ function FibromyalgiaOverview() {
             {/* WHEN TO CONSULT + CTA */}
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>When Should a Rheumatologist Be Consulted?</h2>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
+                Many people with fibromyalgia in India spend years living with pain, tiredness, and poor sleep before receiving the right diagnosis. As blood tests and scans often appear normal, it is easy to assume that nothing is wrong.
+              </p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
+                If these symptoms have been affecting you for months, it may be time to consult a rheumatologist. They can look at all your symptoms together and confirm whether fibromyalgia is the cause. An early diagnosis can help you understand your situation better. This will help you avoid unnecessary tests and treatments.
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Many people with fibromyalgia in India spend years living with pain, tiredness, and poor sleep before receiving the right diagnosis. As blood tests and scans often appear normal, it is easy to assume that nothing is wrong. If these symptoms have been affecting you for months, it may be time to consult a rheumatologist. They can look at all your symptoms together and confirm whether fibromyalgia is the cause. An early diagnosis can help you understand your situation better. This will help you avoid unnecessary tests and treatments. Living with long-term pain can be frustrating, especially when others cannot see what you are experiencing. However, fibromyalgia is a recognised medical condition. With the right treatment and support, many people are able to manage their symptoms and return to their daily activities.
+                Living with long-term pain can be frustrating, especially when others cannot see what you are experiencing. However, fibromyalgia is a recognised medical condition. With the right treatment and support, many people are able to manage their symptoms and return to their daily activities.
               </p>
               <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>

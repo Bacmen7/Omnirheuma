@@ -20,7 +20,7 @@ function FocusDiagnostic() {
             <p className="text-4xl text-navy-deep leading-tight mb-6">
               &ldquo;Diagnostic latency remains the single greatest cost driver in rheumatology.&rdquo;
             </p>
-            <p className="text-xs uppercase tracking-widest font-bold text-teal-soft">&mdash; Health Policy Review Board</p>
+            <p className="text-xs uppercase tracking-widest font-bold text-teal-soft">Health Policy Review Board</p>
           </div>
         </div>
       </div>

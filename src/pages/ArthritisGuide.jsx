@@ -316,7 +316,7 @@ function ArthritisGuide() {
                     ))}
                   </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep mb-5">
-                    Rheumatoid arthritis symptoms don&apos;t stay the same all the time &mdash; they can come and go. Periods when symptoms get worse are called{" "}
+                    Rheumatoid arthritis symptoms don&apos;t stay the same all the time. They can come and go. Periods when symptoms get worse are called{" "}
                     <strong className="font-bold">flares</strong>, while times when you feel better are known as{" "}
                     <strong className="font-bold">remission</strong>. Early diagnosis plays an important role in preventing permanent joint damage.
                   </p>

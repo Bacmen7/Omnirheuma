@@ -286,16 +286,10 @@ function GoutOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 A rheumatologist confirms the diagnosis with a physical examination and blood test. They may recommend X-ray, ultrasound, and joint fluid examination to confirm the condition.
               </p>
-              <div className="grid grid-cols-1 gap-5">
-                <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Physical Examination and Blood Tests</h3>
-                  <p className="text-[16px] leading-[1.75] text-navy-deep">The doctor examines the affected joint for swelling, redness, and warmth and hard lumps. They also ask about your attack patterns, diet, alcohol use, medicines, and family history. The doctor may recommend a blood test to measure uric acid levels and kidney function. High uric acid levels can damage the kidneys. Poorly functioning kidneys make it harder for the body to remove uric acid, making gout worse.</p>
-                </div>
-                <div style={{ backgroundColor: "#f5f5f5", borderRadius: "12px", padding: "1.5rem" }}>
-                  <h3 style={{ letterSpacing: "-0.2px", marginBottom: "0.75rem", color: "#0f616e", fontSize: "1.15rem" }}>Confirming the Diagnosis</h3>
-                  <p className="text-[16px] leading-[1.75] text-navy-deep">Sometimes, gout is confused with a joint infection or other forms of joint pain and swelling. Doctors recommend a fine needle aspiration test to confirm gout. During this test, a small amount of fluid is taken from the affected joint and checked for uric acid crystals. This is the most reliable test to confirm gout. The doctor performs an ultrasound in the early stages to detect uric acid crystals in the joints. They can recommend an X-ray in advanced stages to check the bone damage. After the condition is diagnosed, the rheumatologist will start the treatment depending on the stage of your condition.</p>
-                </div>
-              </div>
+              <h3 style={H3Style}>Physical Examination and Blood Tests</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>The doctor examines the affected joint for swelling, redness, and warmth and hard lumps. They also ask about your attack patterns, diet, alcohol use, medicines, and family history. The doctor may recommend a blood test to measure uric acid levels and kidney function. High uric acid levels can damage the kidneys. Poorly functioning kidneys make it harder for the body to remove uric acid, making gout worse.</p>
+              <h3 style={H3Style}>Confirming the Diagnosis</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">Sometimes, gout is confused with a joint infection or other forms of joint pain and swelling. Doctors recommend a fine needle aspiration test to confirm gout. During this test, a small amount of fluid is taken from the affected joint and checked for uric acid crystals. This is the most reliable test to confirm gout. The doctor performs an ultrasound in the early stages to detect uric acid crystals in the joints. They can recommend an X-ray in advanced stages to check the bone damage. After the condition is diagnosed, the rheumatologist will start the treatment depending on the stage of your condition.</p>
             </div>
 
             <DarkDivider />
