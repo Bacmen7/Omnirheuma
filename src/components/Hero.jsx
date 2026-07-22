@@ -28,7 +28,7 @@ function Hero() {
         </div>
 
         <div className="home-hero__right">
-          <img src="/hero.png" alt="Dr. Raghavendra H" className="home-hero__img" />
+          <img src="/hero.webp" alt="Dr. Raghavendra H" className="home-hero__img" />
         </div>
 
       </div>
