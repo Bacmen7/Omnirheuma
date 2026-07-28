@@ -89,7 +89,7 @@ function SymptomsCausesOA() {
   const [activeSection, setActiveSection] = useState("feel-like")
 
   useEffect(() => {
-    document.title = "Osteoarthritis, Symptoms and Causes: What Your Joints Are Tarying to Tell You | Omni Rheuma"
+    document.title = "Osteoarthritis, Symptoms and Causes: What Your Joints Are trying to Tell You | Omni Rheuma"
     return () => { document.title = "Omni Rheuma | Professional Rheumatology Resource" }
   }, [])
 
@@ -194,7 +194,7 @@ function SymptomsCausesOA() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    What Your Joints Are Tarying to Tell You
+                    What Your Joints Are trying to Tell You
                   </span>
                 </h1>
               </div>
