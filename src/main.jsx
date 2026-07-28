@@ -12,6 +12,14 @@ import DoctorProfile from "./pages/DoctorProfile.jsx"
 import HealthGuide from "./pages/HealthGuide.jsx"
 import ArthritisGuide from "./pages/ArthritisGuide.jsx"
 import ArthritisGuide2 from "./pages/ArthritisGuide2.jsx"
+import LivingWithRA from "./pages/LivingWithRA.jsx"
+import SpecialisedTreatmentRA from "./pages/SpecialisedTreatmentRA.jsx"
+import SymptomsWarningSignsRA from "./pages/SymptomsWarningSignsRA.jsx"
+import BloodTestsMonitoringRA from "./pages/BloodTestsMonitoringRA.jsx"
+import SpecialisedTreatmentOA from "./pages/SpecialisedTreatmentOA.jsx"
+import LivingWithOA from "./pages/LivingWithOA.jsx"
+import DiagnosisTreatmentOA from "./pages/DiagnosisTreatmentOA.jsx"
+import SymptomsCausesOA from "./pages/SymptomsCausesOA.jsx"
 import RheumatoidArthritisOverview from "./pages/overview/RheumatoidArthritisOverview.jsx"
 import OsteoarthritisOverview from "./pages/overview/OsteoarthritisOverview.jsx"
 import LupusOverview from "./pages/overview/LupusOverview.jsx"
@@ -55,6 +63,14 @@ createRoot(document.getElementById('root')).render(
         <Route path="/health-guide" element={<HealthGuide />} />
         <Route path="/Rheumatoid-Arthritis" element={<ArthritisGuide />} />
         <Route path="/Rheumatoid-Arthritis-2" element={<ArthritisGuide2 />} />
+        <Route path="/Living-With-Rheumatoid-Arthritis" element={<LivingWithRA />} />
+        <Route path="/Specialised-Treatment-Rheumatoid-Arthritis" element={<SpecialisedTreatmentRA />} />
+        <Route path="/Rheumatoid-Arthritis-Symptoms-Warning-Signs" element={<SymptomsWarningSignsRA />} />
+        <Route path="/Rheumatoid-Arthritis-Blood-Tests-Monitoring" element={<BloodTestsMonitoringRA />} />
+        <Route path="/Specialised-Treatment-Osteoarthritis" element={<SpecialisedTreatmentOA />} />
+        <Route path="/Living-With-Osteoarthritis" element={<LivingWithOA />} />
+        <Route path="/Osteoarthritis-Diagnosis-Treatment" element={<DiagnosisTreatmentOA />} />
+        <Route path="/Osteoarthritis-Symptoms-Causes" element={<SymptomsCausesOA />} />
         <Route path="/Rheumatoid-Arthritis-overview" element={<RheumatoidArthritisOverview />} />
         <Route path="/Osteoarthritis-overview" element={<OsteoarthritisOverview />} />
         <Route path="/Lupus-overview" element={<LupusOverview />} />

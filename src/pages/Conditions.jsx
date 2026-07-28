@@ -24,12 +24,13 @@ const overviewRouteMap = {
   "fibromyalgia": "/Fibromyalgia-overview",
 }
 
-const buildCategoryLinks = (name, overviewHref) => [
+const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref) => [
   { label: "An overview", href: overviewHref },
-  { label: "Symptoms and Warning Signs", href: overviewHref },
-  { label: "Treatment options", href: overviewHref },
-  { label: "Specialised treatment options", href: overviewHref },
-  { label: `Living with ${name}`, href: overviewHref },
+  ...(symptomsHref ? [{ label: "Symptoms and Warning Signs", href: symptomsHref }] : []),
+  ...(diagnosisHref ? [{ label: "How It Is Diagnosed and Treated", href: diagnosisHref }] : []),
+  ...(specialisedHref ? [{ label: "Specialised treatment options", href: specialisedHref }] : []),
+  ...(livingHref ? [{ label: `Living with ${name}`, href: livingHref }] : []),
+  ...(monitoringHref ? [{ label: "Blood Tests, Scans, and Ongoing Monitoring", href: monitoringHref }] : []),
 ]
 
 const videos = [
@@ -101,8 +102,26 @@ function Conditions() {
   const conditionName = conditionSlug ? conditionNameMap[conditionSlug] : null
   const displayName = conditionName || defaultConditionName
   const overviewHref = (conditionSlug && overviewRouteMap[conditionSlug]) || "/Rheumatoid-Arthritis-overview"
+  const isRA = !conditionSlug || conditionSlug === "arthritis" || conditionSlug === "rheumatoid-arthritis"
+  const livingHref = isRA
+    ? "/Living-With-Rheumatoid-Arthritis"
+    : conditionSlug === "osteoarthritis"
+      ? "/Living-With-Osteoarthritis"
+      : null
+  const specialisedHref = isRA
+    ? "/Specialised-Treatment-Rheumatoid-Arthritis"
+    : conditionSlug === "osteoarthritis"
+      ? "/Specialised-Treatment-Osteoarthritis"
+      : null
+  const symptomsHref = isRA
+    ? "/Rheumatoid-Arthritis-Symptoms-Warning-Signs"
+    : conditionSlug === "osteoarthritis"
+      ? "/Osteoarthritis-Symptoms-Causes"
+      : null
+  const monitoringHref = isRA ? "/Rheumatoid-Arthritis-Blood-Tests-Monitoring" : null
+  const diagnosisHref = conditionSlug === "osteoarthritis" ? "/Osteoarthritis-Diagnosis-Treatment" : null
   const featured = buildFeatured(displayName)
-  const categoryLinks = buildCategoryLinks(displayName, overviewHref)
+  const categoryLinks = buildCategoryLinks(displayName, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref)
 
   const [query, setQuery] = useState("")
   const [current, setCurrent] = useState(0)
