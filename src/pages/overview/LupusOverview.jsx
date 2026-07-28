@@ -14,7 +14,7 @@ const quickAnswers = [
   "Women aged between 15 to 45 years are at most risk.",
   "Common symptoms include butterfly-shaped facial rash, joint pain, fatigue, hair loss, and mouth ulcers.",
   "Complications include kidney involvement, known as lupus nephritis.",
-  "Treatments include: Hydroxychloroquine plus daily sun protection for almost all patients.",
+  "Treatments include : Hydroxychloroquine plus daily sun protection for almost all patients.",
 ]
 
 const lupusTypes = [
@@ -33,8 +33,8 @@ const envTriggers = [
 ]
 
 const riskFactors = [
-  "Women of childbearing age between 15 and 45 years",
-  "A family history of autoimmune disease",
+  "Women of childbearing age between 15 and 45 years. ,",
+  "A family history of autoimmune disease,",
   "People living in Asia",
   "Prolonged sun exposure without protection",
 ]
@@ -66,10 +66,15 @@ const medTiers = [
 
 const faqs = [
   { q: "Is lupus curable?", a: "No, there is no complete cure for lupus. Treatment can control disease progression, prevent organ damage, and reduce how often flares happen. Many people experience long periods of remission in which symptoms are minimal." },
-  { q: "Can lupus be life-threatening?", a: "When the kidneys, heart, or lungs are involved, lupus can become life-threatening. Lupus nephritis is the most serious complication. Most people diagnosed early and treated consistently live a normal life. There are risks, but it is manageable with early treatment and lifestyle changes." },
-  { q: "What is the butterfly rash in lupus?", a: "A rash that spreads across both cheeks and the nose bridge. It mainly appears or worsens after sun exposure. On Indian skin tones, it appears as darkened or brownish discolouration instead of a red rash, so it often goes unnoticed." },
+  { q: "Can lupus be life-threatening?", a: "When the kidneys, heart, or lungs are involved, lupus can become life-threatening. Lupus nephritis is the most serious complication. Most people with lupus who are diagnosed early and treated consistently live a normal life. There are risks, but it is manageable with early treatment and lifestyle changes." },
+  { q: "What is the butterfly rash in lupus?", a: "A rash that spreads across both cheeks and the nose bridge. It mainly appears or worsens after sun exposure. On Indian skin tones, it appears as darkened or brownish discolouration instead of a red rash. As a result, it often goes unnoticed." },
   { q: "Does lupus affect pregnancy?", a: "Lupus raises the risk of miscarriage, preterm birth, and high blood pressure during pregnancy. With rheumatology and obstetric care, many women with lupus have successful pregnancies." },
-  { q: "Why does sunlight make lupus worse?", a: "UV radiation triggers an immune response that can cause or worsen both skin rashes and systemic flares. This is called photosensitivity, which is one of the main reasons sun protection is very important in lupus management, especially in India." },
+  { q: "Why does sunlight make lupus worse?", a: "UV radiation triggers an immune response. This can cause or worsen both skin rashes and systemic flares. This is photosensitivity. It is one of the main reasons sun protection is very important in lupus management, especially in India." },
+]
+
+const references = [
+  "Malaviya AN, Singh RR, Singh YN, Kapoor SK, Kumar A. Prevalence of systemic lupus erythematosus in India. Lupus. 1993;2(2):115-118. doi:10.1177/096120339300200209",
+  "Singh A, Kamen DL. Potential benefits of vitamin D for patients with systemic lupus erythematosus. Dermatoendocrinol. 2012;4(2):146-151. doi:10.4161/derm.20443",
 ]
 
 /* DARK GREEN divider between sections */
@@ -172,17 +177,12 @@ function LupusOverview() {
 
             {/* QUICK ANSWER */}
             <div style={{ scrollMarginTop: "80px" }}>
-              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers</h2>
-              <div style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "22px 26px" }}>
-                <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {quickAnswers.map((q, i) => (
-                    <li key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                      <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "6px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      <span className="text-[16px] leading-[1.7] text-navy-deep">{q}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answer Block</h2>
+              <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                {quickAnswers.map((q, i) => (
+                  <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{q}</li>
+                ))}
+              </ul>
             </div>
 
             <DarkDivider />
@@ -191,16 +191,21 @@ function LupusOverview() {
             <div id="what-is-lupus" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What Is Lupus?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Lupus is a long-term condition in which the body&apos;s immune system attacks its own tissues and organs. In a healthy body, the immune system makes antibodies, which fight against infections. But in lupus, it makes abnormal antibodies that attack the body&apos;s healthy tissues. This is called an autoimmune condition (&ldquo;auto&rdquo; means self).
+                Lupus is a long-term condition in which the body&apos;s immune system attacks its own tissues and organs. In a healthy body, the immune system makes antibodies, which fight against infections. But in lupus, it makes abnormal antibodies that attack the body's healthy tissues. This is called an autoimmune condition (&ldquo;auto&rdquo; means self).
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Lupus causes swelling and irritation. This can damage the heart, lungs, kidneys, brain cells, joints, and skin. The medical name for the most common form is systemic lupus erythematosus, or SLE.
               </p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Lupus follows a flare-and-remission pattern: symptoms worsen during a flare and settle during remission. Sometimes, symptoms even disappear for months or years.
               </p>
+            </div>
 
-              <h3 style={H3Style}>How Common Is Lupus in India?</h3>
+            <DarkDivider />
+
+            {/* HOW COMMON */}
+            <div style={{ scrollMarginTop: "80px" }}>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>How Common Is Lupus in India?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Lupus can affect 14 to 60 per 100,000 people in India. And around 92.7% of lupus patients in India are women. The female-to-male ratio is about 19:1.
               </p>
@@ -217,7 +222,7 @@ function LupusOverview() {
             {/* TYPES */}
             <div id="types" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Types of Lupus</h2>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>The various types of lupus are:</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>The various types of Lupus are as follows:</p>
               <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {lupusTypes.map((t, i) => (
                   <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
@@ -242,7 +247,7 @@ function LupusOverview() {
               </p>
 
               <h3 style={H3Style}>Environmental and Lifestyle Triggers</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>Several everyday factors can trigger lupus symptoms or make them worse, especially in people already susceptible:</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>Several everyday factors can trigger lupus symptoms or make them worse, especially in people who are already susceptible. These include:</p>
               <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {envTriggers.map((t, i) => (
                   <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
@@ -262,7 +267,7 @@ function LupusOverview() {
             {/* WHO IS AT RISK */}
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Who Is Most at Risk?</h2>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>The strongest risk factors include:</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>The strongest risk factor include:</p>
               <ul className="space-y-1" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {riskFactors.map((r, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{r}</li>))}
               </ul>
@@ -274,10 +279,10 @@ function LupusOverview() {
             <div id="symptoms" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Symptoms of Lupus</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Symptoms of lupus develop slowly. They may improve for a while and then flare up again. This pattern makes the disease go unnoticed in the early stages.
+                Symptoms of lupus develop slowly, they may improve for a while and then flare up again. This pattern makes the disease go unnoticed in the early stages.
               </p>
 
-              <h3 style={H3Style}>Early Warning Signs</h3>
+              <h3 style={H3Style}>Early warning Signs</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>Lupus can affect almost any part of the body.</p>
               <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {earlySigns.map((s, i) => (
@@ -287,14 +292,14 @@ function LupusOverview() {
                 ))}
               </ul>
 
-              <h3 style={H3Style}>Advanced Organ Involvement</h3>
+              <h3 style={H3Style}>Advanced Organ Involvement and Serious Symptoms</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>When lupus reaches internal organs, the condition becomes more serious.</p>
               <div className="overflow-x-auto mb-6">
                 <table className="w-full border-collapse text-left min-w-[560px]">
                   <thead>
                     <tr style={{ backgroundColor: "#e0f3f5" }}>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">Part of the body</th>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">What to watch for</th>
+                      <th className="p-4 text-[14px] font-bold text-navy-deep">Part of the Body Affected</th>
+                      <th className="p-4 text-[14px] font-bold text-navy-deep">What to Watch For</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -307,18 +312,20 @@ function LupusOverview() {
                   </tbody>
                 </table>
               </div>
-              <div className="flex items-start gap-3 p-4 mb-8" style={{ backgroundColor: "#fff3ec", borderRadius: "10px" }}>
-                <p className="text-[14px] leading-[1.65] text-navy-deep"><strong className="font-semibold">Note:</strong> Kidney involvement (lupus nephritis) is the most serious complication of lupus and the main cause of severe illness in Indian lupus patients.</p>
-              </div>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                Kidney Involvement (Lupus nephritis) is the most serious complication of Lupus. It is the main cause of severe illness in Indian lupus patients.
+              </p>
 
               <h3 style={H3Style}>When Should a Rheumatologist Be Consulted?</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>See a specialist if you have:</p>
-              <ul className="space-y-1" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Continuous joint pain with unexplained tiredness</li>
-                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">A facial rash that worsens in sunlight</li>
+              <ul className="space-y-1 mb-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Continuous joint pain with unexplained tiredness,</li>
+                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">A facial rash that worsens in sunlight,</li>
                 <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Significant hair loss</li>
-                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Any warning signs of kidney involvement (swollen ankles or foamy urine). These need an immediate same-day visit to a rheumatologist without delay</li>
               </ul>
+              <p className="text-[17px] leading-[1.8] text-navy-deep font-bold">
+                Any warning signs of kidney involvement, such as swollen ankles or foamy urine, need an immediate same-day visit to a rheumatologist without delay.
+              </p>
             </div>
 
             <DarkDivider />
@@ -327,12 +334,13 @@ function LupusOverview() {
             <div id="diagnosis" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>How Is Lupus Diagnosed?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                There is no single test to diagnose lupus. A rheumatologist checks symptoms, clinical examination, and blood test results. They look for skin rashes, joint swelling, and hair loss, and ask about the symptom pattern and any family history of autoimmune disease. They rule out other diseases that can cause these symptoms before detecting lupus.
+                There is no single test to diagnose lupus. A rheumatologist checks symptoms, clinical examination and blood test results. They look for skin rashes, joint swelling, and hair loss. They will ask about the symptom pattern and any family history of autoimmune disease. They will rule out any other disease that can cause these symptoms before detecting lupus.
               </p>
-              <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "1.5rem", marginBottom: "1rem", fontSize: "1.35rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Blood tests for lupus include</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>ANA, Anti-dsDNA, Full blood count, ESR, CRP, and Urine protein.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
+                Blood tests for lupus include: ANA, Anti-dsDNA , Full blood count, ESR, CRP, Urine protein
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                A positive ANA alone cannot confirm lupus. A kidney or skin biopsy may be required to assess organ involvement. Rheumatologists use the SLICC (Systemic Lupus International Collaborating Clinics) criteria, an internationally accepted checklist, to confirm the diagnosis.
+                A positive ANA alone can not confirm lupus. A kidney or skin biopsy may be required to assess organ involvement. Rheumatologists use the SLICC (Systemic Lupus International Collaborating Clinics) criteria, an internationally accepted checklist, to confirm the diagnosis.
               </p>
             </div>
 
@@ -351,8 +359,8 @@ function LupusOverview() {
                   <thead>
                     <tr style={{ backgroundColor: "#e0f3f5" }}>
                       <th className="p-4 text-[14px] font-bold text-navy-deep">Tier</th>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">Medication type</th>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">When used</th>
+                      <th className="p-4 text-[14px] font-bold text-navy-deep">Medication Type</th>
+                      <th className="p-4 text-[14px] font-bold text-navy-deep">When Used</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -371,14 +379,14 @@ function LupusOverview() {
               </p>
 
               <h3 style={H3Style}>Sun Protection and Kidney Care</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>In Indian lupus patients, sun protection is a medical requirement. It is advised to:</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>In Indian lupus patients, sun protection is a medical requirement. It is advised:</p>
               <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Apply SPF 50 sunscreen daily</li>
-                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Cover exposed body parts with protective clothing like a scarf, socks, and caps</li>
-                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Avoid the sun between 10 am and 4 pm</li>
+                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">To apply SPF 50 sunscreen daily,</li>
+                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Cover exposed body parts with protective clothing like a scarf, socks and caps</li>
+                <li className="text-[17px] leading-[1.75] text-navy-deep pl-1">Avoid the sun between 10 am and 4 pm.</li>
               </ul>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                For kidney involvement, mycophenolate mofetil or cyclophosphamide is used along with corticosteroids. This is the standard approach. A nephrologist works alongside the rheumatologist. It is important to detect kidney damage early, because delay can make the damage irreversible.
+                For kidney involvement, mycophenolate mofetil or cyclophosphamide is used along with corticosteroids. It is the standard approach. A nephrologist (kidney specialist) works alongside the rheumatologist. It is important to detect kidney damage early because the delay can make the kidney damage irreversible.
               </p>
             </div>
 
@@ -388,7 +396,7 @@ function LupusOverview() {
             <div id="living" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Living With Lupus in India</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                Lupus does not go away, but daily habits can make a real difference. Protect yourself from the sun every day, even when indoors near windows. Eat a balanced, anti-inflammatory diet rich in omega-3 fatty acids. If your kidneys are affected, reducing salt intake may also help. Counselling and support from family and friends help significantly. There is a lot of stigma around long-term illness, especially in India, which can sometimes make things harder.
+                Lupus does not go away, but daily habits can make a real difference. Protect yourself from the sun every day, even when you&apos;re indoors near windows. Eat a balanced, anti-inflammatory diet that includes foods rich in omega-3 fatty acids. If your kidneys are affected, reducing salt intake may also help. Counselling and support from family and friends help significantly. Because there is a lot of stigma around long-term illness, especially in India, which can sometimes make things harder.
               </p>
             </div>
 
@@ -396,9 +404,12 @@ function LupusOverview() {
 
             {/* GETTING RIGHT DIAGNOSIS + CTA */}
             <div style={{ scrollMarginTop: "80px" }}>
-              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Getting the Right Diagnosis</h2>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Getting the right diagnosis</h2>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                Many people with lupus spend months seeing different specialists. Every doctor treats one symptom without connecting it to the others. Joint pain, a rash, and fatigue that nobody can explain. When symptoms are affecting multiple parts of the body, especially in a young woman, lupus can be a reason. Only a rheumatologist can make the right diagnosis.
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Many people with lupus spend months seeing different specialists. Every doctor treats one symptom without connecting it to the others. Joint pain, a rash, and fatigue that nobody can explain. When symptoms are affecting multiple parts of the body, especially in a young woman, lupus can be a reason. Only a rheumatologist can make the right diagnosis. Delay can worsen the condition and can cause organ damage. Getting the right diagnosis early can make a real difference. Your doctor may also recommend vitamin D supplements if your levels are low.
+                Delay can worsen the condition and can cause organ damage. Getting the right diagnosis early can make a real difference. Your doctor may also recommend vitamin D supplements if your levels are low.
               </p>
               <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>
@@ -412,6 +423,18 @@ function LupusOverview() {
                   </span>
                 </Link>
               </div>
+            </div>
+
+            <DarkDivider />
+
+            {/* REFERENCE */}
+            <div style={{ scrollMarginTop: "80px" }}>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Reference</h2>
+              <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                {references.map((r, i) => (
+                  <li key={i} className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>{r}</li>
+                ))}
+              </ul>
             </div>
 
           </div>

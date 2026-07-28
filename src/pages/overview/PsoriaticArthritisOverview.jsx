@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import Header from "../../components/Header"
 import BriefingFooter from "../../components/BriefingFooter"
 import ReviewedConsultationCta from "../../components/ReviewedConsultationCta"
-import { ArrowRight, Stethoscope } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 /* ─────────────────────────────────────────────
    DATA - Psoriatic Arthritis (PsA)
@@ -12,18 +12,13 @@ import { ArrowRight, Stethoscope } from "lucide-react"
 const quickAnswers = [
   "Psoriatic arthritis is an autoimmune condition where the body attacks itself (Auto means self, and the immune system is the defence system which fights against infections). It affects joints and skin.",
   "About 1 in 3 people with psoriasis develop psoriatic arthritis. Stress, infections, joint injury, and certain medications are common triggering causes.",
-  "Common experienced symptoms include joint pain, morning stiffness, swollen “sausage” fingers/toes, and nail changes like pitting or thickening.",
+  "Common experienced symptoms include joint pain, morning stiffness, swollen \"sausage\" fingers/toes, and nail changes like pitting or thickening.",
   "There is no permanent cure, but the right treatment can control symptoms and help most people stay active.",
   "Treatment usually starts with managing pain and providing relief. This is followed by medications that slow the disease and biologic injections for more severe cases.",
 ]
 
-const geneticFactors = [
-  { title: "Genetic marker HLA-B27", desc: "The gene marker HLA-B27 (HLA stands for Human Leukocyte Antigen) is linked to involvement of the spine in some patients. Not everyone with this gene will develop psoriatic arthritis. It increases the chances of getting PsA." },
-  { title: "Family history", desc: "Having a close family member with psoriasis or psoriatic arthritis also makes the individual vulnerable. If these conditions run in the family, then no joint symptoms should not be ignored. It should be checked by a doctor early." },
-]
-
 const triggers = [
-  { title: "Physical injury", desc: "Injury to a joint or repetitive strain can trigger the body's protective system. In high-risk people, this defence system can attack the body's own tissues." },
+  { title: "Physical injury", desc: "Injury to a joint or repetitive strain can trigger the body’s protective system. In high-risk people, this defence system can attack the body’s own tissues." },
   { title: "Infections", desc: "Throat infections that are caused by bacteria, and other infections can lead to worsening of the condition." },
   { title: "High stress", desc: "Increased stress is the most common cause of psoriatic arthritis." },
   { title: "Certain medications", desc: "Few medications like lithium, chloroquine (malaria medicine), and beta-blockers (used to treat heart conditions) are associated with the worsening of psoriasis. They can also trigger joint symptoms." },
@@ -37,18 +32,9 @@ const jointSymptoms = [
 ]
 
 const riskFactors = [
-  "Patients with psoriasis",
+  "Patients with psoriasis.",
   "Family members or close relatives suffering from psoriasis or psoriatic arthritis",
   "Age between 30 and 55 years",
-]
-
-const livingTips = [
-  "A healthy, anti-inflammatory diet with foods such as turmeric, mustard oil, flaxseeds, and fish",
-  "Reduce intake of refined sugar and processed foods",
-  "Stay in a healthy weight range, as it can reduce joint load and help medication work better",
-  "Walking, swimming, and yoga are the best options",
-  "A physiotherapist can suggest modified positions for floor-sitting to protect the knees and hips",
-  "Visiting your rheumatologist early instead of self-medicating can prevent the condition from worsening",
 ]
 
 const faqs = [
@@ -163,19 +149,14 @@ function PsoriaticArthritisOverview() {
 
             <DarkDivider />
 
-            {/* QUICK ANSWER */}
+            {/* QUICK TO ANSWER */}
             <div style={{ scrollMarginTop: "80px" }}>
-              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers</h2>
-              <div style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "22px 26px" }}>
-                <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {quickAnswers.map((q, i) => (
-                    <li key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                      <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "6px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      <span className="text-[16px] leading-[1.7] text-navy-deep">{q}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick to Answer</h2>
+              <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                {quickAnswers.map((q, i) => (
+                  <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{q}</li>
+                ))}
+              </ul>
             </div>
 
             <DarkDivider />
@@ -184,16 +165,21 @@ function PsoriaticArthritisOverview() {
             <div id="what-is-psa" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>What Is Psoriatic Arthritis?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Psoriatic arthritis (PsA) is a condition where the immune system mistakenly attacks healthy tissues of skin and joints. The immune system is the body&apos;s natural defence against harmful germs and infections. In a healthy person, it carefully targets only outside threats and fights against those.
+                Psoriatic arthritis (PsA) is a condition where the immune system mistakenly attacks healthy tissues of skin and joints. The immune system is the body's natural defence against harmful germs and infections. In a healthy person, it carefully targets only outside threats and fights against those.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 In psoriasis, the immune system becomes overactive and mistakenly starts attacking the skin tissue. This attack causes the skin to become red, thick, and scaly. In psoriatic arthritis, the overactive immune system starts attacking joints. It is a form of arthritis that mainly affects people with psoriasis. It can involve multiple joints, the spine, tendons, and nails all at once.
               </p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                For most people, skin symptoms appear first, sometimes years before any joint problems begin. In others, joint and skin symptoms develop around the same time. The root cause in both conditions is an immune system that gets overactive and mistakenly attacks the body&apos;s own healthy tissues.
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
+                For most people, skin symptoms appear first, sometimes years before any joint problems begin. In others, joint and skin symptoms develop around the same time. The root cause in both conditions is an immune system that gets overactive and mistakenly attacks the body's own healthy tissues.
               </p>
+            </div>
 
-              <h3 style={H3Style}>How Common Is Psoriatic Arthritis in India?</h3>
+            <DarkDivider />
+
+            {/* HOW COMMON */}
+            <div style={{ scrollMarginTop: "80px" }}>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>How Common Is Psoriatic Arthritis in India?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Psoriatic arthritis affects approximately 8.7 % of people with psoriasis in India. The data is based on the RAPID-India group study from 2025. Still, it often goes undiagnosed. The reason behind this is - most patients see a dermatologist for the skin and a general doctor for the joints. As a result, the two major symptoms never get connected. Due to different patterns and common symptoms, many patients reach a rheumatologist after suffering for years.
               </p>
@@ -209,15 +195,15 @@ function PsoriaticArthritisOverview() {
               </p>
 
               <h3 style={H3Style}>Genetic and Family History Factors</h3>
-              <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                {geneticFactors.map((g, i) => (
-                  <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                    <strong className="font-bold" style={{ color: "#0a4f5a" }}>{g.title}:</strong> {g.desc}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                Genes play an important role in developing psoriatic arthritis (PsA). The gene marker HLA-B27 (HLA stands for Human Leukocyte Antigen) is linked to involvement of the spine in some patients. Not everyone with this gene will develop psoriatic arthritis. It increases the chances of getting PsA.
+              </p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
+                Having a close family member with psoriasis or psoriatic arthritis also makes the individual vulnerable. If these conditions run in the family, then no joint symptoms should not be ignored. It should be checked by a doctor early.
+              </p>
 
-              <h3 style={H3Style}>Triggers That Can Start or Worsen PsA</h3>
+              <h3 style={H3Style}>Triggers That Can Start or Worsen Psoriatic Arthritis:</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>There are a few factors which can worsen the condition:</p>
               <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {triggers.map((t, i) => (
                   <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
@@ -231,8 +217,8 @@ function PsoriaticArthritisOverview() {
                 Vitamin D deficiency is very common in urban India. Active inflammation of the disease is the underlying cause. Arthritis, which develops after chikungunya, closely resembles the psoriatic joint pattern. This is also one of the reasons for the misdiagnosis of psoriatic arthritis. Rheumatologist availability in smaller towns is limited. That is why many patients visit them only after joint damage has already started.
               </p>
 
-              <h3 style={H3Style}>Who Is Most at Risk?</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>People at higher risk of developing psoriatic arthritis include:</p>
+              <h3 style={H3Style}>Who is most at risk?</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>Following are the people who are at more risk of developing psoriatic arthritis:</p>
               <ul className="space-y-1" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {riskFactors.map((r, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{r}</li>))}
               </ul>
@@ -263,12 +249,12 @@ function PsoriaticArthritisOverview() {
                 Psoriasis patches are raised, red, silvery-scaled areas. Scalp, elbows, knees, and lower back are the most common sites. Nail changes include pitting, crumbling, discolouration and separation from the nail bed. These changes sometimes appear before joint pain. That is why these are meaningful early signs that psoriatic arthritis may develop. It is best not to ignore these early signs to prevent the disease from progressing.
               </p>
 
-              <h3 style={H3Style}>Swelling and Pain</h3>
+              <h3 style={H3Style}>Swelling and Pain :</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                The swelling occurs on the entire finger or toe, not just at one joint, which is referred to as <strong className="font-semibold">Dactylitis</strong>. Tendons are tight cords which attach muscle of the finger to bone. The tissue is present along the whole length of the finger. The inflammation occurs in the tissue tendons. Therefore, the swelling occurs in the entire finger or toe, which gives them the characteristic &ldquo;sausage&rdquo; appearance. This typical appearance helps differentiate psoriatic arthritis from other types of arthritis.
+                The swelling occurs on the entire finger or toe, not just at one joint, which is referred to as Dactylitis. Tendons are tight cords which attach muscle of the finger to bone. The tissue is present along the whole length of the finger. The inflammation occurs in the tissue tendons. Therefore, the swelling occurs in the entire finger or toe, which gives them the characteristic sausage appearance. This typical appearance helps differentiate psoriatic arthritis from other types of arthritis.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                <strong className="font-semibold">Enthesitis</strong> is pain at the points where tendons attach to bone. The pain most commonly occurs in the heel, sole of the foot, elbow, and knee. Many patients first consult a doctor for this heel pain without knowing they could be suffering from psoriatic arthritis.
+                Enthesitis is pain at the points where tendons attach to bone. The pain most commonly occurs in the heel, sole of the foot, elbow, and knee. Many patients first consult a doctor for this heel pain without knowing they could be suffering from psoriatic arthritis.
               </p>
             </div>
 
@@ -313,37 +299,9 @@ function PsoriaticArthritisOverview() {
             {/* PsA vs RA */}
             <div style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>How Is It Different from Rheumatoid Arthritis?</h2>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                Both rheumatoid arthritis (RA) and psoriatic arthritis (PsA) cause joint pain, stiffness, and swelling. But they both require different treatments. Therefore, it is necessary to differentiate them.
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
+                Both rheumatoid arthritis (RA) and psoriatic arthritis (PsA) cause joint pain, stiffness, and swelling. But they both require different treatments. Therefore, it is necessary to differentiate them. In Psoriatic arthritis common sites include skin, spine and entire fingers/ toes will be affected, whereas in Rheumatoid arthritis mainly joints are affected. Psoriatic arthritis only one side is affected, whereas in Rheumatoid arthritis both sides are affected. Psoriatic arthritis(PsA) has a family history of autoimmune disease and skin conditions. Skin or nail changes, along with joint pain, can make a doctor consider PsA.
               </p>
-              <div className="overflow-x-auto mb-4">
-                <table className="w-full border-collapse text-left min-w-[560px]">
-                  <thead>
-                    <tr style={{ backgroundColor: "#e0f3f5" }}>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">Feature</th>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">Psoriatic Arthritis</th>
-                      <th className="p-4 text-[14px] font-bold text-navy-deep">Rheumatoid Arthritis</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-[#dadfe8]">
-                      <td className="p-4 text-[15px] font-semibold text-navy-deep align-top">Common sites</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Skin, spine, entire fingers/toes</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Mainly joints</td>
-                    </tr>
-                    <tr className="border-b border-[#dadfe8]">
-                      <td className="p-4 text-[15px] font-semibold text-navy-deep align-top">Sides affected</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Usually one side</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Both sides</td>
-                    </tr>
-                    <tr className="border-b border-[#dadfe8]">
-                      <td className="p-4 text-[15px] font-semibold text-navy-deep align-top">Skin/nail changes</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Present, with family history of psoriasis</td>
-                      <td className="p-4 text-[15px] leading-[1.7] text-navy-deep align-top">Absent</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
 
             <DarkDivider />
@@ -351,14 +309,11 @@ function PsoriaticArthritisOverview() {
             {/* LIVING WITH */}
             <div id="living" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Living With Psoriatic Arthritis in India</h2>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                Psoriatic arthritis is a long-term condition. With small lifestyle and dietary changes, you can live an active life:
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                Psoriatic arthritis is a long-term condition. With small lifestyle and dietary changes, you can live an active life. A healthy, anti-inflammatory diet with foods such as turmeric, mustard oil, flaxseeds, and fish needs to be incorporated. Reduce intake of refined sugar and processed foods. Stay in a healthy weight range, as it can reduce joint load and help medication work better. Walking, swimming, and yoga are the best options. A physiotherapist can suggest modified positions for floor-sitting to protect the knees and hips.
               </p>
-              <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                {livingTips.map((t, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{t}</li>))}
-              </ul>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                Psoriasis is still wrongly believed to be contagious in many Indian communities. As a result, people are pushed toward isolation. Counselling and support from family and friends help significantly. These can help reduce both the physical and emotional weight of managing the condition in the long term.
+                Visiting your rheumatologist early instead of self-medicating can prevent the condition from worsening. Psoriasis is still wrongly believed to be contagious in many Indian communities. As a result, people are pushed toward isolation. Counselling and support from family and friends help significantly. These can help reduce both the physical and emotional weight of managing the condition in the long term.
               </p>
             </div>
 
@@ -370,18 +325,12 @@ function PsoriaticArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 When you notice joint pain, alongside psoriasis, see a rheumatologist without delay. Early diagnosis prevents irreversible joint damage. A rheumatologist will confirm your diagnosis, build a treatment plan suited to your specific disease pattern, and help you track changes over time. Starting the right treatment early gives you the best chance of living an active life.
               </p>
-              <div style={{ backgroundColor: "#FFF3E8", borderRadius: 0, padding: "28px", fontFamily: "var(--font-base)" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>
-                  <Stethoscope size={28} color="#E86531" strokeWidth={2} style={{ flexShrink: 0 }} />
-                  <p style={{ fontSize: "16px", fontWeight: 700, color: "#0f616e", lineHeight: 1.3, margin: 0 }}>Joint pain with psoriasis? See a rheumatologist early</p>
-                </div>
-                <Link to="/book-appointment" className="group" style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none" }}>
-                  Book a Specialist Visit
-                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
-                    <ArrowRight size={14} />
-                  </span>
-                </Link>
-              </div>
+              <Link to="/book-appointment" className="group" style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none" }}>
+                Book a Consultation with Dr Raghavendra H
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
+                  <ArrowRight size={14} />
+                </span>
+              </Link>
             </div>
 
           </div>

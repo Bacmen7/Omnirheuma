@@ -30,7 +30,7 @@ const riskFactors = [
   "People with a family history of gout",
   "People who are overweight or obese",
   "People with high sugar level, high blood pressure, or kidney disease",
-  "People who are taking medicines like diuretics, aspirin and immunosuppressants",
+  "People who are taking medicines like diuretics, aspirin and immunosuppressants.",
 ]
 
 const safeFoods = [
@@ -55,6 +55,13 @@ const faqs = [
   { q: "Can vegetarians get gout?", a: "Yes, eating large amounts of packaged cold drinks, commercial juices, and sweets, along with health conditions like obesity or diabetes, increases the risk of developing gout in vegetarians." },
   { q: "Is allopurinol safe to take for life?", a: "Yes, it is advised for most people who have repeated gout attacks. The dose of allopurinol is adjusted based on kidney function and uric acid levels and is reviewed regularly. It can be used for long-term treatment." },
   { q: "Can gout damage the kidneys?", a: "Yes, consistently high uric acid levels in the body can form crystals in the kidneys. This causes kidney stones and leads to kidney damage. Therefore, kidney function should be checked regularly." },
+]
+
+const references = [
+  "Mo Q, Luo S, Wang F, et al. Burden, risk factors, and forecasts of gout in BRICS countries, 1990-2021: Insights from the Global Burden of Disease Study 2021. PLoS One. 2025;20(9):e0332265. Published 2025 Sep 24. doi:10.1371/journal.pone.0332265",
+  "Misra DP, Sharma A, Dharmanand BG, Chandrashekara S. The Epidemiology of Rheumatic Diseases in India. Indian Journal of Rheumatology. 2024;19(1):54-61. doi:10.1177/09733698241229779",
+  "Ben Salem C, Slim R, Fathallah N, Hmouda H. Drug-induced hyperuricaemia and gout. Rheumatology (Oxford). 2017;56(5):679-688. doi:10.1093/rheumatology/kew293",
+  "Yang F, Chen R, Xiong J, Wang W, Yu P, Wang H. The disease burden of gout in Asian countries and regions from 1990 to 2021, risk factors and forecast analysis: A systematic study of Asian disease burden in 2021. PLoS One. 2025;20(7):e0328543. Published 2025 Jul 28. doi:10.1371/journal.pone.0328543",
 ]
 
 /* DARK GREEN divider between sections */
@@ -157,7 +164,7 @@ function GoutOverview() {
 
             {/* QUICK ANSWER */}
             <div style={{ scrollMarginTop: "80px" }}>
-              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers</h2>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers Block</h2>
               <div style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "22px 26px" }}>
                 <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   {quickAnswers.map((q, i) => (
@@ -227,8 +234,11 @@ function GoutOverview() {
               </p>
 
               <h3 style={H3Style}>Diet and Lifestyle Factors</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                What you eat and drink can affect the uric acid levels. Eating large amounts of organ meats like liver, kidney, and brain, red meat, mutton, and shellfish can raise uric acid levels. Alcoholic drinks, especially beer, also increase the uric acid level in the body. Sugary drinks, such as soft drinks, packaged fruit juices, and other sweetened beverages, can increase the chances of gout, even in vegetarians.
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                What you eat and drink can affect the uric acid levels. Eating large amounts of organ meats like liver, kidney, and brain, red meat, mutton, and shellfish can raise uric acid levels. Alcoholic drinks, especially beer, also increase the uric acid level in the body. Sugary drinks, such as soft drinks, packaged fruit juices, and other sweetened beverages, can increase the chances of gout, even in vegetarians. Drinking less water can make it harder for the kidneys to remove the uric acid efficiently. As a result, the uric acid levels increase in the blood and can trigger gout.
+                Drinking less water can make it harder for the kidneys to remove the uric acid efficiently. As a result, the uric acid levels increase in the blood and can trigger gout.
               </p>
 
               <h3 style={H3Style}>Health Conditions Linked to Gout</h3>
@@ -237,8 +247,11 @@ function GoutOverview() {
               </p>
 
               <h3 style={H3Style}>Medications That Can Raise Uric Acid</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                Some medicines can increase the uric acid levels in the body. Medicines like thiazides, which are used for treatment of high blood pressure are among the most common medicines which cause gout. Blood-thinning medicines like Aspirin and medicines that suppress the body&apos;s defence system (immunosuppressants) can also cause gout.
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Some medicines can increase the uric acid levels in the body. Medicines like thiazides, which are used for treatment of high blood pressure are among the most common medicines which cause gout. Blood-thinning medicines like Aspirin and medicines that suppress the body&apos;s defence system (immunosuppressants) can also cause gout. If gout starts after beginning a new medicine or gout becomes worse, you should speak to your doctor. Do not stop taking your prescribed medicine on your own. Your doctor will review your treatment and recommend the safest option for you.
+                If gout starts after beginning a new medicine or gout becomes worse, you should speak to your doctor. Do not stop taking your prescribed medicine on your own. Your doctor will review your treatment and recommend the safest option for you.
               </p>
 
               <h3 style={H3Style}>Indian-Specific Risk Factors</h3>
@@ -287,9 +300,11 @@ function GoutOverview() {
                 A rheumatologist confirms the diagnosis with a physical examination and blood test. They may recommend X-ray, ultrasound, and joint fluid examination to confirm the condition.
               </p>
               <h3 style={H3Style}>Physical Examination and Blood Tests</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>The doctor examines the affected joint for swelling, redness, and warmth and hard lumps. They also ask about your attack patterns, diet, alcohol use, medicines, and family history. The doctor may recommend a blood test to measure uric acid levels and kidney function. High uric acid levels can damage the kidneys. Poorly functioning kidneys make it harder for the body to remove uric acid, making gout worse.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>The doctor examines the affected joint for swelling, redness, and warmth and hard lumps. They also ask about your attack patterns, diet, alcohol use, medicines, and family history.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>The doctor may recommend a blood test to measure uric acid levels and kidney function. High uric acid levels can damage the kidneys. Poorly functioning kidneys make it harder for the body to remove uric acid, making gout worse.</p>
               <h3 style={H3Style}>Confirming the Diagnosis</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">Sometimes, gout is confused with a joint infection or other forms of joint pain and swelling. Doctors recommend a fine needle aspiration test to confirm gout. During this test, a small amount of fluid is taken from the affected joint and checked for uric acid crystals. This is the most reliable test to confirm gout. The doctor performs an ultrasound in the early stages to detect uric acid crystals in the joints. They can recommend an X-ray in advanced stages to check the bone damage. After the condition is diagnosed, the rheumatologist will start the treatment depending on the stage of your condition.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>Sometimes, gout is confused with a joint infection or other forms of joint pain and swelling. Doctors recommend a fine needle aspiration test to confirm gout. During this test, a small amount of fluid is taken from the affected joint and checked for uric acid crystals. This is the most reliable test to confirm gout.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">The doctor performs an ultrasound in the early stages to detect uric acid crystals in the joints. They can recommend an X-ray in advanced stages to check the bone damage. After the condition is diagnosed, the rheumatologist will start the treatment depending on the stage of your condition.</p>
             </div>
 
             <DarkDivider />
@@ -319,20 +334,20 @@ function GoutOverview() {
                 Diet changes are important in controlling gout symptoms along with medicine. Avoiding foods that can raise uric acid can provide a long-term benefit. Maintaining a healthy body weight, eating fresh food and vegetables and drinking plenty of water can prevent the condition from progressing. Here is the list of safe and unsafe foods for gout.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div style={{ border: "1px solid #cbe6ea", borderRadius: "12px", overflow: "hidden" }}>
-                  <div style={{ backgroundColor: "#e0f3f5", padding: "12px 18px" }}>
-                    <span className="text-[14px] font-bold text-navy-deep">✓ SAFE: Include in your diet</span>
-                  </div>
-                  <ul className="p-4 space-y-2" style={{ listStyleType: "disc", paddingLeft: "2rem" }}>
-                    {safeFoods.map((f, i) => (<li key={i} className="text-[14px] leading-[1.6] text-navy-deep">{f}</li>))}
-                  </ul>
-                </div>
                 <div style={{ border: "1px solid #f3d6c8", borderRadius: "12px", overflow: "hidden" }}>
                   <div style={{ backgroundColor: "#fff3ec", padding: "12px 18px" }}>
                     <span className="text-[14px] font-bold text-navy-deep">✕ UNSAFE: Reduce or avoid in your diet</span>
                   </div>
                   <ul className="p-4 space-y-2" style={{ listStyleType: "disc", paddingLeft: "2rem" }}>
                     {unsafeFoods.map((f, i) => (<li key={i} className="text-[14px] leading-[1.6] text-navy-deep">{f}</li>))}
+                  </ul>
+                </div>
+                <div style={{ border: "1px solid #cbe6ea", borderRadius: "12px", overflow: "hidden" }}>
+                  <div style={{ backgroundColor: "#e0f3f5", padding: "12px 18px" }}>
+                    <span className="text-[14px] font-bold text-navy-deep">✓ SAFE: Include in your diet</span>
+                  </div>
+                  <ul className="p-4 space-y-2" style={{ listStyleType: "disc", paddingLeft: "2rem" }}>
+                    {safeFoods.map((f, i) => (<li key={i} className="text-[14px] leading-[1.6] text-navy-deep">{f}</li>))}
                   </ul>
                 </div>
               </div>
@@ -346,8 +361,11 @@ function GoutOverview() {
             {/* LIVING WITH */}
             <div id="living" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Living With Gout in India</h2>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                Gout is one of the most controllable forms of arthritis. Living well with gout involves taking your medicines regularly and making healthy lifestyle changes. Keeping uric acid levels under control is the best way to prevent future attacks and protect your joints over time. It is also important to manage diabetes and high blood pressure along with gout to prevent the condition from worsening.
+              </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                Gout is one of the most controllable forms of arthritis. Living well with gout involves taking your medicines regularly and making healthy lifestyle changes. Keeping uric acid levels under control is the best way to prevent future attacks and protect your joints over time. It is also important to manage diabetes and high blood pressure along with gout to prevent the condition from worsening. Uric acid levels, kidney function, blood pressure, and blood sugar should all be checked regularly. Many Indian patients usually return to the doctor when the next attack occurs. The goal is to prevent future attacks and control the condition before it worsens. With proper long-term treatment, most people live a normal daily life.
+                Uric acid levels, kidney function, blood pressure, and blood sugar should all be checked regularly. Many Indian patients usually return to the doctor when the next attack occurs. The goal is to prevent future attacks and control the condition before it worsens. With proper long-term treatment, most people live a normal daily life.
               </p>
             </div>
 
@@ -374,6 +392,18 @@ function GoutOverview() {
                   </span>
                 </Link>
               </div>
+            </div>
+
+            <DarkDivider />
+
+            {/* REFERENCE */}
+            <div style={{ scrollMarginTop: "80px" }}>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Reference</h2>
+              <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                {references.map((r, i) => (
+                  <li key={i} className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>{r}</li>
+                ))}
+              </ul>
             </div>
 
           </div>

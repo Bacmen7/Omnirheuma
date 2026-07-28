@@ -18,7 +18,7 @@ const quickAnswers = [
 ]
 
 const riskFactors = [
-  "Women aged 20 to 50 years, though it can develop at any age",
+  "Women aged 20 to 50 years, though it can develop at any age:",
   "People with a family history of fibromyalgia",
   "People with a history of severe infection, accident, or surgery",
   "People with other medical conditions, such as rheumatoid arthritis, lupus, or irritable bowel syndrome",
@@ -147,7 +147,7 @@ function FibromyalgiaOverview() {
 
             {/* QUICK ANSWER */}
             <div style={{ scrollMarginTop: "80px" }}>
-              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answers</h2>
+              <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Quick Answer Block</h2>
               <div style={{ backgroundColor: "#f5f7f8", borderRadius: "10px", padding: "22px 26px" }}>
                 <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   {quickAnswers.map((q, i) => (

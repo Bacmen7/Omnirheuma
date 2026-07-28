@@ -157,7 +157,7 @@ function AnkylosingSpondylitisOverview() {
                 In Ankylosing spondylitis, the immune system becomes overactive. The immune system attacks the healthy joints in the backbone. Tendons are the fibres that connect muscles and bones to support movement, whereas ligaments connect bones. The attack also occurs at tendons and ligaments. The immune system&apos;s attack causes pain, swelling and irritation in the joints and these fibres.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Slowly, the body tries to heal from the swelling and irritation. This is by producing new bones. The new bone starts filling the gaps between bones in the back. This continuous filling causes the bones to fuse with each other. Due to this fusion, the backbone loses its natural flexibility and becomes stiff and rigid. This is why the condition is sometimes called &ldquo;bamboo spine&rdquo; (bamboo-like backbone).
+                Slowly, the body tries to heal from the swelling and irritation. This is by producing new bones. The new bone starts filling the gaps between bones in the back. This continuous filling causes the bones to fuse with each other. Due to this fusion, the backbone loses its natural flexibility and becomes stiff and rigid. This is why the condition is sometimes called &ldquo;bamboo spine" (bamboo-like backbone).
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 Ankylosing spondylitis is not only a condition of the backbone. It can also affect the hips, shoulders, knees, ankles, and eyes. In India, many patients first notice this condition in the knees or ankles before any pain in the back.
@@ -203,6 +203,7 @@ function AnkylosingSpondylitisOverview() {
               </p>
 
               <h3 style={H3Style}>Who Is Most at Risk?</h3>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>Certain factors increase the risk of developing ankylosing spondylitis, such as</p>
               <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {riskFactors.map((r, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{r}</li>))}
               </ul>
