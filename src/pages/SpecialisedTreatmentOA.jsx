@@ -169,8 +169,8 @@ function SpecialisedTreatmentOA() {
                     marginBottom: 0,
                   }}
                 >
-                  Specialised Treatment Procedures<br />
-                  <span className="whitespace-nowrap">for Osteoarthritis:</span>
+                  Specialised Treatment Procedures for<br />
+                  <span className="whitespace-nowrap">Osteoarthritis:</span>
                   <span
                     style={{
                       display: "block",

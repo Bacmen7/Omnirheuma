@@ -69,7 +69,7 @@ export const diagnosis = {
   ],
   bloodTests: {
     heading: "Main blood tests include:",
-    intro: "Rheumatologists usually recommend blood tests such as:",
+    intro: "Rheumatologists usually recommend blood tests such as -",
     list: [
       "Rheumatoid factor (RF)",
       "Anti-CCP Antibody (ACPA)",
