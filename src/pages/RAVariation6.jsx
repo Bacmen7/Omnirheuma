@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope } from "lucide-react"
 import { raIntro, whatIsRA, symptoms, stages, causes, riskFactors, diagnosis, treatment, daily, earlyResponse, whenToSee, faqs } from "../data/raContent"
 
-/* V6 — Documentation style. Numbered left rail + wide flowing content with section numbers. */
+/* V6 - Documentation style. Numbered left rail + wide flowing content with section numbers. */
 
 const SECTIONS = [
   { id: "what-is-ra", label: "What is RA?" },
@@ -34,7 +34,7 @@ function RAVariation6() {
   const clickLockRef = useRef(false)
 
   useEffect(() => {
-    document.title = "Rheumatoid Arthritis — Reference | Omni Rheuma"
+    document.title = "Rheumatoid Arthritis - Reference | Omni Rheuma"
     return () => { document.title = "Omni Rheuma" }
   }, [])
 
@@ -70,7 +70,7 @@ function RAVariation6() {
       <Header />
       <main>
 
-        {/* ═══════════ HERO — compact ═══════════ */}
+        {/* ═══════════ HERO - compact ═══════════ */}
         <header style={{ backgroundColor: "#0f616e" }} className="text-white">
           <div className="max-w-6xl mx-auto px-5 sm:px-6 pt-7 pb-10">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] font-medium" style={{ color: "rgba(255,255,255,0.65)", marginBottom: "2rem" }}>

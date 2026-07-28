@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope } from "lucide-react"
 
 /* ─────────────────────────────────────────────
-   DATA — Fibromyalgia
+   DATA - Fibromyalgia
    ───────────────────────────────────────────── */
 
 const quickAnswers = [

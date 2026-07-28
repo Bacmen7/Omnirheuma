@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope } from "lucide-react"
 
 /* ─────────────────────────────────────────────
-   DATA — Osteoarthritis
+   DATA - Osteoarthritis
    ───────────────────────────────────────────── */
 
 const oaTypes = [
@@ -86,7 +86,7 @@ function OsteoarthritisOverview() {
     <div className="landing-page bg-white text-navy-deep antialiased">
       <Header />
 
-      {/* Reading progress bar — orange line at top */}
+      {/* Reading progress bar - orange line at top */}
       <div style={{ position: "fixed", top: 0, left: 0, right: 0, height: "3px", zIndex: 60, backgroundColor: "transparent" }}>
         <div style={{ height: "100%", width: `${progress}%`, backgroundColor: "#E86531", transition: "width 0.1s linear" }} />
       </div>

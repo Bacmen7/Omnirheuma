@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope } from "lucide-react"
 
 /* ─────────────────────────────────────────────
-   DATA — Ankylosing Spondylitis (AS)
+   DATA - Ankylosing Spondylitis (AS)
    ───────────────────────────────────────────── */
 
 const quickAnswers = [

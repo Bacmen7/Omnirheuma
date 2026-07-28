@@ -261,7 +261,7 @@ function Osteoarthritis() {
         <header style={{ backgroundColor: "#0f616e" }} className="text-white">
           <div className="relative w-full px-5 sm:px-6" style={{ minHeight: "380px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingTop: "3rem", paddingBottom: "2rem" }}>
 
-            {/* Breadcrumb — absolute top */}
+            {/* Breadcrumb - absolute top */}
             {/* <div
               className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] font-medium leading-snug sm:text-[14px]"
               style={{ color: "rgba(255,255,255,0.68)", position: "absolute", top: "1.5rem", left: "1.25rem" }}
@@ -274,7 +274,7 @@ function Osteoarthritis() {
               <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Osteoarthritis</span>
             </div> */}
 
-            {/* Title — bottom left */}
+            {/* Title - bottom left */}
             <h1
               style={{
                 fontFamily: "var(--font-display)",
@@ -290,7 +290,7 @@ function Osteoarthritis() {
               <span style={{ display: "block", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "rgba(255,255,255,0.85)", marginTop: "0.6rem", fontWeight: 400 }}>What Your Joints Are Trying to Tell You</span>
             </h1>
 
-            {/* Image — absolute right, full height */}
+            {/* Image - absolute right, full height */}
             {/* <div className="hidden md:block" style={{ position: "absolute", top: 0, bottom: 0, right: "24px", width: "420px", overflow: "hidden" }}>
               <img
                 src="/OA.webp"

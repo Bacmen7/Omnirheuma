@@ -167,7 +167,7 @@ function ArthritisGuide() {
 
         {/* ═══════════ HERO ═══════════ */}
         <header style={{ backgroundColor: "#0f616e" }} className="text-white">
-          <div className="max-w-7xl mx-auto px-5 pt-6 pb-0 sm:px-6 md:pt-8">
+          <div className="max-w-7xl mx-auto px-5 pt-6 pb-8 sm:px-6 md:pt-8 md:pb-12">
 
             {/* Breadcrumb */}
             <div
@@ -216,6 +216,7 @@ function ArthritisGuide() {
               </div>
 
               {/* Right: Image */}
+              {/*
               <div className="hidden md:block" style={{ width: "420px", height: "280px", flexShrink: 0, overflow: "hidden", alignSelf: "flex-end" }}>
                 <img
                   src="/images/hero-slide-4.webp"
@@ -223,11 +224,13 @@ function ArthritisGuide() {
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
                 />
               </div>
+              */}
 
             </div>
           </div>
 
           {/* Nav Tabs */}
+          {false && (
           <div style={{ backgroundColor: "#0a4f5a", borderTop: "1px solid rgba(255,255,255,0.15)" }}>
             <div className="max-w-7xl mx-auto grid grid-cols-3 gap-2 px-5 py-4 sm:flex sm:gap-3 sm:overflow-x-auto sm:px-6">
               {[
@@ -252,6 +255,7 @@ function ArthritisGuide() {
               })}
             </div>
           </div>
+          )}
         </header>
 
         {/* ═══════════ ARTICLE BODY + TOC ═══════════ */}

@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope } from "lucide-react"
 
 /* ─────────────────────────────────────────────
-   DATA — Lupus (SLE)
+   DATA - Lupus (SLE)
    ───────────────────────────────────────────── */
 
 const quickAnswers = [

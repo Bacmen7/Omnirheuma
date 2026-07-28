@@ -17,7 +17,7 @@ const SECTIONS = [
   { id: "faq", label: "FAQs" },
 ]
 
-/* Section divider — number + rule line + label */
+/* Section divider - number + rule line + label */
 function Divider({ num, label }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "20px", margin: "0 0 2.5rem" }}>
@@ -34,7 +34,7 @@ function RAVariation4() {
   const clickLockRef = useRef(false)
 
   useEffect(() => {
-    document.title = "Rheumatoid Arthritis — Complete Guide | Omni Rheuma"
+    document.title = "Rheumatoid Arthritis - Complete Guide | Omni Rheuma"
     return () => { document.title = "Omni Rheuma" }
   }, [])
 
@@ -203,9 +203,9 @@ function RAVariation4() {
           {/* Pull quote */}
           <blockquote style={{ margin: "4rem 0", padding: "0 0 0 28px", borderLeft: "4px solid #E86531" }}>
             <p style={{ fontFamily: "var(--font-display)", fontSize: "clamp(22px, 3vw, 30px)", lineHeight: 1.35, color: "#0f616e", fontWeight: 400, letterSpacing: "-0.3px" }}>
-              "The initial three-month window is when we can make the biggest difference — early diagnosis changes the entire course of the disease."
+              "The initial three-month window is when we can make the biggest difference - early diagnosis changes the entire course of the disease."
             </p>
-            <cite style={{ display: "block", marginTop: "16px", fontSize: "13px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "#8a94a6", fontStyle: "normal" }}>— Dr. Raghavendra H</cite>
+            <cite style={{ display: "block", marginTop: "16px", fontSize: "13px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "#8a94a6", fontStyle: "normal" }}>- Dr. Raghavendra H</cite>
           </blockquote>
 
           {/* CAUSES */}

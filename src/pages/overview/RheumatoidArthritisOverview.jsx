@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope } from "lucide-react"
 
 /* ─────────────────────────────────────────────
-   DATA — same content as original RA page
+   DATA - same content as original RA page
    ───────────────────────────────────────────── */
 
 const symptoms = [
@@ -98,14 +98,14 @@ function RheumatoidArthritisOverview() {
     <div className="landing-page bg-white text-navy-deep antialiased">
       <Header />
 
-      {/* Reading progress bar — orange line at top */}
+      {/* Reading progress bar - orange line at top */}
       <div style={{ position: "fixed", top: 0, left: 0, right: 0, height: "3px", zIndex: 60, backgroundColor: "transparent" }}>
         <div style={{ height: "100%", width: `${progress}%`, backgroundColor: "#E86531", transition: "width 0.1s linear" }} />
       </div>
 
       <main>
 
-        {/* ═══════════ HERO — light, centered, doctor card + stats ═══════════ */}
+        {/* ═══════════ HERO - light, centered, doctor card + stats ═══════════ */}
         <header style={{ backgroundColor: "#E8F4F8" }}>
           <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-8 pb-0 text-center">
             <p style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", color: "#1AA3B5", marginBottom: "16px" }}>A Patient Guide for India</p>
@@ -163,7 +163,7 @@ function RheumatoidArthritisOverview() {
           </div>
         </header>
 
-        {/* ═══════════ CONTENT — original UI, dark green dividers ═══════════ */}
+        {/* ═══════════ CONTENT - original UI, dark green dividers ═══════════ */}
         <section className="bg-white">
           <div className="overview-content max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
 

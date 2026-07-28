@@ -93,7 +93,7 @@ function RAVariation3() {
           </div>
         </div>
 
-        {/* ═══════════ CONTENT — wide, centered ═══════════ */}
+        {/* ═══════════ CONTENT - wide, centered ═══════════ */}
         <section className="bg-white">
           <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-12 pb-16" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
 

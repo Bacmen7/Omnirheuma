@@ -276,7 +276,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* ── 3 & 4 HIDDEN (Our Approach / How It Works) — commented out per request ──
+      {/* ── 3 & 4 HIDDEN (Our Approach / How It Works) - commented out per request ──
       <section className="w-full bg-[#eef7f5]" style={{ padding: "clamp(40px, 4vw, 48px) 0" }}>
         <div className="max-w-[1320px]" style={{ margin: "0 auto", padding: "0 clamp(16px, 3vw, 28px)" }}>
           <p className="text-sm font-semibold uppercase tracking-wider text-[#1AA3B5]" style={{ marginBottom: "12px" }}>Our Approach</p>

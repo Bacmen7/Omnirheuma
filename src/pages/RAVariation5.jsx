@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope, ChevronDown } from "lucide-react"
 import { raIntro, whatIsRA, symptoms, stages, causes, riskFactors, diagnosis, treatment, daily, earlyResponse, whenToSee, faqs } from "../data/raContent"
 
-/* V5 — Accordion / expandable sections. Each major topic is a collapsible panel. */
+/* V5 - Accordion / expandable sections. Each major topic is a collapsible panel. */
 
 const SECTIONS = [
   { id: "what-is-ra", label: "What is RA?" },
@@ -45,7 +45,7 @@ function RAVariation5() {
   const [open, setOpen] = useState({ "what-is-ra": true })
 
   useEffect(() => {
-    document.title = "Rheumatoid Arthritis — Explore | Omni Rheuma"
+    document.title = "Rheumatoid Arthritis - Explore | Omni Rheuma"
     return () => { document.title = "Omni Rheuma" }
   }, [])
 

@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope } from "lucide-react"
 
 /* ─────────────────────────────────────────────
-   DATA — Psoriatic Arthritis (PsA)
+   DATA - Psoriatic Arthritis (PsA)
    ───────────────────────────────────────────── */
 
 const quickAnswers = [

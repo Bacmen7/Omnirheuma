@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope } from "lucide-react"
 
 /* ─────────────────────────────────────────────
-   DATA — same content as original RA page
+   DATA - same content as original RA page
    ───────────────────────────────────────────── */
 
 const symptoms = [
@@ -96,14 +96,14 @@ function RAVariation7() {
     <div className="landing-page bg-white text-navy-deep antialiased">
       <Header />
 
-      {/* Reading progress bar — orange line at top */}
+      {/* Reading progress bar - orange line at top */}
       <div style={{ position: "fixed", top: 0, left: 0, right: 0, height: "3px", zIndex: 60, backgroundColor: "transparent" }}>
         <div style={{ height: "100%", width: `${progress}%`, backgroundColor: "#E86531", transition: "width 0.1s linear" }} />
       </div>
 
       <main>
 
-        {/* ═══════════ HERO — light, centered, doctor card + stats ═══════════ */}
+        {/* ═══════════ HERO - light, centered, doctor card + stats ═══════════ */}
         <header style={{ backgroundColor: "#E8F4F8" }}>
           <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-8 pb-0 text-center">
             <p style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", color: "#1AA3B5", marginBottom: "16px" }}>A Patient Guide for India</p>
@@ -111,7 +111,7 @@ function RAVariation7() {
               Rheumatoid Arthritis
             </h1>
             <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
-              What it is, symptoms, causes and treatment options — explained for patients and caregivers
+              What it is, symptoms, causes and treatment options - explained for patients and caregivers
             </p>
 
             {/* Disease image gradient card + overlapping stats */}
@@ -141,7 +141,7 @@ function RAVariation7() {
               </div>
             </div>
 
-            {/* Tab pills — below the card */}
+            {/* Tab pills - below the card */}
             <div className="flex flex-wrap justify-center gap-2.5 pb-10">
               {tabs.map((t) => (
                 <button key={t} onClick={() => scrollTo(tabTargets[t])} className="nav-tab transition-colors" style={{ backgroundColor: "transparent", border: "1px solid rgba(15,97,110,0.3)", color: "#0f616e", padding: "9px 20px", borderRadius: "9999px", fontSize: "13px", fontWeight: 600, cursor: "pointer" }}>
@@ -152,7 +152,7 @@ function RAVariation7() {
           </div>
         </header>
 
-        {/* ═══════════ CONTENT — original UI, dark green dividers ═══════════ */}
+        {/* ═══════════ CONTENT - original UI, dark green dividers ═══════════ */}
         <section className="bg-white">
           <div className="max-w-[820px] mx-auto px-5 sm:px-6 pt-14 pb-14" style={{ "--color-navy-deep": "#1a1a1a", "--color-navy-muted": "#1a1a1a" }}>
 
@@ -203,7 +203,7 @@ function RAVariation7() {
                 ))}
               </div>
               <p className="text-[17px] leading-[1.8] text-navy-deep mb-5">
-                Rheumatoid arthritis symptoms don&apos;t stay the same all the time &mdash; they can come and go. Periods when symptoms get worse are called <strong className="font-bold">flares</strong>, while times when you feel better are known as <strong className="font-bold">remission</strong>. Early diagnosis plays an important role in preventing permanent joint damage.
+                Rheumatoid arthritis symptoms don&apos;t stay the same all the time - they can come and go. Periods when symptoms get worse are called <strong className="font-bold">flares</strong>, while times when you feel better are known as <strong className="font-bold">remission</strong>. Early diagnosis plays an important role in preventing permanent joint damage.
               </p>
             </div>
 

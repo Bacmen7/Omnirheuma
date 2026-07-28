@@ -6,7 +6,7 @@ import ReviewedConsultationCta from "../../components/ReviewedConsultationCta"
 import { ArrowRight, Stethoscope } from "lucide-react"
 
 /* ─────────────────────────────────────────────
-   DATA — Gout
+   DATA - Gout
    ───────────────────────────────────────────── */
 
 const quickAnswers = [
@@ -196,7 +196,7 @@ function GoutOverview() {
 
             <DarkDivider />
 
-            {/* HOW IT PROGRESSES — 4 stages */}
+            {/* HOW IT PROGRESSES - 4 stages */}
             <div id="stages" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>How Does Gout Progress?</h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>

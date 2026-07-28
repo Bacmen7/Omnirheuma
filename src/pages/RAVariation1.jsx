@@ -98,7 +98,7 @@ function RAVariation1() {
             </div>
           </div>
 
-          {/* Nav Tabs — underline style */}
+          {/* Nav Tabs - underline style */}
           <div style={{ backgroundColor: "#0f616e", borderTop: "1px solid rgba(255,255,255,0.12)" }}>
             <div className="max-w-7xl mx-auto flex px-5 overflow-x-auto sm:px-6" style={{ scrollbarWidth: "none" }}>
               {TABS.map((tab) => {

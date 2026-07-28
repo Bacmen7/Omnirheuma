@@ -292,7 +292,7 @@ function RAVariation2() {
                   ))}
                 </article>
 
-                {/* EARLY RESPONSE — highlighted card */}
+                {/* EARLY RESPONSE - highlighted card */}
                 <article style={{ background: "linear-gradient(135deg, #0f616e 0%, #12707e 100%)", borderRadius: "4px", padding: "clamp(28px, 4vw, 44px)", color: "#fff" }}>
                   <p style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.16em", color: "#5fdae8", marginBottom: "16px" }}>{earlyResponse.heading}</p>
                   {earlyResponse.paras.map((p, i) => (
