@@ -124,7 +124,7 @@ function RAVariation4() {
                   className="nav-tab shrink-0 whitespace-nowrap transition-colors"
                   style={{
                     padding: "16px 16px",
-                    fontSize: "13.5px",
+                    fontSize: "15.5px",
                     fontWeight: isActive ? 700 : 500,
                     color: isActive ? "#0f616e" : "#8a94a6",
                     background: "transparent",

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Header from "../components/Header"
-import Newsletter from "../components/Newsletter"
 import BriefingFooter from "../components/BriefingFooter"
 import ReviewedConsultationCta from "../components/ReviewedConsultationCta"
 import { ArrowRight } from "lucide-react"
@@ -54,9 +53,9 @@ const tocItems = [
   { id: "other-parts", label: "When Rheumatoid Arthritis Affects Other Parts of the Body" },
   { id: "age-groups", label: "Symptoms of Rheumatoid Arthritis in Different Age Groups" },
   { id: "similar-conditions", label: "Conditions That Look Similar to Rheumatoid Arthritis" },
-  { id: "faq", label: "Frequently Asked Questions" },
   { id: "when-to-see", label: "When to See a Rheumatologist?" },
   { id: "references", label: "References" },
+  { id: "faq", label: "Frequently Asked Questions" },
 ]
 
 
@@ -156,7 +155,7 @@ function SymptomsWarningSignsRA() {
                     marginBottom: 0,
                   }}
                 >
-                  Rheumatoid Arthritis:
+                  Symptoms of <span className="whitespace-nowrap">Rheumatoid Arthritis:</span>
                   <span
                     style={{
                       display: "block",
@@ -411,6 +410,38 @@ function SymptomsWarningSignsRA() {
                   </div>
                 </div>
 
+        {/* ═══════════ WHEN TO SEE + REFERENCES ═══════════ */}
+              <div id="when-to-see" data-toc-section style={{ marginTop: "0" }}>
+                <h2
+                  className="text-navy-deep"
+                  style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                >
+                  When to See a Rheumatologist?
+                </h2>
+                <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                  Many people in India live with pain, swelling, and tiredness for years before receiving the right diagnosis of rheumatoid arthritis. See a rheumatologist if stiffness in the morning lasts for more than an hour. Also, seek medical advice if the small joints on both sides of your body become swollen or warm. Do not ignore symptoms that last for more than six weeks.
+                </p>
+                <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
+                  See a doctor if your symptoms keep coming and going or if tiredness has no clear cause. It is also important to get checked if joint pain starts after a chikungunya infection or within a few weeks after childbirth. Waiting for the symptoms to improve on their own can delay the diagnosis. Early diagnosis and the right treatment can help prevent the condition from worsening.
+                </p>
+              </div>
+
+              <div id="references" data-toc-section style={{ marginTop: "0" }}>
+                <h2
+                  className="text-navy-deep"
+                  style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                >
+                  References
+                </h2>
+                <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                  {references.map((r, i) => (
+                    <li key={i} className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                      {r}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
                 <hr className="border-none border-t border-[#dcdcdc] mt-12" />
 
               </div>
@@ -428,13 +459,13 @@ function SymptomsWarningSignsRA() {
                             key={s.id}
                             onClick={() => scrollToSection(s.id)}
                             className="text-left flex items-center gap-3 pr-5 transition-colors"
-                            style={{ backgroundColor: isActive ? "#e2eef9" : "transparent", paddingLeft: "16px", paddingTop: "9px", paddingBottom: "9px", borderBottom: "1px solid rgba(15,97,110,0.08)", borderRadius: 0 }}
+                            style={{ backgroundColor: isActive ? "#e2eef9" : "transparent", paddingLeft: "16px", paddingTop: "13px", paddingBottom: "13px", borderBottom: "1px solid rgba(15,97,110,0.08)", borderRadius: 0 }}
                           >
                             <div style={{ width: 3, alignSelf: "stretch", backgroundColor: isActive ? "#0f616e" : "transparent", flexShrink: 0 }} />
                             <span style={{ fontSize: "11px", fontWeight: 600, color: isActive ? "#0f616e" : "#9aa7b8", minWidth: "18px" }}>
                               {String(i + 1).padStart(2, "0")}
                             </span>
-                            <span style={{ fontSize: "13.5px", color: isActive ? "#0f616e" : "#4a5568", fontWeight: isActive ? 600 : 400, lineHeight: 1.3 }}>
+                            <span style={{ fontSize: "15.5px", color: isActive ? "#0f616e" : "#4a5568", fontWeight: isActive ? 600 : 400, lineHeight: 1.45 }}>
                               {s.label}
                             </span>
                           </button>
@@ -501,56 +532,8 @@ function SymptomsWarningSignsRA() {
           </div>
         </section>
 
-        {/* ═══════════ WHEN TO SEE + REFERENCES ═══════════ */}
-        <section className="bg-white">
-          <div className="max-w-7xl mx-auto px-4 py-14 md:py-20">
-            <div className="max-w-[820px]">
-              <div id="when-to-see">
-                <h2
-                  className="text-navy-deep"
-                  style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                >
-                  When to See a Rheumatologist?
-                </h2>
-                <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                  Many people in India live with pain, swelling, and tiredness for years before receiving the right diagnosis of rheumatoid arthritis. See a rheumatologist if stiffness in the morning lasts for more than an hour. Also, seek medical advice if the small joints on both sides of your body become swollen or warm. Do not ignore symptoms that last for more than six weeks.
-                </p>
-                <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                  See a doctor if your symptoms keep coming and going or if tiredness has no clear cause. It is also important to get checked if joint pain starts after a chikungunya infection or within a few weeks after childbirth. Waiting for the symptoms to improve on their own can delay the diagnosis. Early diagnosis and the right treatment can help prevent the condition from worsening.
-                </p>
-                <Link
-                  to="/book-appointment"
-                  className="group"
-                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none", marginBottom: "3.5rem" }}
-                >
-                  Book a Specialist Visit
-                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
-                    <ArrowRight size={14} />
-                  </span>
-                </Link>
-              </div>
-
-              <div id="references">
-                <h2
-                  className="text-navy-deep"
-                  style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                >
-                  References
-                </h2>
-                <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                  {references.map((r, i) => (
-                    <li key={i} className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
-                      {r}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* ═══════════ CTA BANNER WITH WAVE ═══════════ */}
-        <section className="w-full flex flex-col bg-ghost overflow-visible">
+        <section className="custom-approach-section w-full flex flex-col bg-ghost overflow-visible" style={{ paddingBottom: 0 }}>
           <div style={{ height: "60px", backgroundColor: "#F5F5F5" }} />
           <svg
             className="w-full h-[24px] sm:h-[90px] md:h-[120px] block" style={{ color: "#0f616e" }}
@@ -564,7 +547,7 @@ function SymptomsWarningSignsRA() {
             />
           </svg>
           <div style={{ backgroundColor: "#0f616e" }} className="w-full overflow-visible">
-            <div className="max-w-7xl mx-auto px-6 pb-24 md:pb-32 pt-6 sm:pt-10">
+            <div className="max-w-7xl mx-auto px-6 pb-10 md:pb-14 pt-6 sm:pt-10">
               <div className="flex flex-col-reverse md:flex-row items-stretch gap-10 md:gap-16">
                 <div className="flex-[1.1] flex flex-col items-center md:items-start justify-center py-4">
                   <h2
@@ -610,11 +593,6 @@ function SymptomsWarningSignsRA() {
             </div>
           </div>
         </section>
-
-        {/* ═══════════ NEWSLETTER ═══════════ */}
-        <div className="pt-6 md:pt-10" style={{ backgroundColor: "#fdfdfe" }}>
-          <Newsletter />
-        </div>
 
       </main>
       <BriefingFooter />

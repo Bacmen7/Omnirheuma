@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Header from "../components/Header"
-import Newsletter from "../components/Newsletter"
 import BriefingFooter from "../components/BriefingFooter"
 import ReviewedConsultationCta from "../components/ReviewedConsultationCta"
 import { ArrowRight } from "lucide-react"
@@ -168,7 +167,7 @@ function SpecialisedTreatmentRA() {
                     marginBottom: 0,
                   }}
                 >
-                  Specialised treatment options for Rheumatoid arthritis:
+                  Specialised treatment options for <span className="whitespace-nowrap">Rheumatoid arthritis:</span>
                   <span
                     style={{
                       display: "block",
@@ -289,7 +288,7 @@ function SpecialisedTreatmentRA() {
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Synovectomy(removing the inflamed joint lining)
+                    1. Synovectomy(removing the inflamed joint lining)
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     Each joint has a soft inner lining called the synovium. In Rheumatoid arthritis, the lining thickens and becomes swollen. This is called synovitis. The swelling produces extra fluid, which slowly thins out your cartilage. A synovectomy is a surgical procedure that removes most of the overgrown lining.
@@ -476,16 +475,6 @@ function SpecialisedTreatmentRA() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                     Surgery is not usually the first step in Rheumatoid arthritis. But when medicines have done all they can for a particular joint, and it has not helped you to return to your normal routine then surgery is a must. They are safe, well-researched and cost-effective for most Indian families.
                   </p>
-                  <Link
-                    to="/book-appointment"
-                    className="group"
-                    style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none" }}
-                  >
-                    Book a Specialist Visit
-                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
-                      <ArrowRight size={14} />
-                    </span>
-                  </Link>
                 </div>
 
                 <hr className="border-none border-t border-[#dcdcdc] mt-12" />
@@ -505,13 +494,13 @@ function SpecialisedTreatmentRA() {
                             key={s.id}
                             onClick={() => scrollToSection(s.id)}
                             className="text-left flex items-center gap-3 pr-5 transition-colors"
-                            style={{ backgroundColor: isActive ? "#e2eef9" : "transparent", paddingLeft: "16px", paddingTop: "9px", paddingBottom: "9px", borderBottom: "1px solid rgba(15,97,110,0.08)", borderRadius: 0 }}
+                            style={{ backgroundColor: isActive ? "#e2eef9" : "transparent", paddingLeft: "16px", paddingTop: "13px", paddingBottom: "13px", borderBottom: "1px solid rgba(15,97,110,0.08)", borderRadius: 0 }}
                           >
                             <div style={{ width: 3, alignSelf: "stretch", backgroundColor: isActive ? "#0f616e" : "transparent", flexShrink: 0 }} />
                             <span style={{ fontSize: "11px", fontWeight: 600, color: isActive ? "#0f616e" : "#9aa7b8", minWidth: "18px" }}>
                               {String(i + 1).padStart(2, "0")}
                             </span>
-                            <span style={{ fontSize: "13.5px", color: isActive ? "#0f616e" : "#4a5568", fontWeight: isActive ? 600 : 400, lineHeight: 1.3 }}>
+                            <span style={{ fontSize: "15.5px", color: isActive ? "#0f616e" : "#4a5568", fontWeight: isActive ? 600 : 400, lineHeight: 1.45 }}>
                               {s.label}
                             </span>
                           </button>
@@ -579,7 +568,7 @@ function SpecialisedTreatmentRA() {
         </section>
 
         {/* ═══════════ CTA BANNER WITH WAVE ═══════════ */}
-        <section className="w-full flex flex-col bg-ghost overflow-visible">
+        <section className="custom-approach-section w-full flex flex-col bg-ghost overflow-visible" style={{ paddingBottom: 0 }}>
           <div style={{ height: "60px", backgroundColor: "#F5F5F5" }} />
           <svg
             className="w-full h-[24px] sm:h-[90px] md:h-[120px] block" style={{ color: "#0f616e" }}
@@ -593,7 +582,7 @@ function SpecialisedTreatmentRA() {
             />
           </svg>
           <div style={{ backgroundColor: "#0f616e" }} className="w-full overflow-visible">
-            <div className="max-w-7xl mx-auto px-6 pb-24 md:pb-32 pt-6 sm:pt-10">
+            <div className="max-w-7xl mx-auto px-6 pb-10 md:pb-14 pt-6 sm:pt-10">
               <div className="flex flex-col-reverse md:flex-row items-stretch gap-10 md:gap-16">
                 <div className="flex-[1.1] flex flex-col items-center md:items-start justify-center py-4">
                   <h2
@@ -639,11 +628,6 @@ function SpecialisedTreatmentRA() {
             </div>
           </div>
         </section>
-
-        {/* ═══════════ NEWSLETTER ═══════════ */}
-        <div className="pt-6 md:pt-10" style={{ backgroundColor: "#fdfdfe" }}>
-          <Newsletter />
-        </div>
 
       </main>
       <BriefingFooter />

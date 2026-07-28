@@ -230,7 +230,7 @@ function ArthritisGuide2() {
                           onClick={() => scrollTo(s.id)}
                           style={{
                             padding: "10px 20px",
-                            fontSize: "13.5px",
+                            fontSize: "15.5px",
                             textAlign: "left",
                             background: isActive ? "#d4ebf0" : "transparent",
                             color: isActive ? "#0f616e" : "#4a5568",

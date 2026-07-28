@@ -129,7 +129,7 @@ function RAVariation2() {
                             }}
                           >
                             <span style={{ fontSize: "11px", fontWeight: 600, color: isActive ? "#0f616e" : "#9aa7b8", minWidth: "18px" }}>{String(i + 1).padStart(2, "0")}</span>
-                            <span style={{ fontSize: "13.5px", color: isActive ? "#0f616e" : "#4a5568", fontWeight: isActive ? 600 : 400, lineHeight: 1.3 }}>{s.label}</span>
+                            <span style={{ fontSize: "15.5px", color: isActive ? "#0f616e" : "#4a5568", fontWeight: isActive ? 600 : 400, lineHeight: 1.45 }}>{s.label}</span>
                           </button>
                         )
                       })}
