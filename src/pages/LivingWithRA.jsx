@@ -157,7 +157,7 @@ function LivingWithRA() {
                 <h1
                   style={{
                     fontFamily: "var(--font-display)",
-                    fontSize: "clamp(36px, 8vw, 64px)",
+                    fontSize: "clamp(40px, 8.5vw, 72px)",
                     fontWeight: 400,
                     lineHeight: "1.1",
                     letterSpacing: "-0.5px",
@@ -169,7 +169,7 @@ function LivingWithRA() {
                   <span
                     style={{
                       display: "block",
-                      fontSize: "clamp(18px, 2.2vw, 26px)",
+                      fontSize: "clamp(22px, 2.9vw, 34px)",
                       lineHeight: 1.2,
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
@@ -419,6 +419,16 @@ function LivingWithRA() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 The journey may not always be easy, but it is far from hopeless. With the right approach and support, it is possible to weave a life where rheumatoid arthritis is just one part of your story, and you can knit it more colourful than you could imagine.
               </p>
+                <Link
+                  to="/book-appointment"
+                  className="group"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none", marginTop: "1.5rem" }}
+                >
+                  Book a Consultation with Dr Raghavendra H
+                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
+                    <ArrowRight size={14} />
+                  </span>
+                </Link>
                 </div>
 
                 <hr className="border-none border-t border-[#dcdcdc] mt-12" />

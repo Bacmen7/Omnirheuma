@@ -145,7 +145,7 @@ function BloodTestsMonitoringRA() {
                 <h1
                   style={{
                     fontFamily: "var(--font-display)",
-                    fontSize: "clamp(36px, 8vw, 64px)",
+                    fontSize: "clamp(40px, 8.5vw, 72px)",
                     fontWeight: 400,
                     lineHeight: "1.1",
                     letterSpacing: "-0.5px",
@@ -157,7 +157,7 @@ function BloodTestsMonitoringRA() {
                   <span
                     style={{
                       display: "block",
-                      fontSize: "clamp(18px, 2.2vw, 26px)",
+                      fontSize: "clamp(22px, 2.9vw, 34px)",
                       lineHeight: 1.2,
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",

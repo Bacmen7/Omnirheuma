@@ -161,7 +161,7 @@ function SpecialisedTreatmentOA() {
                 <h1
                   style={{
                     fontFamily: "var(--font-display)",
-                    fontSize: "clamp(36px, 8vw, 64px)",
+                    fontSize: "clamp(40px, 8.5vw, 72px)",
                     fontWeight: 400,
                     lineHeight: "1.1",
                     letterSpacing: "-0.5px",
@@ -173,7 +173,7 @@ function SpecialisedTreatmentOA() {
                   <span
                     style={{
                       display: "block",
-                      fontSize: "clamp(18px, 2.2vw, 26px)",
+                      fontSize: "clamp(22px, 2.9vw, 34px)",
                       lineHeight: 1.3,
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
@@ -456,9 +456,16 @@ function SpecialisedTreatmentOA() {
                 <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                   There&rsquo;s no one-size-fits-all answer here, and based on your condition, your rheumatologist will recommend the best option suitable for you.
                 </p>
-                <p className="text-[13px] leading-[1.7] text-navy-muted" style={{ marginBottom: "3.5rem", color: "#5E5E5E" }}>
-                  Medically reviewed by Dr. [Name], Consultant Rheumatologist and Dr. [Name], Orthopaedic Surgeon, [Hospital], [City]. Last updated: [Month, Year]. This content is for informational purposes only and does not substitute professional medical advice. Costs mentioned are approximate and may vary by hospital, city, and individual clinical circumstances.
-                </p>
+                <Link
+                  to="/book-appointment"
+                  className="group"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none", marginTop: "1.5rem" }}
+                >
+                  Book a Consultation with Dr Raghavendra H
+                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
+                    <ArrowRight size={14} />
+                  </span>
+                </Link>
               </div>
 
               <div id="references" data-toc-section style={{ marginTop: "0" }}>

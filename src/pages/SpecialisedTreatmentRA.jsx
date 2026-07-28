@@ -159,7 +159,7 @@ function SpecialisedTreatmentRA() {
                 <h1
                   style={{
                     fontFamily: "var(--font-display)",
-                    fontSize: "clamp(32px, 6vw, 54px)",
+                    fontSize: "clamp(40px, 8.5vw, 72px)",
                     fontWeight: 400,
                     lineHeight: "1.1",
                     letterSpacing: "-0.5px",
@@ -171,7 +171,7 @@ function SpecialisedTreatmentRA() {
                   <span
                     style={{
                       display: "block",
-                      fontSize: "clamp(18px, 2.2vw, 26px)",
+                      fontSize: "clamp(22px, 2.9vw, 34px)",
                       lineHeight: 1.2,
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
@@ -475,6 +475,16 @@ function SpecialisedTreatmentRA() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                     Surgery is not usually the first step in Rheumatoid arthritis. But when medicines have done all they can for a particular joint, and it has not helped you to return to your normal routine then surgery is a must. They are safe, well-researched and cost-effective for most Indian families.
                   </p>
+                <Link
+                  to="/book-appointment"
+                  className="group"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none", marginTop: "1.5rem" }}
+                >
+                  Book a Consultation with Dr Raghavendra H
+                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
+                    <ArrowRight size={14} />
+                  </span>
+                </Link>
                 </div>
 
                 <hr className="border-none border-t border-[#dcdcdc] mt-12" />
