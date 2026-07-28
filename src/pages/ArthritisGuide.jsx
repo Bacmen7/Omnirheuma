@@ -167,7 +167,7 @@ function ArthritisGuide() {
 
         {/* ═══════════ HERO ═══════════ */}
         <header style={{ backgroundColor: "#0f616e" }} className="text-white">
-          <div className="max-w-7xl mx-auto px-5 pt-6 pb-8 sm:px-6 md:pt-8 md:pb-12">
+          <div className="max-w-7xl mx-auto px-5 pt-8 pb-10 sm:px-6 md:pt-12 md:pb-16">
 
             {/* Breadcrumb */}
             <div
@@ -204,7 +204,7 @@ function ArthritisGuide() {
                 <p
                   style={{
                     fontFamily: "var(--font-display)",
-                    fontSize: "clamp(16px, 2vw, 22px)",
+                    fontSize: "clamp(18px, 2.2vw, 26px)",
                     lineHeight: 1.2,
                     color: "rgba(255,255,255,0.92)",
                     marginBottom: 0,
