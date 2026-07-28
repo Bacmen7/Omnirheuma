@@ -36,10 +36,9 @@ const diagnosisImaging = ["X-rays", "Ultrasounds", "Magnetic resonance Imaging(M
 
 const medications = [
   { title: "NSAIDs and Corticosteroids :", desc: "They are used to relieve short-term symptoms. But neither of them stops disease progression." },
-  { title: "DMARDs:", desc: "They alter the body's immune response.", subPoints: [
-    "Methotrexate is the most common and widely used in India.",
-    "Hydroxychloroquine, Sulfasalazine, and Leflunomide : They are the alternative drugs used.",
-  ] },
+  { title: "DMARDs:", desc: "They alter the body's immune response." },
+  { title: "", desc: "Methotrexate is the most common and widely used in India." },
+  { title: "Hydroxychloroquine, Sulfasalazine, and Leflunomide :", desc: "They are the alternative drugs used." },
   { title: "Biologic DMARDs:", desc: "When traditional DMARDs fail, their modified forms are used. It includes drugs like TNF inhibitors, IL-6 inhibitors, and Rituximab." },
   { title: "JAK inhibitors:", desc: "They can be used if the biologic DMARDs were found not to work in patients" },
 ]
@@ -52,7 +51,7 @@ const nonMedApproaches = [
 ]
 
 const faqs = [
-  { q: "Is Rheumatoid arthritis curable?", a: "Rheumatoid arthritis is not completely curable, but it can be effectively controlled. With early diagnosis and the right treatment, many people can reduce symptoms, prevent joint damage, and live a normal, active life." },
+  { q: "1. Is Rheumatoid arthritis curable?", a: "Rheumatoid arthritis is not completely curable, but it can be effectively controlled. With early diagnosis and the right treatment, many people can reduce symptoms, prevent joint damage, and live a normal, active life." },
   { q: "2. What is the difference between Rheumatoid arthritis and normal arthritis?", a: "Rheumatoid arthritis is the attack of the body's own immune system. It is an autoimmune condition that affects both sides. Osteoarthritis is also called normal arthritis, which is caused due to excessive wear and tear. It occurs only on one side." },
   { q: "3. Does Rheumatoid arthritis only affect elderly people?", a: "No, rheumatoid arthritis does not affect only elderly people. It can occur at any age, but it is most commonly seen in people between 30 and 60 years. It is also more common in women than in men." },
   { q: "4. Can I take Ayurvedic medicine with my Rheumatoid arthritis treatment?", a: "Yes, some Ayurvedic treatments may be used alongside standard Rheumatoid arthritis medications, but only under medical guidance. Always consult your rheumatologist before starting any Ayurvedic medicine, as some combinations may cause interactions." },
@@ -290,15 +289,10 @@ function RheumatoidArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>The main aim of treatment is to reduce the symptoms. Once treatment begins, every 3-6 months evaluation will be there to monitor the disease&apos;s progression. If it does not improve, doctors increase the medication dosage or implement other treatment methodologies.</p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2.5rem" }}>Doctors usually begin the treatment with medications and other non-medicated options. If the disease progression is not improved, surgery would be the last option.</p>
               <h3 style={h3Style}>Common medications used in Rheumatoid arthritis</h3>
-              <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem", marginBottom: "2.5rem" }}>
+              <ul className="space-y-2" style={{ listStyleType: "decimal", paddingLeft: "1.5rem", marginBottom: "2.5rem" }}>
                 {medications.map((med, i) => (
                   <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                    <strong className="font-semibold">{med.title}</strong> {med.desc}
-                    {med.subPoints && (
-                      <ul className="space-y-1 mt-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                        {med.subPoints.map((sp, j) => (<li key={j} className="text-[16px] leading-[1.7] text-navy-muted">{sp}</li>))}
-                      </ul>
-                    )}
+                    {med.title ? (<><strong className="font-semibold">{med.title}</strong> {med.desc}</>) : med.desc}
                   </li>
                 ))}
               </ul>
