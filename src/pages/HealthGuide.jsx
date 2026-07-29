@@ -17,8 +17,8 @@ const getPreviewText = (text) => {
 
 const conditions = [
   { name: "Rheumatoid Arthritis", slug: "arthritis", image: "/condition/Rheumatoid Arthritis (RA).webp", description: "Autoimmune joint inflammation affecting 1.3M+ Americans. Learn about early diagnosis and modern treatments." },
-  { name: "Psoriatic Arthritis", slug: "psoriatic-arthritis", image: "/condition/Psoriatic Arthritis.webp", description: "Where skin meets joints. Understanding the psoriasis-arthritis connection and targeted therapies." },
   { name: "Osteoarthritis", slug: "osteoarthritis", image: "/condition/Osteoarthritis.webp", description: "The most common form of arthritis. Evidence-based approaches to manage cartilage loss and pain." },
+  { name: "Psoriatic Arthritis", slug: "psoriatic-arthritis", image: "/condition/Psoriatic Arthritis.webp", description: "Where skin meets joints. Understanding the psoriasis-arthritis connection and targeted therapies." },
   { name: "Lupus", slug: "lupus", image: "/condition/Lupus.webp", description: "A complex autoimmune disease affecting multiple organ systems. Expert guidance for flare management." },
   { name: "Gout", slug: "gout", image: "/condition/Gout.webp", description: "Caused by uric acid crystal deposits. Prevent flares with medication, diet, and lifestyle strategies." },
   { name: "Ankylosing Spondylitis", slug: "ankylosing-spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", description: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture." },

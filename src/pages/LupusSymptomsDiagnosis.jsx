@@ -191,6 +191,9 @@ function LupusSymptomsDiagnosis() {
                     Symptoms, Warning Signs and Diagnosis
                   </span>
                 </h1>
+                <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
+                  Written by Medical Content Team | Last Updated: July 29, 2026
+                </p>
               </div>
             </div>
           </div>
@@ -206,9 +209,6 @@ function LupusSymptomsDiagnosis() {
 
                 {/* ── INTRO ── */}
                 <div id="intro" data-toc-section style={{ marginBottom: "1rem" }}>
-                  <p className="text-[14px] leading-[1.7]" style={{ color: "#5E5E5E", marginBottom: "1.5rem" }}>
-                    Written by Medical Content Team | Last Updated: July 29, 2026
-                  </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                     Lupus is oftentimes referred to as &ldquo;The Great Imitator&rdquo;. This is because it mimics so many diseases. For instance, constant fatigue and weakness are commonly overlooked as low hemoglobin (anemia). Joint discomfort is blamed on work stress or posture. And repeated skin breakouts are mistaken for simple allergies or heat rashes. Due to the commonness of symptoms, it takes approximately 4 years to receive a confirmed diagnosis. However, the wait is even longer in India due to low awareness and limited access to rheumatologists.
                   </p>
