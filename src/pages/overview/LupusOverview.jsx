@@ -326,6 +326,10 @@ function LupusOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep font-bold">
                 Any warning signs of kidney involvement, such as swollen ankles or foamy urine, need an immediate same-day visit to a rheumatologist without delay.
               </p>
+              <Link to="/Lupus-Symptoms-Warning-Signs" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px", marginTop: "1.5rem" }}>
+                Read more about symptoms, warning signs and diagnosis
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />

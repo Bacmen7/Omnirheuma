@@ -238,6 +238,10 @@ function RheumatoidArthritisOverview() {
                   <p className="text-[14px] leading-[1.65] text-navy-deep"><strong className="font-semibold">Note:</strong> Not everyone progresses through all the stages. Early treatment can stop progression.</p>
                 </div>
               </div>
+              <Link to="/Rheumatoid-Arthritis-Symptoms-Warning-Signs" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", marginTop: "1.5rem", fontSize: "15px" }}>
+                Read more about symptoms and warning signs
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             {/* INLINE CTA */}
@@ -276,9 +280,13 @@ function RheumatoidArthritisOverview() {
               </ul>
               <h3 className="text-navy-deep" style={h3Style}>Imaging test :</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.75rem" }}>The various imaging techniques help to understand the disease progression(how bad the disease has progressed).</p>
-              <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+              <ul className="space-y-2 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {diagnosisImaging.map((test, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{test}</li>))}
               </ul>
+              <Link to="/Rheumatoid-Arthritis-Blood-Tests-Monitoring" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                Read more about blood tests, scans and ongoing monitoring
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -303,7 +311,11 @@ function RheumatoidArthritisOverview() {
               </ul>
               <h3 style={h3Style}>Surgery</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.5rem" }}>Last resort for severe deformity unresponsive to medication.</p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "0.5rem" }}>Types of surgeries include: synovectomy, tendon repair, and joint replacement. Surgery does not replace medications.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>Types of surgeries include: synovectomy, tendon repair, and joint replacement. Surgery does not replace medications.</p>
+              <Link to="/Specialised-Treatment-Rheumatoid-Arthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                Read more about specialised treatment options
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -315,6 +327,10 @@ function RheumatoidArthritisOverview() {
               <h3 style={h3Style}>Importance of Diet and Nutrition</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep mb-4">The diet plays an important role in our daily lives. In Rheumatoid arthritis, it plays a major role in keeping our body healthy, without any nutrient restrictions. Several anti-inflammatory foods, such as turmeric, ginger, black pepper, amla, flax seeds, spinach, and fenugreek, should be incorporated into daily meals.</p>
               <p className="text-[17px] leading-[1.8] text-navy-deep mb-4">Vegetarian options such as dal, paneer, curd, and soya should be incorporated to meet protein requirements.</p>
+              <Link to="/Living-With-Rheumatoid-Arthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                Read more about living with Rheumatoid Arthritis
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />

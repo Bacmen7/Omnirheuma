@@ -256,9 +256,13 @@ function OsteoarthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Early visits to specialists help you diagnose the condition as early as possible. A rheumatologist is the specialist who can properly evaluate the joint problems and guide you through the treatment.
               </p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 When the pain starts disturbing sleep and the stiffness hinders daily activities, you should definitely consider seeing a doctor in the near future.
               </p>
+              <Link to="/Osteoarthritis-Symptoms-Causes" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                Read more about symptoms and causes
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -276,7 +280,11 @@ function OsteoarthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>Once the doctor examines the affected site completely, they proceed with imaging tests, commonly used to look for cartilage loss and bone changes. MRI is not routine for osteoarthritis; it is used when the situation needs a closer, more detailed picture beyond what an X-ray can show, usually in early cases where symptoms don&apos;t match the site, or after prior surgeries.</p>
 
               <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Blood Tests</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">There is no specific blood test for osteoarthritis. Tests are mainly done to rule out other conditions like rheumatoid arthritis.</p>
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>There is no specific blood test for osteoarthritis. Tests are mainly done to rule out other conditions like rheumatoid arthritis.</p>
+              <Link to="/Osteoarthritis-Diagnosis-Treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                Read more about how it is diagnosed and treated
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -306,9 +314,13 @@ function OsteoarthritisOverview() {
               <ul className="space-y-1 mb-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {advancedTreatments.map((t, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{t}</li>))}
               </ul>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 Knee replacement surgeries are covered under government schemes like PM-JAY for eligible patients, such as central government employees. Consult your doctor to know more.
               </p>
+              <Link to="/Specialised-Treatment-Osteoarthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                Read more about specialised treatment options
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -322,9 +334,13 @@ function OsteoarthritisOverview() {
               <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                 {adapting.map((a, i) => (<li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{a}</li>))}
               </ul>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 Managing emotional health is absolutely important. Long-term pain can affect your mood and disturb your sleep, so seeking support when needed is always recommended.
               </p>
+              <Link to="/Living-With-Osteoarthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                Read more about living with Osteoarthritis
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />

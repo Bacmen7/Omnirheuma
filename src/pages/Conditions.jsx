@@ -27,10 +27,10 @@ const overviewRouteMap = {
 const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref) => [
   { label: "An overview", href: overviewHref },
   ...(symptomsHref ? [{ label: "Symptoms and Warning Signs", href: symptomsHref }] : []),
+  ...(monitoringHref ? [{ label: "Blood Tests, Scans, and Ongoing Monitoring", href: monitoringHref }] : []),
   ...(diagnosisHref ? [{ label: "How It Is Diagnosed and Treated", href: diagnosisHref }] : []),
   ...(specialisedHref ? [{ label: "Specialised treatment options", href: specialisedHref }] : []),
   ...(livingHref ? [{ label: `Living with ${name}`, href: livingHref }] : []),
-  ...(monitoringHref ? [{ label: "Blood Tests, Scans, and Ongoing Monitoring", href: monitoringHref }] : []),
 ]
 
 const videos = [
@@ -117,7 +117,9 @@ function Conditions() {
     ? "/Rheumatoid-Arthritis-Symptoms-Warning-Signs"
     : conditionSlug === "osteoarthritis"
       ? "/Osteoarthritis-Symptoms-Causes"
-      : null
+      : conditionSlug === "lupus"
+        ? "/Lupus-Symptoms-Warning-Signs"
+        : null
   const monitoringHref = isRA ? "/Rheumatoid-Arthritis-Blood-Tests-Monitoring" : null
   const diagnosisHref = conditionSlug === "osteoarthritis" ? "/Osteoarthritis-Diagnosis-Treatment" : null
   const featured = buildFeatured(displayName)

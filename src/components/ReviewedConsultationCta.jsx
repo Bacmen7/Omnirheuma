@@ -43,7 +43,7 @@ export default function ReviewedConsultationCta({ style = {} }) {
             alignSelf: "flex-start",
           }}
         >
-          Book Visit
+          Book a Consultation
         </Link>
       </div>
       <div className="hidden md:block" style={{ width: "200px", flexShrink: 0, overflow: "hidden" }}>

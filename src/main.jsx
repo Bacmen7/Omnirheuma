@@ -20,6 +20,7 @@ import SpecialisedTreatmentOA from "./pages/SpecialisedTreatmentOA.jsx"
 import LivingWithOA from "./pages/LivingWithOA.jsx"
 import DiagnosisTreatmentOA from "./pages/DiagnosisTreatmentOA.jsx"
 import SymptomsCausesOA from "./pages/SymptomsCausesOA.jsx"
+import LupusSymptomsDiagnosis from "./pages/LupusSymptomsDiagnosis.jsx"
 import RheumatoidArthritisOverview from "./pages/overview/RheumatoidArthritisOverview.jsx"
 import OsteoarthritisOverview from "./pages/overview/OsteoarthritisOverview.jsx"
 import LupusOverview from "./pages/overview/LupusOverview.jsx"
@@ -71,6 +72,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Living-With-Osteoarthritis" element={<LivingWithOA />} />
         <Route path="/Osteoarthritis-Diagnosis-Treatment" element={<DiagnosisTreatmentOA />} />
         <Route path="/Osteoarthritis-Symptoms-Causes" element={<SymptomsCausesOA />} />
+        <Route path="/Lupus-Symptoms-Warning-Signs" element={<LupusSymptomsDiagnosis />} />
         <Route path="/Rheumatoid-Arthritis-overview" element={<RheumatoidArthritisOverview />} />
         <Route path="/Osteoarthritis-overview" element={<OsteoarthritisOverview />} />
         <Route path="/Lupus-overview" element={<LupusOverview />} />

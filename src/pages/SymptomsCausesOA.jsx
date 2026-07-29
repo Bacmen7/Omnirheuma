@@ -89,7 +89,7 @@ function SymptomsCausesOA() {
   const [activeSection, setActiveSection] = useState("feel-like")
 
   useEffect(() => {
-    document.title = "Osteoarthritis, Symptoms and Causes: What Your Joints Are Trying to Tell You | Omni Rheuma"
+    document.title = "Osteoarthritis : Symptoms and Causes - What Your Joints Are Trying to Tell You | Omni Rheuma"
     return () => { document.title = "Omni Rheuma | Professional Rheumatology Resource" }
   }, [])
 
@@ -163,7 +163,7 @@ function SymptomsCausesOA() {
               <span aria-hidden="true">›</span>
               <span className="whitespace-nowrap">Diseases &amp; Conditions</span>
               <span aria-hidden="true">›</span>
-              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Osteoarthritis, Symptoms and Causes</span>
+              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Osteoarthritis : Symptoms and Causes</span>
             </div>
 
             {/* Split layout */}
@@ -183,7 +183,7 @@ function SymptomsCausesOA() {
                     marginBottom: 0,
                   }}
                 >
-                  Osteoarthritis, Symptoms and Causes:
+                  Osteoarthritis : Symptoms and Causes
                   <span
                     style={{
                       display: "block",
