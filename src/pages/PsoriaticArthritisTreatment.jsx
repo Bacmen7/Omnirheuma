@@ -9,58 +9,33 @@ import { ArrowRight } from "lucide-react"
    DATA
    ───────────────────────────────────────────── */
 
-const bodySymptoms = [
-  { label: "Skin:", detail: "A reddish, butterfly-shaped rash caused by exposure to the sun. It spreads over the cheeks and nose. It can often be mistaken on darker Indian skin tones as a pigmented area." },
-  { label: "Joints:", detail: "Notice that there is pain and swelling that shifts location, as opposed to a typical sports injury that remains in one location. For many, it feels like pain that just never goes away." },
-  { label: "Whole Body Fatigue:", detail: "This is not the tiredness that goes away with a good night's rest. It is persistent and similar to being burdened all day long." },
-  { label: "Kidneys:", detail: "If you notice swelling of your legs or around your eyes, or foamy urine? Or does fluid build up in your body for no apparent reason? It could be a warning sign. Lupus can make the kidneys leaky, like a filter. When this happens, the fluid that should be leaving the kidneys remains in the body." },
-  { label: "Chest and Breathing:", detail: "A sharp chest pain when taking a deep breath can be mistaken for a heart problem or gas. This occurs due to swelling of the lining of the lungs or around the heart." },
-  { label: "Brain and Thinking:", detail: "Difficulty focusing on tasks, forgetfulness, and chronic headaches. Some patients describe this as thinking in a really thick fog. Even simple things are more difficult." },
-  { label: "Fingers and Toes:", detail: "White or blue discoloration of fingers and toes in cold weather or under stress. The blood circulation is just like a circuit that shuts down when there is an overload of electricity." },
-]
-
-const warningSigns = [
-  "Constant tiredness that does not go away with rest.",
-  "A mild fever that keeps returning without any infection.",
-  "Recurring mouth ulcers that come and go.",
-  "Hair thinning or hair loss in patches.",
-  "Joint pain that keeps shifting between different joints.",
-  "Skin rashes worsen after sun exposure.",
-]
-
-const similarConditions = [
-  { condition: "Rheumatoid Arthritis", overlap: "Joint pain, swelling, fatigue", difference: "Rheumatoid arthritis stays in joints, does not cause butterfly rash or organ involvement" },
-  { condition: "Fibromyalgia", overlap: "Fatigue, widespread pain, brain fog", difference: "No redness, swelling, or organ involvement" },
-  { condition: "Viral Infections", overlap: "Fever, fatigue, joint pain, rash", difference: "Infections resolve; lupus symptoms persist and come back" },
-  { condition: "Sjögren's Syndrome", overlap: "Fatigue, dry eyes, dry mouth", difference: "Can overlap with lupus and both can occur together" },
-  { condition: "Thyroid Disease", overlap: "Fatigue, hair loss, weight changes", difference: "Thyroid tests help distinguish; lupus needs ANA testing" },
-]
-
-const doctorSigns = [
-  "A facial rash on the cheeks and nose that worsens with exposure to sunlight.",
-  "Constant tiredness and joint pain for more than 4 to 6 weeks without a clear reason.",
-  "Unusual hair loss, persistent mouth ulcers, or low-grade fevers that are commonly repeated",
-  "Heavy, puffy-looking swelling in the legs, ankles, or around the eyes with no known origin.",
-  "Fingers or toes turning white or blue in cold or stressful situations.",
-  "A close family member diagnosed with lupus or another autoimmune condition.",
+const treatmentCosts = [
+  { option: "NSAIDs (per month)", cost: "Rs 100–500" },
+  { option: "DMARDs (per month)", cost: "Rs 200–1,200" },
+  { option: "Biologics (per month)", cost: "Rs 15,000–70,000 or more" },
+  { option: "JAK inhibitors (per month)", cost: "Rs 8,000–20,000" },
+  { option: "Apremilast (per month)", cost: "Rs 10,000–20,000" },
+  { option: "Corticosteroid Joint Injection (per session)", cost: "Rs 500–2,000" },
+  { option: "Physiotherapy (per session)", cost: "Rs 300–2,500" },
+  { option: "Joint replacement surgery", cost: "Rs 1,50,000–3,50,000" },
 ]
 
 const faqs = [
-  { q: "How to know the commonest early signs of lupus?", a: "Answer: Constant tiredness is the most common early sign. It affects up to 90% of patients. It differs from regular tiredness, and it does not improve with rest. Repeated joint pain shifting between different joints is another early signal." },
-  { q: "Is it possible for lupus to affect the kidneys?", a: "Answer: Yes. Kidney involvement is called lupus nephritis. It is one of the most serious complications of lupus. It can develop silently with no obvious symptoms. This is why regular urine and blood tests are essential throughout treatment." },
-  { q: "Why do people with lupus get a butterfly rash on their face?", a: "Answer: The butterfly rash occurs due to swelling in small blood vessels under the facial skin. It appears as a reddish rash across the cheeks and nose. It is often triggered or worsened by sunlight. On darker Indian skin tones, it may look like a darker pigmented patch, making it harder to spot." },
-  { q: "Why is lupus diagnosed so late in India?", a: "Answer: Lupus may look like other conditions. This makes it difficult to identify sooner. In India, most patients first see a general physician, dermatologist, or orthopaedician before reaching the rheumatologist. Less awareness also adds to the delay." },
-  { q: "Does lupus affect teens in India?", a: "Answer: Yes. Juvenile-onset lupus is diagnosed before age 18. It tends to be more severe in Indian patients than in Western populations. Kidney and blood involvement are particularly common in young Indian patients. That is why early specialist care is important." },
-  { q: "Is lupus and rheumatoid arthritis the same?", a: "Answer: No, they are different. Although both are autoimmune and cause joint pain, they are distinct. Rheumatoid arthritis mainly affects joints and can cause permanent joint damage. Lupus can affect multiple organs, including the kidneys, skin, heart, and nervous system. Its joint pain shifts between the joints rather than staying fixed." },
+  { q: "Is there a cure for psoriatic arthritis?", a: "No, there is no cure for psoriatic arthritis. However, with the right combination of medicines, physiotherapy, and regular monitoring, most people manage their symptoms well." },
+  { q: "Do I need to take medicines lifelong for psoriatic arthritis?", a: "Yes, but this depends on how the disease behaves over time. Some people need medicines consistently to keep symptoms and disease activity under control. Others may have periods of low activity where a rheumatologist reduces or adjusts the dose. Regular monitoring guides all of these decisions." },
+  { q: "Are biologics available in India, and how much do they cost?", a: "Yes, biologics, including etanercept, adalimumab, secukinumab, and ustekinumab, are available in India. Monthly costs usually range from approximately Rs 15,000 to Rs 70,000 or more." },
+  { q: "Can methotrexate treat both the skin and joint symptoms of psoriatic arthritis?", a: "Yes, methotrexate can help treat both joint inflammation and skin psoriasis simultaneously. It is widely available as a low-cost generic in India and is often the first conventional DMARD your doctor will prescribe when NSAIDs are no longer sufficient." },
+  { q: "Can physiotherapy alone manage psoriatic arthritis without medicines?", a: "Physiotherapy is an important part of treatment, but it is not sufficient on its own. It usually works best when combined with appropriate medicines to control the underlying inflammation. Staying active consistently is one of the most important things for people with psoriatic arthritis to protect joint function over time." },
+  { q: "Is surgery ever needed for psoriatic arthritis?", a: "Surgery is rarely needed. It is often considered when a joint has been severely damaged and has no treatment to improve it. Joint replacement for the hip or knee is the most common procedure when required. Most people with psoriatic arthritis never reach the point where surgery is necessary with appropriate early treatment." },
 ]
 
 const references = [
-  { text: "Lupus Foundation of America. Symptoms and Diagnosis of Lupus. ", url: "https://www.lupus.org/resources/symptoms-diagnosis" },
-  { text: "Mayo Clinic. Lupus Symptoms and Causes. 2025. ", url: "https://www.mayoclinic.org/diseases-conditions/lupus/symptoms-causes/syc-20365789" },
-  { text: "Healthline. 10 Early Signs of Lupus. 2023. ", url: "https://www.healthline.com/health/lupus/early-signs" },
-  { text: "Pace Hospital. Lupus Disease Overview. 2026. ", url: "https://www.pacehospital.com/lupus" },
-  { text: "Gupta R et al. Systemic Lupus Erythematosus in India. PubMed Central. 2022. ", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9270079/" },
-  { text: "ScienceDirect. Challenges in the Diagnosis and Management of SLE in India. 2023. ", url: "https://www.sciencedirect.com/science/article/pii/S2772613423000276" },
+  { text: "Arthritis Foundation. Treatment Options for Psoriatic Arthritis. ", url: "https://www.arthritis.org/health-wellness/treatment/treatment-plan/disease-management/treatment-options-for-psoriatic-arthritis" },
+  { text: "Mayo Clinic. Psoriatic Arthritis Diagnosis and Treatment. 2025. ", url: "https://www.mayoclinic.org/diseases-conditions/psoriatic-arthritis/diagnosis-treatment/drc-20354081" },
+  { text: "PMC. Biologics Use in Indian Psoriasis Patients. 2016. ", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5134162/" },
+  { text: "GoodRx. Psoriatic Arthritis Medications and Treatment Options. 2025. ", url: "https://www.goodrx.com/conditions/psoriatic-arthritis/psoriatic-arthritis-treatment" },
+  { text: "Fraenkel L et al. ACR Guideline for the Treatment of Psoriatic Arthritis. Arthritis and Rheumatology. 2021. ", url: "https://pubmed.ncbi.nlm.nih.gov/34709700/" },
+  { text: "WebMD. Psoriatic Arthritis Treatment. 2024. ", url: "https://www.webmd.com/arthritis/psoriatic-arthritis/psoriatic-arthritis-treatment" },
 ]
 
 /* ─────────────────────────────────────────────
@@ -68,24 +43,26 @@ const references = [
    ───────────────────────────────────────────── */
 
 const tocItems = [
-  { id: "common-symptoms", label: "Common Symptoms of Lupus" },
-  { id: "progress", label: "How Symptoms Progress Over Time" },
-  { id: "groups", label: "How Symptoms Differ Across Groups" },
-  { id: "early-warning", label: "Early Warning Signs of Lupus" },
-  { id: "similar-conditions", label: "Conditions That Can Cause Similar Symptoms" },
-  { id: "diagnosis", label: "How Is Lupus Diagnosed?" },
-  { id: "see-doctor", label: "When Should You See a Doctor?" },
-  { id: "speak-rheumatologist", label: "Think These Symptoms Sound Familiar? Speak to a Rheumatologist" },
+  { id: "goals", label: "What Are the Goals of Psoriatic Arthritis Treatment?" },
+  { id: "approach", label: "How Treatment Is Approached" },
+  { id: "medications", label: "Medications Used to Treat Psoriatic Arthritis" },
+  { id: "injections", label: "Corticosteroid Joint Injections" },
+  { id: "physiotherapy", label: "Physiotherapy and Exercise" },
+  { id: "skin-nail", label: "Skin and Nail Treatment" },
+  { id: "surgery", label: "When Does a Doctor Recommend Surgery?" },
+  { id: "costs", label: "Approximate Treatment Costs in India" },
+  { id: "monitoring", label: "Monitoring Your Treatment" },
+  { id: "speak-to-doctor", label: "When to Speak to a Rheumatologist About Treatment" },
   { id: "references", label: "References" },
   { id: "faq", label: "Frequently Asked Questions" },
 ]
 
 
-function LupusSymptomsDiagnosis() {
-  const [activeSection, setActiveSection] = useState("common-symptoms")
+function PsoriaticArthritisTreatment() {
+  const [activeSection, setActiveSection] = useState("goals")
 
   useEffect(() => {
-    document.title = "Lupus (SLE) - Symptoms, Warning Signs and Diagnosis | Omni Rheuma"
+    document.title = "Psoriatic Arthritis Treatment: Medications, Therapies and What to Expect | Omni Rheuma"
     return () => { document.title = "Omni Rheuma | Professional Rheumatology Resource" }
   }, [])
 
@@ -159,7 +136,7 @@ function LupusSymptomsDiagnosis() {
               <span aria-hidden="true">›</span>
               <span className="whitespace-nowrap">Diseases &amp; Conditions</span>
               <span aria-hidden="true">›</span>
-              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Lupus Symptoms and Diagnosis</span>
+              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Psoriatic Arthritis Treatment</span>
             </div>
 
             {/* Title */}
@@ -177,7 +154,7 @@ function LupusSymptomsDiagnosis() {
                     marginBottom: 0,
                   }}
                 >
-                  Lupus (SLE) -
+                  Psoriatic Arthritis Treatment:
                   <span
                     style={{
                       display: "block",
@@ -188,11 +165,11 @@ function LupusSymptomsDiagnosis() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Symptoms, Warning Signs and Diagnosis
+                    Medications, Therapies and What to Expect
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
-                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
+                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Shafali Nagpal</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 31, 2026
                 </p>
               </div>
             </div>
@@ -209,234 +186,243 @@ function LupusSymptomsDiagnosis() {
 
                 {/* ── INTRO ── */}
                 <div id="intro" data-toc-section style={{ marginBottom: "1rem" }}>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    Lupus is oftentimes referred to as &ldquo;The Great Imitator&rdquo;. This is because it mimics so many diseases. For instance, constant fatigue and weakness are commonly overlooked as low hemoglobin (anemia). Joint discomfort is blamed on work stress or posture. And repeated skin breakouts are mistaken for simple allergies or heat rashes. Due to the commonness of symptoms, it takes approximately 4 years to receive a confirmed diagnosis. However, the wait is even longer in India due to low awareness and limited access to rheumatologists.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Psoriatic arthritis affects both the skin and joints. Treatment mainly focuses on controlling pain, skin symptoms and protecting the joints from long-term damage. Medicines are prescribed based on the severity of symptoms and how active the condition is. Physiotherapy and lifestyle changes are also needed to support the long-term treatment.
+                  </p>
+                  <p className="text-[16px] leading-[1.8] text-navy-muted" style={{ marginBottom: "1.25rem" }}>
+                    There is no single treatment that works for everyone. Some may respond well with medicines alone, while others may require additional support to manage pain and skin symptoms. Surgery is usually considered when other treatments do not provide enough relief any longer or severe joint damage has occurred.
                   </p>
                   <p className="text-[16px] leading-[1.8] text-navy-muted">
-                    SLE is the most common form of this disease. It is a condition where the body's immune system attacks its own tissues. It can occur in the skin, joints, kidneys, and other parts of the body. This page can guide patients/caretakers to identify the early warning signs. It will help to know what symptoms to put the spotlight on and what the diagnosis involves.
+                    Psoriatic arthritis is a long-term condition that requires regular monitoring to assess how well the treatment is working and whether any changes are needed. In this guide, you will learn about all treatment options available for psoriatic arthritis in India: medicines, injections, physiotherapy, and when surgery is considered.
                   </p>
                 </div>
 
-                {/* ── COMMON SYMPTOMS ── */}
-                <div id="common-symptoms" data-toc-section style={{ marginBottom: "1.5rem" }}>
+                {/* ── GOALS ── */}
+                <div id="goals" data-toc-section style={{ marginBottom: "1.5rem" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Common Symptoms of Lupus
+                    What Are the Goals of Psoriatic Arthritis Treatment?
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    As lupus becomes more active, the symptoms become more apparent and can begin to affect more than one organ. It usually comes and goes in episodes. Lupus is different for each person.
+                    Psoriatic arthritis treatment mainly aims to reduce pain, stiffness, and swelling and help people stay active in their daily lives. Treatment can also help control psoriasis affecting the skin and nails. It is also important to prevent or slow down permanent joint damage before it affects quality of life.
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    This is how lupus is seen throughout the body:
-                  </p>
-                  <ul className="space-y-2 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {bodySymptoms.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        <strong className="font-semibold">{s.label}</strong> {s.detail}
-                      </li>
-                    ))}
-                  </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Not all of these occur in people with lupus. Some have symptoms in a few areas, others more broadly. The best picture a rheumatologist can have is how frequent the symptoms are, when they occur, and what their origins are.
+                    The treatment plan for psoriatic arthritis may vary from person to person. Doctors usually decide on the most suitable treatment based on how severe the condition is and which parts of the body are affected.
                   </p>
                 </div>
 
                 {/* ── INLINE CTA BANNER ── */}
                 <ReviewedConsultationCta />
 
-                {/* ── PROGRESS OVER TIME ── */}
-                <div id="progress" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── APPROACH ── */}
+                <div id="approach" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    How Symptoms Progress Over Time
+                    How Treatment Is Approached
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus affects people in an episodic manner throughout their lives. At times, symptoms are worse. At other times, they are relatively better. Typical causes are exposure to sunlight, emotional upset, infections, periods, pregnancy, and some medications.
+                    Psoriatic arthritis treatment is not the same for everyone. It often affects both skin and joints, therefore, rheumatologists and dermatologists usually work together to plan treatment. Doctors plan the treatment based on the severity of the condition and how much the disease has progressed.
                   </p>
+                  <ol className="space-y-2" style={{ listStyleType: "decimal", paddingLeft: "1.5rem", marginBottom: "1.25rem" }}>
+                    <li className="text-[17px] leading-[1.8] text-navy-deep pl-1">
+                      Treatment often begins with medicines that help reduce pain and stiffness and also calm the overactive immune system. If these medicines do not provide enough relief, doctors may recommend newer treatment options like biologics or JAK inhibitors.
+                    </li>
+                    <li className="text-[17px] leading-[1.8] text-navy-deep pl-1">
+                      Physiotherapy and lifestyle changes are also recommended to help improve movement and support long-term control of symptoms.
+                    </li>
+                  </ol>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The reason why it is important to monitor in quiet periods is that damage to the organs can occur without the person feeling unwell. Early kidney injury can occur with no symptoms. These changes can be detected through regular examinations and blood and urine tests. Long-term organ damage can be minimised if treatment is started early and regularly.
+                    Doctors often review and adjust the treatment regularly based on the level of disease activity. The American College of Rheumatology (ACR) recommends starting treatment early and continuing it consistently to help prevent joint damage.
                   </p>
                 </div>
 
-                {/* ── GROUPS ── */}
-                <div id="groups" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── MEDICATIONS ── */}
+                <div id="medications" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    How Symptoms Differ Across Groups
+                    Medications Used to Treat Psoriatic Arthritis
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus does not have the same symptoms for every person. The appearance of the condition is dependent on age, gender and life stage.
+                    Medicines are the main treatment option for people with psoriatic arthritis. Doctors prescribe medicines based on how severe the symptoms are, how much the disease has progressed and which part of the body is affected.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Women
+                    NSAIDs: The First Step
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Doctors often start psoriatic arthritis treatment with pain-relieving medicines called NSAIDs (non-steroidal anti-inflammatory drugs). NSAIDs include ibuprofen, naproxen, and diclofenac, which help relieve pain.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    People often find these medicines effective for controlling day-to-day symptoms. However, these medicines cannot slow down disease progression or protect joints from further damage. NSAIDs are widely available in India and are generally affordable.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    Conventional DMARDs: Slowing the Disease
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is most often diagnosed in women. It typically occurs between 15 and 45 years of age. Women are commonly affected by hormonal shifts at puberty, pregnancy, and during the menstrual cycle. Women with lupus planning a pregnancy need early rheumatology support. It increases the risk of miscarriage, premature birth, and high blood pressure during pregnancy.
+                    Doctors also prescribe medicines called DMARDs (disease-modifying medicines) to slow down the progression of disease. DMARDs such as methotrexate, sulfasalazine, and leflunomide calm the overactive immune system and prevent joint damage. Methotrexate can help manage both joint symptoms and skin psoriasis. For people living with both conditions, it is often a good treatment option. These medicines usually take around 6 to 12 weeks to show their full effect. DMARDs are generally available as affordable generic medicines across India.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Teenagers and Young Adults
+                    Biologics: When DMARDs Are Not Enough
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus may occur at any time during the teens. Children developing lupus before age 18 are more likely to have severe lupus in Indian patients than in Western patients. Early diagnosis is especially significant as kidney and blood system involvement is very common in young Indian patients.
+                    Doctors recommend newer medicines called Biologics when the DMARDs do not provide enough relief. These medicines target specific parts of the immune system to help control both joint and skin symptoms. Several biologics are available in India, including adalimumab, secukinumab, and ustekinumab. Lower-cost biologics are also available in India. The doctor will recommend the most suitable option based on the symptoms and long-term treatment plan.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Men
+                    JAK Inhibitors: The Newest Option
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is much less prevalent but more severe in men. They are also less likely to be referred to a specialist, contributing to delayed diagnosis.
+                    Newer medicines called JAK inhibitors are often recommended by doctors when biologics fail to control the disease or are not suitable. Tofacitinib and Upadacitinib are common JAK inhibitors available in tablet form. The doctor will recommend these medicines based on the severity of the symptoms, previous treatment and overall health.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Older Adults
+                    Apremilast: A Targeted Oral Option
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Lupus that develops at age 50 years or older tends to have less involvement of the kidney. It may have more joint and lung involvement. Pregnant or elderly patients are more likely to present with drug-induced lupus. This occurs from several blood pressure and anti-seizure drugs.
+                    Apremilast (Otezla) is a medicine that helps reduce joint pain and swelling in people with psoriatic arthritis. Doctors may recommend it for people who cannot take conventional DMARDs, when other medicines are not suitable or when people prefer tablets over injections. It is available in India but is generally more expensive than conventional DMARDs.
                   </p>
                 </div>
 
-                {/* ── EARLY WARNING SIGNS ── */}
-                <div id="early-warning" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── INJECTIONS ── */}
+                <div id="injections" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Early Warning Signs of Lupus
+                    Corticosteroid Joint Injections
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus is very easy to miss, as the initial symptoms are simple to overlook. Most people believe they are due to stress, tiredness, or other illnesses.
+                    Doctors may recommend a steroid injection when one or a few joints become particularly painful and swollen. The medicine is injected directly into the affected joint to help reduce pain and swelling quickly. The procedure usually takes only a few minutes and is performed in a clinic or hospital.
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    The common warning signs are:
-                  </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {warningSigns.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The problem with recognising the early signs of lupus is that they may come on slowly. One week it may be joint pain and the next a rash. Then it may be feeling relatively well for weeks in between. Lupus can take a while to be diagnosed because of this erratic pattern.
+                    Doctors use a local anaesthetic to numb the area before giving the injection. Although steroid injections can provide rapid relief, they are not used as a long-term treatment for psoriatic arthritis. In India, the cost of a steroid injection is approximately Rs 500 to Rs 2,000 per joint, depending on the hospital or clinic.
                   </p>
                 </div>
 
-                {/* ── SIMILAR CONDITIONS ── */}
-                <div id="similar-conditions" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── PHYSIOTHERAPY ── */}
+                <div id="physiotherapy" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Conditions That Can Cause Similar Symptoms
+                    Physiotherapy and Exercise
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Physiotherapy is an important part of psoriatic arthritis treatment. It helps reduce stiffness, improve joint movement, and make everyday activities more comfortable. It can also help protect the joints and improve muscle strength over time.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    A physiotherapist will recommend exercises based on the patient's symptoms and physical ability. Gentle stretching and strengthening exercises are usually recommended. Regular gentle exercise, including walking, swimming and yoga, helps improve flexibility and reduce stiffness. Regular movement is important, even when symptoms are mild or well controlled. In India, physiotherapy usually costs around ₹300 to ₹2,500 per session.
+                  </p>
+                </div>
+
+                {/* ── SKIN AND NAIL ── */}
+                <div id="skin-nail" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Skin and Nail Treatment
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Psoriatic arthritis can affect both the skin and the joints, so treatment often involves managing both together. Rheumatologists and dermatologists may work together to plan the most suitable treatment. Doctors may recommend topical creams, light therapy (phototherapy), or medicines that help control skin psoriasis.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    The treatment is recommended based on how severe the skin symptoms are. Many biologic medicines, which are used to treat psoriatic arthritis, can improve both joint symptoms and skin psoriasis at the same time. This means that a single treatment option may help manage multiple symptoms of the condition.
+                  </p>
+                </div>
+
+                {/* ── SURGERY ── */}
+                <div id="surgery" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    When Does a Doctor Recommend Surgery?
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Surgery is usually considered when medicines and other treatment options cannot control symptoms or prevent joint damage. Doctors may recommend surgery if severe joint damage affects movement, causes persistent pain, or makes everyday activities difficult.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    A rheumatologist and orthopaedic surgeon will decide whether surgery is the most appropriate option based on the condition of the affected joint. Surgery is generally recommended only after other treatment options have been fully explored.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    In India, hip and knee replacement surgery typically costs between Rs 1.5 lakh and Rs 3.5 lakh per joint, depending on the hospital and city.
+                  </p>
+                </div>
+
+                {/* ── COSTS ── */}
+                <div id="costs" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Approximate Treatment Costs in India
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    It is common to be tested for other conditions before a lupus diagnosis is made. This is because symptoms can overlap with many other diseases. The table below presents the most frequent diseases considered together with lupus.
+                    The treatment cost for psoriatic arthritis may vary depending on the medicines prescribed, how severe the condition is and what joints are affected. Here is the approximate cost of the treatment.
                   </p>
 
                   <div className="overflow-x-auto mb-6">
-                    <table className="w-full border-collapse text-left min-w-[680px]">
+                    <table className="w-full border-collapse text-left min-w-[560px]">
                       <thead>
                         <tr style={{ backgroundColor: "#e0f3f5" }}>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Condition</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">How It Overlaps With Lupus</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Key Difference</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Treatment Option</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Approximate Cost in India</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {similarConditions.map((row) => (
-                          <tr key={row.condition} className="border-b border-[#dadfe8]">
-                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.condition}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.overlap}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.difference}</td>
+                        {treatmentCosts.map((row) => (
+                          <tr key={row.option} className="border-b border-[#dadfe8]">
+                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.option}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top whitespace-nowrap">{row.cost}</td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   </div>
-                </div>
 
-                {/* ── DIAGNOSIS ── */}
-                <div id="diagnosis" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    How Is Lupus Diagnosed?
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    No one test can diagnose lupus. The diagnosis is constructed through several means. It involves history, physical examination, blood tests, and imaging. All of these are done by a rheumatologist. This process may take time, and that is normal.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Physical Examination and Medical History
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The first steps in a rheumatologist's evaluation involve asking about the nature of the symptoms. It is about when they began, what makes them better, and what makes them worse. Whether any family member has a similar or autoimmune disorder. A physical examination is performed to look for the butterfly rash, swollen joints, mouth ulcers, and other visible symptoms.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Blood Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The most important blood test is an ANA (anti-nuclear antibody) test. It is positive in nearly every lupus patient. It indicates that the immune system is creating antibodies that attack the body's own cells. Anti-dsDNA antibodies, ESR, and CRP (measuring the inflammation) further narrow the diagnosis, if necessary.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Urine Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    A urine analysis is performed to determine if there is protein or blood in the urine. This may indicate kidney involvement even if there are no symptoms. Urine testing is performed regularly during the diagnostic process and monitoring.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Imaging
-                  </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    A chest X-ray, heart ultrasound, or kidney ultrasound might be ordered depending on the involved organs. If there is a concern for kidney involvement, a kidney biopsy may be suggested.
+                    The costs mentioned above are approximate and may vary depending on the city, hospital, and treatment centre. Government hospitals and health schemes such as CGHS and PM-JAY may reduce treatment costs for eligible patients.
                   </p>
                 </div>
 
-                {/* ── SEE DOCTOR ── */}
-                <div id="see-doctor" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── MONITORING ── */}
+                <div id="monitoring" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    When Should You See a Doctor?
+                    Monitoring Your Treatment
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    If you have any of the following, see a rheumatologist:
+                    Psoriatic arthritis is a long-term condition, so regular follow-up appointments are an important part of treatment. Monitoring helps doctors check whether the medicines are working, whether inflammation is under control, and whether treatment needs to be adjusted over time.
                   </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {doctorSigns.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Doctors may recommend blood tests such as ESR and CRP to look for inflammation in the body. If medicines such as methotrexate are prescribed, liver function tests may also be recommended to monitor their safety. Imaging tests may be performed periodically to check for any changes in the joints.
+                  </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The earlier lupus is identified, the better the long-term outcomes. Don&apos;t delay treatment until symptoms are severe.
+                    The doctor may also use simple scoring tools such as DAPSA (Disease Activity Index for Psoriatic Arthritis). This is a simple questionnaire to understand how active the condition is and how well treatment is working. These tools include symptoms, number of painful joints, and blood test results to calculate a score. Regular monitoring is a routine part of psoriatic arthritis care and helps doctors make treatment decisions before complications develop.
                   </p>
                 </div>
 
-                {/* ── SPEAK TO RHEUMATOLOGIST ── */}
-                <div id="speak-rheumatologist" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── SPEAK TO DOCTOR ── */}
+                <div id="speak-to-doctor" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Think These Symptoms Sound Familiar? Speak to a Rheumatologist
+                    When to Speak to a Rheumatologist About Treatment
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    If you feel any or all of the symptoms on this page are familiar, visit a rheumatologist sooner. The sooner recognized, the sooner diagnosed, and the better the outcomes will be. Don&apos;t wait until things get &quot;bad&quot; to take action. Action is preferable to inaction. Get the right care when it is needed.
+                    See a rheumatologist if your joint pain, stiffness, skin symptoms or nail changes are not improving even after taking medicine regularly. If you are planning a pregnancy or are considering herbal or complementary therapies, discuss them with your doctor before making any changes to your treatment plan. Regular treatment reviews help ensure that psoriatic arthritis is under control and that your medicines are working efficiently.
                   </p>
                   <Link
                     to="/book-appointment"
@@ -452,6 +438,12 @@ function LupusSymptomsDiagnosis() {
 
                 {/* ── DISCLAIMER + REFERENCES ── */}
                 <div id="references" data-toc-section style={{ marginBottom: "2rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Disclaimer
+                  </h2>
                   <p className="text-[14px] leading-[1.7] italic" style={{ color: "#5E5E5E", marginBottom: "2.5rem" }}>
                     This content has been written for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified rheumatologist or healthcare provider if you have questions about a medical condition or treatment plan.
                   </p>
@@ -511,7 +503,7 @@ function LupusSymptomsDiagnosis() {
                       </div>
                     </div>
                     <p style={{ fontFamily: "var(--font-base)", fontSize: "13px", lineHeight: 1.55, color: "rgba(255,255,255,0.78)", marginBottom: "14px" }}>
-                      Consultant Rheumatologist for lupus evaluation and long-term care.
+                      Consultant Rheumatologist for psoriatic arthritis evaluation and long-term joint care.
                     </p>
                     <Link
                       to="/book-appointment"
@@ -629,4 +621,4 @@ function LupusSymptomsDiagnosis() {
   )
 }
 
-export default LupusSymptomsDiagnosis
+export default PsoriaticArthritisTreatment

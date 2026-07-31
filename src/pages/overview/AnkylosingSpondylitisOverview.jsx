@@ -121,7 +121,7 @@ function AnkylosingSpondylitisOverview() {
             {/* INTRO */}
             <div id="overview" style={{ scrollMarginTop: "80px" }}>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                Ajith, a young man aged 30 years had lower back pain for several months. He works at an IT company, where it involves mostly a desk job. The pain was severe, but he ignored it. He thought the pain could be due to poor posture, long hours at a desk, or some muscle strain. He took a painkiller, got some rest, but never went for a proper consultation with a doctor. The pain kept coming back. Upon repeated advice from his family and colleagues, he finally visited the doctor. After proper evaluation and diagnosis, the doctors referred to the case as ankylosing spondylitis. Not all long-term pain refers to a serious condition, but getting a proper evaluation keeps conditions under control.
+                Ajith, a young man aged 30 years had lower back pain for several months. He works at an IT company, where it involves mostly a desk job. The pain was severe, but he ignored it. He thought the pain could be due to poor posture, long hours at a desk, or some muscle strain. He took a painkiller, got some rest, but never went for a proper consultation with a doctor. The pain kept coming back. Upon repeated advice from his family and colleagues, he finally visited the doctor. After proper evaluation and diagnosis, the doctors referred to the case as ankylosing spondylitis. <strong className="font-semibold">Not all long-term pain refers to a serious condition, but getting a proper evaluation keeps conditions under control.</strong>
               </p>
               <p className="text-[16px] leading-[1.8] text-navy-muted">
                 About 7–9 people in 10000 suffer from ankylosing spondylitis. It is 2 to 3 times more common in men than in women. It most commonly affects people at a young age but is often ignored. Consulting a rheumatologist early instead of ignoring it could prevent the condition from worsening. This article explains what ankylosing spondylitis is, how it progresses, what causes it, its symptoms, how it is diagnosed, and what treatments are available.
@@ -137,7 +137,7 @@ function AnkylosingSpondylitisOverview() {
                 <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   {quickAnswers.map((q, i) => (
                     <li key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                      <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "6px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <svg width="16" height="16" viewBox="0 0 10 8" fill="none" style={{ flexShrink: 0, marginTop: "8px" }}><path d="M1 4l2.5 2.5L9 1" stroke="#1AA3B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       <span className="text-[16px] leading-[1.7] text-navy-deep">{q}</span>
                     </li>
                   ))}
@@ -157,7 +157,7 @@ function AnkylosingSpondylitisOverview() {
                 In Ankylosing spondylitis, the immune system becomes overactive. The immune system attacks the healthy joints in the backbone. Tendons are the fibres that connect muscles and bones to support movement, whereas ligaments connect bones. The attack also occurs at tendons and ligaments. The immune system&apos;s attack causes pain, swelling and irritation in the joints and these fibres.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Slowly, the body tries to heal from the swelling and irritation. This is by producing new bones. The new bone starts filling the gaps between bones in the back. This continuous filling causes the bones to fuse with each other. Due to this fusion, the backbone loses its natural flexibility and becomes stiff and rigid. This is why the condition is sometimes called &ldquo;bamboo spine" (bamboo-like backbone).
+                Slowly, the body tries to heal from the swelling and irritation. This is by producing new bones. The new bone starts filling the gaps between bones in the back. This continuous filling causes the bones to fuse with each other. Due to this fusion, the backbone loses its natural flexibility and becomes stiff and rigid. This is why the condition is sometimes called <strong className="font-semibold">&ldquo;bamboo spine" (bamboo-like backbone).</strong>
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 Ankylosing spondylitis is not only a condition of the backbone. It can also affect the hips, shoulders, knees, ankles, and eyes. In India, many patients first notice this condition in the knees or ankles before any pain in the back.
@@ -186,7 +186,7 @@ function AnkylosingSpondylitisOverview() {
                 Human Leukocyte Antigen-B27 (HLA-B27) is a gene that is mainly seen in patients with ankylosing spondylitis. 84% of patients in India who develop ankylosing spondylitis carry this gene. Only 6% of the Indian population carries this gene but does not develop this condition. Therefore, it is important to check for the presence of this gene, especially when there is pain and swelling in the joints.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Having this gene does not mean the condition will develop. Some people develop it without having this gene. The HLA-B27 test helps to detect the condition, and a positive result alone cannot confirm the diagnosis. A positive test result without any pain or swelling only tells one thing: the chances of ankylosing spondylitis are high.
+                Having this gene does not mean the condition will develop. Some people develop it without having this gene. <strong className="font-semibold">The HLA-B27 test helps to detect the condition, and a positive result alone cannot confirm the diagnosis.</strong> A positive test result without any pain or swelling only tells one thing: the chances of ankylosing spondylitis are high.
               </p>
 
               <h3 style={H3Style}>How does an Overactive Immune System Affect the Body</h3>

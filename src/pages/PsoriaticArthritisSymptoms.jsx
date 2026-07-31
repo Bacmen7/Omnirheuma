@@ -9,58 +9,39 @@ import { ArrowRight } from "lucide-react"
    DATA
    ───────────────────────────────────────────── */
 
-const bodySymptoms = [
-  { label: "Skin:", detail: "A reddish, butterfly-shaped rash caused by exposure to the sun. It spreads over the cheeks and nose. It can often be mistaken on darker Indian skin tones as a pigmented area." },
-  { label: "Joints:", detail: "Notice that there is pain and swelling that shifts location, as opposed to a typical sports injury that remains in one location. For many, it feels like pain that just never goes away." },
-  { label: "Whole Body Fatigue:", detail: "This is not the tiredness that goes away with a good night's rest. It is persistent and similar to being burdened all day long." },
-  { label: "Kidneys:", detail: "If you notice swelling of your legs or around your eyes, or foamy urine? Or does fluid build up in your body for no apparent reason? It could be a warning sign. Lupus can make the kidneys leaky, like a filter. When this happens, the fluid that should be leaving the kidneys remains in the body." },
-  { label: "Chest and Breathing:", detail: "A sharp chest pain when taking a deep breath can be mistaken for a heart problem or gas. This occurs due to swelling of the lining of the lungs or around the heart." },
-  { label: "Brain and Thinking:", detail: "Difficulty focusing on tasks, forgetfulness, and chronic headaches. Some patients describe this as thinking in a really thick fog. Even simple things are more difficult." },
-  { label: "Fingers and Toes:", detail: "White or blue discoloration of fingers and toes in cold weather or under stress. The blood circulation is just like a circuit that shuts down when there is an overload of electricity." },
+const earlyWarningSigns = [
+  "Stiffness in the morning that lasts for more than 30 minutes after waking up. This gradually improves with movement.",
+  "Pain and swelling in the hands and feet that may come and go.",
+  "Small pits or dents on the nail, yellowing or white discolouration, and nails lifting away from the nail bed.",
+  "Pain in the heel or sole of the foot that does not improve after rest.",
+  "Pain and swelling in the whole finger or toe that looks like a sausage.",
 ]
 
-const warningSigns = [
-  "Constant tiredness that does not go away with rest.",
-  "A mild fever that keeps returning without any infection.",
-  "Recurring mouth ulcers that come and go.",
-  "Hair thinning or hair loss in patches.",
-  "Joint pain that keeps shifting between different joints.",
-  "Skin rashes worsen after sun exposure.",
-]
-
-const similarConditions = [
-  { condition: "Rheumatoid Arthritis", overlap: "Joint pain, swelling, fatigue", difference: "Rheumatoid arthritis stays in joints, does not cause butterfly rash or organ involvement" },
-  { condition: "Fibromyalgia", overlap: "Fatigue, widespread pain, brain fog", difference: "No redness, swelling, or organ involvement" },
-  { condition: "Viral Infections", overlap: "Fever, fatigue, joint pain, rash", difference: "Infections resolve; lupus symptoms persist and come back" },
-  { condition: "Sjögren's Syndrome", overlap: "Fatigue, dry eyes, dry mouth", difference: "Can overlap with lupus and both can occur together" },
-  { condition: "Thyroid Disease", overlap: "Fatigue, hair loss, weight changes", difference: "Thyroid tests help distinguish; lupus needs ANA testing" },
-]
-
-const doctorSigns = [
-  "A facial rash on the cheeks and nose that worsens with exposure to sunlight.",
-  "Constant tiredness and joint pain for more than 4 to 6 weeks without a clear reason.",
-  "Unusual hair loss, persistent mouth ulcers, or low-grade fevers that are commonly repeated",
-  "Heavy, puffy-looking swelling in the legs, ankles, or around the eyes with no known origin.",
-  "Fingers or toes turning white or blue in cold or stressful situations.",
-  "A close family member diagnosed with lupus or another autoimmune condition.",
+const progressionFlow = [
+  "Warning signs appear : discussed above",
+  "Symptoms seem to improve",
+  "Symptoms are often ignored or misdiagnosed",
+  "The condition remains active inside the joints.",
+  "Joint damage can develop over time",
+  "Early treatment helps prevent long-term damage",
 ]
 
 const faqs = [
-  { q: "How to know the commonest early signs of lupus?", a: "Answer: Constant tiredness is the most common early sign. It affects up to 90% of patients. It differs from regular tiredness, and it does not improve with rest. Repeated joint pain shifting between different joints is another early signal." },
-  { q: "Is it possible for lupus to affect the kidneys?", a: "Answer: Yes. Kidney involvement is called lupus nephritis. It is one of the most serious complications of lupus. It can develop silently with no obvious symptoms. This is why regular urine and blood tests are essential throughout treatment." },
-  { q: "Why do people with lupus get a butterfly rash on their face?", a: "Answer: The butterfly rash occurs due to swelling in small blood vessels under the facial skin. It appears as a reddish rash across the cheeks and nose. It is often triggered or worsened by sunlight. On darker Indian skin tones, it may look like a darker pigmented patch, making it harder to spot." },
-  { q: "Why is lupus diagnosed so late in India?", a: "Answer: Lupus may look like other conditions. This makes it difficult to identify sooner. In India, most patients first see a general physician, dermatologist, or orthopaedician before reaching the rheumatologist. Less awareness also adds to the delay." },
-  { q: "Does lupus affect teens in India?", a: "Answer: Yes. Juvenile-onset lupus is diagnosed before age 18. It tends to be more severe in Indian patients than in Western populations. Kidney and blood involvement are particularly common in young Indian patients. That is why early specialist care is important." },
-  { q: "Is lupus and rheumatoid arthritis the same?", a: "Answer: No, they are different. Although both are autoimmune and cause joint pain, they are distinct. Rheumatoid arthritis mainly affects joints and can cause permanent joint damage. Lupus can affect multiple organs, including the kidneys, skin, heart, and nervous system. Its joint pain shifts between the joints rather than staying fixed." },
+  { q: "Can I have psoriatic arthritis without a skin rash?", a: "Yes, many people develop joint symptoms months or years before any skin rash appears. The doctor may detect the condition based on the nail changes, family history and joint symptoms. Early diagnosis and treatment can help reduce symptoms and protect the joints." },
+  { q: "Is psoriatic arthritis the same as rheumatoid arthritis?", a: "No, although both conditions cause joint pain and stiffness, they are different.  Psoriatic arthritis usually develops with skin rashes, nail changes, swelling in the entire finger or toe, and pain in the heel or sole of the foot. Rheumatoid arthritis, on the other hand, more commonly affects the same joints on both sides of the body, particularly the hands, wrists, and feet." },
+  { q: "Are nail changes in psoriatic arthritis different from a fungal nail infection?", a: "Yes, fungal nail infections respond to antifungal treatment. Psoriatic arthritis nail changes do not respond to antifungals. If antifungal treatment has not helped, it is better to consult with a doctor." },
+  { q: "Can psoriatic arthritis affect the spine?", a: "Yes, some people develop swelling and irritation in the spine, which causes back pain and stiffness. These symptoms are often worse in the morning and improve with movement. The doctor may recommend an MRI if spinal involvement is suspected." },
+  { q: "What does dactylitis feel like?", a: "Dactylitis feels like an entire finger or toe has become swollen rather than just one joint. It may feel tender, warm, and visibly puffy. Many people first notice that they cannot fully close their hand or that one toe looks noticeably different from the others." },
 ]
 
 const references = [
-  { text: "Lupus Foundation of America. Symptoms and Diagnosis of Lupus. ", url: "https://www.lupus.org/resources/symptoms-diagnosis" },
-  { text: "Mayo Clinic. Lupus Symptoms and Causes. 2025. ", url: "https://www.mayoclinic.org/diseases-conditions/lupus/symptoms-causes/syc-20365789" },
-  { text: "Healthline. 10 Early Signs of Lupus. 2023. ", url: "https://www.healthline.com/health/lupus/early-signs" },
-  { text: "Pace Hospital. Lupus Disease Overview. 2026. ", url: "https://www.pacehospital.com/lupus" },
-  { text: "Gupta R et al. Systemic Lupus Erythematosus in India. PubMed Central. 2022. ", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9270079/" },
-  { text: "ScienceDirect. Challenges in the Diagnosis and Management of SLE in India. 2023. ", url: "https://www.sciencedirect.com/science/article/pii/S2772613423000276" },
+  { text: "Arthritis Foundation. Psoriatic Arthritis Symptoms, Diagnosis and Treatment. ", url: "https://www.arthritis.org/diseases/psoriatic-arthritis" },
+  { text: "Chandran V, Raychaudhuri SP. Geoepidemiology and Environmental Factors of Psoriasis and Psoriatic Arthritis. Journal of Autoimmunity. 2010. ", url: "https://pubmed.ncbi.nlm.nih.gov/20219336/" },
+  { text: "Gladman DD et al. Diagnosis and Management of Psoriatic Arthritis. Indian Journal of Dermatology Venereology and Luprology. 2013. ", url: "https://ijdvl.com/diagnosis-and-management-of-psoriatic-arthritis/" },
+  { text: "Medical News Today. 12 Early Signs of Psoriatic Arthritis. 2024. ", url: "https://www.medicalnewstoday.com/articles/what-are-the-first-signs-of-psoriatic-arthritis" },
+  { text: "PMC. Enthesitis and Dactylitis in Psoriatic Disease. PubMed Central. 2018. ", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6267546/" },
+  { text: "National Psoriasis Foundation. Psoriatic Arthritis: Symptoms, Causes and Treatment.  Psoriasis.org", url: null },
+  { text: "PMC. Psoriatic Arthritis: Pathogenesis and Targeted Therapies. PubMed Central. 2023. ", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10003101/" },
 ]
 
 /* ─────────────────────────────────────────────
@@ -68,24 +49,21 @@ const references = [
    ───────────────────────────────────────────── */
 
 const tocItems = [
-  { id: "common-symptoms", label: "Common Symptoms of Lupus" },
-  { id: "progress", label: "How Symptoms Progress Over Time" },
+  { id: "common-symptoms", label: "Common Symptoms of Psoriatic Arthritis" },
+  { id: "early-warning", label: "Early Warning Signs of Psoriatic Arthritis" },
+  { id: "progression", label: "How Symptoms Progress Over Time" },
   { id: "groups", label: "How Symptoms Differ Across Groups" },
-  { id: "early-warning", label: "Early Warning Signs of Lupus" },
-  { id: "similar-conditions", label: "Conditions That Can Cause Similar Symptoms" },
-  { id: "diagnosis", label: "How Is Lupus Diagnosed?" },
   { id: "see-doctor", label: "When Should You See a Doctor?" },
-  { id: "speak-rheumatologist", label: "Think These Symptoms Sound Familiar? Speak to a Rheumatologist" },
   { id: "references", label: "References" },
   { id: "faq", label: "Frequently Asked Questions" },
 ]
 
 
-function LupusSymptomsDiagnosis() {
+function PsoriaticArthritisSymptoms() {
   const [activeSection, setActiveSection] = useState("common-symptoms")
 
   useEffect(() => {
-    document.title = "Lupus (SLE) - Symptoms, Warning Signs and Diagnosis | Omni Rheuma"
+    document.title = "Psoriatic Arthritis: Symptoms and Warning Signs | Omni Rheuma"
     return () => { document.title = "Omni Rheuma | Professional Rheumatology Resource" }
   }, [])
 
@@ -159,7 +137,7 @@ function LupusSymptomsDiagnosis() {
               <span aria-hidden="true">›</span>
               <span className="whitespace-nowrap">Diseases &amp; Conditions</span>
               <span aria-hidden="true">›</span>
-              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Lupus Symptoms and Diagnosis</span>
+              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Psoriatic Arthritis Symptoms</span>
             </div>
 
             {/* Title */}
@@ -177,7 +155,7 @@ function LupusSymptomsDiagnosis() {
                     marginBottom: 0,
                   }}
                 >
-                  Lupus (SLE) -
+                  Symptoms of <span className="whitespace-nowrap">Psoriatic Arthritis:</span>
                   <span
                     style={{
                       display: "block",
@@ -188,11 +166,11 @@ function LupusSymptomsDiagnosis() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Symptoms, Warning Signs and Diagnosis
+                    Symptoms and Warning Signs
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
-                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
+                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Shafali Nagpal</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
                 </p>
               </div>
             </div>
@@ -210,10 +188,10 @@ function LupusSymptomsDiagnosis() {
                 {/* ── INTRO ── */}
                 <div id="intro" data-toc-section style={{ marginBottom: "1rem" }}>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    Lupus is oftentimes referred to as &ldquo;The Great Imitator&rdquo;. This is because it mimics so many diseases. For instance, constant fatigue and weakness are commonly overlooked as low hemoglobin (anemia). Joint discomfort is blamed on work stress or posture. And repeated skin breakouts are mistaken for simple allergies or heat rashes. Due to the commonness of symptoms, it takes approximately 4 years to receive a confirmed diagnosis. However, the wait is even longer in India due to low awareness and limited access to rheumatologists.
+                    Skin problems and joint pain do not always seem related. Many people with psoriasis develop pain and stiffness in the joints. This could develop months or even years later. These symptoms are often blamed on ageing, overwork, or poor posture.
                   </p>
                   <p className="text-[16px] leading-[1.8] text-navy-muted">
-                    SLE is the most common form of this disease. It is a condition where the body's immune system attacks its own tissues. It can occur in the skin, joints, kidneys, and other parts of the body. This page can guide patients/caretakers to identify the early warning signs. It will help to know what symptoms to put the spotlight on and what the diagnosis involves.
+                    Psoriatic arthritis is a condition that mainly affects people with psoriasis. It mainly causes joint pain, stiffness and swelling. Some people may develop pain in the heels or sole of the foot, especially while walking or getting out of bed in the morning. Others may notice nail changes such as small pits or discolouration. Skin rashes caused by psoriasis are also common. Many people are diagnosed late because the connection between the skin and joints are not recognised early. This article explains the common symptoms of psoriatic arthritis, early warning signs to watch for, and symptoms in different age groups.
                   </p>
                 </div>
 
@@ -223,42 +201,99 @@ function LupusSymptomsDiagnosis() {
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Common Symptoms of Lupus
+                    Common Symptoms of Psoriatic Arthritis
                   </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    As lupus becomes more active, the symptoms become more apparent and can begin to affect more than one organ. It usually comes and goes in episodes. Lupus is different for each person.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Psoriatic arthritis can affect different parts of the body, such as skin, joints, tendons, nails, eyes, and spine. Symptoms may come and go. They may improve for a few days or weeks before returning again.
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    This is how lupus is seen throughout the body:
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    Skin Symptoms
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Psoriatic arthritis often develops in people with psoriasis. It usually appears as red, raised, scaly patches on the scalp, elbows, knees, and lower back. These patches may itch and are often mistaken for eczema or a fungal skin condition, which delays the correct diagnosis.
                   </p>
-                  <ul className="space-y-2 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {bodySymptoms.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        <strong className="font-semibold">{s.label}</strong> {s.detail}
-                      </li>
-                    ))}
-                  </ul>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    Joint Symptoms
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Pain, swelling, and stiffness can affect the fingers, toes, wrists, knees, ankles, and spine. Some people may also develop pain in the lower back and neck. Stiffness in the morning that lasts for more than 30 minutes is common in psoriatic arthritis.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    Nail Changes
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Nail changes affect up to 80% of people with psoriatic arthritis. They often develop years or months before joint symptoms. These changes may appear as small dents, yellow or white discolouration, thickening under the nail, and separation of the nail from the nail bed (called onycholysis). These symptoms are often mistaken for a fungal nail infection, leading to repeated antifungal treatments that provide no relief.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    Dactylitis and Enthesitis
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    In psoriatic arthritis, an entire finger or toe becomes swollen instead of just one joint. This condition is called Dactylitis. It gives the finger or toe a sausage-like appearance.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Pain at the back of the heel or the bottom of the foot is another common symptom of psoriatic arthritis. This is called Enthesitis and it occurs where tendons attach to the bone. It is often mistaken for overuse or a simple foot problem.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    Eye Symptoms
+                  </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Not all of these occur in people with lupus. Some have symptoms in a few areas, others more broadly. The best picture a rheumatologist can have is how frequent the symptoms are, when they occur, and what their origins are.
+                    Eye symptoms are less common but should not be ignored. Redness, pain, blurred vision and sensitivity to light may indicate disease progression inside the eye. If these symptoms develop, they need immediate medical attention.
                   </p>
                 </div>
 
                 {/* ── INLINE CTA BANNER ── */}
                 <ReviewedConsultationCta />
 
-                {/* ── PROGRESS OVER TIME ── */}
-                <div id="progress" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── EARLY WARNING SIGNS ── */}
+                <div id="early-warning" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Early Warning Signs of Psoriatic Arthritis
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    In the early stages of psoriatic arthritis, symptoms are often mild and easy to ignore. The following signs should not be ignored, especially if they occur along with psoriasis.
+                  </p>
+                  <ul className="space-y-2" style={{ listStyleType: "decimal", paddingLeft: "1.5rem" }}>
+                    {earlyWarningSigns.map((s, i) => (
+                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* ── PROGRESSION ── */}
+                <div id="progression" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
                     How Symptoms Progress Over Time
                   </h2>
+
+                  <div className="flex flex-col items-center text-center mb-8">
+                    {progressionFlow.map((step, i) => (
+                      <div key={i}>
+                        <p className="text-[17px] leading-[1.7] text-navy-deep" style={{ fontWeight: 600 }}>{step}</p>
+                        {i < progressionFlow.length - 1 && (
+                          <div className="text-[18px]" style={{ color: "#1AA3B5", margin: "6px 0" }}>↓</div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus affects people in an episodic manner throughout their lives. At times, symptoms are worse. At other times, they are relatively better. Typical causes are exposure to sunlight, emotional upset, infections, periods, pregnancy, and some medications.
+                    Psoriatic arthritis symptoms do not always stay the same. Joint pain, stiffness, and swelling may improve for weeks or even months before returning. Because of this, many people assume the condition has gone away. However, inflammation can remain active inside the joints even when symptoms feel better.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The reason why it is important to monitor in quiet periods is that damage to the organs can occur without the person feeling unwell. Early kidney injury can occur with no symptoms. These changes can be detected through regular examinations and blood and urine tests. Long-term organ damage can be minimised if treatment is started early and regularly.
+                    Psoriatic arthritis can affect different people in different ways. Some people develop symptoms in the same joints on both sides of the body, while others may notice pain in only one hand, knee, or foot. In some people, the condition mainly affects the spine, while others develop symptoms in the small joints of the fingers and toes near the nails. Sometimes, a more severe form of psoriatic arthritis develops that can cause significant joint damage if left untreated. Early diagnosis and treatment can help reduce symptoms and protect the joints over time.
                   </p>
                 </div>
 
@@ -271,136 +306,35 @@ function LupusSymptomsDiagnosis() {
                     How Symptoms Differ Across Groups
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus does not have the same symptoms for every person. The appearance of the condition is dependent on age, gender and life stage.
+                    Psoriatic arthritis can develop at any age, but the way it appears may not always be the same. People experience symptoms based on their age, gender, and stage of life.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
                     Symptoms in Women
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is most often diagnosed in women. It typically occurs between 15 and 45 years of age. Women are commonly affected by hormonal shifts at puberty, pregnancy, and during the menstrual cycle. Women with lupus planning a pregnancy need early rheumatology support. It increases the risk of miscarriage, premature birth, and high blood pressure during pregnancy.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Teenagers and Young Adults
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus may occur at any time during the teens. Children developing lupus before age 18 are more likely to have severe lupus in Indian patients than in Western patients. Early diagnosis is especially significant as kidney and blood system involvement is very common in young Indian patients.
+                    Women with psoriatic arthritis are more likely to experience symptoms in multiple joints and may develop prominent nail changes. Pain and stiffness may become worse during the menstrual cycle and pregnancy.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
                     Symptoms in Men
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is much less prevalent but more severe in men. They are also less likely to be referred to a specialist, contributing to delayed diagnosis.
+                    Men are more likely to develop psoriatic arthritis in the spine. It causes back pain and stiffness in the morning. These symptoms often occur along with severe skin and scalp psoriasis.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    Symptoms in Children
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    In children, psoriatic arthritis may develop in only a few joints in the early stage. Some children develop redness, pain and sensitivity to light due to the progression of disease in the eye. Regular eye check-ups are important because eye symptoms can sometimes appear before skin symptoms.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
                     Symptoms in Older Adults
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Lupus that develops at age 50 years or older tends to have less involvement of the kidney. It may have more joint and lung involvement. Pregnant or elderly patients are more likely to present with drug-induced lupus. This occurs from several blood pressure and anti-seizure drugs.
-                  </p>
-                </div>
-
-                {/* ── EARLY WARNING SIGNS ── */}
-                <div id="early-warning" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    Early Warning Signs of Lupus
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus is very easy to miss, as the initial symptoms are simple to overlook. Most people believe they are due to stress, tiredness, or other illnesses.
-                  </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    The common warning signs are:
-                  </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {warningSigns.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The problem with recognising the early signs of lupus is that they may come on slowly. One week it may be joint pain and the next a rash. Then it may be feeling relatively well for weeks in between. Lupus can take a while to be diagnosed because of this erratic pattern.
-                  </p>
-                </div>
-
-                {/* ── SIMILAR CONDITIONS ── */}
-                <div id="similar-conditions" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    Conditions That Can Cause Similar Symptoms
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    It is common to be tested for other conditions before a lupus diagnosis is made. This is because symptoms can overlap with many other diseases. The table below presents the most frequent diseases considered together with lupus.
-                  </p>
-
-                  <div className="overflow-x-auto mb-6">
-                    <table className="w-full border-collapse text-left min-w-[680px]">
-                      <thead>
-                        <tr style={{ backgroundColor: "#e0f3f5" }}>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Condition</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">How It Overlaps With Lupus</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Key Difference</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {similarConditions.map((row) => (
-                          <tr key={row.condition} className="border-b border-[#dadfe8]">
-                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.condition}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.overlap}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.difference}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                {/* ── DIAGNOSIS ── */}
-                <div id="diagnosis" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    How Is Lupus Diagnosed?
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    No one test can diagnose lupus. The diagnosis is constructed through several means. It involves history, physical examination, blood tests, and imaging. All of these are done by a rheumatologist. This process may take time, and that is normal.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Physical Examination and Medical History
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The first steps in a rheumatologist's evaluation involve asking about the nature of the symptoms. It is about when they began, what makes them better, and what makes them worse. Whether any family member has a similar or autoimmune disorder. A physical examination is performed to look for the butterfly rash, swollen joints, mouth ulcers, and other visible symptoms.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Blood Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The most important blood test is an ANA (anti-nuclear antibody) test. It is positive in nearly every lupus patient. It indicates that the immune system is creating antibodies that attack the body's own cells. Anti-dsDNA antibodies, ESR, and CRP (measuring the inflammation) further narrow the diagnosis, if necessary.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Urine Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    A urine analysis is performed to determine if there is protein or blood in the urine. This may indicate kidney involvement even if there are no symptoms. Urine testing is performed regularly during the diagnostic process and monitoring.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Imaging
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    A chest X-ray, heart ultrasound, or kidney ultrasound might be ordered depending on the involved organs. If there is a concern for kidney involvement, a kidney biopsy may be suggested.
+                    In older adults, pain in the fingers, stiffness in the morning, and nail changes may be mistaken for ageing or gout. The history of psoriasis in the person or family can provide an important clue.
                   </p>
                 </div>
 
@@ -412,46 +346,19 @@ function LupusSymptomsDiagnosis() {
                   >
                     When Should You See a Doctor?
                   </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    If you have any of the following, see a rheumatologist:
-                  </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {doctorSigns.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The earlier lupus is identified, the better the long-term outcomes. Don&apos;t delay treatment until symptoms are severe.
+                    If you have psoriasis and have noticed persistent joint pain, stiffness, swelling, or changes in your nails, it is worth discussing these symptoms with a rheumatologist. Back pain that is worse in the morning, heel pain, or swelling of an entire finger or toe are also important signs that should not be ignored. Waiting for symptoms to improve on their own can delay the diagnosis and treatment. Early diagnosis can help reduce symptoms, protect the joints, and improve long-term outcomes.
                   </p>
-                </div>
-
-                {/* ── SPEAK TO RHEUMATOLOGIST ── */}
-                <div id="speak-rheumatologist" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    Think These Symptoms Sound Familiar? Speak to a Rheumatologist
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    If you feel any or all of the symptoms on this page are familiar, visit a rheumatologist sooner. The sooner recognized, the sooner diagnosed, and the better the outcomes will be. Don&apos;t wait until things get &quot;bad&quot; to take action. Action is preferable to inaction. Get the right care when it is needed.
-                  </p>
-                  <Link
-                    to="/book-appointment"
-                    className="group"
-                    style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none", marginTop: "1.5rem" }}
-                  >
-                    Book a Consultation with Dr Raghavendra H
-                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
-                      <ArrowRight size={14} />
-                    </span>
-                  </Link>
                 </div>
 
                 {/* ── DISCLAIMER + REFERENCES ── */}
                 <div id="references" data-toc-section style={{ marginBottom: "2rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Disclaimer
+                  </h2>
                   <p className="text-[14px] leading-[1.7] italic" style={{ color: "#5E5E5E", marginBottom: "2.5rem" }}>
                     This content has been written for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified rheumatologist or healthcare provider if you have questions about a medical condition or treatment plan.
                   </p>
@@ -465,7 +372,9 @@ function LupusSymptomsDiagnosis() {
                     {references.map((r, i) => (
                       <li key={i} className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
                         {r.text}
-                        <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0f616e", textDecoration: "underline" }}>{r.url}</a>
+                        {r.url && (
+                          <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0f616e", textDecoration: "underline" }}>{r.url}</a>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -511,7 +420,7 @@ function LupusSymptomsDiagnosis() {
                       </div>
                     </div>
                     <p style={{ fontFamily: "var(--font-base)", fontSize: "13px", lineHeight: 1.55, color: "rgba(255,255,255,0.78)", marginBottom: "14px" }}>
-                      Consultant Rheumatologist for lupus evaluation and long-term care.
+                      Consultant Rheumatologist for psoriatic arthritis evaluation and long-term joint care.
                     </p>
                     <Link
                       to="/book-appointment"
@@ -629,4 +538,4 @@ function LupusSymptomsDiagnosis() {
   )
 }
 
-export default LupusSymptomsDiagnosis
+export default PsoriaticArthritisSymptoms

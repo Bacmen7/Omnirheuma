@@ -9,58 +9,56 @@ import { ArrowRight } from "lucide-react"
    DATA
    ───────────────────────────────────────────── */
 
-const bodySymptoms = [
-  { label: "Skin:", detail: "A reddish, butterfly-shaped rash caused by exposure to the sun. It spreads over the cheeks and nose. It can often be mistaken on darker Indian skin tones as a pigmented area." },
-  { label: "Joints:", detail: "Notice that there is pain and swelling that shifts location, as opposed to a typical sports injury that remains in one location. For many, it feels like pain that just never goes away." },
-  { label: "Whole Body Fatigue:", detail: "This is not the tiredness that goes away with a good night's rest. It is persistent and similar to being burdened all day long." },
-  { label: "Kidneys:", detail: "If you notice swelling of your legs or around your eyes, or foamy urine? Or does fluid build up in your body for no apparent reason? It could be a warning sign. Lupus can make the kidneys leaky, like a filter. When this happens, the fluid that should be leaving the kidneys remains in the body." },
-  { label: "Chest and Breathing:", detail: "A sharp chest pain when taking a deep breath can be mistaken for a heart problem or gas. This occurs due to swelling of the lining of the lungs or around the heart." },
-  { label: "Brain and Thinking:", detail: "Difficulty focusing on tasks, forgetfulness, and chronic headaches. Some patients describe this as thinking in a really thick fog. Even simple things are more difficult." },
-  { label: "Fingers and Toes:", detail: "White or blue discoloration of fingers and toes in cold weather or under stress. The blood circulation is just like a circuit that shuts down when there is an overload of electricity." },
+const causesFibromyalgia = [
+  "Infections such as COVID or chikungunya.",
+  "Injury",
+  "Surgery",
+  "Long-term stress",
 ]
 
-const warningSigns = [
-  "Constant tiredness that does not go away with rest.",
-  "A mild fever that keeps returning without any infection.",
-  "Recurring mouth ulcers that come and go.",
-  "Hair thinning or hair loss in patches.",
-  "Joint pain that keeps shifting between different joints.",
-  "Skin rashes worsen after sun exposure.",
+const earlyWarningSigns = [
+  "Pain in the shoulders, neck, or back without any obvious injury.",
+  "Tiredness that continues even after a full night's sleep.",
+  "Stiffness in the morning becomes part of everyday life.",
+  "Difficulty concentrating or feeling mentally \"foggy\" during daily activities.",
 ]
 
-const similarConditions = [
-  { condition: "Rheumatoid Arthritis", overlap: "Joint pain, swelling, fatigue", difference: "Rheumatoid arthritis stays in joints, does not cause butterfly rash or organ involvement" },
-  { condition: "Fibromyalgia", overlap: "Fatigue, widespread pain, brain fog", difference: "No redness, swelling, or organ involvement" },
-  { condition: "Viral Infections", overlap: "Fever, fatigue, joint pain, rash", difference: "Infections resolve; lupus symptoms persist and come back" },
-  { condition: "Sjögren's Syndrome", overlap: "Fatigue, dry eyes, dry mouth", difference: "Can overlap with lupus and both can occur together" },
-  { condition: "Thyroid Disease", overlap: "Fatigue, hair loss, weight changes", difference: "Thyroid tests help distinguish; lupus needs ANA testing" },
+const triggerFactors = [
+  "Stress",
+  "Illness",
+  "Poor sleep",
+  "Hormonal shifts",
+  "Changes in weather",
+  "Doing too much physical activity",
 ]
 
-const doctorSigns = [
-  "A facial rash on the cheeks and nose that worsens with exposure to sunlight.",
-  "Constant tiredness and joint pain for more than 4 to 6 weeks without a clear reason.",
-  "Unusual hair loss, persistent mouth ulcers, or low-grade fevers that are commonly repeated",
-  "Heavy, puffy-looking swelling in the legs, ankles, or around the eyes with no known origin.",
-  "Fingers or toes turning white or blue in cold or stressful situations.",
-  "A close family member diagnosed with lupus or another autoimmune condition.",
+const lookAlikeConditions = [
+  { condition: "Rheumatoid Arthritis", symptoms: "Joint pain, fatigue, stiffness", difference: "Rheumatoid arthritis causes joint damage. Fibromyalgia does not damage joints." },
+  { condition: "Hypothyroidism", symptoms: "Fatigue, pain, confusion, and difficulty focusing", difference: "Confirmed through a thyroid blood test" },
+  { condition: "Vitamin D Deficiency", symptoms: "Widespread body pain and fatigue", difference: "Symptoms usually improve with vitamin D supplementation" },
+  { condition: "Depression", symptoms: "Fatigue, sleep problems, difficulty focusing", difference: "Depression is a mood disorder. Although both conditions can occur together" },
+  { condition: "Post-Chikungunya Arthritis", symptoms: "Joint pain, fatigue", difference: "It usually develops after a chikungunya infection and has a clear viral trigger." },
+  { condition: "Lupus SLE", symptoms: "Fatigue, pain, difficulty concentrating and memory loss", difference: "Lupus has characteristic clinical features and specific blood test findings." },
 ]
 
 const faqs = [
-  { q: "How to know the commonest early signs of lupus?", a: "Answer: Constant tiredness is the most common early sign. It affects up to 90% of patients. It differs from regular tiredness, and it does not improve with rest. Repeated joint pain shifting between different joints is another early signal." },
-  { q: "Is it possible for lupus to affect the kidneys?", a: "Answer: Yes. Kidney involvement is called lupus nephritis. It is one of the most serious complications of lupus. It can develop silently with no obvious symptoms. This is why regular urine and blood tests are essential throughout treatment." },
-  { q: "Why do people with lupus get a butterfly rash on their face?", a: "Answer: The butterfly rash occurs due to swelling in small blood vessels under the facial skin. It appears as a reddish rash across the cheeks and nose. It is often triggered or worsened by sunlight. On darker Indian skin tones, it may look like a darker pigmented patch, making it harder to spot." },
-  { q: "Why is lupus diagnosed so late in India?", a: "Answer: Lupus may look like other conditions. This makes it difficult to identify sooner. In India, most patients first see a general physician, dermatologist, or orthopaedician before reaching the rheumatologist. Less awareness also adds to the delay." },
-  { q: "Does lupus affect teens in India?", a: "Answer: Yes. Juvenile-onset lupus is diagnosed before age 18. It tends to be more severe in Indian patients than in Western populations. Kidney and blood involvement are particularly common in young Indian patients. That is why early specialist care is important." },
-  { q: "Is lupus and rheumatoid arthritis the same?", a: "Answer: No, they are different. Although both are autoimmune and cause joint pain, they are distinct. Rheumatoid arthritis mainly affects joints and can cause permanent joint damage. Lupus can affect multiple organs, including the kidneys, skin, heart, and nervous system. Its joint pain shifts between the joints rather than staying fixed." },
+  { q: "Is fibromyalgia pain real or imagined?", a: "Yes, fibromyalgia pain is real. People with fibromyalgia process pain differently, which makes them more sensitive to pain signals. It is a medical condition and does not mean that the symptoms are imagined." },
+  { q: "Why is fibromyalgia so often mistaken for vitamin D deficiency or anaemia in India?", a: "Many fibromyalgia symptoms look like vitamin D deficiency and anaemia, which are common in India. The difference is that fibromyalgia symptoms do not improve even after taking supplements." },
+  { q: "What does fibro fog feel like?", a: "'Fibro fog' is a feeling of being mentally tired or unusually forgetful. It may become difficult to concentrate, remember simple things, or find the right words during conversations or daily tasks." },
+  { q: "Is fibromyalgia the same as arthritis?", a: "No, arthritis damages the joints, which are visible on scans and blood tests. Fibromyalgia causes no joint damage and shows nothing abnormal on blood tests. The two conditions can coexist. People with rheumatoid arthritis are at higher risk of developing fibromyalgia." },
 ]
 
 const references = [
-  { text: "Lupus Foundation of America. Symptoms and Diagnosis of Lupus. ", url: "https://www.lupus.org/resources/symptoms-diagnosis" },
-  { text: "Mayo Clinic. Lupus Symptoms and Causes. 2025. ", url: "https://www.mayoclinic.org/diseases-conditions/lupus/symptoms-causes/syc-20365789" },
-  { text: "Healthline. 10 Early Signs of Lupus. 2023. ", url: "https://www.healthline.com/health/lupus/early-signs" },
-  { text: "Pace Hospital. Lupus Disease Overview. 2026. ", url: "https://www.pacehospital.com/lupus" },
-  { text: "Gupta R et al. Systemic Lupus Erythematosus in India. PubMed Central. 2022. ", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9270079/" },
-  { text: "ScienceDirect. Challenges in the Diagnosis and Management of SLE in India. 2023. ", url: "https://www.sciencedirect.com/science/article/pii/S2772613423000276" },
+  { text: "Mayo Clinic. Fibromyalgia: Symptoms and Causes. ", url: "mayoclinic.org/diseases-conditions/fibromyalgia/symptoms-causes/syc-20354780" },
+  { text: "Mayo Clinic. Fibromyalgia: Diagnosis and Treatment. ", url: "mayoclinic.org/diseases-conditions/fibromyalgia/diagnosis-treatment/drc-20354785" },
+  { text: "Mayo Clinic Proceedings. The Science of Fibromyalgia. Clauw DJ et al. 2011;86(9):907-911." },
+  { text: "Mayo Clinic Proceedings. Fibromyalgia and Related Conditions. 2015." },
+  { text: "Wolfe F et al. 2016 Revisions to the 2010/2011 Fibromyalgia Diagnostic Criteria. Seminars in Arthritis and Rheumatism. 2016;46:319-329. ", url: "sciencedirect.com" },
+  { text: "American College of Rheumatology. ACR 2016 Fibromyalgia Diagnostic Criteria. ", url: "acrabstracts.org" },
+  { text: "Wolfe F et al. Fibromyalgia Diagnosis and Biased Assessment: Sex, Prevalence and Bias. PLOS ONE. 2018. ", url: "journals.plos.org" },
+  { text: "Oz A, Yildirim T. Association Between Post-COVID-19 Infection and Fibromyalgia. Journal of Clinical Medicine. 2026;15(3):1098. ", url: "ncbi.nlm.nih.gov" },
+  { text: "ScienceDirect. Post-COVID-19 Syndrome and Fibromyalgia. 2023." },
+  { text: "Nature Medicine. Unexplained Post-Acute Infection Syndromes (post-chikungunya sequelae). 2022." },
 ]
 
 /* ─────────────────────────────────────────────
@@ -68,24 +66,23 @@ const references = [
    ───────────────────────────────────────────── */
 
 const tocItems = [
-  { id: "common-symptoms", label: "Common Symptoms of Lupus" },
-  { id: "progress", label: "How Symptoms Progress Over Time" },
-  { id: "groups", label: "How Symptoms Differ Across Groups" },
-  { id: "early-warning", label: "Early Warning Signs of Lupus" },
-  { id: "similar-conditions", label: "Conditions That Can Cause Similar Symptoms" },
-  { id: "diagnosis", label: "How Is Lupus Diagnosed?" },
-  { id: "see-doctor", label: "When Should You See a Doctor?" },
-  { id: "speak-rheumatologist", label: "Think These Symptoms Sound Familiar? Speak to a Rheumatologist" },
+  { id: "causes", label: "What Causes Fibromyalgia?" },
+  { id: "early-warning", label: "Early Warning Signs: What Fibromyalgia Feels Like Before It Has a Name" },
+  { id: "common-symptoms", label: "Common Symptoms of Fibromyalgia" },
+  { id: "triggers", label: "What Triggers or Worsens Fibromyalgia Symptoms?" },
+  { id: "look-alike", label: "Conditions That Can Look Like Fibromyalgia" },
+  { id: "diagnosis", label: "How Is Fibromyalgia Diagnosed?" },
+  { id: "when-to-see-doctor", label: "When Should You See a Doctor?" },
   { id: "references", label: "References" },
   { id: "faq", label: "Frequently Asked Questions" },
 ]
 
 
-function LupusSymptomsDiagnosis() {
-  const [activeSection, setActiveSection] = useState("common-symptoms")
+function FibromyalgiaSymptomsDiagnosis() {
+  const [activeSection, setActiveSection] = useState("causes")
 
   useEffect(() => {
-    document.title = "Lupus (SLE) - Symptoms, Warning Signs and Diagnosis | Omni Rheuma"
+    document.title = "Fibromyalgia: Symptoms, Warning Signs, And Diagnosis | Omni Rheuma"
     return () => { document.title = "Omni Rheuma | Professional Rheumatology Resource" }
   }, [])
 
@@ -159,7 +156,7 @@ function LupusSymptomsDiagnosis() {
               <span aria-hidden="true">›</span>
               <span className="whitespace-nowrap">Diseases &amp; Conditions</span>
               <span aria-hidden="true">›</span>
-              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Lupus Symptoms and Diagnosis</span>
+              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Fibromyalgia Symptoms and Diagnosis</span>
             </div>
 
             {/* Title */}
@@ -177,7 +174,7 @@ function LupusSymptomsDiagnosis() {
                     marginBottom: 0,
                   }}
                 >
-                  Lupus (SLE) -
+                  Symptoms and Warning Signs of <span className="whitespace-nowrap">Fibromyalgia:</span>
                   <span
                     style={{
                       display: "block",
@@ -188,11 +185,11 @@ function LupusSymptomsDiagnosis() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Symptoms, Warning Signs and Diagnosis
+                    Symptoms, Warning Signs, And Diagnosis
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
-                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
+                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 31, 2026
                 </p>
               </div>
             </div>
@@ -209,99 +206,40 @@ function LupusSymptomsDiagnosis() {
 
                 {/* ── INTRO ── */}
                 <div id="intro" data-toc-section style={{ marginBottom: "1rem" }}>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    Lupus is oftentimes referred to as &ldquo;The Great Imitator&rdquo;. This is because it mimics so many diseases. For instance, constant fatigue and weakness are commonly overlooked as low hemoglobin (anemia). Joint discomfort is blamed on work stress or posture. And repeated skin breakouts are mistaken for simple allergies or heat rashes. Due to the commonness of symptoms, it takes approximately 4 years to receive a confirmed diagnosis. However, the wait is even longer in India due to low awareness and limited access to rheumatologists.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Climbing stairs feels more tiring than it should. Household chores leave the body aching for hours. Sleeping through the night does not feel refreshing, and blood tests repeatedly come back normal. Many people spend years believing that they are simply overworked or stressed before receiving a diagnosis. However, these symptoms can be due to a condition called fibromyalgia.
                   </p>
-                  <p className="text-[16px] leading-[1.8] text-navy-muted">
-                    SLE is the most common form of this disease. It is a condition where the body's immune system attacks its own tissues. It can occur in the skin, joints, kidneys, and other parts of the body. This page can guide patients/caretakers to identify the early warning signs. It will help to know what symptoms to put the spotlight on and what the diagnosis involves.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    Fibromyalgia is a long-term condition that affects how the brain and nervous system process pain signals. It can cause widespread pain, tiredness, and problems with sleep and concentration. If it is not diagnosed early, symptoms can affect daily life for many years. This page will explain the causes, early warning signs, common symptoms, and how a diagnosis is reached so that anyone who has been searching for answers finally has a place to start.
                   </p>
                 </div>
 
-                {/* ── COMMON SYMPTOMS ── */}
-                <div id="common-symptoms" data-toc-section style={{ marginBottom: "1.5rem" }}>
+                {/* ── CAUSES ── */}
+                <div id="causes" data-toc-section style={{ marginBottom: "1.5rem" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Common Symptoms of Lupus
+                    What Causes Fibromyalgia?
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    As lupus becomes more active, the symptoms become more apparent and can begin to affect more than one organ. It usually comes and goes in episodes. Lupus is different for each person.
+                    The exact cause of fibromyalgia is not known. Doctors believe it often starts with changes in how the brain and nervous system respond to pain signals.
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    This is how lupus is seen throughout the body:
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>
+                    Genes play an important role, which is why fibromyalgia often runs in families. Fibromyalgia may trigger due to reasons, such as
                   </p>
-                  <ul className="space-y-2 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {bodySymptoms.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        <strong className="font-semibold">{s.label}</strong> {s.detail}
-                      </li>
+                  <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem", marginBottom: "1.25rem" }}>
+                    {causesFibromyalgia.map((c, i) => (
+                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{c}</li>
                     ))}
                   </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Not all of these occur in people with lupus. Some have symptoms in a few areas, others more broadly. The best picture a rheumatologist can have is how frequent the symptoms are, when they occur, and what their origins are.
+                    This does not mean pain is psychological. Fibromyalgia is a real medical condition that changes the way the body feels and responds to pain.
                   </p>
                 </div>
 
                 {/* ── INLINE CTA BANNER ── */}
                 <ReviewedConsultationCta />
-
-                {/* ── PROGRESS OVER TIME ── */}
-                <div id="progress" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    How Symptoms Progress Over Time
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus affects people in an episodic manner throughout their lives. At times, symptoms are worse. At other times, they are relatively better. Typical causes are exposure to sunlight, emotional upset, infections, periods, pregnancy, and some medications.
-                  </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The reason why it is important to monitor in quiet periods is that damage to the organs can occur without the person feeling unwell. Early kidney injury can occur with no symptoms. These changes can be detected through regular examinations and blood and urine tests. Long-term organ damage can be minimised if treatment is started early and regularly.
-                  </p>
-                </div>
-
-                {/* ── GROUPS ── */}
-                <div id="groups" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    How Symptoms Differ Across Groups
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus does not have the same symptoms for every person. The appearance of the condition is dependent on age, gender and life stage.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Women
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is most often diagnosed in women. It typically occurs between 15 and 45 years of age. Women are commonly affected by hormonal shifts at puberty, pregnancy, and during the menstrual cycle. Women with lupus planning a pregnancy need early rheumatology support. It increases the risk of miscarriage, premature birth, and high blood pressure during pregnancy.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Teenagers and Young Adults
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus may occur at any time during the teens. Children developing lupus before age 18 are more likely to have severe lupus in Indian patients than in Western patients. Early diagnosis is especially significant as kidney and blood system involvement is very common in young Indian patients.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Men
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is much less prevalent but more severe in men. They are also less likely to be referred to a specialist, contributing to delayed diagnosis.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Older Adults
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Lupus that develops at age 50 years or older tends to have less involvement of the kidney. It may have more joint and lung involvement. Pregnant or elderly patients are more likely to present with drug-induced lupus. This occurs from several blood pressure and anti-seizure drugs.
-                  </p>
-                </div>
 
                 {/* ── EARLY WARNING SIGNS ── */}
                 <div id="early-warning" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
@@ -309,52 +247,123 @@ function LupusSymptomsDiagnosis() {
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Early Warning Signs of Lupus
+                    Early Warning Signs: What Fibromyalgia Feels Like Before It Has a Name
                   </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus is very easy to miss, as the initial symptoms are simple to overlook. Most people believe they are due to stress, tiredness, or other illnesses.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>
+                    In the early stages, fibromyalgia symptoms are often easy to overlook. People may experience:
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    The common warning signs are:
-                  </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {warningSigns.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
-                      </li>
+                  <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem", marginBottom: "1.25rem" }}>
+                    {earlyWarningSigns.map((s, i) => (
+                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{s}</li>
                     ))}
                   </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The problem with recognising the early signs of lupus is that they may come on slowly. One week it may be joint pain and the next a rash. Then it may be feeling relatively well for weeks in between. Lupus can take a while to be diagnosed because of this erratic pattern.
+                    In India, these symptoms are often blamed on anaemia, vitamin deficiencies, stress, or overwork. These conditions can cause similar symptoms. However, fibromyalgia should be considered when several symptoms occur together and do not improve with treatment. Doctors usually look at the full pattern of symptoms rather than just one symptom.
                   </p>
                 </div>
 
-                {/* ── SIMILAR CONDITIONS ── */}
-                <div id="similar-conditions" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── COMMON SYMPTOMS ── */}
+                <div id="common-symptoms" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Conditions That Can Cause Similar Symptoms
+                    Common Symptoms of Fibromyalgia
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Fibromyalgia can affect different parts of the body. It can cause pain and stiffness symptoms in several parts of the body instead of one area. Symptoms may come and go. They may improve for a few days or weeks before they return again.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    1. Widespread Pain
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Widespread body pain often develops in people with fibromyalgia. The pain can affect several parts of the body at the same time. It usually involves muscles, soft tissues, and sometimes joints. People describe it as a constant aching pain, while others feel a burning sensation even when touched gently. The symptoms may continue for months or years. It is present on both sides of the body, often above and below the waist.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    2. Fatigue and Low Energy
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Many people with fibromyalgia feel tired all the time. They often feel constant tiredness that does not improve with rest or sleep. Many people describe this as feeling completely drained even when they wake up in the morning. This fatigue is different from ordinary tiredness because it affects the ability to work, care for family, and manage everyday tasks.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    3. Sleep Problems
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    People with fibromyalgia often wake up as tired as when they went to bed. Tiredness does not improve even after sleeping for many hours. This is because the brain does not reach the deep sleep stage. Stiffness in the morning is also common, but it improves gradually.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    4. Confusion and Difficulty in focusing: Brain Fog
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Brain fog is a common symptom of fibromyalgia. People with brain fog often forget words while speaking and lose track of what they were doing. They also struggle to concentrate. In India, these difficulties are usually linked to stress or inattention. Many people never mention these daily-life symptoms to their doctor because they assume these symptoms are not related to their condition.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    5. Heightened Sensitivity
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Fibromyalgia can increase sensitivity to pain. Things that should not be painful become painful. Even minor injuries such as a needle prick or small cut may feel much more painful than expected in people with fibromyalgia. There is also increased sensitivity to touch, temperature, light, and sound.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Other Common Symptoms.
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    Fibromyalgia can cause frequent headaches or migraines. Some people may also experience stomach problems such as cramps, constipation, or diarrhoea. It can also cause an uncontrollable urge to move their legs at night. Anxiety, low mood, and tingling or numbness in the hands and feet are also common.
+                  </p>
+                </div>
+
+                {/* ── TRIGGERS ── */}
+                <div id="triggers" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    What Triggers or Worsens Fibromyalgia Symptoms?
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>
+                    Fibromyalgia does not always remain the same. Pain, tiredness or sleep problems may improve for a while before worsening again. The following factors can trigger these symptoms:
+                  </p>
+                  <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem", marginBottom: "1.25rem" }}>
+                    {triggerFactors.map((t, i) => (
+                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">{t}</li>
+                    ))}
+                  </ul>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    Keeping a simple symptom diary may help identify personal triggers and symptom patterns. With the right treatment and lifestyle changes, many people experience periods when their symptoms are better controlled.
+                  </p>
+                </div>
+
+                {/* ── LOOK-ALIKE CONDITIONS ── */}
+                <div id="look-alike" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Conditions That Can Look Like Fibromyalgia
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    It is common to be tested for other conditions before a lupus diagnosis is made. This is because symptoms can overlap with many other diseases. The table below presents the most frequent diseases considered together with lupus.
+                    Fibromyalgia is often confused with other conditions because it shares many symptoms with other health conditions. This can make the diagnosis more challenging. Doctors take a step-by-step approach before confirming fibromyalgia.
                   </p>
 
                   <div className="overflow-x-auto mb-6">
-                    <table className="w-full border-collapse text-left min-w-[680px]">
+                    <table className="w-full border-collapse text-left min-w-[640px]">
                       <thead>
                         <tr style={{ backgroundColor: "#e0f3f5" }}>
                           <th className="p-4 text-[14px] font-bold text-navy-deep">Condition</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">How It Overlaps With Lupus</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Common Symptoms</th>
                           <th className="p-4 text-[14px] font-bold text-navy-deep">Key Difference</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {similarConditions.map((row) => (
-                          <tr key={row.condition} className="border-b border-[#dadfe8]">
+                        {lookAlikeConditions.map((row, i) => (
+                          <tr key={i} className="border-b border-[#dadfe8]">
                             <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.condition}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.overlap}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.symptoms}</td>
                             <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.difference}</td>
                           </tr>
                         ))}
@@ -369,74 +378,29 @@ function LupusSymptomsDiagnosis() {
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    How Is Lupus Diagnosed?
+                    How Is Fibromyalgia Diagnosed?
                   </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    No one test can diagnose lupus. The diagnosis is constructed through several means. It involves history, physical examination, blood tests, and imaging. All of these are done by a rheumatologist. This process may take time, and that is normal.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    There is no single blood test that can confirm fibromyalgia. Doctors usually diagnose fibromyalgia by looking at the pattern of symptoms. They will also recommend blood tests to rule out other conditions that can cause similar problems.
                   </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Physical Examination and Medical History
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The first steps in a rheumatologist's evaluation involve asking about the nature of the symptoms. It is about when they began, what makes them better, and what makes them worse. Whether any family member has a similar or autoimmune disorder. A physical examination is performed to look for the butterfly rash, swollen joints, mouth ulcers, and other visible symptoms.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Doctors use internationally accepted diagnostic criteria called the ACR 2016 criteria to diagnose fibromyalgia. These criteria look at how many areas of the body are painful and how severe symptoms are, such as tiredness, poor sleep, and difficulty concentrating. Symptoms usually will be present for at least three months and affect several parts of the body before fibromyalgia is diagnosed.
                   </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Blood Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The most important blood test is an ANA (anti-nuclear antibody) test. It is positive in nearly every lupus patient. It indicates that the immune system is creating antibodies that attack the body's own cells. Anti-dsDNA antibodies, ESR, and CRP (measuring the inflammation) further narrow the diagnosis, if necessary.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Urine Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    A urine analysis is performed to determine if there is protein or blood in the urine. This may indicate kidney involvement even if there are no symptoms. Urine testing is performed regularly during the diagnostic process and monitoring.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Imaging
-                  </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    A chest X-ray, heart ultrasound, or kidney ultrasound might be ordered depending on the involved organs. If there is a concern for kidney involvement, a kidney biopsy may be suggested.
+                    One of the most important things to understand is that normal blood test results are common in fibromyalgia. In fact, they help doctors rule out other conditions and support the diagnosis. Normal test results do not mean that the symptoms are "all in the mind" or that nothing is wrong.
                   </p>
                 </div>
 
-                {/* ── SEE DOCTOR ── */}
-                <div id="see-doctor" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── WHEN TO SEE DOCTOR ── */}
+                <div id="when-to-see-doctor" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
                     When Should You See a Doctor?
                   </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    If you have any of the following, see a rheumatologist:
-                  </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {doctorSigns.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The earlier lupus is identified, the better the long-term outcomes. Don&apos;t delay treatment until symptoms are severe.
-                  </p>
-                </div>
-
-                {/* ── SPEAK TO RHEUMATOLOGIST ── */}
-                <div id="speak-rheumatologist" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    Think These Symptoms Sound Familiar? Speak to a Rheumatologist
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    If you feel any or all of the symptoms on this page are familiar, visit a rheumatologist sooner. The sooner recognized, the sooner diagnosed, and the better the outcomes will be. Don&apos;t wait until things get &quot;bad&quot; to take action. Action is preferable to inaction. Get the right care when it is needed.
+                    See a rheumatologist if widespread pain has lasted for more than three months without a clear cause or if tiredness does not improve despite adequate rest, sleep, or treatment for anaemia or vitamin deficiencies. Fibromyalgia should also be considered when multiple symptoms such as pain, fatigue, sleep problems, and gut symptoms affect daily life. Early diagnosis can help improve symptom control and quality of life.
                   </p>
                   <Link
                     to="/book-appointment"
@@ -452,6 +416,12 @@ function LupusSymptomsDiagnosis() {
 
                 {/* ── DISCLAIMER + REFERENCES ── */}
                 <div id="references" data-toc-section style={{ marginBottom: "2rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Disclaimer
+                  </h2>
                   <p className="text-[14px] leading-[1.7] italic" style={{ color: "#5E5E5E", marginBottom: "2.5rem" }}>
                     This content has been written for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified rheumatologist or healthcare provider if you have questions about a medical condition or treatment plan.
                   </p>
@@ -465,7 +435,9 @@ function LupusSymptomsDiagnosis() {
                     {references.map((r, i) => (
                       <li key={i} className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
                         {r.text}
-                        <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0f616e", textDecoration: "underline" }}>{r.url}</a>
+                        {r.url && (
+                          <a href={`https://${r.url}`} target="_blank" rel="noopener noreferrer" style={{ color: "#0f616e", textDecoration: "underline" }}>{r.url}</a>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -511,7 +483,7 @@ function LupusSymptomsDiagnosis() {
                       </div>
                     </div>
                     <p style={{ fontFamily: "var(--font-base)", fontSize: "13px", lineHeight: 1.55, color: "rgba(255,255,255,0.78)", marginBottom: "14px" }}>
-                      Consultant Rheumatologist for lupus evaluation and long-term care.
+                      Consultant Rheumatologist for fibromyalgia evaluation and long-term care.
                     </p>
                     <Link
                       to="/book-appointment"
@@ -629,4 +601,4 @@ function LupusSymptomsDiagnosis() {
   )
 }
 
-export default LupusSymptomsDiagnosis
+export default FibromyalgiaSymptomsDiagnosis

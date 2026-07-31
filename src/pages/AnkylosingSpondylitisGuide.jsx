@@ -10,39 +10,26 @@ import { ArrowRight } from "lucide-react"
    ───────────────────────────────────────────── */
 
 const quickAnswers = [
-  "Psoriatic arthritis is an autoimmune condition where the body attacks itself (Auto means self, and the immune system is the defence system which fights against infections). It affects joints and skin.",
-  "About 1 in 3 people with psoriasis develop psoriatic arthritis. Stress, infections, joint injury, and certain medications are common triggering causes.",
-  "Common experienced symptoms include joint pain, morning stiffness, swollen “sausage” fingers/toes, and nail changes like pitting or thickening.",
-  "There is no permanent cure, but the right treatment can control symptoms and help most people stay active.",
-  "Treatment usually starts with managing pain and providing relief. This is followed by medications that slow the disease and biologic injections for more severe cases.",
+  "Ankylosing spondylitis is a condition that mainly occurs in the backbone and lower joints in the back.",
+  "The key feature is back pain. It becomes worse while resting and in the morning, but improves with movement. This is the opposite of normal back pain, which is relieved by rest.",
+  "It develops mostly in younger men in their 20s and 30s.",
+  "There is no cure, but early treatment can prevent the fusion of bones in the backbone.",
+  "Treatment includes medicines such as pain relievers (NSAIDs) and newer treatments called biologics. Regular exercise and physiotherapy are beneficial.",
 ]
 
-const triggers = [
-  { label: "Physical injury:", detail: "Injury to a joint or repetitive strain can trigger the body’s protective system. In high-risk people, this defence system can attack the body’s own tissues." },
-  { label: "Infections:", detail: "Throat infections that are caused by bacteria, and other infections can lead to worsening of the condition." },
-  { label: "High stress:", detail: "Increased stress is the most common cause of psoriatic arthritis." },
-  { label: "Certain medications:", detail: "Few medications like lithium, chloroquine (malaria medicine), and beta-blockers (used to treat heart conditions) are associated with the worsening of psoriasis. They can also trigger joint symptoms." },
-]
-
-const atRisk = [
-  "Patients with psoriasis.",
-  "Family members or close relatives suffering from psoriasis or psoriatic arthritis",
-  "Age between 30 and 55 years",
-]
-
-const jointSymptoms = [
-  { label: "Pain and swelling:", detail: "Joints feel painful, warm, and visibly swollen. The symptoms become worse after sitting still for a short duration." },
-  { label: "Morning stiffness:", detail: "After waking up, there is difficulty in joint movement. The stiffness gradually reduces within 30 to 60 minutes." },
-  { label: "Flares and remissions:", detail: "Symptoms intensify suddenly and then settle down. This pattern of the condition makes it easy to ignore." },
-  { label: "Reduced range of motion:", detail: "When the condition is left untreated, the swelling and irritation increases. This reduces how far a joint can bend or stretch." },
+const riskFactors = [
+  "Young men between 17– 35 years",
+  "People with a close family member who has ankylosing spondylitis or a related condition",
+  "People who carry the HLA-B27 gene",
+  "People with a history of swelling, pain and irritation in the stomach and skin",
 ]
 
 const faqs = [
-  { q: "Can psoriatic arthritis be cured?", a: "There is no cure. But treatment can control inflammation and protect the joints. It allows most people to live an active life. The main goal of treatment is to lower disease progression and flare-ups." },
-  { q: "Does everyone with psoriasis get psoriatic arthritis?", a: "Only 1 in 3 people with psoriasis develops psoriatic arthritis. Nail changes or a family history of inflammatory arthritis can increase the risk. Reporting joint symptoms to a doctor early is the best way to prevent damage." },
-  { q: "What does psoriatic arthritis feel like in the early stages?", a: "In the early stages, there will be unexplained morning stiffness. Along with this a persistent ache in one or two joints, slightly puffy fingers or toes, or heel pain that does not resolve with rest. Many people dismiss these as an injury until the symptoms keep returning." },
-  { q: "Can psoriatic arthritis affect the spine?", a: "Yes, psoriatic arthritis can cause lower back stiffness. It can reduce flexibility and sometimes causes hip and shoulder pain." },
-  { q: "Are there affordable treatment options for psoriatic arthritis in India?", a: "Yes, NSAIDs and methotrexate are available at low cost through Jan Aushadhi outlets. Indian biosimilar biologics cost significantly less than imported brands. PM-JAY may cover certain hospitalisation and treatment costs for qualifying patients." },
+  { q: "Is ankylosing spondylitis curable?", a: "There is no cure for ankylosing spondylitis. When the right treatment is started early, most people can control symptoms. They can prevent backbone fusion and stay active." },
+  { q: "Will the spine always fuse completely with ankylosing spondylitis?", a: "No, complete fusion is not guaranteed. The level of fusion depends on how early treatment begins. It also depends on the consistency of treatment and habit changes. Many people live with minimal change in the bone structure for years with proper management." },
+  { q: "Can women get ankylosing spondylitis?", a: "Yes, women can develop ankylosing spondylitis. In women, spinal involvement is mild. The symptoms usually appear as peripheral joint pain in the hips and knees, along with fatigue. Because the back symptoms are mild, diagnosis in women is often delayed." },
+  { q: "How is ankylosing spondylitis different from normal back pain?", a: "Normal back pain is usually worse after activity and better with rest. In ankylosing spondylitis, the opposite is true. Pain is worse during rest and in the morning and improves with movement. Night pain that wakes the person from sleep is another differentiating feature from other types of back pain." },
+  { q: "Does exercise help or make ankylosing spondylitis worse?", a: "Exercise helps with ankylosing spondylitis. Regular physical activity maintains backbone flexibility. It is one of the most important parts of long-term disease management. Stopping exercise when the pain increases could further worsen it. Gentle movement, such as swimming, yoga, and daily stretching, is the most beneficial choice for ankylosing spondylitis." },
 ]
 
 /* ─────────────────────────────────────────────
@@ -50,25 +37,25 @@ const faqs = [
    ───────────────────────────────────────────── */
 
 const tocItems = [
-  { id: "quick-answer", label: "Quick to Answer" },
-  { id: "what-is-psa", label: "What Is Psoriatic Arthritis?" },
-  { id: "how-common", label: "How Common Is Psoriatic Arthritis in India?" },
-  { id: "causes", label: "What Causes Psoriatic Arthritis?" },
-  { id: "symptoms", label: "Symptoms of Psoriatic Arthritis" },
-  { id: "diagnosis", label: "How Is Psoriatic Arthritis Diagnosed?" },
-  { id: "treatment", label: "Treatment Options for Psoriatic Arthritis" },
-  { id: "different-from-ra", label: "How Is It Different from Rheumatoid Arthritis?" },
-  { id: "living", label: "Living With Psoriatic Arthritis in India" },
+  { id: "quick-answer", label: "Quick Answer Points" },
+  { id: "what-is-as", label: "What Is Ankylosing Spondylitis?" },
+  { id: "causes", label: "What Causes Ankylosing Spondylitis?" },
+  { id: "symptoms", label: "Symptoms of Ankylosing Spondylitis" },
+  { id: "diagnosis", label: "How Is Ankylosing Spondylitis Diagnosed?" },
+  { id: "treatment", label: "Treatment Options for Ankylosing Spondylitis" },
+  { id: "living", label: "Living With Ankylosing Spondylitis in India" },
+  { id: "different-from-back-pain", label: "How Is Ankylosing Spondylitis Different from Regular Back Pain?" },
   { id: "when-to-consult", label: "When Should a Rheumatologist Be Consulted?" },
+  { id: "references", label: "Reference" },
   { id: "faq", label: "Frequently Asked Questions" },
 ]
 
 
-function PsoriaticArthritisGuide() {
+function AnkylosingSpondylitisGuide() {
   const [activeSection, setActiveSection] = useState("quick-answer")
 
   useEffect(() => {
-    document.title = "Psoriatic Arthritis: What It Is, Symptoms, Causes and Treatment Options | Omni Rheuma"
+    document.title = "Ankylosing Spondylitis: What It Is, Symptoms, Causes and Treatment Options | Omni Rheuma"
     return () => { document.title = "Omni Rheuma | Professional Rheumatology Resource" }
   }, [])
 
@@ -142,7 +129,7 @@ function PsoriaticArthritisGuide() {
               <span aria-hidden="true">›</span>
               <span className="whitespace-nowrap">Diseases &amp; Conditions</span>
               <span aria-hidden="true">›</span>
-              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Psoriatic Arthritis</span>
+              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Ankylosing Spondylitis</span>
             </div>
 
             {/* Title */}
@@ -160,7 +147,7 @@ function PsoriaticArthritisGuide() {
                     marginBottom: 0,
                   }}
                 >
-                  Psoriatic Arthritis:
+                  Ankylosing Spondylitis:
                   <span
                     style={{
                       display: "block",
@@ -175,7 +162,7 @@ function PsoriaticArthritisGuide() {
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
-                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Shafali Nagpal</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
+                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 31, 2026
                 </p>
               </div>
             </div>
@@ -192,27 +179,21 @@ function PsoriaticArthritisGuide() {
 
                 {/* ── INTRO ── */}
                 <div id="intro" data-toc-section style={{ marginBottom: "1rem" }}>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    Noticed skin itching lately? The small patch of itchy skin, which turns scaly on your fingers, is easy to be ignored as dry skin. A skin specialist confirms it as psoriasis, and for a while, that feels fine, with medications and follow- ups.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Ajith, a young man aged 30 years had lower back pain for several months. He works at an IT company, where it involves mostly a desk job. The pain was severe, but he ignored it. He thought the pain could be due to poor posture, long hours at a desk, or some muscle strain. He took a painkiller, got some rest, but never went for a proper consultation with a doctor. The pain kept coming back. Upon repeated advice from his family and colleagues, he finally visited the doctor. After proper evaluation and diagnosis, the doctors referred to the case as ankylosing spondylitis. <strong className="font-semibold">Not all long-term pain refers to a serious condition, but getting a proper evaluation keeps conditions under control.</strong>
                   </p>
-                  <p className="text-[16px] leading-[1.8] text-navy-muted" style={{ marginBottom: "1.25rem" }}>
-                    But then the mornings start feeling harder. The knees begin to ache without reason. Fingers feel stiff and harder to bend. Even closing a laptop becomes an effort. These joint changes do not feel connected to the skin, so they often go unnoticed or untreated for years. By the time the two are linked together, psoriatic arthritis has already been quietly progressing.
-                  </p>
-                  <p className="text-[16px] leading-[1.8] text-navy-muted" style={{ marginBottom: "1.25rem" }}>
-                    This is more common than most people realise. About 2 to 3% of the population lives with psoriasis, and 1 in 3 of them go on to develop psoriatic arthritis.
-                  </p>
-                  <p className="text-[16px] leading-[1.8] text-navy-muted">
-                    Doctors confirm the diagnosis, and the right treatment can manage symptoms and protect the joints from further damage. This article helps you understand through what psoriatic arthritis is, symptoms, causes, and what treatment looks like in India.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    About 7–9 people in 10000 suffer from ankylosing spondylitis. It is 2 to 3 times more common in men than in women. It most commonly affects people at a young age but is often ignored. Consulting a rheumatologist early instead of ignoring it could prevent the condition from worsening. This article explains what ankylosing spondylitis is, how it progresses, what causes it, its symptoms, how it is diagnosed, and what treatments are available.
                   </p>
                 </div>
 
-                {/* ── QUICK TO ANSWER ── */}
+                {/* ── QUICK ANSWER POINTS ── */}
                 <div id="quick-answer" data-toc-section style={{ marginBottom: "1.5rem" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Quick to Answer
+                    Quick Answer Points
                   </h2>
                   <ul className="space-y-2 mb-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                     {quickAnswers.map((s, i) => (
@@ -226,35 +207,35 @@ function PsoriaticArthritisGuide() {
                 {/* ── INLINE CTA BANNER ── */}
                 <ReviewedConsultationCta />
 
-                {/* ── WHAT IS PSA ── */}
-                <div id="what-is-psa" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── WHAT IS AS ── */}
+                <div id="what-is-as" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    What Is Psoriatic Arthritis?
+                    What Is Ankylosing Spondylitis?
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Psoriatic arthritis (PsA) is a condition where the immune system mistakenly attacks healthy tissues of skin and joints. The immune system is the body's natural defence against harmful germs and infections. In a healthy person, it carefully targets only outside threats and fights against those.
+                    Ankylosing spondylitis is a long-term disease that mainly affects the spine. The immune system is the body's defence system to fight against infection. In healthy people, the immune system accurately targets outside germs and fights against them.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    In psoriasis, the immune system becomes overactive and mistakenly starts attacking the skin tissue. This attack causes the skin to become red, thick, and scaly. In psoriatic arthritis, the overactive immune system starts attacking joints. It is a form of arthritis that mainly affects people with psoriasis. It can involve multiple joints, the spine, tendons, and nails all at once.
+                    In Ankylosing spondylitis, the immune system becomes overactive. The immune system attacks the healthy joints in the backbone. Tendons are the fibres that connect muscles and bones to support movement, whereas ligaments connect bones. The attack also occurs at tendons and ligaments. The immune system's attack causes pain, swelling and irritation in the joints and these fibres.
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    For most people, skin symptoms appear first, sometimes years before any joint problems begin. In others, joint and skin symptoms develop around the same time. The root cause in both conditions is an immune system that gets overactive and mistakenly attacks the body's own healthy tissues.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Slowly, the body tries to heal from the swelling and irritation. This is by producing new bones. The new bone starts filling the gaps between bones in the back. This continuous filling causes the bones to fuse with each other. Due to this fusion, the backbone loses its natural flexibility and becomes stiff and rigid. This is why the condition is sometimes called <strong className="font-semibold">"bamboo spine" (bamboo-like backbone).</strong>
                   </p>
-                </div>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Ankylosing spondylitis is not only a condition of the backbone. It can also affect the hips, shoulders, knees, ankles, and eyes. In India, many patients first notice this condition in the knees or ankles before any pain in the back.
+                  </p>
 
-                {/* ── HOW COMMON ── */}
-                <div id="how-common" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    How Common Is Psoriatic Arthritis in India?
-                  </h2>
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    How Common Is Ankylosing Spondylitis in India?
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Ankylosing spondylitis mainly affects young Indian men. The condition is 3 times more common in men than in women. Studies show that the average age of developing this condition is around 21 years.
+                  </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Psoriatic arthritis affects approximately 8.7 % of people with psoriasis in India. The data is based on the RAPID-India group study from 2025. Still, it often goes undiagnosed. The reason behind this is - most patients see a dermatologist for the skin and a general doctor for the joints. As a result, the two major symptoms never get connected. Due to different patterns and common symptoms, many patients reach a rheumatologist after suffering for years.
+                    Despite its widespread occurrence, the condition is frequently ignored as pain due to poor posture or muscle pain. Most patients reach the right specialist, a rheumatologist, only after several years of back pain.
                   </p>
                 </div>
 
@@ -264,56 +245,55 @@ function PsoriaticArthritisGuide() {
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    What Causes Psoriatic Arthritis?
+                    What Causes Ankylosing Spondylitis?
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The main cause of psoriatic arthritis is still unknown. The immune system plays a central role. Certain factors, such as genes, stress, infection, vitamin D deficiency and medication, trigger the immune system. It starts attacking healthy joints and skin tissue instead of protecting them. This causes persistent inflammation that can become worse without treatment.
+                    The exact cause of ankylosing spondylitis is still not fully known. Genes play a central role. The defence system of the body attacks joints of the backbone and places where tendons and ligaments attach to bone. This attack causes swelling and irritation, which can persist even when pain is not present.
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Genetic and Family History Factors
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    The Role of the HLA-B27 Gene
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Genes play an important role in developing psoriatic arthritis (PsA). The gene marker HLA-B27 (HLA stands for Human Leukocyte Antigen) is linked to involvement of the spine in some patients. Not everyone with this gene will develop psoriatic arthritis. It increases the chances of getting PsA.
+                    Human Leukocyte Antigen-B27 (HLA-B27) is a gene that is mainly seen in patients with ankylosing spondylitis. 84% of patients in India who develop ankylosing spondylitis carry this gene. Only 6% of the Indian population carries this gene but does not develop this condition. Therefore, it is important to check for the presence of this gene, especially when there is pain and swelling in the joints.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Having a close family member with psoriasis or psoriatic arthritis also makes the individual vulnerable. If these conditions run in the family, then no joint symptoms should not be ignored. It should be checked by a doctor early.
+                    Having this gene does not mean the condition will develop. Some people develop it without having this gene. <strong className="font-semibold">The HLA-B27 test helps to detect the condition, and a positive result alone cannot confirm the diagnosis.</strong> A positive test result without any pain or swelling only tells one thing: the chances of ankylosing spondylitis are high.
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Triggers That Can Start or Worsen Psoriatic Arthritis:
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    How does an Overactive Immune System Affect the Body
                   </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    There are a few factors which can worsen the condition:
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    The overactive immune system attacks the joints in the back ie. the tailbone and hip. Some stomach infections can also trigger this attack in high-risk people. An injury, sitting for long hours, poor posture, and staying inactive for too long cause stress in the tailbone. Continuous stress on these joints can also trigger ankylosing spondylitis.
                   </p>
-                  <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {triggers.map((t, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        <strong className="font-semibold">{t.label}</strong> {t.detail}
-                      </li>
-                    ))}
-                  </ul>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
                     Indian-Specific Risk Factors
                   </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    In India, ankylosing spondylitis usually develops between 15–30 years of age. Most people first develop pain in joints like the knees, ankles, or elbows, even before back pain. This pattern makes it look like a sports injury or joint pain after an infection.
+                  </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Vitamin D deficiency is very common in urban India. Active inflammation of the disease is the underlying cause. Arthritis, which develops after chikungunya, closely resembles the psoriatic joint pattern. This is also one of the reasons for the misdiagnosis of psoriatic arthritis. Rheumatologist availability in smaller towns is limited. That is why many patients visit them only after joint damage has already started.
+                    Due to the delay in diagnosis, the swelling and irritation remain untreated for years. As a result, the damage causes irreversible changes in the structure of bones and surrounding tissue. Therefore, it is important to consult a rheumatologist for long-term lower back pain before it causes permanent damage.
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Who is most at risk?
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Who Is Most at Risk?
                   </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Following are the people who are at more risk of developing psoriatic arthritis:
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1rem" }}>
+                    Certain factors increase the risk of developing ankylosing spondylitis, such as
                   </p>
                   <ul className="space-y-1 mb-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {atRisk.map((s, i) => (
+                    {riskFactors.map((s, i) => (
                       <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
                         {s}
                       </li>
                     ))}
                   </ul>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    Women can also develop ankylosing spondylitis. They develop mild back pain, joint pain, and fatigue. The joints that usually ache are the knees, ankles, hips, and hands. This mimics other conditions, such as joint pain due to ageing or muscle pain. This delays their diagnosis even further. But knowing the symptoms can help detect the condition early and prevent living in pain for years.
+                  </p>
                 </div>
 
                 {/* ── SYMPTOMS ── */}
@@ -322,38 +302,34 @@ function PsoriaticArthritisGuide() {
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Symptoms of Psoriatic Arthritis
+                    Symptoms of Ankylosing Spondylitis
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Psoriatic arthritis can affect the joints, skin, nails, spine, and tendons. Symptoms can vary among people, and they usually worsen suddenly.
+                    Ankylosing spondylitis symptoms may vary. The symptoms depend on the part of the body that is affected and how long the condition has been active. The backbone is almost always involved. Many people develop pain and stiffness in other joints before back pain.
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Joint Symptoms
-                  </h3>
-                  <ul className="space-y-2 mb-8" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {jointSymptoms.map((t, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        <strong className="font-semibold">{t.label}</strong> {t.detail}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Skin and Nail Changes
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Back and Spine Symptoms
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Psoriasis patches are raised, red, silvery-scaled areas. Scalp, elbows, knees, and lower back are the most common sites. Nail changes include pitting, crumbling, discolouration and separation from the nail bed. These changes sometimes appear before joint pain. That is why these are meaningful early signs that psoriatic arthritis may develop. It is best not to ignore these early signs to prevent the disease from progressing.
+                    Pain and stiffness in the lower back and hip are most common. These symptoms become worse in the morning or after a long period of rest and are relieved after some movement. Some patients also complain of waking up from pain during the night.
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Swelling and Pain :
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Symptoms Beyond the Spine
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Ankylosing spondylitis can also involve joints other than the back. Pain in smaller joints such as knees, hands, and ankles is more common among younger patients in India. Joints in the shoulder and the sole of the foot are involved. Other symptoms include eye pain, stomach pain and fatigue.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    How Ankylosing Spondylitis Progresses Over Time
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    The swelling occurs on the entire finger or toe, not just at one joint, which is referred to as Dactylitis. Tendons are tight cords which attach muscle of the finger to bone. The tissue is present along the whole length of the finger. The inflammation occurs in the tissue tendons. Therefore, the swelling occurs in the entire finger or toe, which gives them the characteristic sausage appearance. This typical appearance helps differentiate psoriatic arthritis from other types of arthritis.
+                    When left untreated for a long time, the body tries to heal. This is by forming new bones. The new bone fills the gap between the backbones and causes them to gradually fuse together. This reduces backbone mobility.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Enthesitis is pain at the points where tendons attach to bone. The pain most commonly occurs in the heel, sole of the foot, elbow, and knee. Many patients first consult a doctor for this heel pain without knowing they could be suffering from psoriatic arthritis.
+                    In advanced cases, the backbone loses its curves and becomes stiff. If the joint in the chest also becomes stiff, it reduces the chest expansion. This makes deep breathing more difficult. Early diagnosis and correct treatment may prevent the condition from causing stiffness and breathing problems.
                   </p>
                 </div>
 
@@ -363,16 +339,17 @@ function PsoriaticArthritisGuide() {
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    How Is Psoriatic Arthritis Diagnosed?
+                    How Is Ankylosing Spondylitis Diagnosed?
                   </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    There is no single test to confirm psoriatic arthritis. Rheumatologists build a diagnosis based on the clinical examination, blood tests, and imaging together. They examine the joints, the skin and nails. They also assess spine movement and ask about family history. Joint and skin symptoms that occur together are the clearest diagnostic signal.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    There is no test to diagnose ankylosing spondylitis. The rheumatologist will detect the condition based on the symptoms, physical checkup, X-rays, MRI and blood tests together. Doctors assess how the back and hip move and measure how much the chest expands during breathing. The doctor will ask about back pain patterns, any eye or bowel problems and family history of ankylosing spondylitis. They will also assess pain while resting and moving. All these details help the doctor make an accurate diagnosis.
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Doctors advise various tests to detect the condition and pattern of the disease. They advise blood tests to measure inflammation through ESR and CRP. An X-ray to check bone changes and an MRI for soft tissue and the spine. Ultrasound is also advised to check for enthesitis before it is visible on an X-ray. The HLA-B27 (Human Leukocyte antigen B27 gene) test is done to detect the presence of this gene. This is suggested mainly when spine involvement is suspected. RF (rheumatoid factor) is usually negative in psoriatic arthritis, which helps separate it from rheumatoid arthritis.
-                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Imaging and Blood Tests
+                  </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The CASPAR criteria (Classification criteria for psoriatic arthritis) is an internationally accepted diagnostic checklist. This checklist provides a structured basis for confirming the diagnosis.
+                    A blood test is done to measure inflammation through ESR and CRP. X-rays can detect changes in the bone structure, especially when the condition has advanced. The HLA-B27 (human leukocyte antigen gene) test is done to detect the presence of this gene. MRI is the most important test to detect the condition early. It can detect swelling and irritation before X-ray changes are visible.
                   </p>
                 </div>
 
@@ -382,37 +359,24 @@ function PsoriaticArthritisGuide() {
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Treatment Options for Psoriatic Arthritis
+                    Treatment Options for Ankylosing Spondylitis
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    There is no cure for psoriatic arthritis. The treatment only reduces inflammation. It protects the joints and manages skin symptoms. With the right treatment plan, most people can control the disease from progressing rapidly and live an active life.
+                    There is no cure for ankylosing spondylitis. The main aim of treatment is to reduce pain and stiffness and keep the backbone as flexible as possible. The treatment slows down further damage to the joints and bones. Treatment works best when it is started early, before any permanent damage.
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
                     Medications Overview
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    NSAIDs only help in reducing pain and stiffness. They cannot slow down joint damage. DMARDs target the immune process causing the disease. Biologics are used when other treatments are not enough to control the disease. Medications need to be taken only after a doctor's prescription.
+                    NSAIDs are medicines that reduce pain, swelling, and irritation. In ankylosing spondylitis, doctors prescribe them regularly, not only when pain increases. Regular use helps control pain and swelling and also relieves stiffness in the backbone. Newer medicines called Biologics calm the overactive immune system and are used when pain killers  do not provide enough relief. Government-approved low-cost biologics are also available.
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Non-Medication Approaches and Skin Care
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Physiotherapy and Exercise
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Along with medication, physiotherapy helps maintain joint flexibility and muscle strength. Walking, swimming, and yoga support joint strength without much impact on them. Topical creams and medicated shampoos manage psoriasis patches along with medication. Keeping psoriasis plaques moisturised reduces cracking and infection risk.
-                  </p>
-                </div>
-
-                {/* ── DIFFERENT FROM RA ── */}
-                <div id="different-from-ra" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    How Is It Different from Rheumatoid Arthritis?
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Both rheumatoid arthritis (RA) and psoriatic arthritis (PsA) cause joint pain, stiffness, and swelling. But they both require different treatments. Therefore, it is necessary to differentiate them. In Psoriatic arthritis common sites include skin, spine and entire fingers/ toes will be affected, whereas in Rheumatoid arthritis mainly joints are affected. Psoriatic arthritis only one side is affected, whereas in Rheumatoid arthritis both sides are affected. Psoriatic arthritis(PsA) has a family history of autoimmune disease and skin conditions. Skin or nail changes, along with joint pain, can make a doctor consider PsA.
+                    Regular exercise and physiotherapy are as important as medication in ankylosing spondylitis. Specific stretching and breathing exercises keep the backbone mobile and also maintain chest expansion. Swimming and yoga are particularly beneficial for patients with ankylosing spondylitis. These activities combine flexibility and strength without putting a heavy load on the joints. Gentle activity, such as walking or bending, should be continued even when the symptoms become worse. Stopping the movement will make joint stiffness worse.
                   </p>
                 </div>
 
@@ -422,26 +386,45 @@ function PsoriaticArthritisGuide() {
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Living With Psoriatic Arthritis in India
+                    Living With Ankylosing Spondylitis in India
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    Ankylosing spondylitis is a lifelong condition, and most people manage it well. Regular movement, such as morning stretches, swimming, yoga, and walking, helps maintain flexibility and also reduces stiffness. Maintaining a healthy weight also helps protect the joints by reducing the load on them. Following an anti-inflammatory diet and stopping smoking can help prevent the condition from causing further damage to bones. Living with long-term back pain from a young age affects work, relationships and confidence. Therefore, proper counselling and support from friends and family matter, along with medical treatment. Early diagnosis and consistent treatment help most people with ankylosing spondylitis to lead active lives.
+                  </p>
+                </div>
+
+                {/* ── DIFFERENT FROM BACK PAIN ── */}
+                <div id="different-from-back-pain" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    How Is Ankylosing Spondylitis Different from Regular Back Pain?
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Psoriatic arthritis is a long-term condition. With small lifestyle and dietary changes, you can live an active life. A healthy, anti-inflammatory diet with foods such as turmeric, mustard oil, flaxseeds, and fish needs to be incorporated. Reduce intake of refined sugar and processed foods. Stay in a healthy weight range, as it can reduce joint load and help medication work better. Walking, swimming, and yoga are the best options. A physiotherapist can suggest modified positions for floor-sitting to protect the knees and hips.
+                    Mostly, back pain is caused by muscle strain, poor posture, or disc problems. But back pain in ankylosing spondylitis is caused by an overactive immune system. Knowing the difference between the two can help you get the right treatment early.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Ankylosing spondylitis pain worsens after resting or early in the morning and improves with exercise. This is the opposite of the other type of back pain, which worsens after heavy work. Unlike normal back pain, pain from ankylosing spondylitis occurs at a very young age, often in the mid-20s.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Visiting your rheumatologist early instead of self-medicating can prevent the condition from worsening. Psoriasis is still wrongly believed to be contagious in many Indian communities. As a result, people are pushed toward isolation. Counselling and support from family and friends help significantly. These can help reduce both the physical and emotional weight of managing the condition in the long term.
+                    If you are waking up at night due to back pain and have stiffness in the morning for more than 30 minutes, it could be ankylosing spondylitis and not normal back pain. Only a rheumatologist can diagnose this type of back pain and give proper treatment.
                   </p>
                 </div>
 
                 {/* ── WHEN TO CONSULT ── */}
-                <div id="when-to-consult" data-toc-section style={{ marginBottom: "2rem", marginTop: "0" }}>
+                <div id="when-to-consult" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
                     When Should a Rheumatologist Be Consulted?
                   </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    You keep living with ankylosing spondylitis, spending years with back pain that never fully resolves. Keep visiting multiple specialists, but no one diagnoses the underlying cause. You may spend years without a correct diagnosis, allowing the condition to worsen. This usually changes the spine in ways that cannot be reversed.
+                  </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    When you notice joint pain, alongside psoriasis, see a rheumatologist without delay. Early diagnosis prevents irreversible joint damage. A rheumatologist will confirm your diagnosis, build a treatment plan suited to your specific disease pattern, and help you track changes over time. Starting the right treatment early gives you the best chance of living an active life.
+                    A rheumatologist is the right doctor for long-term back pain caused by an overactive immune system. Getting the right diagnosis early can change the outcome of the condition and prevent further progression.
                   </p>
                   <Link
                     to="/book-appointment"
@@ -453,6 +436,27 @@ function PsoriaticArthritisGuide() {
                       <ArrowRight size={14} />
                     </span>
                   </Link>
+                </div>
+
+                {/* ── REFERENCE ── */}
+                <div id="references" data-toc-section style={{ marginBottom: "2rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Reference
+                  </h2>
+                  <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                    <li className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                      Prakash S, Mehra NK, Bhargava S, Vaidya MC, Malaviya AN. Ankylosing spondylitis in North India: a clinical and immunogenetic study. Ann Rheum Dis. 1984;43(3):381-385. doi:10.1136/ard.43.3.381
+                    </li>
+                    <li className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                      Malaviya, Anand N. Spondyloarthritis in India. Indian Journal of Rheumatology 15(Suppl 1):p S2-S5, May 2020. | DOI: 10.4103/0973-3698.284742
+                    </li>
+                    <li className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                      <a href="https://medlineplus.gov/genetics/condition/ankylosing-spondylitis/" target="_blank" rel="noopener noreferrer" style={{ color: "#0f616e", textDecoration: "underline" }}>https://medlineplus.gov/genetics/condition/ankylosing-spondylitis/</a>
+                    </li>
+                  </ul>
                 </div>
 
                 <hr className="border-none border-t border-[#dcdcdc] mt-12" />
@@ -495,7 +499,7 @@ function PsoriaticArthritisGuide() {
                       </div>
                     </div>
                     <p style={{ fontFamily: "var(--font-base)", fontSize: "13px", lineHeight: 1.55, color: "rgba(255,255,255,0.78)", marginBottom: "14px" }}>
-                      Consultant Rheumatologist for psoriatic arthritis evaluation and long-term joint care.
+                      Consultant Rheumatologist for ankylosing spondylitis evaluation and long-term joint care.
                     </p>
                     <Link
                       to="/book-appointment"
@@ -613,4 +617,4 @@ function PsoriaticArthritisGuide() {
   )
 }
 
-export default PsoriaticArthritisGuide
+export default AnkylosingSpondylitisGuide

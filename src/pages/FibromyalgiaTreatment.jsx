@@ -9,58 +9,34 @@ import { ArrowRight } from "lucide-react"
    DATA
    ───────────────────────────────────────────── */
 
-const bodySymptoms = [
-  { label: "Skin:", detail: "A reddish, butterfly-shaped rash caused by exposure to the sun. It spreads over the cheeks and nose. It can often be mistaken on darker Indian skin tones as a pigmented area." },
-  { label: "Joints:", detail: "Notice that there is pain and swelling that shifts location, as opposed to a typical sports injury that remains in one location. For many, it feels like pain that just never goes away." },
-  { label: "Whole Body Fatigue:", detail: "This is not the tiredness that goes away with a good night's rest. It is persistent and similar to being burdened all day long." },
-  { label: "Kidneys:", detail: "If you notice swelling of your legs or around your eyes, or foamy urine? Or does fluid build up in your body for no apparent reason? It could be a warning sign. Lupus can make the kidneys leaky, like a filter. When this happens, the fluid that should be leaving the kidneys remains in the body." },
-  { label: "Chest and Breathing:", detail: "A sharp chest pain when taking a deep breath can be mistaken for a heart problem or gas. This occurs due to swelling of the lining of the lungs or around the heart." },
-  { label: "Brain and Thinking:", detail: "Difficulty focusing on tasks, forgetfulness, and chronic headaches. Some patients describe this as thinking in a really thick fog. Even simple things are more difficult." },
-  { label: "Fingers and Toes:", detail: "White or blue discoloration of fingers and toes in cold weather or under stress. The blood circulation is just like a circuit that shuts down when there is an overload of electricity." },
-]
-
-const warningSigns = [
-  "Constant tiredness that does not go away with rest.",
-  "A mild fever that keeps returning without any infection.",
-  "Recurring mouth ulcers that come and go.",
-  "Hair thinning or hair loss in patches.",
-  "Joint pain that keeps shifting between different joints.",
-  "Skin rashes worsen after sun exposure.",
-]
-
-const similarConditions = [
-  { condition: "Rheumatoid Arthritis", overlap: "Joint pain, swelling, fatigue", difference: "Rheumatoid arthritis stays in joints, does not cause butterfly rash or organ involvement" },
-  { condition: "Fibromyalgia", overlap: "Fatigue, widespread pain, brain fog", difference: "No redness, swelling, or organ involvement" },
-  { condition: "Viral Infections", overlap: "Fever, fatigue, joint pain, rash", difference: "Infections resolve; lupus symptoms persist and come back" },
-  { condition: "Sjögren's Syndrome", overlap: "Fatigue, dry eyes, dry mouth", difference: "Can overlap with lupus and both can occur together" },
-  { condition: "Thyroid Disease", overlap: "Fatigue, hair loss, weight changes", difference: "Thyroid tests help distinguish; lupus needs ANA testing" },
-]
-
-const doctorSigns = [
-  "A facial rash on the cheeks and nose that worsens with exposure to sunlight.",
-  "Constant tiredness and joint pain for more than 4 to 6 weeks without a clear reason.",
-  "Unusual hair loss, persistent mouth ulcers, or low-grade fevers that are commonly repeated",
-  "Heavy, puffy-looking swelling in the legs, ankles, or around the eyes with no known origin.",
-  "Fingers or toes turning white or blue in cold or stressful situations.",
-  "A close family member diagnosed with lupus or another autoimmune condition.",
+const treatmentCosts = [
+  { option: "Medicines", cost: "Rs 50 to Rs 2,500 per month" },
+  { option: "Rheumatologist consultation (initial)", cost: "Rs 500 to Rs 2,000 per visit" },
+  { option: "Rheumatologist follow-up", cost: "Rs 300 to Rs 1,500 per visit" },
+  { option: "Amitriptyline", cost: "Rs 50 to Rs 200 per month" },
+  { option: "Pregabalin", cost: "Rs 400 to Rs 1,200 per month" },
+  { option: "Duloxetine", cost: "Rs 600 to Rs 1,800 per month" },
+  { option: "Physiotherapy session", cost: "Rs 300 to Rs 1,500 per session" },
+  { option: "Pain-focused talking therapy (CBT)", cost: "Rs 1,500 to Rs 3,000 per session" },
+  { option: "Trigger point injection", cost: "Rs 500 to Rs 2,000 per session" },
+  { option: "TENS device (home use)", cost: "Rs 1,500 to Rs 5,000 one-time" },
+  { option: "rTMS session", cost: "Rs 3,000 to Rs 8,000 per session" },
 ]
 
 const faqs = [
-  { q: "How to know the commonest early signs of lupus?", a: "Answer: Constant tiredness is the most common early sign. It affects up to 90% of patients. It differs from regular tiredness, and it does not improve with rest. Repeated joint pain shifting between different joints is another early signal." },
-  { q: "Is it possible for lupus to affect the kidneys?", a: "Answer: Yes. Kidney involvement is called lupus nephritis. It is one of the most serious complications of lupus. It can develop silently with no obvious symptoms. This is why regular urine and blood tests are essential throughout treatment." },
-  { q: "Why do people with lupus get a butterfly rash on their face?", a: "Answer: The butterfly rash occurs due to swelling in small blood vessels under the facial skin. It appears as a reddish rash across the cheeks and nose. It is often triggered or worsened by sunlight. On darker Indian skin tones, it may look like a darker pigmented patch, making it harder to spot." },
-  { q: "Why is lupus diagnosed so late in India?", a: "Answer: Lupus may look like other conditions. This makes it difficult to identify sooner. In India, most patients first see a general physician, dermatologist, or orthopaedician before reaching the rheumatologist. Less awareness also adds to the delay." },
-  { q: "Does lupus affect teens in India?", a: "Answer: Yes. Juvenile-onset lupus is diagnosed before age 18. It tends to be more severe in Indian patients than in Western populations. Kidney and blood involvement are particularly common in young Indian patients. That is why early specialist care is important." },
-  { q: "Is lupus and rheumatoid arthritis the same?", a: "Answer: No, they are different. Although both are autoimmune and cause joint pain, they are distinct. Rheumatoid arthritis mainly affects joints and can cause permanent joint damage. Lupus can affect multiple organs, including the kidneys, skin, heart, and nervous system. Its joint pain shifts between the joints rather than staying fixed." },
+  { q: "Is there a cure for fibromyalgia?", a: "No, there is currently no cure for fibromyalgia. With the right combination of medicines, physical therapies, and psychological support, most people see improvement in symptoms and quality of life." },
+  { q: "Do I need to take medicines lifelong for fibromyalgia?", a: "This usually depends on how the condition changes over time. Some people may need medicines consistently to manage symptoms, while others find that lifestyle changes, exercise, and talking therapy reduce their dependence on medicines significantly." },
+  { q: "Are fibromyalgia medicines available in India, and how much do they cost?", a: "Yes, medicines like amitriptyline, pregabalin and duloxetine are available at affordable prices. Monthly costs of medicines may vary from approximately Rs 50 for amitriptyline to Rs 2,500 for milnacipran. The doctor will recommend the appropriate medicine based on the specific symptoms." },
+  { q: "Can exercise really help fibromyalgia pain, or will it make it worse?", a: "Exercise is one of the most effective treatments for fibromyalgia. It is recommended to start very gently and increase the intensity slowly as the symptoms improve. This may help avoid triggering pain. Swimming, walking, and gentle yoga are the best options. A physiotherapist or doctor can advise on how to begin safely." },
 ]
 
 const references = [
-  { text: "Lupus Foundation of America. Symptoms and Diagnosis of Lupus. ", url: "https://www.lupus.org/resources/symptoms-diagnosis" },
-  { text: "Mayo Clinic. Lupus Symptoms and Causes. 2025. ", url: "https://www.mayoclinic.org/diseases-conditions/lupus/symptoms-causes/syc-20365789" },
-  { text: "Healthline. 10 Early Signs of Lupus. 2023. ", url: "https://www.healthline.com/health/lupus/early-signs" },
-  { text: "Pace Hospital. Lupus Disease Overview. 2026. ", url: "https://www.pacehospital.com/lupus" },
-  { text: "Gupta R et al. Systemic Lupus Erythematosus in India. PubMed Central. 2022. ", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9270079/" },
-  { text: "ScienceDirect. Challenges in the Diagnosis and Management of SLE in India. 2023. ", url: "https://www.sciencedirect.com/science/article/pii/S2772613423000276" },
+  { text: "PMC. Management of Fibromyalgia - An Update. 2024. ", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11201510/" },
+  { text: "PMC. Update on Treatment Guideline in Fibromyalgia Syndrome. 2017. ", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5489806/" },
+  { text: "Annals of Indian Academy of Neurology. Role of Repetitive Transcranial Magnetic Stimulation in Fibromyalgia. 2024. ", url: "https://journals.lww.com/annalsofian/fulltext/2024/27020/role_of_repetitive_transcranial_magnetic.11.aspx" },
+  { text: "PMC. Distress of Fibromyalgia in Neurology Practice - Northeast India Study. 2025. ", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12007770/" },
+  { text: "WebMD. Fibromyalgia Medicines and Treatment. 2026. ", url: "https://www.webmd.com/fibromyalgia/medicines-to-treat-fibromyalgia" },
+  { text: "Frontiers in Pharmacology. Pharmacologic Treatment of Fibromyalgia - An Update. 2025. ", url: "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2025.1651181/full" },
 ]
 
 /* ─────────────────────────────────────────────
@@ -68,24 +44,24 @@ const references = [
    ───────────────────────────────────────────── */
 
 const tocItems = [
-  { id: "common-symptoms", label: "Common Symptoms of Lupus" },
-  { id: "progress", label: "How Symptoms Progress Over Time" },
-  { id: "groups", label: "How Symptoms Differ Across Groups" },
-  { id: "early-warning", label: "Early Warning Signs of Lupus" },
-  { id: "similar-conditions", label: "Conditions That Can Cause Similar Symptoms" },
-  { id: "diagnosis", label: "How Is Lupus Diagnosed?" },
-  { id: "see-doctor", label: "When Should You See a Doctor?" },
-  { id: "speak-rheumatologist", label: "Think These Symptoms Sound Familiar? Speak to a Rheumatologist" },
+  { id: "how-works", label: "How Fibromyalgia Treatment Works" },
+  { id: "lifestyle-therapies", label: "Lifestyle and Supportive Therapies: The First Step" },
+  { id: "medications", label: "Medications Used to Treat Fibromyalgia" },
+  { id: "specialised-therapies", label: "Specialised Therapies: When Standard Treatment Is Not Enough" },
+  { id: "complementary", label: "Complementary and Traditional Treatments" },
+  { id: "monitoring", label: "Monitoring Your Treatment" },
+  { id: "costs", label: "Cost of Fibromyalgia Treatment in India" },
+  { id: "speak-to-doctor", label: "When to Speak to a Rheumatologist About Treatment" },
   { id: "references", label: "References" },
   { id: "faq", label: "Frequently Asked Questions" },
 ]
 
 
-function LupusSymptomsDiagnosis() {
-  const [activeSection, setActiveSection] = useState("common-symptoms")
+function FibromyalgiaTreatment() {
+  const [activeSection, setActiveSection] = useState("how-works")
 
   useEffect(() => {
-    document.title = "Lupus (SLE) - Symptoms, Warning Signs and Diagnosis | Omni Rheuma"
+    document.title = "Fibromyalgia Treatment: Medications, Therapies and Specialised Options | Omni Rheuma"
     return () => { document.title = "Omni Rheuma | Professional Rheumatology Resource" }
   }, [])
 
@@ -159,7 +135,7 @@ function LupusSymptomsDiagnosis() {
               <span aria-hidden="true">›</span>
               <span className="whitespace-nowrap">Diseases &amp; Conditions</span>
               <span aria-hidden="true">›</span>
-              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Lupus Symptoms and Diagnosis</span>
+              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Fibromyalgia Treatment</span>
             </div>
 
             {/* Title */}
@@ -177,7 +153,7 @@ function LupusSymptomsDiagnosis() {
                     marginBottom: 0,
                   }}
                 >
-                  Lupus (SLE) -
+                  Fibromyalgia Treatment:
                   <span
                     style={{
                       display: "block",
@@ -188,11 +164,11 @@ function LupusSymptomsDiagnosis() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Symptoms, Warning Signs and Diagnosis
+                    Medications, Therapies and Specialised Options
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
-                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
+                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Shafali Nagpal</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 31, 2026
                 </p>
               </div>
             </div>
@@ -209,234 +185,241 @@ function LupusSymptomsDiagnosis() {
 
                 {/* ── INTRO ── */}
                 <div id="intro" data-toc-section style={{ marginBottom: "1rem" }}>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    Lupus is oftentimes referred to as &ldquo;The Great Imitator&rdquo;. This is because it mimics so many diseases. For instance, constant fatigue and weakness are commonly overlooked as low hemoglobin (anemia). Joint discomfort is blamed on work stress or posture. And repeated skin breakouts are mistaken for simple allergies or heat rashes. Due to the commonness of symptoms, it takes approximately 4 years to receive a confirmed diagnosis. However, the wait is even longer in India due to low awareness and limited access to rheumatologists.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Fibromyalgia can make everyday life difficult. Widespread body pain can make daily tasks more tiring, poor sleep can lead to feeling tired throughout the day, and simple activities such as cleaning, cooking or taking a shower may feel difficult to perform.
                   </p>
-                  <p className="text-[16px] leading-[1.8] text-navy-muted">
-                    SLE is the most common form of this disease. It is a condition where the body's immune system attacks its own tissues. It can occur in the skin, joints, kidneys, and other parts of the body. This page can guide patients/caretakers to identify the early warning signs. It will help to know what symptoms to put the spotlight on and what the diagnosis involves.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Many people worry knowing that there is no cure for this condition and nothing can be done to improve their symptoms. But that is not true. Regular exercise, counselling, medicines or specialised therapies can help manage these daily symptoms.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    No single treatment works for everyone. Doctors usually plan treatments based on which symptom and how much they affect daily life. In this guide, you will learn about the treatment options available for fibromyalgia, when doctors recommend them, what to expect and how much they cost.
                   </p>
                 </div>
 
-                {/* ── COMMON SYMPTOMS ── */}
-                <div id="common-symptoms" data-toc-section style={{ marginBottom: "1.5rem" }}>
+                {/* ── HOW WORKS ── */}
+                <div id="how-works" data-toc-section style={{ marginBottom: "1.5rem" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Common Symptoms of Lupus
+                    How Fibromyalgia Treatment Works
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    As lupus becomes more active, the symptoms become more apparent and can begin to affect more than one organ. It usually comes and goes in episodes. Lupus is different for each person.
+                    Fibromyalgia treatment mainly aims to reduce pain and tiredness and help people stay active in their daily lives. It is also important to improve quality of sleep, anxiety and overall mood. The treatment plan for fibromyalgia is not the same for every person.
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    This is how lupus is seen throughout the body:
-                  </p>
-                  <ul className="space-y-2 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {bodySymptoms.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        <strong className="font-semibold">{s.label}</strong> {s.detail}
-                      </li>
-                    ))}
-                  </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Not all of these occur in people with lupus. Some have symptoms in a few areas, others more broadly. The best picture a rheumatologist can have is how frequent the symptoms are, when they occur, and what their origins are.
+                    Doctors usually follow the <strong className="font-semibold">European Alliance of Associations for Rheumatology (EULAR 2016)</strong> guidelines to decide on the most suitable treatment option. They adjust it based on the symptoms and how well the treatment works.
                   </p>
                 </div>
 
                 {/* ── INLINE CTA BANNER ── */}
                 <ReviewedConsultationCta />
 
-                {/* ── PROGRESS OVER TIME ── */}
-                <div id="progress" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── LIFESTYLE THERAPIES ── */}
+                <div id="lifestyle-therapies" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    How Symptoms Progress Over Time
+                    Lifestyle and Supportive Therapies: The First Step
                   </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Fibromyalgia treatment often begins with therapies instead of medicine. The EULAR  guidelines recommend starting non-pharmacological therapies before medicines for fibromyalgia. These therapies are not an alternative to medicines. Instead, they help support how well medicines work.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Exercise Therapy
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Doctors recommend aerobic exercise such as walking, swimming, and gentle yoga to help reduce pain and anxiety. These exercises also improve sleep quality and overall energy. It is usually recommended to start these exercises slowly and gradually increase the intensity as the symptoms improve. Pushing too hard early can trigger pain and make it harder to continue exercising.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Talk Therapy For Long-Term Pain Management
+                  </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus affects people in an episodic manner throughout their lives. At times, symptoms are worse. At other times, they are relatively better. Typical causes are exposure to sunlight, emotional upset, infections, periods, pregnancy, and some medications.
+                    In fibromyalgia, the brain and the nervous system become oversensitive to how they respond to pain signals. Doctors can recommend a structured talk therapy called Cognitive Behavioural Therapy (CBT) that helps patients understand the connection between their thoughts, daily habits, and how much pain they feel.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    A psychologist helps people identify patterns that can worsen the pain, such as avoiding daily activity out of fear or being anxious about a flare. They also help people learn about the practical techniques to break these patterns. Gradually, this helps reduce pain and tiredness and improves quality of life.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Physiotherapy and Pacing
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Physiotherapy is an important part of fibromyalgia treatment. Gentle stretching, posture correction, relaxation techniques and pacing strategies are usually recommended based on how severe the symptoms are.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Pacing helps people learn how to balance work and rest. Pacing means taking short breaks during activities before pain or tiredness becomes worse. This is one of the most effective skills that helps people with fibromyalgia perform tasks without triggering pain.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The reason why it is important to monitor in quiet periods is that damage to the organs can occur without the person feeling unwell. Early kidney injury can occur with no symptoms. These changes can be detected through regular examinations and blood and urine tests. Long-term organ damage can be minimised if treatment is started early and regularly.
+                    Learning about fibromyalgia and understanding what makes the symptoms worse can help people manage the condition better. Knowing when to rest, stay active, and when to seek medical advice can make daily life easier. Doctors can often provide reliable information and suggest ways to manage long-term pain.
                   </p>
                 </div>
 
-                {/* ── GROUPS ── */}
-                <div id="groups" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── MEDICATIONS ── */}
+                <div id="medications" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    How Symptoms Differ Across Groups
+                    Medications Used to Treat Fibromyalgia
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus does not have the same symptoms for every person. The appearance of the condition is dependent on age, gender and life stage.
+                    When lifestyle changes and support therapies do not provide enough relief, doctors often prescribe medicines along with these therapies. Doctors recommend medicine when therapies alone do not provide relief from pain, sleep quality, or mood.
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Women
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Amitriptyline: The Most Common Starting Medicine in India
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is most often diagnosed in women. It typically occurs between 15 and 45 years of age. Women are commonly affected by hormonal shifts at puberty, pregnancy, and during the menstrual cycle. Women with lupus planning a pregnancy need early rheumatology support. It increases the risk of miscarriage, premature birth, and high blood pressure during pregnancy.
+                    Doctors may recommend a low dose of the medicine amitriptyline to help reduce pain and improve sleep in people with fibromyalgia.
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Teenagers and Young Adults
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Pregabalin: For Pain and Sleep
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus may occur at any time during the teens. Children developing lupus before age 18 are more likely to have severe lupus in Indian patients than in Western patients. Early diagnosis is especially significant as kidney and blood system involvement is very common in young Indian patients.
+                    Pregabalin is a medicine often recommended to help reduce pain signals reaching the nervous system. As a result, it helps reduce pain and improve quality of sleep. It is one of three FDA-approved medicines recommended by doctors for fibromyalgia. In India, it is available with the brand name <strong className="font-semibold">Lyrica.</strong>
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Men
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Duloxetine: For Pain and Mood
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is much less prevalent but more severe in men. They are also less likely to be referred to a specialist, contributing to delayed diagnosis.
+                    Doctors often recommend the medicine duloxetine to relieve pain, improve anxiety and overall mood. Duloxetine acts on certain chemicals in the brain that regulate pain and mood. This medicine is approved by the FDA for people with fibromyalgia. It is available in India as <strong className="font-semibold">Cymbalta.</strong>
                   </p>
 
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Older Adults
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Milnacipran: An Alternative Option
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Lupus that develops at age 50 years or older tends to have less involvement of the kidney. It may have more joint and lung involvement. Pregnant or elderly patients are more likely to present with drug-induced lupus. This occurs from several blood pressure and anti-seizure drugs.
+                    Milnacipran is recommended when duloxetine does not provide enough relief or is causing side effects.
                   </p>
                 </div>
 
-                {/* ── EARLY WARNING SIGNS ── */}
-                <div id="early-warning" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── SPECIALISED THERAPIES ── */}
+                <div id="specialised-therapies" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Early Warning Signs of Lupus
+                    Specialised Therapies: When Standard Treatment Is Not Enough
                   </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus is very easy to miss, as the initial symptoms are simple to overlook. Most people believe they are due to stress, tiredness, or other illnesses.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Doctors often recommend specialised therapies when other therapies and medicines fail to provide relief alone. These therapies directly interrupt or reduce overactive pain signals in the nervous system.
                   </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    Trigger Point Injections
+                  </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    The common warning signs are:
+                    Doctors may recommend an injection directly into tight and painful muscle knots called trigger points. In fibromyalgia, trigger points are common in the neck, shoulders, upper back, and hips.
                   </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {warningSigns.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    The doctor will numb the area, which helps loosen tight muscle and relieve pain in that area. It usually provides relief for 2 to 12 weeks. The procedure usually takes around 10 to 15 minutes in a clinic or pain management centre. Sometimes, multiple sessions are recommended, and the injections can be repeated regularly if needed.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    TENS: Transcutaneous Electrical Nerve Stimulation
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    TENS (Transcutaneous Electrical Nerve Stimulation) is recommended when fibromyalgia pain becomes severe and affects daily activities. It is a small, portable pain relief device. It works by sending mild electrical impulses through adhesive pads placed on the skin over painful areas. These impulses help reduce pain without medicines or needles.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    The procedure often takes about 20 to 30 minutes and can be given at a physiotherapy clinic or at home under recommendation by a doctor or physiotherapist. TENS devices are widely available in India.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e" }}>
+                    rTMS: Repetitive Transcranial Magnetic Stimulation
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    rTMS is a specialised treatment that uses magnetic stimulation to help reduce pain in people with fibromyalgia. It is a painless procedure and does not involve injections or surgery. It can improve pain, anxiety and low mood in people with fibromyalgia.
+                  </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The problem with recognising the early signs of lupus is that they may come on slowly. One week it may be joint pain and the next a rash. Then it may be feeling relatively well for weeks in between. Lupus can take a while to be diagnosed because of this erratic pattern.
+                    The procedure involves multiple sittings over several weeks, with each session lasting approximately 30 to 45 minutes. In India, rTMS is available at select neurology and pain management centres in big cities, including Bengaluru, Mumbai, Delhi, and Chennai.
                   </p>
                 </div>
 
-                {/* ── SIMILAR CONDITIONS ── */}
-                <div id="similar-conditions" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── COMPLEMENTARY ── */}
+                <div id="complementary" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Conditions That Can Cause Similar Symptoms
+                    Complementary and Traditional Treatments
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    In India, many people with fibromyalgia often use Ayurveda, yoga therapy, and meditation along with taking medicine. In people with long-term pain, yoga often helps reduce pain and tiredness and improves overall mood. Meditation and mindfulness are also beneficial to improve anxiety and mood.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    Speak with a doctor before taking any Ayurvedic medicine, as some herbs can affect how well the prescribed medicines work, particularly those affecting the nervous system.
+                  </p>
+                </div>
+
+                {/* ── MONITORING ── */}
+                <div id="monitoring" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Monitoring Your Treatment
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Fibromyalgia treatment requires regular monitoring to ensure that therapies and medicines are working well. Doctors will check whether symptoms have improved, if medicines need adjusting, or if additional therapies should be added or changed.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    A simple self-assessment tool called the <strong className="font-semibold">FIQ (Fibromyalgia Impact Questionnaire)</strong>, a short questionnaire that rates how much fibromyalgia is affecting daily life, helps both patient and doctor track progress over time. Doctors may adjust the treatment based on how the patient responds to the current therapies and medicine.
+                  </p>
+                </div>
+
+                {/* ── COSTS ── */}
+                <div id="costs" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Cost of Fibromyalgia Treatment in India
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    It is common to be tested for other conditions before a lupus diagnosis is made. This is because symptoms can overlap with many other diseases. The table below presents the most frequent diseases considered together with lupus.
+                    Fibromyalgia is a long-term condition, and treatment costs add up over time. The table below gives a rough overview of what patients in India can expect to pay across different parts of the treatment plan. The cost may vary depending on the city and the hospital.
                   </p>
 
                   <div className="overflow-x-auto mb-6">
-                    <table className="w-full border-collapse text-left min-w-[680px]">
+                    <table className="w-full border-collapse text-left min-w-[560px]">
                       <thead>
                         <tr style={{ backgroundColor: "#e0f3f5" }}>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Condition</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">How It Overlaps With Lupus</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Key Difference</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Treatment</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Approximate Cost in India</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {similarConditions.map((row) => (
-                          <tr key={row.condition} className="border-b border-[#dadfe8]">
-                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.condition}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.overlap}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.difference}</td>
+                        {treatmentCosts.map((row) => (
+                          <tr key={row.option} className="border-b border-[#dadfe8]">
+                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.option}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top whitespace-nowrap">{row.cost}</td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   </div>
+
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    Treatment costs can vary. It is helpful to check whether the health insurance or government health scheme covers physiotherapy or mental health consultations before starting long-term treatment.
+                  </p>
                 </div>
 
-                {/* ── DIAGNOSIS ── */}
-                <div id="diagnosis" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── SPEAK TO DOCTOR ── */}
+                <div id="speak-to-doctor" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    How Is Lupus Diagnosed?
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    No one test can diagnose lupus. The diagnosis is constructed through several means. It involves history, physical examination, blood tests, and imaging. All of these are done by a rheumatologist. This process may take time, and that is normal.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Physical Examination and Medical History
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The first steps in a rheumatologist's evaluation involve asking about the nature of the symptoms. It is about when they began, what makes them better, and what makes them worse. Whether any family member has a similar or autoimmune disorder. A physical examination is performed to look for the butterfly rash, swollen joints, mouth ulcers, and other visible symptoms.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Blood Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The most important blood test is an ANA (anti-nuclear antibody) test. It is positive in nearly every lupus patient. It indicates that the immune system is creating antibodies that attack the body's own cells. Anti-dsDNA antibodies, ESR, and CRP (measuring the inflammation) further narrow the diagnosis, if necessary.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Urine Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    A urine analysis is performed to determine if there is protein or blood in the urine. This may indicate kidney involvement even if there are no symptoms. Urine testing is performed regularly during the diagnostic process and monitoring.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Imaging
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    A chest X-ray, heart ultrasound, or kidney ultrasound might be ordered depending on the involved organs. If there is a concern for kidney involvement, a kidney biopsy may be suggested.
-                  </p>
-                </div>
-
-                {/* ── SEE DOCTOR ── */}
-                <div id="see-doctor" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    When Should You See a Doctor?
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    If you have any of the following, see a rheumatologist:
-                  </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {doctorSigns.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The earlier lupus is identified, the better the long-term outcomes. Don&apos;t delay treatment until symptoms are severe.
-                  </p>
-                </div>
-
-                {/* ── SPEAK TO RHEUMATOLOGIST ── */}
-                <div id="speak-rheumatologist" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    Think These Symptoms Sound Familiar? Speak to a Rheumatologist
+                    When to Speak to a Rheumatologist About Treatment
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    If you feel any or all of the symptoms on this page are familiar, visit a rheumatologist sooner. The sooner recognized, the sooner diagnosed, and the better the outcomes will be. Don&apos;t wait until things get &quot;bad&quot; to take action. Action is preferable to inaction. Get the right care when it is needed.
+                    Speak to a rheumatologist if your pain, fatigue, or sleep problems are not improving with treatment. It is also important to seek medical advice if anxiety or low mood is affecting daily life or if medicines are causing side effects. If you are planning a pregnancy or considering complementary or herbal treatments, discuss them with your doctor before making any changes to your treatment plan. Regular reviews help ensure that treatment continues to work well.
                   </p>
                   <Link
                     to="/book-appointment"
@@ -452,6 +435,12 @@ function LupusSymptomsDiagnosis() {
 
                 {/* ── DISCLAIMER + REFERENCES ── */}
                 <div id="references" data-toc-section style={{ marginBottom: "2rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Disclaimer
+                  </h2>
                   <p className="text-[14px] leading-[1.7] italic" style={{ color: "#5E5E5E", marginBottom: "2.5rem" }}>
                     This content has been written for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified rheumatologist or healthcare provider if you have questions about a medical condition or treatment plan.
                   </p>
@@ -511,7 +500,7 @@ function LupusSymptomsDiagnosis() {
                       </div>
                     </div>
                     <p style={{ fontFamily: "var(--font-base)", fontSize: "13px", lineHeight: 1.55, color: "rgba(255,255,255,0.78)", marginBottom: "14px" }}>
-                      Consultant Rheumatologist for lupus evaluation and long-term care.
+                      Consultant Rheumatologist for fibromyalgia evaluation and long-term care.
                     </p>
                     <Link
                       to="/book-appointment"
@@ -629,4 +618,4 @@ function LupusSymptomsDiagnosis() {
   )
 }
 
-export default LupusSymptomsDiagnosis
+export default FibromyalgiaTreatment

@@ -22,6 +22,16 @@ import DiagnosisTreatmentOA from "./pages/DiagnosisTreatmentOA.jsx"
 import SymptomsCausesOA from "./pages/SymptomsCausesOA.jsx"
 import LupusSymptomsDiagnosis from "./pages/LupusSymptomsDiagnosis.jsx"
 import PsoriaticArthritisGuide from "./pages/PsoriaticArthritisGuide.jsx"
+import LupusTreatmentOptions from "./pages/LupusTreatmentOptions.jsx"
+import LivingWithLupus from "./pages/LivingWithLupus.jsx"
+import PsoriaticArthritisSymptoms from "./pages/PsoriaticArthritisSymptoms.jsx"
+import PsoriaticArthritisDiagnosis from "./pages/PsoriaticArthritisDiagnosis.jsx"
+import PsoriaticArthritisTreatment from "./pages/PsoriaticArthritisTreatment.jsx"
+import LivingWithPsoriaticArthritis from "./pages/LivingWithPsoriaticArthritis.jsx"
+import FibromyalgiaSymptomsDiagnosis from "./pages/FibromyalgiaSymptomsDiagnosis.jsx"
+import FibromyalgiaTreatment from "./pages/FibromyalgiaTreatment.jsx"
+import AnkylosingSpondylitisGuide from "./pages/AnkylosingSpondylitisGuide.jsx"
+import AnkylosingSpondylitisTreatment from "./pages/AnkylosingSpondylitisTreatment.jsx"
 import RheumatoidArthritisOverview from "./pages/overview/RheumatoidArthritisOverview.jsx"
 import OsteoarthritisOverview from "./pages/overview/OsteoarthritisOverview.jsx"
 import LupusOverview from "./pages/overview/LupusOverview.jsx"
@@ -75,6 +85,16 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Osteoarthritis-Symptoms-Causes" element={<SymptomsCausesOA />} />
         <Route path="/Lupus-Symptoms-Warning-Signs" element={<LupusSymptomsDiagnosis />} />
         <Route path="/Psoriatic-Arthritis" element={<PsoriaticArthritisGuide />} />
+        <Route path="/Lupus-Treatment-Options" element={<LupusTreatmentOptions />} />
+        <Route path="/Living-With-Lupus" element={<LivingWithLupus />} />
+        <Route path="/Psoriatic-Arthritis-Symptoms-Warning-Signs" element={<PsoriaticArthritisSymptoms />} />
+        <Route path="/Psoriatic-Arthritis-Diagnosis" element={<PsoriaticArthritisDiagnosis />} />
+        <Route path="/Psoriatic-Arthritis-Treatment" element={<PsoriaticArthritisTreatment />} />
+        <Route path="/Living-With-Psoriatic-Arthritis" element={<LivingWithPsoriaticArthritis />} />
+        <Route path="/Fibromyalgia-Symptoms-Warning-Signs" element={<FibromyalgiaSymptomsDiagnosis />} />
+        <Route path="/Fibromyalgia-Treatment" element={<FibromyalgiaTreatment />} />
+        <Route path="/Ankylosing-Spondylitis" element={<AnkylosingSpondylitisGuide />} />
+        <Route path="/Ankylosing-Spondylitis-Treatment" element={<AnkylosingSpondylitisTreatment />} />
         <Route path="/Rheumatoid-Arthritis-overview" element={<RheumatoidArthritisOverview />} />
         <Route path="/Osteoarthritis-overview" element={<OsteoarthritisOverview />} />
         <Route path="/Lupus-overview" element={<LupusOverview />} />

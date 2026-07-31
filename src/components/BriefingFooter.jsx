@@ -12,7 +12,7 @@ function BriefingFooter() {
           {/* LEFT: Logo + tagline + social */}
           <div className="flex flex-col items-start w-full lg:w-[240px] lg:flex-shrink-0">
             <Link to="/" className="inline-flex items-center mb-2" aria-label="Omni Rheuma home">
-              <img src="/logo.png" alt="Omni Rheuma logo" className="h-28 w-28 lg:h-20 lg:w-20 object-contain" />
+              <img src="/logo.png" alt="Omni Rheuma logo" className="w-28 h-auto object-contain" />
             </Link>
             <p className="text-left" style={{ marginBottom: "18px", lineHeight: "24px", color: "#5E5E5E" }}>
               Personalised care for people living with joint and autoimmune conditions. Led by a DM-qualified rheumatologist.

@@ -137,7 +137,7 @@ function LivingWithOA() {
             {/* Title */}
             <div className="flex flex-col md:flex-row md:items-stretch gap-8 md:gap-12">
               <div className="flex-1 pb-7 text-left md:pb-0">
-                <p style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "#a0e2e4", marginBottom: "12px" }}>A Patient Guide for India</p>
+                {/* <p style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "#a0e2e4", marginBottom: "12px" }}>A Patient Guide for India</p> */}
                 <h1
                   style={{
                     fontFamily: "var(--font-display)",
@@ -153,7 +153,7 @@ function LivingWithOA() {
                   <span
                     style={{
                       display: "block",
-                      fontSize: "clamp(22px, 2.9vw, 34px)",
+                      fontSize: "clamp(26px, 3.4vw, 40px)",
                       lineHeight: 1.2,
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
@@ -163,8 +163,8 @@ function LivingWithOA() {
                     Daily Habits That Make a Real Difference
                   </span>
                 </h1>
-                <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
-                  Written by Dr. Chaitali Waghmore | Reviewed by Dr. Raghavendra | Last Updated: July 29, 2026
+                <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
+                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
                 </p>
               </div>
             </div>

@@ -107,21 +107,41 @@ function Conditions() {
     ? "/Living-With-Rheumatoid-Arthritis"
     : conditionSlug === "osteoarthritis"
       ? "/Living-With-Osteoarthritis"
-      : null
+      : conditionSlug === "lupus"
+        ? "/Living-With-Lupus"
+        : conditionSlug === "psoriatic-arthritis"
+          ? "/Living-With-Psoriatic-Arthritis"
+          : null
   const specialisedHref = isRA
     ? "/Specialised-Treatment-Rheumatoid-Arthritis"
     : conditionSlug === "osteoarthritis"
       ? "/Specialised-Treatment-Osteoarthritis"
-      : null
+      : conditionSlug === "lupus"
+        ? "/Lupus-Treatment-Options"
+        : conditionSlug === "psoriatic-arthritis"
+          ? "/Psoriatic-Arthritis-Treatment"
+          : conditionSlug === "fibromyalgia"
+            ? "/Fibromyalgia-Treatment"
+            : conditionSlug === "ankylosing-spondylitis"
+              ? "/Ankylosing-Spondylitis-Treatment"
+              : null
   const symptomsHref = isRA
     ? "/Rheumatoid-Arthritis-Symptoms-Warning-Signs"
     : conditionSlug === "osteoarthritis"
       ? "/Osteoarthritis-Symptoms-Causes"
       : conditionSlug === "lupus"
         ? "/Lupus-Symptoms-Warning-Signs"
-        : null
+        : conditionSlug === "psoriatic-arthritis"
+          ? "/Psoriatic-Arthritis-Symptoms-Warning-Signs"
+          : conditionSlug === "fibromyalgia"
+            ? "/Fibromyalgia-Symptoms-Warning-Signs"
+            : null
   const monitoringHref = isRA ? "/Rheumatoid-Arthritis-Blood-Tests-Monitoring" : null
-  const diagnosisHref = conditionSlug === "osteoarthritis" ? "/Osteoarthritis-Diagnosis-Treatment" : null
+  const diagnosisHref = conditionSlug === "osteoarthritis"
+    ? "/Osteoarthritis-Diagnosis-Treatment"
+    : conditionSlug === "psoriatic-arthritis"
+      ? "/Psoriatic-Arthritis-Diagnosis"
+      : null
   const featured = buildFeatured(displayName)
   const categoryLinks = buildCategoryLinks(displayName, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref)
 

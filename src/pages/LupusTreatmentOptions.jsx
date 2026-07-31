@@ -9,58 +9,48 @@ import { ArrowRight } from "lucide-react"
    DATA
    ───────────────────────────────────────────── */
 
-const bodySymptoms = [
-  { label: "Skin:", detail: "A reddish, butterfly-shaped rash caused by exposure to the sun. It spreads over the cheeks and nose. It can often be mistaken on darker Indian skin tones as a pigmented area." },
-  { label: "Joints:", detail: "Notice that there is pain and swelling that shifts location, as opposed to a typical sports injury that remains in one location. For many, it feels like pain that just never goes away." },
-  { label: "Whole Body Fatigue:", detail: "This is not the tiredness that goes away with a good night's rest. It is persistent and similar to being burdened all day long." },
-  { label: "Kidneys:", detail: "If you notice swelling of your legs or around your eyes, or foamy urine? Or does fluid build up in your body for no apparent reason? It could be a warning sign. Lupus can make the kidneys leaky, like a filter. When this happens, the fluid that should be leaving the kidneys remains in the body." },
-  { label: "Chest and Breathing:", detail: "A sharp chest pain when taking a deep breath can be mistaken for a heart problem or gas. This occurs due to swelling of the lining of the lungs or around the heart." },
-  { label: "Brain and Thinking:", detail: "Difficulty focusing on tasks, forgetfulness, and chronic headaches. Some patients describe this as thinking in a really thick fog. Even simple things are more difficult." },
-  { label: "Fingers and Toes:", detail: "White or blue discoloration of fingers and toes in cold weather or under stress. The blood circulation is just like a circuit that shuts down when there is an overload of electricity." },
+const treatmentGoals = [
+  "Lowering the pain, redness, and swelling.",
+  "Preventing long-term damage to kidneys and heart.",
+  "Achieving periods of low or no disease activity.",
+  "Reducing the prolonged use of steroids over time.",
+  "Maintaining the quality of life.",
+  "Being able to carry out daily activities.",
 ]
 
-const warningSigns = [
-  "Constant tiredness that does not go away with rest.",
-  "A mild fever that keeps returning without any infection.",
-  "Recurring mouth ulcers that come and go.",
-  "Hair thinning or hair loss in patches.",
-  "Joint pain that keeps shifting between different joints.",
-  "Skin rashes worsen after sun exposure.",
+const medicineCosts = [
+  { medicine: "Hydroxychloroquine", type: "Daily tablet", cost: "Rs 200 to Rs 600" },
+  { medicine: "NSAIDs", type: "Tablets", cost: "Rs 100 to Rs 500" },
+  { medicine: "Prednisolone (steroid)", type: "Tablets", cost: "Rs 100 to Rs 400" },
+  { medicine: "Azathioprine", type: "Tablets", cost: "Rs 500 to Rs 1,500" },
+  { medicine: "Mycophenolate mofetil", type: "Tablets", cost: "Rs 1,500 to Rs 4,000" },
+  { medicine: "Belimumab (biologic)", type: "Injection or infusion", cost: "Rs 20,000 to Rs 80,000 or more" },
 ]
 
-const similarConditions = [
-  { condition: "Rheumatoid Arthritis", overlap: "Joint pain, swelling, fatigue", difference: "Rheumatoid arthritis stays in joints, does not cause butterfly rash or organ involvement" },
-  { condition: "Fibromyalgia", overlap: "Fatigue, widespread pain, brain fog", difference: "No redness, swelling, or organ involvement" },
-  { condition: "Viral Infections", overlap: "Fever, fatigue, joint pain, rash", difference: "Infections resolve; lupus symptoms persist and come back" },
-  { condition: "Sjögren's Syndrome", overlap: "Fatigue, dry eyes, dry mouth", difference: "Can overlap with lupus and both can occur together" },
-  { condition: "Thyroid Disease", overlap: "Fatigue, hair loss, weight changes", difference: "Thyroid tests help distinguish; lupus needs ANA testing" },
-]
-
-const doctorSigns = [
-  "A facial rash on the cheeks and nose that worsens with exposure to sunlight.",
-  "Constant tiredness and joint pain for more than 4 to 6 weeks without a clear reason.",
-  "Unusual hair loss, persistent mouth ulcers, or low-grade fevers that are commonly repeated",
-  "Heavy, puffy-looking swelling in the legs, ankles, or around the eyes with no known origin.",
-  "Fingers or toes turning white or blue in cold or stressful situations.",
-  "A close family member diagnosed with lupus or another autoimmune condition.",
+const speakToDoctorSigns = [
+  "If current medicines are not able to control symptoms or episodes adequately.",
+  "If you see new symptoms or existing ones have worsened.",
+  "If you see your legs swollen or changes in urine (might be kidney involvement).",
+  "If a pregnancy is being planned.",
+  "If you are considering starting any complementary or herbal treatment.",
 ]
 
 const faqs = [
-  { q: "How to know the commonest early signs of lupus?", a: "Answer: Constant tiredness is the most common early sign. It affects up to 90% of patients. It differs from regular tiredness, and it does not improve with rest. Repeated joint pain shifting between different joints is another early signal." },
-  { q: "Is it possible for lupus to affect the kidneys?", a: "Answer: Yes. Kidney involvement is called lupus nephritis. It is one of the most serious complications of lupus. It can develop silently with no obvious symptoms. This is why regular urine and blood tests are essential throughout treatment." },
-  { q: "Why do people with lupus get a butterfly rash on their face?", a: "Answer: The butterfly rash occurs due to swelling in small blood vessels under the facial skin. It appears as a reddish rash across the cheeks and nose. It is often triggered or worsened by sunlight. On darker Indian skin tones, it may look like a darker pigmented patch, making it harder to spot." },
-  { q: "Why is lupus diagnosed so late in India?", a: "Answer: Lupus may look like other conditions. This makes it difficult to identify sooner. In India, most patients first see a general physician, dermatologist, or orthopaedician before reaching the rheumatologist. Less awareness also adds to the delay." },
-  { q: "Does lupus affect teens in India?", a: "Answer: Yes. Juvenile-onset lupus is diagnosed before age 18. It tends to be more severe in Indian patients than in Western populations. Kidney and blood involvement are particularly common in young Indian patients. That is why early specialist care is important." },
-  { q: "Is lupus and rheumatoid arthritis the same?", a: "Answer: No, they are different. Although both are autoimmune and cause joint pain, they are distinct. Rheumatoid arthritis mainly affects joints and can cause permanent joint damage. Lupus can affect multiple organs, including the kidneys, skin, heart, and nervous system. Its joint pain shifts between the joints rather than staying fixed." },
+  { q: "Does lupus have a cure?", a: "Answer:  There is no cure for lupus. But with treatment, patients are able to live healthy lives. With lifestyle changes and periodic check-ups, lupus can be controlled long-term. With appropriate care, many patients live full and active lives." },
+  { q: "Will I have to take lifelong medicines for my lupus?", a: "Answer: This depends on the disease during the course of its development. Hydroxychloroquine can be taken as long-term protective medicine, even when symptoms are mild. When the symptoms subside, other medicines may be lowered or discontinued. These decisions will be made by a doctor." },
+  { q: "Is there a medicine for Lupus in India, and what is the cost of it?", a: "Answer: Yes. Medicines such as hydroxychloroquine, steroids, azathioprine, and mycophenolate mofetil are available in India as affordable generics. Biologics are expensive. The price of belimumab is from Rs 20,000 to Rs 80,000 or more per month. Patients should check with their treating hospital what is covered by the CGHS and/or PMJAY schemes." },
+  { q: "Can I try Ayurvedic treatment along with my doctor's prescription?", a: "Answer: Some patients believe that complementary treatments can be a supportive measure for lupus. Talk to your doctor before starting any herbal/Ayurvedic treatment. It can interact with certain herbs." },
+  { q: "Is it possible to control lupus without steroids?", a: "Answer: In many patients, the aim is to reduce steroid use over time rather than avoid it entirely. This is achieved by using immunosuppressants and Hydroxychloroquine. Steroids are still needed in moderate or serious episodes or in organ involvement. Your doctor will always try to reduce the amount of steroids." },
+  { q: "How are immunosuppressants and biologics different in lupus treatment?", a: "Answer: Immunosuppressants calm the overactive immune system. They are used earlier in treatment at much lower cost. Biologics are more targeted. They block specific proteins driving lupus activity. And they are reserved for patients whose condition has not responded adequately to standard medicines. Both are used under close rheumatology supervision." },
 ]
 
 const references = [
-  { text: "Lupus Foundation of America. Symptoms and Diagnosis of Lupus. ", url: "https://www.lupus.org/resources/symptoms-diagnosis" },
-  { text: "Mayo Clinic. Lupus Symptoms and Causes. 2025. ", url: "https://www.mayoclinic.org/diseases-conditions/lupus/symptoms-causes/syc-20365789" },
-  { text: "Healthline. 10 Early Signs of Lupus. 2023. ", url: "https://www.healthline.com/health/lupus/early-signs" },
-  { text: "Pace Hospital. Lupus Disease Overview. 2026. ", url: "https://www.pacehospital.com/lupus" },
-  { text: "Gupta R et al. Systemic Lupus Erythematosus in India. PubMed Central. 2022. ", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9270079/" },
-  { text: "ScienceDirect. Challenges in the Diagnosis and Management of SLE in India. 2023. ", url: "https://www.sciencedirect.com/science/article/pii/S2772613423000276" },
+  { text: "Lupus Foundation of America. New ACR Treatment Guidelines for Systemic Lupus Erythematosus. 2024. ", url: "https://www.lupus.org/news/american-college-of-rheumatology-new-systemic-lupus-erythematosus-guideline" },
+  { text: "EULAR 2023 Recommendations for the Management of Systemic Lupus Erythematosus. PubMed Central. 2024. ", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11082770/" },
+  { text: "Mayo Clinic. Lupus Diagnosis and Treatment. 2025. ", url: "https://www.mayoclinic.org/diseases-conditions/lupus/diagnosis-treatment/drc-20365790" },
+  { text: "Cleveland Clinic. Lupus Treatment. 2025. ", url: "https://my.clevelandclinic.org/health/diseases/4875-lupus" },
+  { text: "Joshi's Clinic of Rheumatology. Lupus Treatment Cost in India. 2026. ", url: "https://joshisclinicofrheumatology.com/lupus-treatment-cost-india/" },
+  { text: "PubMed Central. Current Cell Therapies for Systemic Lupus Erythematosus. 2024. ", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11386214/" },
 ]
 
 /* ─────────────────────────────────────────────
@@ -68,24 +58,25 @@ const references = [
    ───────────────────────────────────────────── */
 
 const tocItems = [
-  { id: "common-symptoms", label: "Common Symptoms of Lupus" },
-  { id: "progress", label: "How Symptoms Progress Over Time" },
-  { id: "groups", label: "How Symptoms Differ Across Groups" },
-  { id: "early-warning", label: "Early Warning Signs of Lupus" },
-  { id: "similar-conditions", label: "Conditions That Can Cause Similar Symptoms" },
-  { id: "diagnosis", label: "How Is Lupus Diagnosed?" },
-  { id: "see-doctor", label: "When Should You See a Doctor?" },
-  { id: "speak-rheumatologist", label: "Think These Symptoms Sound Familiar? Speak to a Rheumatologist" },
+  { id: "goals", label: "What Are the Goals of Lupus Treatment?" },
+  { id: "approach", label: "How Treatment Is Approached" },
+  { id: "medications", label: "Medications Used to Treat Lupus" },
+  { id: "lifestyle", label: "Physiotherapy, Lifestyle and Sun Protection" },
+  { id: "complementary", label: "Complementary and Traditional Treatments" },
+  { id: "advanced", label: "Advanced Procedures - When They Are Needed" },
+  { id: "monitoring", label: "Monitoring Your Treatment" },
+  { id: "speak-to-doctor", label: "When to Speak to a Doctor About Treatment" },
+  { id: "build-plan", label: "Ready to Build Your Treatment Plan? Speak to a Rheumatologist" },
   { id: "references", label: "References" },
   { id: "faq", label: "Frequently Asked Questions" },
 ]
 
 
-function LupusSymptomsDiagnosis() {
-  const [activeSection, setActiveSection] = useState("common-symptoms")
+function LupusTreatmentOptions() {
+  const [activeSection, setActiveSection] = useState("goals")
 
   useEffect(() => {
-    document.title = "Lupus (SLE) - Symptoms, Warning Signs and Diagnosis | Omni Rheuma"
+    document.title = "Lupus (SLE) Treatment Options - Medications, Therapies and What to Expect | Omni Rheuma"
     return () => { document.title = "Omni Rheuma | Professional Rheumatology Resource" }
   }, [])
 
@@ -159,7 +150,7 @@ function LupusSymptomsDiagnosis() {
               <span aria-hidden="true">›</span>
               <span className="whitespace-nowrap">Diseases &amp; Conditions</span>
               <span aria-hidden="true">›</span>
-              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Lupus Symptoms and Diagnosis</span>
+              <span className="whitespace-nowrap" style={{ color: "#ffffff" }}>Lupus Treatment Options</span>
             </div>
 
             {/* Title */}
@@ -177,7 +168,7 @@ function LupusSymptomsDiagnosis() {
                     marginBottom: 0,
                   }}
                 >
-                  Lupus (SLE) -
+                  Lupus (SLE) Treatment Options -
                   <span
                     style={{
                       display: "block",
@@ -188,11 +179,11 @@ function LupusSymptomsDiagnosis() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Symptoms, Warning Signs and Diagnosis
+                    Medications, Therapies and What to Expect
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
-                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
+                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Shafali Nagpal</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
                 </p>
               </div>
             </div>
@@ -210,233 +201,215 @@ function LupusSymptomsDiagnosis() {
                 {/* ── INTRO ── */}
                 <div id="intro" data-toc-section style={{ marginBottom: "1rem" }}>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    Lupus is oftentimes referred to as &ldquo;The Great Imitator&rdquo;. This is because it mimics so many diseases. For instance, constant fatigue and weakness are commonly overlooked as low hemoglobin (anemia). Joint discomfort is blamed on work stress or posture. And repeated skin breakouts are mistaken for simple allergies or heat rashes. Due to the commonness of symptoms, it takes approximately 4 years to receive a confirmed diagnosis. However, the wait is even longer in India due to low awareness and limited access to rheumatologists.
+                    When people are diagnosed with lupus, all they want to know is what can be done about the disease. The reply is more comforting than it is anticipated. With the right treatment, Lupus patients can enjoy full, active lives. Fortunately, treatment for lupus has improved significantly in the last 10 years. It has become more targeted and effective than in the past.
                   </p>
                   <p className="text-[16px] leading-[1.8] text-navy-muted">
-                    SLE is the most common form of this disease. It is a condition where the body's immune system attacks its own tissues. It can occur in the skin, joints, kidneys, and other parts of the body. This page can guide patients/caretakers to identify the early warning signs. It will help to know what symptoms to put the spotlight on and what the diagnosis involves.
+                    Lupus is a disease that affects each patient uniquely. It is hard to say exactly what everyone will need to treat. The process is individualised according to the organs affected, disease activity, and it can vary as the disease evolves. This page covers all the treatment options available, ranging from the initially prescribed to advanced treatments. Everything is explained on this page in detail, along with the associated costs of the treatment in India.
                   </p>
                 </div>
 
-                {/* ── COMMON SYMPTOMS ── */}
-                <div id="common-symptoms" data-toc-section style={{ marginBottom: "1.5rem" }}>
+                {/* ── GOALS ── */}
+                <div id="goals" data-toc-section style={{ marginBottom: "1.5rem" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Common Symptoms of Lupus
+                    What Are the Goals of Lupus Treatment?
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    As lupus becomes more active, the symptoms become more apparent and can begin to affect more than one organ. It usually comes and goes in episodes. Lupus is different for each person.
+                    A doctor's treatment choices are influenced by a clear set of goals:
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    This is how lupus is seen throughout the body:
-                  </p>
-                  <ul className="space-y-2 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {bodySymptoms.map((s, i) => (
+                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                    {treatmentGoals.map((s, i) => (
                       <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        <strong className="font-semibold">{s.label}</strong> {s.detail}
+                        {s}
                       </li>
                     ))}
                   </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Not all of these occur in people with lupus. Some have symptoms in a few areas, others more broadly. The best picture a rheumatologist can have is how frequent the symptoms are, when they occur, and what their origins are.
+                    Achievement of these goals varies from patient to patient. It depends on disease activity and organ involvement.
                   </p>
                 </div>
 
                 {/* ── INLINE CTA BANNER ── */}
                 <ReviewedConsultationCta />
 
-                {/* ── PROGRESS OVER TIME ── */}
-                <div id="progress" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── APPROACH ── */}
+                <div id="approach" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    How Symptoms Progress Over Time
+                    How Treatment Is Approached
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus affects people in an episodic manner throughout their lives. At times, symptoms are worse. At other times, they are relatively better. Typical causes are exposure to sunlight, emotional upset, infections, periods, pregnancy, and some medications.
+                    The treatment of Lupus is personalised. Someone with lupus involving the skin and joints will need different treatment than someone whose kidneys are affected. Usually the treatment begins with the simplest, most effective medications. It's also modified as it progresses.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The reason why it is important to monitor in quiet periods is that damage to the organs can occur without the person feeling unwell. Early kidney injury can occur with no symptoms. These changes can be detected through regular examinations and blood and urine tests. Long-term organ damage can be minimised if treatment is started early and regularly.
+                    As per the recommendations of EULAR 2023, early treatment to avoid organ damage is a priority. A doctor reviews the plan on a regular basis. All decisions are made after discussing with the patient.
                   </p>
                 </div>
 
-                {/* ── GROUPS ── */}
-                <div id="groups" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── MEDICATIONS ── */}
+                <div id="medications" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    How Symptoms Differ Across Groups
+                    Medications Used to Treat Lupus
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus does not have the same symptoms for every person. The appearance of the condition is dependent on age, gender and life stage.
+                    As an autoimmune disease, lupus treatment is based primarily on medicines. They are used at different stages. The use depends on how active the disease is and which organs are affected.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Women
+                    1. Hydroxychloroquine - The Foundation
                   </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is most often diagnosed in women. It typically occurs between 15 and 45 years of age. Women are commonly affected by hormonal shifts at puberty, pregnancy, and during the menstrual cycle. Women with lupus planning a pregnancy need early rheumatology support. It increases the risk of miscarriage, premature birth, and high blood pressure during pregnancy.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Teenagers and Young Adults
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus may occur at any time during the teens. Children developing lupus before age 18 are more likely to have severe lupus in Indian patients than in Western patients. Early diagnosis is especially significant as kidney and blood system involvement is very common in young Indian patients.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Men
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    Lupus is much less prevalent but more severe in men. They are also less likely to be referred to a specialist, contributing to delayed diagnosis.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Symptoms in Older Adults
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Lupus that develops at age 50 years or older tends to have less involvement of the kidney. It may have more joint and lung involvement. Pregnant or elderly patients are more likely to present with drug-induced lupus. This occurs from several blood pressure and anti-seizure drugs.
-                  </p>
-                </div>
-
-                {/* ── EARLY WARNING SIGNS ── */}
-                <div id="early-warning" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    Early Warning Signs of Lupus
-                  </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    Lupus is very easy to miss, as the initial symptoms are simple to overlook. Most people believe they are due to stress, tiredness, or other illnesses.
+                    Hydroxychloroquine is an antimalarial medicine. It has become the cornerstone of lupus treatment. It is recommended for nearly all lupus patients. Regardless of the severity of the condition, it reduces lupus episodes. It shields organs in the long term and enhances long-lasting survival.
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    The common warning signs are:
-                  </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {warningSigns.map((s, i) => (
-                      <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The problem with recognising the early signs of lupus is that they may come on slowly. One week it may be joint pain and the next a rash. Then it may be feeling relatively well for weeks in between. Lupus can take a while to be diagnosed because of this erratic pattern.
-                  </p>
-                </div>
-
-                {/* ── SIMILAR CONDITIONS ── */}
-                <div id="similar-conditions" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    Conditions That Can Cause Similar Symptoms
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    It is common to be tested for other conditions before a lupus diagnosis is made. This is because symptoms can overlap with many other diseases. The table below presents the most frequent diseases considered together with lupus.
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    As per ACR guidelines, it is recommended for all lupus patients, unless there is a specific reason not to. It is one of the most available medicines for lupus. It is easily available in India in an affordable, generic tablet form.
                   </p>
 
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    2. NSAIDs - For Pain and Mild Symptoms
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    NSAIDs (non-steroidal anti-inflammatory drugs) can help manage joint pain, swelling, and fever during mild episodes. They include ibuprofen and naproxen. They are widely available in India as low-cost generics. They are used for short-term symptom relief. They are not suitable for patients with kidney involvement. It is better if a doctor confirms whether they are appropriate.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    3. Steroids - For Controlling Flares
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Steroids like prednisolone can quickly control the swelling and redness during an episode. They can be effective but are always used at the minimum dose and duration. Lowering dependence on steroids is one of the main objectives of lupus treatment. Newer medications allow this to be possible. The product is accessible as affordable generics in India.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    4. Immunosuppressants - For Moderate to Severe Disease
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Immunosuppressants are used when lupus damages organs such as the kidneys. These medicines help reduce the hyperactive immune system responsible for organ damage. Immunosuppressants include azathioprine, mycophenolate mofetil, or cyclophosphamide. The standard treatment for any lupus with kidney involvement is mycophenolate mofetil. It is available in India. These drugs are used with careful monitoring of the blood and urine.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    5. Biologics - When Standard Medicines Are Not Enough
+                  </h3>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
+                    Biologics are the new medications that help block certain proteins in the immune system. The two main biologics approved to treat lupus are belimumab and anifrolumab. The latter was recently approved. Biologics are given as injections or infusions. They are recommended when other treatments fail to control the condition. These drugs for the treatment of lupus are much more costly.
+                  </p>
+
+                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
+                    Cost of Medicines in India
+                  </h3>
                   <div className="overflow-x-auto mb-6">
-                    <table className="w-full border-collapse text-left min-w-[680px]">
+                    <table className="w-full border-collapse text-left min-w-[560px]">
                       <thead>
                         <tr style={{ backgroundColor: "#e0f3f5" }}>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Condition</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">How It Overlaps With Lupus</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Key Difference</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Medicine</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Type</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Approximate Monthly Cost in India</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {similarConditions.map((row) => (
-                          <tr key={row.condition} className="border-b border-[#dadfe8]">
-                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.condition}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.overlap}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.difference}</td>
+                        {medicineCosts.map((row) => (
+                          <tr key={row.medicine} className="border-b border-[#dadfe8]">
+                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.medicine}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.type}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top whitespace-nowrap">{row.cost}</td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   </div>
-                </div>
-
-                {/* ── DIAGNOSIS ── */}
-                <div id="diagnosis" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
-                  <h2
-                    className="text-navy-deep"
-                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
-                  >
-                    How Is Lupus Diagnosed?
-                  </h2>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    No one test can diagnose lupus. The diagnosis is constructed through several means. It involves history, physical examination, blood tests, and imaging. All of these are done by a rheumatologist. This process may take time, and that is normal.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Physical Examination and Medical History
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The first steps in a rheumatologist's evaluation involve asking about the nature of the symptoms. It is about when they began, what makes them better, and what makes them worse. Whether any family member has a similar or autoimmune disorder. A physical examination is performed to look for the butterfly rash, swollen joints, mouth ulcers, and other visible symptoms.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Blood Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    The most important blood test is an ANA (anti-nuclear antibody) test. It is positive in nearly every lupus patient. It indicates that the immune system is creating antibodies that attack the body's own cells. Anti-dsDNA antibodies, ESR, and CRP (measuring the inflammation) further narrow the diagnosis, if necessary.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Urine Tests
-                  </h3>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
-                    A urine analysis is performed to determine if there is protein or blood in the urine. This may indicate kidney involvement even if there are no symptoms. Urine testing is performed regularly during the diagnostic process and monitoring.
-                  </p>
-
-                  <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Imaging
-                  </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    A chest X-ray, heart ultrasound, or kidney ultrasound might be ordered depending on the involved organs. If there is a concern for kidney involvement, a kidney biopsy may be suggested.
+                    These costs are approximate and vary by city, hospital, and brand. Generic versions are available for most medicines. Patients who fall under CGHS coverage as well as PMJAY patient benefits should confirm their coverage in the treating hospital.
                   </p>
                 </div>
 
-                {/* ── SEE DOCTOR ── */}
-                <div id="see-doctor" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── LIFESTYLE ── */}
+                <div id="lifestyle" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    When Should You See a Doctor?
+                    Physiotherapy, Lifestyle and Sun Protection
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    The medicines work best with regular daily routines. Sun protection is one of the most consistent lifestyle measures to control lupus episodes. Sunscreen, protective clothing and avoiding peak hours of 10 am to 4 pm can make a significant difference. Gentle exercise, a diet including Indian staples like turmeric, palak, and methi, and managing stress all support treatment outcomes.
+                  </p>
+                </div>
+
+                {/* ── COMPLEMENTARY ── */}
+                <div id="complementary" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Complementary and Traditional Treatments
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    Many patients in India choose Ayurveda, Panchakarma, or homeopathy along with conventional medicine. Clinical data supporting these methods in lupus is currently limited. However, there are some observations of the benefits of these approaches for general well-being. The first step is to tell your doctor before using anything new. Some herbal treatments might interact with other lupus medicines.
+                  </p>
+                </div>
+
+                {/* ── ADVANCED PROCEDURES ── */}
+                <div id="advanced" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Advanced Procedures - When They Are Needed
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    For most patients, medicines manage lupus well over the long term. In cases where lupus has severely damaged the kidneys despite all available medicines, more advanced interventions may be considered. These include a kidney biopsy (a small tissue sample to assess kidney damage and guide treatment), dialysis (a machine that performs the work of damaged kidneys), and in the most severe cases, a kidney transplant. These are last-resort options managed by a doctor working closely with a specialist.
+                  </p>
+                </div>
+
+                {/* ── MONITORING ── */}
+                <div id="monitoring" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    Monitoring Your Treatment
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
+                    Treatment for Lupus needs to be monitored regularly to be effective. A blood test is run, followed by your doctor. This is to check blood markers such as ANA (a measure of immune activity), anti-dsDNA (a specific marker for lupus), ESR, and CRP (measures of inflammation), as well as urine tests that monitor and check when the kidneys are showing signs of involvement early on. Adjustments may also be based on a simple questionnaire called SLEDAI (Systemic Lupus Erythematosus Disease Activity Index). This is used to measure the activity of the disease. Monitoring is proactive care.
+                  </p>
+                </div>
+
+                {/* ── SPEAK TO DOCTOR ── */}
+                <div id="speak-to-doctor" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    When to Speak to a Doctor About Treatment
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    If you have any of the following, see a rheumatologist:
+                    Consider seeing your doctor in the following situations:
                   </p>
-                  <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {doctorSigns.map((s, i) => (
+                  <ul className="space-y-1" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                    {speakToDoctorSigns.map((s, i) => (
                       <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
                         {s}
                       </li>
                     ))}
                   </ul>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    The earlier lupus is identified, the better the long-term outcomes. Don&apos;t delay treatment until symptoms are severe.
-                  </p>
                 </div>
 
-                {/* ── SPEAK TO RHEUMATOLOGIST ── */}
-                <div id="speak-rheumatologist" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
+                {/* ── BUILD PLAN ── */}
+                <div id="build-plan" data-toc-section style={{ marginBottom: "1.5rem", marginTop: "0" }}>
                   <h2
                     className="text-navy-deep"
                     style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
                   >
-                    Think These Symptoms Sound Familiar? Speak to a Rheumatologist
+                    Ready to Build Your Treatment Plan? Speak to a Rheumatologist
                   </h2>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    If you feel any or all of the symptoms on this page are familiar, visit a rheumatologist sooner. The sooner recognized, the sooner diagnosed, and the better the outcomes will be. Don&apos;t wait until things get &quot;bad&quot; to take action. Action is preferable to inaction. Get the right care when it is needed.
+                    Lupus can be controlled, and the right treatment can make a difference. Your doctor will evaluate you. Based on your clinical history, a treatment strategy will be given suited to your circumstances, disease stage, and lifestyle. The first step towards specialist care is the most crucial.
                   </p>
                   <Link
                     to="/book-appointment"
@@ -453,7 +426,7 @@ function LupusSymptomsDiagnosis() {
                 {/* ── DISCLAIMER + REFERENCES ── */}
                 <div id="references" data-toc-section style={{ marginBottom: "2rem", marginTop: "0" }}>
                   <p className="text-[14px] leading-[1.7] italic" style={{ color: "#5E5E5E", marginBottom: "2.5rem" }}>
-                    This content has been written for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified rheumatologist or healthcare provider if you have questions about a medical condition or treatment plan.
+                    This content has been written for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified doctor or healthcare provider if you have questions about a medical condition or treatment plan.
                   </p>
                   <h2
                     className="text-navy-deep"
@@ -629,4 +602,4 @@ function LupusSymptomsDiagnosis() {
   )
 }
 
-export default LupusSymptomsDiagnosis
+export default LupusTreatmentOptions

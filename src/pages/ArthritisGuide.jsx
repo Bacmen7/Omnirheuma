@@ -187,7 +187,7 @@ function ArthritisGuide() {
 
               {/* Left: Title + meta */}
               <div className="flex-1 pb-7 text-left md:pb-0">
-                <p style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "#a0e2e4", marginBottom: "12px" }}>A Patient Guide for India</p>
+                {/* <p style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "#a0e2e4", marginBottom: "12px" }}>A Patient Guide for India</p> */}
                 <h1
                   style={{
                     fontFamily: "var(--font-display)",
@@ -212,8 +212,8 @@ function ArthritisGuide() {
                 >
                   What It Is, Symptoms, Causes &amp; Treatment Options
                 </p>
-                <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
-                  Written by Dr. Shafali Nagpal | Reviewed by Dr. Raghavendra | Last Updated: July 29, 2026
+                <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
+                  Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Shafali Nagpal</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026
                 </p>
 
               </div>
