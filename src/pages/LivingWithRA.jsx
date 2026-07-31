@@ -179,6 +179,9 @@ function LivingWithRA() {
                     Diet, exercise and mental wellbeing
                   </span>
                 </h1>
+                <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
+                  Written by Dr. Shafali Nagpal | Reviewed by Dr. Raghavendra | Last Updated: July 29, 2026
+                </p>
               </div>
             </div>
           </div>
