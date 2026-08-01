@@ -370,7 +370,7 @@ function PsoriaticArthritisSymptoms() {
                   </h2>
                   <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                     {references.map((r, i) => (
-                      <li key={i} className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                      <li key={i} className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
                         {r.text}
                         {r.url && (
                           <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0f616e", textDecoration: "underline" }}>{r.url}</a>

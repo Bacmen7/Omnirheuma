@@ -497,7 +497,7 @@ function DiagnosisTreatmentOA() {
                 </h2>
                 <ol className="space-y-2" style={{ listStyleType: "decimal", paddingLeft: "1.5rem" }}>
                   {references.map((r, i) => (
-                    <li key={i} className="text-[15px] leading-[1.75] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                    <li key={i} className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
                       {r}
                     </li>
                   ))}
