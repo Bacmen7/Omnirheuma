@@ -479,13 +479,19 @@ function SpecialisedTreatmentOA() {
                 >
                   References
                 </h2>
-                <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                  {references.map((r, i) => (
-                    <li key={i} className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
-                      {r}
-                    </li>
-                  ))}
-                </ul>
+                <details className="group" open>
+                  <summary className="cursor-pointer inline-flex items-center gap-2 [&::-webkit-details-marker]:hidden" style={{ color: "#0f616e", fontWeight: 700, fontSize: "15px" }}>
+                    View Sources
+                    <svg className="transition-transform group-open:rotate-180" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f616e" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>
+                  </summary>
+                  <ul className="space-y-2 mt-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                    {references.map((r, i) => (
+                      <li key={i} className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                        {r}
+                      </li>
+                    ))}
+                  </ul>
+                </details>
               </div>
 
                 <hr className="border-none border-t border-[#dcdcdc] mt-12" />

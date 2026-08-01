@@ -349,6 +349,16 @@ function PsoriaticArthritisSymptoms() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
                     If you have psoriasis and have noticed persistent joint pain, stiffness, swelling, or changes in your nails, it is worth discussing these symptoms with a rheumatologist. Back pain that is worse in the morning, heel pain, or swelling of an entire finger or toe are also important signs that should not be ignored. Waiting for symptoms to improve on their own can delay the diagnosis and treatment. Early diagnosis can help reduce symptoms, protect the joints, and improve long-term outcomes.
                   </p>
+                  <Link
+                    to="/book-appointment"
+                    className="group"
+                    style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#E86531", color: "#ffffff", fontFamily: "var(--font-base)", fontWeight: 700, fontSize: "14px", padding: "12px 18px 12px 26px", borderRadius: "9999px", textDecoration: "none", marginTop: "1.5rem" }}
+                  >
+                    Book a Consultation with Dr Raghavendra H
+                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full transition-colors group-hover:bg-white/30" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
+                      <ArrowRight size={14} />
+                    </span>
+                  </Link>
                 </div>
 
                 {/* ── DISCLAIMER + REFERENCES ── */}
@@ -368,16 +378,19 @@ function PsoriaticArthritisSymptoms() {
                   >
                     References
                   </h2>
-                  <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    {references.map((r, i) => (
-                      <li key={i} className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
-                        {r.text}
-                        {r.url && (
-                          <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0f616e", textDecoration: "underline" }}>{r.url}</a>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
+                  <details className="group" open>
+                    <summary className="cursor-pointer inline-flex items-center gap-2 [&::-webkit-details-marker]:hidden" style={{ color: "#0f616e", fontWeight: 700, fontSize: "15px" }}>
+                      View Sources
+                      <svg className="transition-transform group-open:rotate-180" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f616e" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>
+                    </summary>
+                    <ul className="space-y-2 mt-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                      {references.map((r, i) => (
+                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                          {r.text}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
                 </div>
 
                 <hr className="border-none border-t border-[#dcdcdc] mt-12" />

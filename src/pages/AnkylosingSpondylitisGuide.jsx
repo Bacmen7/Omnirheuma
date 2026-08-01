@@ -446,17 +446,23 @@ function AnkylosingSpondylitisGuide() {
                   >
                     Reference
                   </h2>
-                  <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
-                    <li className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
-                      Prakash S, Mehra NK, Bhargava S, Vaidya MC, Malaviya AN. Ankylosing spondylitis in North India: a clinical and immunogenetic study. Ann Rheum Dis. 1984;43(3):381-385. doi:10.1136/ard.43.3.381
-                    </li>
-                    <li className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
-                      Malaviya, Anand N. Spondyloarthritis in India. Indian Journal of Rheumatology 15(Suppl 1):p S2-S5, May 2020. | DOI: 10.4103/0973-3698.284742
-                    </li>
-                    <li className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
-                      <a href="https://medlineplus.gov/genetics/condition/ankylosing-spondylitis/" target="_blank" rel="noopener noreferrer" style={{ color: "#0f616e", textDecoration: "underline" }}>https://medlineplus.gov/genetics/condition/ankylosing-spondylitis/</a>
-                    </li>
-                  </ul>
+                  <details className="group" open>
+                    <summary className="cursor-pointer inline-flex items-center gap-2 [&::-webkit-details-marker]:hidden" style={{ color: "#0f616e", fontWeight: 700, fontSize: "15px" }}>
+                      View Sources
+                      <svg className="transition-transform group-open:rotate-180" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f616e" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>
+                    </summary>
+                    <ul className="space-y-2 mt-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                      <li className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                        Prakash S, Mehra NK, Bhargava S, Vaidya MC, Malaviya AN. Ankylosing spondylitis in North India: a clinical and immunogenetic study. Ann Rheum Dis. 1984;43(3):381-385. doi:10.1136/ard.43.3.381
+                      </li>
+                      <li className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                        Malaviya, Anand N. Spondyloarthritis in India. Indian Journal of Rheumatology 15(Suppl 1):p S2-S5, May 2020. | DOI: 10.4103/0973-3698.284742
+                      </li>
+                      <li className="text-[14px] leading-[1.7] text-navy-muted pl-1" style={{ wordBreak: "break-word" }}>
+                        medlineplus.gov/genetics/condition/ankylosing-spondylitis
+                      </li>
+                    </ul>
+                  </details>
                 </div>
 
                 <hr className="border-none border-t border-[#dcdcdc] mt-12" />
