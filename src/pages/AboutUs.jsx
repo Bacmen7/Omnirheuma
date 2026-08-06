@@ -235,7 +235,7 @@ export default function AboutUs() {
       <section style={{ backgroundColor: "#e0f3f5", overflow: "hidden", position: "relative" }}>
         <div className="about-hero__inner">
           <div style={{ flex: "1.02 1 450px", padding: "clamp(54px, 7vw, 88px) clamp(28px, 5vw, 72px)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <h1 style={{ fontFamily: "var(--font-display)", color: "#0f616e", fontSize: "clamp(2.5rem, 4.4vw, 4rem)", fontWeight: 300, lineHeight: 1.11, letterSpacing: "-0.8px", maxWidth: "650px", marginBottom: "30px" }}>
+            <h1 style={{ fontFamily: "var(--font-display)", color: "#0f616e", fontSize: "clamp(2.5rem, 4.4vw, 4rem)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.5px", maxWidth: "650px", marginBottom: "30px" }}>
               Relief you can trust.{" "}
               <span style={{ color: "#1AA3B5" }}>Care you can count on.</span>
             </h1>
