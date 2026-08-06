@@ -132,18 +132,14 @@ function HealthGuide() {
       <main>
 
         {/* ═══════════ HERO ═══════════ */}
-        <section style={{ position: "relative", overflow: "hidden", minHeight: "380px" }}>
-          {/* BG image full width */}
-          <img src="/h1.webp" alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
-          {/* Dark overlay */}
-          <div style={{ position: "absolute", inset: 0, background: "rgba(15,97,110,0.55)", pointerEvents: "none" }} />
-          {/* Content */}
-          <div style={{ position: "relative", zIndex: 1, padding: "clamp(54px, 7vw, 88px) clamp(28px, 5vw, 72px)", display: "flex", flexDirection: "column", justifyContent: "center", minHeight: "380px", maxWidth: "760px" }}>
-            <h1 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "clamp(2.5rem, 4.4vw, 4rem)", fontWeight: 300, lineHeight: 1.11, letterSpacing: "-0.8px", maxWidth: "650px", marginBottom: "30px" }}>
+        <section style={{ display: "flex", flexDirection: "row", width: "100%", minHeight: "clamp(560px, calc(100vh - 72px), 900px)" }} className="home-hero flex-col md:flex-row">
+          {/* LEFT: content */}
+          <div style={{ flex: "0 0 50%", backgroundColor: "#e0f3f5", padding: "clamp(2rem, 5vw, 5rem) clamp(1.25rem, 4vw, 4rem)", display: "flex", flexDirection: "column", justifyContent: "center", gap: "1.4rem" }} className="w-full md:w-1/2">
+            <h1 style={{ fontFamily: "var(--font-display)", color: "#0F616E", fontSize: "clamp(2.2rem, 4vw, 3.6rem)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.5px", margin: 0 }}>
               Explore Health Guide.{" "}
-              <span style={{ color: "#9DE5D4" }}>Understand your condition.</span>
+              <span style={{ color: "#1AA3B5" }}>Understand your condition.</span>
             </h1>
-            <p style={{ color: "rgba(255,255,255,0.82)", fontSize: "clamp(16px, 1.25vw, 18px)", lineHeight: 1.78, maxWidth: "600px", marginBottom: "42px" }}>
+            <p style={{ color: "#5a6577", fontSize: "clamp(15px, 1.1vw, 17px)", lineHeight: 1.7, maxWidth: "480px", margin: 0 }}>
               Written and reviewed by board-certified rheumatologists. Evidence-based articles, condition guides, and treatment information to help you take an active role in your care.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
@@ -156,11 +152,16 @@ function HealthGuide() {
               </a>
               <Link
                 to="/blog"
-                style={{ border: "2px solid rgba(255,255,255,0.7)", color: "#fff", borderRadius: "100px", padding: "12px 28px", fontWeight: 700, fontSize: "15px", textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+                style={{ border: "2px solid #0F616E", color: "#0F616E", borderRadius: "100px", padding: "12px 28px", fontWeight: 700, fontSize: "15px", textDecoration: "none", display: "inline-flex", alignItems: "center" }}
               >
                 Browse Articles
               </Link>
             </div>
+          </div>
+
+          {/* RIGHT: image */}
+          <div style={{ flex: "0 0 50%", backgroundColor: "#cfe8e3", position: "relative", minHeight: "clamp(560px, calc(100vh - 72px), 900px)" }} className="w-full md:w-1/2">
+            <img src="/d2.webp" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }} />
           </div>
         </section>
 

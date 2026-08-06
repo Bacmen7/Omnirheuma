@@ -27,7 +27,7 @@ const overviewRouteMap = {
 const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref) => [
   { label: "An overview", href: overviewHref },
   ...(symptomsHref ? [{ label: "Symptoms and Warning Signs", href: symptomsHref }] : []),
-  ...(monitoringHref ? [{ label: "Blood Tests, Scans, and Ongoing Monitoring", href: monitoringHref }] : []),
+  ...(monitoringHref ? [{ label: "How It Is Diagnosed and Treated", href: monitoringHref }] : []),
   ...(diagnosisHref ? [{ label: "How It Is Diagnosed and Treated", href: diagnosisHref }] : []),
   ...(specialisedHref ? [{ label: "Specialised treatment options", href: specialisedHref }] : []),
   ...(livingHref ? [{ label: `Living with ${name}`, href: livingHref }] : []),
@@ -111,7 +111,9 @@ function Conditions() {
         ? "/Living-With-Lupus"
         : conditionSlug === "psoriatic-arthritis"
           ? "/Living-With-Psoriatic-Arthritis"
-          : null
+          : conditionSlug === "fibromyalgia"
+            ? "/Living-With-Fibromyalgia"
+            : null
   const specialisedHref = isRA
     ? "/Specialised-Treatment-Rheumatoid-Arthritis"
     : conditionSlug === "osteoarthritis"

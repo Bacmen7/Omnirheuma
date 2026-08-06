@@ -27,9 +27,9 @@ const replacementJoints = [
 ]
 
 const replacementCosts = [
-  "Knee replacement: ₹1.5 to 3 lakh (government hospitals); ₹3–6 lakh (private hospitals)",
-  "Hip replacement: ₹2 to 5 lakh",
-  "Finger joint replacement: ₹70,000 to ₹2 lakh",
+  { label: "Knee replacement:", detail: "₹1.5 to 3 lakh (government hospitals); ₹3–6 lakh (private hospitals)" },
+  { label: "Hip replacement:", detail: "₹2 to 5 lakh" },
+  { label: "Finger joint replacement:", detail: "₹70,000 to ₹2 lakh" },
 ]
 
 const comparisonRows = [
@@ -376,12 +376,12 @@ function SpecialisedTreatmentRA() {
                   <ul className="space-y-1 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
                     {replacementCosts.map((s, i) => (
                       <li key={i} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
-                        {s}
+                        <strong className="font-semibold">{s.label}</strong> {s.detail}
                       </li>
                     ))}
                   </ul>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
-                    Joint replacement is covered under PM-JAY (Ayushman Bharat) up to {"₹"}5 lakh per family per year at specific hospitals. ( Note: Consult your rheumatologist or nearby hospital for the accurate cost)
+                    Joint replacement is covered under <strong className="font-semibold">PM-JAY (Ayushman Bharat)</strong> up to {"₹"}5 lakh per family per year at specific hospitals. ( Note: Consult your rheumatologist or nearby hospital for the accurate cost)
                   </p>
                 </div>
 
