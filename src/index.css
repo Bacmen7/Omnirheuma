@@ -182,3 +182,31 @@ p {
     display: none;
   }
 }
+
+/* About page hero — mirrors the homepage hero proportions (see Hero.css). */
+.about-hero__inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: clamp(560px, calc(100vh - 72px), 900px);
+}
+
+.about-hero__media {
+  flex: 0.98 1 420px;
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(560px, calc(100vh - 72px), 900px);
+}
+
+@media (max-width: 768px) {
+  .about-hero__inner {
+    min-height: auto;
+  }
+
+  .about-hero__media {
+    flex: 1 1 auto;
+    min-height: 320px;
+    height: 60vw;
+    max-height: 420px;
+  }
+}

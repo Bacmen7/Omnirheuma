@@ -161,7 +161,7 @@ function HealthGuide() {
 
           {/* RIGHT: image */}
           <div style={{ flex: "0 0 50%", backgroundColor: "#cfe8e3", position: "relative", minHeight: "clamp(560px, calc(100vh - 72px), 900px)" }} className="w-full md:w-1/2">
-            <img src="/d2.webp" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }} />
+            <img src="/h2.jpg" alt="Rheumatologist explaining a report to a patient on a tablet" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
           </div>
         </section>
 

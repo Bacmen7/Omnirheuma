@@ -233,7 +233,7 @@ export default function AboutUs() {
 
       {/* ── 1. HERO ── */}
       <section style={{ backgroundColor: "#e0f3f5", overflow: "hidden", position: "relative" }}>
-        <div style={{ display: "flex", flexWrap: "wrap", minHeight: "560px" }}>
+        <div className="about-hero__inner">
           <div style={{ flex: "1.02 1 450px", padding: "clamp(54px, 7vw, 88px) clamp(28px, 5vw, 72px)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <h1 style={{ fontFamily: "var(--font-display)", color: "#0f616e", fontSize: "clamp(2.5rem, 4.4vw, 4rem)", fontWeight: 300, lineHeight: 1.11, letterSpacing: "-0.8px", maxWidth: "650px", marginBottom: "30px" }}>
               Relief you can trust.{" "}
@@ -251,9 +251,9 @@ export default function AboutUs() {
               </Link>
             </div>
           </div>
-          <div style={{ flex: "0.98 1 420px", minHeight: "560px", position: "relative", overflow: "hidden" }}>
+          <div className="about-hero__media">
             <div style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
-              <img src="/ri.webp" alt="Rheumatology specialist caring for a patient" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
+              <img src="/hero-consult.webp" alt="Rheumatology specialist caring for a patient" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(15,97,110,0.12), transparent 18%)", pointerEvents: "none" }} />
             </div>
           </div>
