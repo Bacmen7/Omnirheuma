@@ -123,7 +123,18 @@ function Block({ block, lead }) {
 function LegalLayout({ title, subtitle, sections, intro }) {
   const [activeId, setActiveId] = useState(sections[0]?.id)
   const [showTop, setShowTop] = useState(false)
+  // The contents sidebar is desktop-only; on phones it ate the whole first screen.
+  const [isDesktop, setIsDesktop] = useState(() =>
+    typeof window === "undefined" ? true : window.matchMedia("(min-width: 1024px)").matches
+  )
   const { hash } = useLocation()
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)")
+    const onChange = (event) => setIsDesktop(event.matches)
+    mq.addEventListener("change", onChange)
+    return () => mq.removeEventListener("change", onChange)
+  }, [])
 
   // Deep links such as /terms-and-conditions#medical-disclaimer land on the section.
   useEffect(() => {
@@ -153,7 +164,7 @@ function LegalLayout({ title, subtitle, sections, intro }) {
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id)
-    if (el) window.scrollTo({ top: el.offsetTop - 110, behavior: "smooth" })
+    if (el) window.scrollTo({ top: el.offsetTop - (isDesktop ? 110 : 84), behavior: "smooth" })
   }
 
   return (
@@ -161,7 +172,7 @@ function LegalLayout({ title, subtitle, sections, intro }) {
       <Header />
 
       {/* ── HERO ── */}
-      <section style={{ backgroundColor: "#e0f3f5", padding: "clamp(48px, 6vw, 78px) clamp(24px, 5vw, 64px)" }}>
+      <section style={{ backgroundColor: "#e0f3f5", padding: "clamp(40px, 6vw, 78px) clamp(18px, 5vw, 64px)" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <nav style={{ fontSize: "13px", color: "#5a6577", marginBottom: "18px" }}>
             <Link to="/" style={{ color: TEAL, textDecoration: "none", fontWeight: 600 }}>Home</Link>
@@ -196,55 +207,63 @@ function LegalLayout({ title, subtitle, sections, intro }) {
       </section>
 
       {/* ── BODY ── */}
-      <section style={{ padding: "clamp(40px, 5vw, 64px) clamp(24px, 5vw, 64px) clamp(56px, 6vw, 80px)" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexWrap: "wrap", gap: "clamp(28px, 4vw, 56px)", alignItems: "flex-start" }}>
+      <section
+        style={{
+          background: "#fff",
+          padding: isDesktop ? "clamp(28px, 5vw, 64px) clamp(24px, 5vw, 64px) clamp(56px, 6vw, 80px)" : "0 0 36px",
+        }}
+      >
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexWrap: "wrap", gap: "clamp(18px, 4vw, 56px)", alignItems: "flex-start" }}>
 
-          {/* TABLE OF CONTENTS */}
-          <aside className="w-full lg:w-[262px]" style={{ flexShrink: 0, position: "sticky", top: "104px" }}>
-            <div style={{ background: "#fff", border: "1px solid #e4ecee", borderRadius: "14px", padding: "20px 18px" }}>
-              <p style={{ color: TEAL, fontSize: "12px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "14px" }}>
-                On this page
-              </p>
-              <ul style={{ display: "flex", flexDirection: "column", gap: "2px", maxHeight: "58vh", overflowY: "auto" }}>
-                {sections.map((section, i) => (
-                  <li key={section.id}>
-                    <button
-                      onClick={() => scrollToSection(section.id)}
-                      style={{
-                        display: "block",
-                        width: "100%",
-                        textAlign: "left",
-                        background: activeId === section.id ? "#e8f6f8" : "transparent",
-                        color: activeId === section.id ? TEAL : "#69757e",
-                        fontWeight: activeId === section.id ? 700 : 500,
-                        fontSize: "13.5px",
-                        lineHeight: 1.45,
-                        padding: "8px 10px",
-                        borderRadius: "8px",
-                        border: "none",
-                        cursor: "pointer",
-                        fontFamily: "var(--font-base)",
-                      }}
-                    >
-                      <span style={{ color: AQUA, fontWeight: 700, marginRight: "7px" }}>{i + 1}.</span>
-                      {section.title}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
+          {/* TABLE OF CONTENTS — desktop only; on phones the document starts straight away. */}
+          {isDesktop && (
+            <aside className="w-[310px]" style={{ flexShrink: 0, position: "sticky", top: "104px" }}>
+              <div style={{ borderRight: "1px solid #e9eff0", paddingRight: "24px" }}>
+                <p style={{ color: TEAL, fontSize: "13px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "16px" }}>
+                  On this page
+                </p>
+                <ul style={{ display: "flex", flexDirection: "column", gap: "2px", maxHeight: "58vh", overflowY: "auto" }}>
+                  {sections.map((section, i) => (
+                    <li key={section.id}>
+                      <button
+                        onClick={() => scrollToSection(section.id)}
+                        style={{
+                          display: "block",
+                          width: "100%",
+                          textAlign: "left",
+                          background: activeId === section.id ? "#e8f6f8" : "transparent",
+                          color: activeId === section.id ? TEAL : "#69757e",
+                          fontWeight: activeId === section.id ? 700 : 500,
+                          fontSize: "15px",
+                          lineHeight: 1.5,
+                          padding: "9px 10px",
+                          borderRadius: "8px",
+                          border: "none",
+                          cursor: "pointer",
+                          fontFamily: "var(--font-base)",
+                        }}
+                      >
+                        <span style={{ color: AQUA, fontWeight: 700, marginRight: "7px" }}>{i + 1}.</span>
+                        {section.title}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </aside>
+          )}
 
           {/* CONTENT — one continuous document sheet */}
           <article
             style={{
               flex: "1 1 520px",
               minWidth: 0,
-              background: "#fff",
-              border: "1px solid #e6edef",
-              borderRadius: "18px",
-              padding: "clamp(26px, 3.6vw, 48px)",
-              boxShadow: "0 1px 3px rgba(15,97,110,0.04)",
+              maxWidth: isDesktop ? "820px" : "none",
+              background: "transparent",
+              border: "none",
+              borderRadius: 0,
+              boxShadow: "none",
+              padding: isDesktop ? "0 0 8px" : "26px 16px 32px",
             }}
           >
             {intro && (
