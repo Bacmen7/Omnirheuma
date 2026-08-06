@@ -3,6 +3,7 @@ import { useState } from "react"
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwUDPYes__c1Zt8e_DM7Q5kgdiBIfFfPLrTr8MouZa1je8uGW8LgO6j83uE0qO_3RU0/exec"
 import Header from "../components/Header"
 import BriefingFooter from "../components/BriefingFooter"
+import { submitAppointmentLead } from "../lib/api"
 
 const fieldStyle = {
   width: "100%",
@@ -43,17 +44,23 @@ export default function BookAppointment() {
     }
     if (loading) return
     setLoading(true)
-    try {
-      await fetch(APPS_SCRIPT_URL, {
-        method: "POST",
-        body: JSON.stringify({
-          name: form.name,
-          phone: form.phone,
-          message: form.message,
-          source: "book-appointment",
-        }),
-      })
-    } catch (_) {}
+
+    const lead = {
+      name: form.name.trim(),
+      phone: form.phone.trim(),
+      message: form.message.trim(),
+      source: "book-appointment",
+    }
+
+    // Sheet logging and the WhatsApp acknowledgement run side by side; neither
+    // one failing should stop the patient from seeing a confirmation.
+    await Promise.allSettled([
+      fetch(APPS_SCRIPT_URL, { method: "POST", body: JSON.stringify(lead) }),
+      submitAppointmentLead(lead).catch(err => {
+        console.error("WhatsApp acknowledgement failed:", err.message)
+      }),
+    ])
+
     setLoading(false)
     setSubmitted(true)
   }

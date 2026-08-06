@@ -8,5 +8,13 @@ export default defineConfig({
   server: {
     middlewareMode: false,
     historyApiFallback: true,
+    // Mirrors the nginx "location /api/" rule in production, so the frontend
+    // uses the same relative URLs in dev as it does on the live site.
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5001',
+        changeOrigin: true,
+      },
+    },
   },
 })
