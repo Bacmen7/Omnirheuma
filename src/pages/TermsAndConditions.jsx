@@ -15,7 +15,7 @@ const sections = [
     title: "Who may use this website and these services",
     body: [
       "You may use this website and contact us if you are 18 years of age or older and legally capable of entering into a binding contract under Indian law.",
-      "If you are under 18, you may use the website and book appointments only through a parent or lawful guardian, who must accompany you to the consultation and who accepts these Terms on your behalf. If you are booking on behalf of another adult — for example a parent or spouse — you confirm that you have their permission to share their details with us.",
+      "If you are under 18, you may use the website and book appointments only through a parent or lawful guardian, who must accompany you to the consultation and who accepts these Terms on your behalf. If you are booking on behalf of another adult, for example a parent or spouse, you confirm that you have their permission to share their details with us.",
       "The website is intended for users in India. We make no representation that the content is appropriate or available for use in other jurisdictions, and you are responsible for complying with local laws if you access it from outside India.",
     ],
   },
@@ -45,14 +45,14 @@ const sections = [
         ul: [
           "The content on this website is provided for <strong>general information and education only</strong>. It is written for a broad audience and cannot account for your age, history, other conditions, medications, allergies or test results.",
           "Reading this website, using a symptom tool, or exchanging messages with us <strong>does not create a doctor-patient relationship</strong>. That relationship begins only when you are formally consulted, examined and accepted as a patient by our doctor.",
-          "<strong>Never delay seeking medical advice, disregard advice you have been given, or stop a prescribed medicine</strong> because of something you read on this website or received in a message from us.",
-          "Medicine changes. Guidelines, drug approvals and dosing recommendations are revised over time. We update our content periodically, but we do not warrant that every page reflects the very latest evidence at the moment you read it.",
+          "<strong>Never delay seeking medical advice, disregard advice you have been given, or stop a prescribed medicine</strong> because of something you read on this website or received from us in a WhatsApp, SMS or email message. Any message we send you is general guidance or an administrative update, and it does not replace the instructions your doctor has given you in person.",
+          "Medicine changes over time, and guidelines, drug approvals and dosing recommendations are revised accordingly. We update our content periodically, but we do not warrant that every page reflects the very latest evidence at the moment you read it.",
           "Any outcome described on this website, including in patient stories, reflects one individual's experience. Rheumatic diseases behave differently in different people, and <strong>no result is promised or guaranteed</strong>.",
           "Descriptions of medicines, biologics, injections or procedures are informational. They are not a recommendation that a particular treatment is right for you, and they are not a prescription.",
         ],
       },
       {
-        note: "<strong>In an emergency, do not use this website, WhatsApp or email.</strong> If you have chest pain, breathlessness, sudden weakness or numbness, slurred speech, a severe allergic or drug reaction, high fever with confusion, a seizure, or any condition you believe is life-threatening — call emergency services or go to the nearest hospital emergency department immediately.",
+        note: "<strong>In an emergency, do not use this website, WhatsApp or email.</strong> If you have chest pain, breathlessness, sudden weakness or numbness, slurred speech, a severe allergic or drug reaction, high fever with confusion, a seizure, or any condition you believe is life-threatening, call emergency services or go to the nearest hospital emergency department immediately.",
       },
     ],
   },
@@ -91,7 +91,7 @@ const sections = [
     title: "Communicating with us on WhatsApp, phone and email",
     body: [
       `Our WhatsApp Business number is ${BUSINESS.whatsapp}. We operate it on the WhatsApp Business Platform provided by Meta Platforms, Inc., which means your messages to and from us are delivered through Meta's systems and are also governed by WhatsApp's own terms and privacy policy.`,
-      `<strong>By submitting an enquiry, appointment or callback form on this website, or by otherwise giving us your mobile number, you expressly consent to receiving WhatsApp messages from Omni Rheuma on that number</strong> — including appointment confirmations, reminders, replies to your enquiry, and notifications that a report or prescription is ready. This consent is voluntary and is not a condition of receiving treatment from us.`,
+      `<strong>By submitting an enquiry, appointment or callback form on this website, or by otherwise giving us your mobile number, you expressly consent to receiving WhatsApp messages from Omni Rheuma on that number</strong>, including appointment confirmations, reminders, replies to your enquiry, and notifications that a report or prescription is ready. This consent is voluntary and is not a condition of receiving treatment from us.`,
       `You can withdraw that consent at any time, free of charge, by replying <strong>STOP</strong> to any WhatsApp message from us, telling us on a call, or emailing <a href="mailto:${BUSINESS.email}" style="color:#0f616e;font-weight:600">${BUSINESS.email}</a>. We do not use your number for advertising, and we do not share it with third parties for marketing. How we handle these messages is set out in full in our <a href='/privacy-policy#whatsapp' style='color:#0f616e;font-weight:600'>Privacy Policy</a>.`,
       { h: "What these channels are for" },
       {
@@ -106,12 +106,12 @@ const sections = [
       {
         ul: [
           "emergencies of any kind;",
-          "obtaining a diagnosis without an examination — we cannot and will not diagnose a rheumatic condition over chat;",
+          "obtaining a diagnosis without an examination, since we cannot and will not diagnose a rheumatic condition over chat;",
           "obtaining a first prescription, or a prescription for a controlled or scheduled drug;",
           "second opinions on complex reports without a formal consultation.",
         ],
       },
-      "Messages are answered during clinic working hours. We cannot guarantee that a message has been read, and we are not responsible for delivery failures, network outages, or delays caused by the messaging platform. If a matter is urgent, call us — do not rely on a message.",
+      "Messages are answered during clinic working hours. We cannot guarantee that a message has been read, and we are not responsible for delivery failures, network outages, or delays caused by the messaging platform. If a matter is urgent, call us instead of relying on a message.",
       "Any clinical guidance given over these channels is limited by the fact that we cannot examine you. It is offered on that basis and may be revised once you are seen in person.",
     ],
   },
@@ -122,7 +122,7 @@ const sections = [
       "When you use our website or services, you agree to:",
       {
         ul: [
-          "give complete, accurate and honest information about your identity, symptoms, medical history, allergies and current medications — incomplete or incorrect information can lead to an incorrect diagnosis or unsafe treatment, and we are not liable for the consequences of information you withheld or misstated;",
+          "give complete, accurate and honest information about your identity, symptoms, medical history, allergies and current medications. Incomplete or incorrect information can lead to an incorrect diagnosis or unsafe treatment, and we are not liable for the consequences of information you withheld or misstated;",
           "follow the treatment plan and follow-up schedule agreed with your doctor, and tell us promptly if you stop a medicine, develop a side effect, or start a treatment prescribed elsewhere;",
           "use the website only for lawful purposes, and not to transmit malware, attempt to gain unauthorised access, scrape content in bulk, overload our systems, or interfere with other users;",
           "not impersonate another person, book appointments in false names, or misuse our WhatsApp number for spam, abuse or solicitation;",
@@ -138,7 +138,7 @@ const sections = [
     body: [
       {
         ul: [
-          "Prescriptions are issued after a consultation, are specific to you, and must not be shared with or used by anyone else — including a family member with apparently similar symptoms.",
+          "Prescriptions are issued after a consultation, are specific to you, and must not be shared with or used by anyone else, including a family member with apparently similar symptoms.",
           "Do not alter, extend or repeat a prescription without review. Many rheumatology medicines require monitoring blood tests at defined intervals.",
           "You are entitled to a copy of your medical records on written request; we ordinarily provide them within 72 hours.",
           "We maintain your records as required by law and medical council regulations. We are not responsible for reports or records lost after they have been handed over to you, or for records held by a third-party laboratory or hospital.",
@@ -150,8 +150,8 @@ const sections = [
     id: "intellectual-property",
     title: "Intellectual property",
     body: [
-      `All content on this website — text, patient guides, articles, illustrations, photographs, icons, layout, design, the ${BUSINESS.name} name and logo, and the compilation of all of it — is owned by us or licensed to us and is protected under Indian copyright and trade mark law.`,
-      "You may read, print and share individual pages for your own personal, non-commercial use, provided you do not remove any credit or notice. Any other use — republication, translation, bulk copying, use in training a machine-learning model, or use in a commercial product — requires our prior written permission.",
+      `All content on this website, including text, patient guides, articles, illustrations, photographs, icons, layout, design, the ${BUSINESS.name} name and logo, and the compilation of all of it, is owned by us or licensed to us and is protected under Indian copyright and trade mark law.`,
+      "You may read, print and share individual pages for your own personal, non-commercial use, provided you do not remove any credit or notice. Any other use requires our prior written permission, including republication, translation, bulk copying, use in training a machine-learning model, or use in a commercial product.",
       "If you believe any material on this website infringes your rights, write to us with details and we will investigate and act promptly.",
     ],
   },
@@ -160,7 +160,7 @@ const sections = [
     title: "Reviews, testimonials and anything you send us",
     body: [
       "If you send us a review, testimonial, photograph, question or suggestion, you grant us a non-exclusive, royalty-free right to use, reproduce and display it in connection with our practice, unless you tell us otherwise in writing. You confirm that the content is your own, is truthful, and does not infringe anyone else's rights.",
-      "We will not publish anything that identifies you as a patient — including case photographs or before-and-after images — without your separate written consent.",
+      "We will not publish anything that identifies you as a patient, including case photographs or before-and-after images, without your separate written consent.",
       "We may decline to publish, or may remove, content that is abusive, misleading, defamatory, unlawful, or that constitutes advertising of medical services in a manner not permitted by the National Medical Commission's regulations.",
     ],
   },
@@ -169,7 +169,7 @@ const sections = [
     title: "Third-party links and platforms",
     body: [
       "Our website links to hospitals, laboratories, medical societies, research articles, booking platforms, maps and social media. We provide these links for convenience and information. We do not control those services, we do not endorse everything on them, and we are not responsible for their content, accuracy, availability, pricing or privacy practices.",
-      "Similarly, where a service is delivered through a third-party platform — such as WhatsApp for messaging or a maps provider for directions — your use of that platform is governed by that platform's own terms and privacy policy in addition to these Terms.",
+      "Similarly, where a service is delivered through a third-party platform, such as WhatsApp for messaging or a maps provider for directions, your use of that platform is governed by that platform's own terms and privacy policy in addition to these Terms.",
     ],
   },
   {
@@ -240,11 +240,11 @@ const sections = [
     body: [
       {
         ul: [
-          "<strong>Entire agreement</strong> — these Terms, together with the Privacy Policy, form the entire agreement between you and us regarding the website and our contact channels.",
-          "<strong>Severability</strong> — if any provision is found to be invalid or unenforceable, the remaining provisions continue in full force.",
-          "<strong>No waiver</strong> — if we do not enforce a right on one occasion, that does not waive our right to enforce it later.",
-          "<strong>Assignment</strong> — you may not assign your rights under these Terms. We may assign ours in connection with a reorganisation or transfer of the practice.",
-          "<strong>Headings</strong> — section headings are for convenience only and do not affect interpretation.",
+          "<strong>Entire agreement:</strong> these Terms, together with the Privacy Policy, form the entire agreement between you and us regarding the website and our contact channels.",
+          "<strong>Severability:</strong> if any provision is found to be invalid or unenforceable, the remaining provisions continue in full force.",
+          "<strong>No waiver:</strong> if we do not enforce a right on one occasion, that does not waive our right to enforce it later.",
+          "<strong>Assignment:</strong> you may not assign your rights under these Terms. We may assign ours in connection with a reorganisation or transfer of the practice.",
+          "<strong>Headings:</strong> section headings are for convenience only and do not affect interpretation.",
         ],
       },
     ],
@@ -279,7 +279,7 @@ function TermsAndConditions() {
   return (
     <LegalLayout
       title="Terms and Conditions"
-      subtitle="The terms on which you may use the Omni Rheuma website, contact us on WhatsApp, and receive care at our clinic — including our medical disclaimer and appointment policy."
+      subtitle="The terms on which you may use the Omni Rheuma website, contact us on WhatsApp, and receive care at our clinic, including our medical disclaimer and appointment policy."
       intro={intro}
       sections={sections}
     />
