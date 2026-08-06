@@ -19,6 +19,6 @@ export const BUSINESS = {
   country: "India",
   jurisdiction: "Bengaluru, Karnataka, India",
   grievanceOfficer: "Dr. Raghavendra H",
-  lastUpdated: "6 August 2026",
-  effectiveDate: "6 August 2026",
+  lastUpdated: "6 June 2026",
+  effectiveDate: "6 June 2026",
 }
