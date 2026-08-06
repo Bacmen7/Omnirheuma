@@ -52,6 +52,8 @@ import Doctors from "./pages/Doctors.jsx"
 import Locations from "./pages/Locations.jsx"
 import Conditions from "./pages/Conditions.jsx"
 import BookAppointment from "./pages/BookAppointment.jsx"
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx"
+import TermsAndConditions from "./pages/TermsAndConditions.jsx"
 import FloatingWhatsApp from "./components/FloatingWhatsApp.jsx"
 import MobileBottomTabs from "./components/MobileBottomTabs.jsx"
 
@@ -118,6 +120,11 @@ createRoot(document.getElementById('root')).render(
         <Route path="/locations" element={<Locations />} />
         <Route path="/conditions" element={<Conditions />} />
         <Route path="/book-appointment" element={<BookAppointment />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
+        <Route path="/terms" element={<Navigate to="/terms-and-conditions" replace />} />
+        <Route path="/terms-of-use" element={<Navigate to="/terms-and-conditions" replace />} />
       </Routes>
       <FloatingWhatsApp />
       <MobileBottomTabs />

@@ -75,9 +75,9 @@ function BriefingFooter() {
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3 text-center md:text-left">
             <p style={{ color: "#a0a4ac" }}>&copy; 2026 Omni Rheuma</p>
             <div className="flex flex-wrap justify-center md:justify-end gap-x-5 gap-y-2" style={{ color: "#a0a4ac" }}>
-              <a href="#" className="hover:text-[#0F616E] transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-[#0F616E] transition-colors">Terms of Use</a>
-              <a href="#" className="hover:text-[#0F616E] transition-colors">Informed Consent</a>
+              <Link to="/privacy-policy" className="hover:text-[#0F616E] transition-colors">Privacy Policy</Link>
+              <Link to="/terms-and-conditions" className="hover:text-[#0F616E] transition-colors">Terms &amp; Conditions</Link>
+              <Link to="/terms-and-conditions#medical-disclaimer" className="hover:text-[#0F616E] transition-colors">Medical Disclaimer</Link>
             </div>
           </div>
         </div>

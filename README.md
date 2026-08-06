@@ -1,5 +1,5 @@
 # Omnirheuma
 
-## Deployment
+# Deployment
 
 - Vercel domain: https://omnirheuma.vercel.app
