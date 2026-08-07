@@ -30,16 +30,33 @@ function Field({ label, required, children }) {
   )
 }
 
+const PHONE_LENGTH = 10
+const PHONE_ERROR = `Please enter a valid ${PHONE_LENGTH}-digit mobile number.`
+const DANGER = "#d92d20"
+
 export default function BookAppointment() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [phoneError, setPhoneError] = useState("")
+  const [phoneFocused, setPhoneFocused] = useState(false)
 
   const update = (key, val) => setForm(f => ({ ...f, [key]: val }))
 
+  // Keep the field to digits only so a pasted "+91 98765 43210" still validates.
+  const updatePhone = (val) => {
+    const digits = val.replace(/\D/g, "").slice(0, PHONE_LENGTH)
+    update("phone", digits)
+    if (digits.length === PHONE_LENGTH) setPhoneError("")
+  }
+
   const handleSubmit = async () => {
-    if (!form.name || !form.phone) {
+    if (!form.name) {
       alert("Please fill in your name and phone number.")
+      return
+    }
+    if (form.phone.length !== PHONE_LENGTH) {
+      setPhoneError(PHONE_ERROR)
       return
     }
     if (loading) return
@@ -109,13 +126,31 @@ export default function BookAppointment() {
               <Field label="Phone Number" required>
                 <input
                   type="tel"
+                  inputMode="numeric"
+                  autoComplete="tel"
+                  maxLength={PHONE_LENGTH}
                   placeholder="10-digit mobile number"
                   value={form.phone}
-                  onChange={e => update("phone", e.target.value)}
-                  style={fieldStyle}
-                  onFocus={e => { e.target.style.borderColor = "#0f616e"; e.target.style.boxShadow = "0 0 0 3px #e6f2f2" }}
-                  onBlur={e => { e.target.style.borderColor = "#d9e4e4"; e.target.style.boxShadow = "none" }}
+                  onChange={e => updatePhone(e.target.value)}
+                  aria-invalid={Boolean(phoneError)}
+                  aria-describedby={phoneError ? "phone-error" : undefined}
+                  style={{
+                    ...fieldStyle,
+                    background: phoneError ? "#fff6f5" : "#ffffff",
+                    borderColor: phoneError ? DANGER : phoneFocused ? "#0f616e" : "#d9e4e4",
+                    boxShadow: phoneError ? "0 0 0 3px #fde5e2" : phoneFocused ? "0 0 0 3px #e6f2f2" : "none",
+                  }}
+                  onFocus={() => setPhoneFocused(true)}
+                  onBlur={() => {
+                    setPhoneFocused(false)
+                    if (form.phone && form.phone.length !== PHONE_LENGTH) setPhoneError(PHONE_ERROR)
+                  }}
                 />
+                {phoneError && (
+                  <p id="phone-error" style={{ color: DANGER, fontSize: "0.85rem", lineHeight: 1.5, marginTop: "7px" }}>
+                    {phoneError}
+                  </p>
+                )}
               </Field>
 
               <Field label="Message (optional)">

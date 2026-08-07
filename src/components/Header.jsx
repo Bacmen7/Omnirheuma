@@ -109,6 +109,9 @@ function Header() {
       document.body.style.width = "100%"
       document.body.style.top = `-${window.scrollY}px`
       document.documentElement.style.overflow = "hidden"
+      // The header is a z-50 stacking context, so the overlay cannot out-stack the
+      // fixed bottom tab bar. Hide the tabs instead while an overlay is open.
+      document.body.classList.add("nav-overlay-open")
     } else {
       const scrollY = document.body.style.top
       document.body.style.overflow = ""
@@ -116,6 +119,7 @@ function Header() {
       document.body.style.width = ""
       document.body.style.top = ""
       document.documentElement.style.overflow = ""
+      document.body.classList.remove("nav-overlay-open")
       if (scrollY) {
         window.scrollTo(0, parseInt(scrollY || "0") * -1)
       }
@@ -127,6 +131,7 @@ function Header() {
       document.body.style.width = ""
       document.body.style.top = ""
       document.documentElement.style.overflow = ""
+      document.body.classList.remove("nav-overlay-open")
       if (scrollY) {
         window.scrollTo(0, parseInt(scrollY || "0") * -1)
       }
@@ -264,6 +269,9 @@ function Header() {
             left: 0,
             width: "100vw",
             height: "100vh",
+            // Clamps to the visible viewport on browsers with dynamic toolbars;
+            // ignored where dvh is unsupported, so 100vh stays the fallback.
+            maxHeight: "100dvh",
             zIndex: 9999,
             background: "linear-gradient(180deg, #ffffff 0%, #f4f7fc 100%)",
             opacity: mobileMenuVisible ? 1 : 0,
@@ -336,6 +344,7 @@ function Header() {
           <div
             className="px-8 pb-10 flex flex-col items-center gap-3"
             style={{
+              paddingBottom: "calc(40px + env(safe-area-inset-bottom))",
               opacity: mobileMenuVisible ? 1 : 0,
               transform: mobileMenuVisible ? "translateY(0)" : "translateY(16px)",
               transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) 400ms, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 400ms",
@@ -437,6 +446,9 @@ function Header() {
             left: 0,
             width: "100vw",
             height: "100vh",
+            // Clamps to the visible viewport on browsers with dynamic toolbars;
+            // ignored where dvh is unsupported, so 100vh stays the fallback.
+            maxHeight: "100dvh",
             zIndex: 9999,
             background: "linear-gradient(180deg, #ffffff 0%, #f4f7fc 100%)",
             opacity: whatWeCoverVisible ? 1 : 0,

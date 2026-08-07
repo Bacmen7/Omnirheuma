@@ -173,8 +173,18 @@ p {
     display: flex;
   }
 
+  /* Full-screen nav overlays sit inside the header's stacking context, so they
+     cannot paint over the tab bar — hide it while an overlay is open. */
+  body.nav-overlay-open .mobile-bottom-tabs {
+    display: none;
+  }
+
   body {
     padding-bottom: 76px;
+  }
+
+  body.nav-overlay-open {
+    padding-bottom: 0;
   }
 
   .floating-whatsapp {

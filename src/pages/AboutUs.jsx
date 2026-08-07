@@ -71,6 +71,10 @@ const journeySteps = [
 const fieldLabel = { display: "block", fontSize: "13px", fontWeight: 600, color: "#0f2e33", marginBottom: "8px" }
 const fieldInput = { width: "100%", borderRadius: "10px", border: "1px solid #dde3e4", padding: "12px 14px", fontSize: "14px", color: "#0f2e33", outline: "none", boxSizing: "border-box", background: "#fff", fontFamily: "var(--font-base)" }
 
+const PHONE_LENGTH = 10
+const PHONE_ERROR = `Please enter a valid ${PHONE_LENGTH}-digit mobile number.`
+const DANGER = "#d92d20"
+
 const qualifications = ["MBBS", "MD - Internal Medicine", "DM - Rheumatology"]
 
 const specialistStats = [
@@ -194,13 +198,26 @@ export default function AboutUs() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [phoneError, setPhoneError] = useState("")
+  const [phoneFocused, setPhoneFocused] = useState(false)
 
   const updateForm = (key, val) => setForm(f => ({ ...f, [key]: val }))
 
+  // Keep the field to digits only so a pasted "+91 98765 43210" still validates.
+  const updatePhone = (val) => {
+    const digits = val.replace(/\D/g, "").slice(0, PHONE_LENGTH)
+    updateForm("phone", digits)
+    if (digits.length === PHONE_LENGTH) setPhoneError("")
+  }
+
   const handleFormSubmit = async (e) => {
     e.preventDefault()
-    if (!form.name || !form.phone) {
+    if (!form.name) {
       alert("Please fill in your name and phone number.")
+      return
+    }
+    if (form.phone.length !== PHONE_LENGTH) {
+      setPhoneError(PHONE_ERROR)
       return
     }
     if (loading) return
@@ -219,6 +236,7 @@ export default function AboutUs() {
     setLoading(false)
     setSubmitted(true)
     setForm({ name: "", phone: "", message: "" })
+    setPhoneError("")
     setTimeout(() => setSubmitted(false), 3000)
   }
 
@@ -509,12 +527,32 @@ export default function AboutUs() {
                     <label style={fieldLabel}>Phone Number</label>
                     <input
                       type="tel"
-                      placeholder="+91 XXXXX XXXXX"
-                      style={fieldInput}
+                      inputMode="numeric"
+                      autoComplete="tel"
+                      maxLength={PHONE_LENGTH}
+                      placeholder="10-digit mobile number"
+                      style={{
+                        ...fieldInput,
+                        background: phoneError ? "#fff6f5" : "#fff",
+                        borderColor: phoneError ? DANGER : phoneFocused ? "#0f616e" : "#dde3e4",
+                        boxShadow: phoneError ? "0 0 0 3px #fde5e2" : "none",
+                      }}
                       value={form.phone}
-                      onChange={(e) => updateForm("phone", e.target.value)}
+                      onChange={(e) => updatePhone(e.target.value)}
+                      onFocus={() => setPhoneFocused(true)}
+                      onBlur={() => {
+                        setPhoneFocused(false)
+                        if (form.phone && form.phone.length !== PHONE_LENGTH) setPhoneError(PHONE_ERROR)
+                      }}
+                      aria-invalid={Boolean(phoneError)}
+                      aria-describedby={phoneError ? "about-phone-error" : undefined}
                       disabled={loading}
                     />
+                    {phoneError && (
+                      <p id="about-phone-error" style={{ color: DANGER, fontSize: "12.5px", lineHeight: 1.5, marginTop: "6px" }}>
+                        {phoneError}
+                      </p>
+                    )}
                   </div>
                 </div>
                 <div>
