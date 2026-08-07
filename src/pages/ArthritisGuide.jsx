@@ -748,7 +748,7 @@ function ArthritisGuide() {
                 </div>
                 <div className="flex-1 relative min-h-[200px] md:min-h-[250px]">
                   <img
-                    src="/images/hero-consult.webp"
+                    src="/hero2.png"
                     alt="Doctor consulting with patient"
                     className="w-full block rounded-[4px] absolute bottom-0"
                     style={{ height: "clamp(300px, 50vw, 520px)", objectFit: "cover", objectPosition: "center 20%" }}
