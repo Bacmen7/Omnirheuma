@@ -281,7 +281,10 @@ function Header() {
           }}
         >
           {/* Top Bar */}
-          <div className="flex items-center justify-between px-5 pt-5">
+          <div
+            className="flex items-center justify-between px-5"
+            style={{ paddingTop: "calc(20px + env(safe-area-inset-top))" }}
+          >
             <Link to="/" className="flex items-center" onClick={closeMobileMenu} aria-label="Omni Rheuma home">
               <img src="/logo.png" alt="Omni Rheuma logo" className="h-24 w-24 object-contain" />
             </Link>
@@ -457,7 +460,10 @@ function Header() {
           }}
         >
           {/* Top Bar: Back + Close */}
-          <div className="flex items-center justify-between px-5 pt-5 pb-3">
+          <div
+            className="flex items-center justify-between px-5 pb-4"
+            style={{ paddingTop: "calc(26px + env(safe-area-inset-top))" }}
+          >
             <button
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-deep hover:text-navy-muted transition-colors"
               onClick={() => {
@@ -480,12 +486,15 @@ function Header() {
           </div>
 
           {/* Content */}
-          <div className="px-6 pt-4 pb-10">
+          <div className="px-6 pt-6 pb-10">
+            {/* Margins are inline because the global `h1..h6, p { margin: 0 }` in
+                index.css sits outside @layer and so out-ranks Tailwind's mb-* utilities. */}
             <h3
-              className="text-[26px] mb-2 text-navy-deep"
+              className="text-[26px] text-navy-deep"
               style={{
                 fontFamily: "var(--font-display)",
                 fontWeight: 400,
+                marginBottom: "10px",
                 opacity: whatWeCoverVisible ? 1 : 0,
                 transform: whatWeCoverVisible ? "translateY(0)" : "translateY(10px)",
                 transition: "opacity 0.35s ease 80ms, transform 0.35s ease 80ms",
@@ -494,8 +503,9 @@ function Header() {
               Conditions We Treat
             </h3>
             <p
-              className="text-sm text-navy-muted mb-8"
+              className="text-sm text-navy-muted"
               style={{
+                marginBottom: "34px",
                 opacity: whatWeCoverVisible ? 1 : 0,
                 transform: whatWeCoverVisible ? "translateY(0)" : "translateY(10px)",
                 transition: "opacity 0.35s ease 150ms, transform 0.35s ease 150ms",
@@ -511,11 +521,12 @@ function Header() {
                 opacity: whatWeCoverVisible ? 1 : 0,
                 transform: whatWeCoverVisible ? "translateY(0)" : "translateY(12px)",
                 transition: "opacity 0.35s ease 200ms, transform 0.35s ease 200ms",
+                marginBottom: "14px",
               }}
             >
               Conditions
             </p>
-            <div className="space-y-1 mb-8">
+            <div className="space-y-1" style={{ marginBottom: "34px" }}>
               {conditions.map((item, index) => {
                 const condTo = conditionRoutes[item]
                 const condStyle = {
@@ -597,19 +608,20 @@ function Header() {
 
             {/* CTA */}
             <div
-              className="rounded-2xl bg-gradient-to-r from-[#1AA3B5]/10 to-[#e86531]/10 p-5"
+              className="rounded-2xl bg-gradient-to-r from-[#1AA3B5]/10 to-[#e86531]/10"
               style={{
+                padding: "22px 20px",
                 opacity: whatWeCoverVisible ? 1 : 0,
                 transform: whatWeCoverVisible ? "translateY(0)" : "translateY(12px)",
                 transition: "opacity 0.4s ease 650ms, transform 0.4s ease 650ms",
               }}
             >
-              <p className="text-[14px] font-semibold text-navy-deep mb-2">Not sure where to start?</p>
-              <p className="text-[13px] text-navy-muted mb-3">Our specialists can help identify your condition and the right treatment plan.</p>
+              <p className="text-[14px] font-semibold text-navy-deep" style={{ marginBottom: "8px" }}>Not sure where to start?</p>
+              <p className="text-[13px] text-navy-muted" style={{ marginBottom: "18px" }}>Our specialists can help identify your condition and the right treatment plan.</p>
               <Link
                 to="/book-appointment"
-                className="inline-flex items-center gap-2 text-[13px] font-bold text-white px-5 py-2.5 rounded-full transition-all hover:opacity-90"
-                style={{ backgroundColor: "#e86531" }}
+                className="inline-flex items-center gap-2 text-[13px] font-bold text-white rounded-full transition-all hover:opacity-90"
+                style={{ backgroundColor: "#e86531", padding: "12px 22px" }}
                 onClick={closeWhatWeCover}
               >
                 Book Consultation

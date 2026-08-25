@@ -513,7 +513,7 @@ export default function AboutUs() {
               <form onSubmit={handleFormSubmit} className="flex flex-col" style={{ gap: "18px" }}>
                 <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "16px" }}>
                   <div>
-                    <label style={fieldLabel}>Your Name</label>
+                    <label style={fieldLabel}>Your Name <span style={{ color: DANGER }}>*</span></label>
                     <input
                       type="text"
                       placeholder="Full name"
@@ -524,7 +524,7 @@ export default function AboutUs() {
                     />
                   </div>
                   <div>
-                    <label style={fieldLabel}>Phone Number</label>
+                    <label style={fieldLabel}>Phone Number <span style={{ color: DANGER }}>*</span></label>
                     <input
                       type="tel"
                       inputMode="numeric"
@@ -556,7 +556,7 @@ export default function AboutUs() {
                   </div>
                 </div>
                 <div>
-                  <label style={fieldLabel}>Message</label>
+                  <label style={fieldLabel}>Message <span style={{ color: "#7a8a8f", fontWeight: 500 }}>(optional)</span></label>
                   <textarea
                     rows={4}
                     placeholder="E.g. duration of symptoms, any past diagnoses, questions you have..."

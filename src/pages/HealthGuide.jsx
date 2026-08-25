@@ -113,6 +113,23 @@ const BookIcon = ({ size = 28, color = "#0f616e" }) => (
    COMPONENT
    ───────────────────────────────────────────── */
 
+// Both hero buttons share this base so the filled and outlined variants match in
+// height (the transparent border compensates for the outlined one) and in width.
+const heroButton = {
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "8px",
+  minWidth: "212px",
+  padding: "13px 28px",
+  border: "2px solid transparent",
+  borderRadius: "100px",
+  fontWeight: 700,
+  fontSize: "15px",
+  textDecoration: "none",
+  boxSizing: "border-box",
+}
+
 function HealthGuide() {
   const scrollRef = useRef(null)
   const conditionsRef = useRef(null)
@@ -132,9 +149,12 @@ function HealthGuide() {
       <main>
 
         {/* ═══════════ HERO ═══════════ */}
-        <section style={{ display: "flex", flexDirection: "row", width: "100%", minHeight: "clamp(560px, calc(100vh - 72px), 900px)" }} className="home-hero flex-col md:flex-row">
+        {/* Sizing comes from the shared home-hero classes (Hero.css) so the mobile
+            breakpoint applies — inline styles here would out-rank the media query. */}
+        <section className="home-hero">
+          <div className="home-hero__inner">
           {/* LEFT: content */}
-          <div style={{ flex: "0 0 50%", backgroundColor: "#e0f3f5", padding: "clamp(2rem, 5vw, 5rem) clamp(1.25rem, 4vw, 4rem)", display: "flex", flexDirection: "column", justifyContent: "center", gap: "1.4rem" }} className="w-full md:w-1/2">
+          <div className="home-hero__left">
             <h1 style={{ fontFamily: "var(--font-display)", color: "#0F616E", fontSize: "clamp(2.2rem, 4vw, 3.6rem)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.5px", margin: 0 }}>
               Explore Health Guide.{" "}
               <span style={{ color: "#1AA3B5" }}>Understand your condition.</span>
@@ -145,14 +165,14 @@ function HealthGuide() {
             <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
               <a
                 href="#conditions"
-                style={{ background: "#e86531", color: "#fff", borderRadius: "100px", padding: "12px 28px", fontWeight: 700, fontSize: "15px", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "8px" }}
+                style={{ ...heroButton, background: "#e86531", color: "#fff" }}
               >
                 Explore Conditions
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
               </a>
               <Link
                 to="/blog"
-                style={{ border: "2px solid #0F616E", color: "#0F616E", borderRadius: "100px", padding: "12px 28px", fontWeight: 700, fontSize: "15px", textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+                style={{ ...heroButton, borderColor: "#0F616E", color: "#0F616E" }}
               >
                 Browse Articles
               </Link>
@@ -160,8 +180,9 @@ function HealthGuide() {
           </div>
 
           {/* RIGHT: image */}
-          <div style={{ flex: "0 0 50%", backgroundColor: "#cfe8e3", position: "relative", minHeight: "clamp(560px, calc(100vh - 72px), 900px)" }} className="w-full md:w-1/2">
-            <img src="/h2.jpg" alt="Rheumatologist explaining a report to a patient on a tablet" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
+          <div className="home-hero__right">
+            <img src="/h2.jpg" alt="Rheumatologist explaining a report to a patient on a tablet" className="home-hero__img" />
+          </div>
           </div>
         </section>
 
