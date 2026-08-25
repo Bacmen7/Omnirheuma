@@ -25,14 +25,34 @@ const overviewRouteMap = {
   "reactive-arthritis": "/reactive-arthritis",
 }
 
-const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref) => [
-  { label: "An overview", href: overviewHref },
-  ...(symptomsHref ? [{ label: "Symptoms and Warning Signs", href: symptomsHref }] : []),
-  ...(monitoringHref ? [{ label: "How It Is Diagnosed and Treated", href: monitoringHref }] : []),
-  ...(diagnosisHref ? [{ label: "How It Is Diagnosed and Treated", href: diagnosisHref }] : []),
-  ...(specialisedHref ? [{ label: "Specialised treatment options", href: specialisedHref }] : []),
-  ...(livingHref ? [{ label: `Living with ${name}`, href: livingHref }] : []),
-]
+const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref, conditionSlug) => {
+  if (conditionSlug === "ankylosing-spondylitis") {
+    return [
+      { label: "An overview", href: overviewHref },
+      { label: "Treatment options", href: "/Ankylosing-Spondylitis-Treatment" },
+      { label: "Specialised procedures and surgical options", href: "/ankylosing-spondylitis-specialised-procedures" },
+      { label: `Living with ${name}`, href: livingHref },
+    ]
+  }
+
+  if (conditionSlug === "reactive-arthritis") {
+    return [
+      { label: "An overview", href: overviewHref },
+      { label: "Symptoms and Warning Signs", href: "/reactive-arthritis-symptoms" },
+      { label: "Diagnosis: Tests and What to Expect", href: "/reactive-arthritis-diagnosis" },
+      { label: "Treatment and Recovery", href: "/reactive-arthritis-treatment" },
+    ]
+  }
+
+  return [
+    { label: "An overview", href: overviewHref },
+    ...(symptomsHref ? [{ label: "Symptoms and Warning Signs", href: symptomsHref }] : []),
+    ...(monitoringHref ? [{ label: "How It Is Diagnosed and Treated", href: monitoringHref }] : []),
+    ...(diagnosisHref ? [{ label: "How It Is Diagnosed and Treated", href: diagnosisHref }] : []),
+    ...(specialisedHref ? [{ label: "Specialised treatment options", href: specialisedHref }] : []),
+    ...(livingHref ? [{ label: `Living with ${name}`, href: livingHref }] : []),
+  ]
+}
 
 const videos = [
   { image: "/content-thumbs/psa-video.webp", title: "What is Rheumatoid Arthritis? Causes, Symptoms & When To See A Doctor" },
@@ -46,7 +66,7 @@ const conditionCards = [
   { name: "Osteoarthritis", image: "/condition/Osteoarthritis.webp", desc: "The most common form of arthritis. Evidence-based approaches to manage cartilage loss and pain.", href: "#" },
   { name: "Lupus", image: "/condition/Lupus.webp", desc: "A complex autoimmune disease affecting multiple organ systems. Expert guidance for flare management.", href: "#" },
   { name: "Gout", image: "/condition/Gout.webp", desc: "Caused by uric acid crystal deposits. Prevent flares with medication, diet, and lifestyle strategies.", href: "#" },
-  { name: "Ankylosing Spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", desc: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture.", href: "#" },
+  { name: "Ankylosing Spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", desc: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture.", href: "/Ankylosing-Spondylitis-overview" },
   { name: "Fibromyalgia", image: "/condition/Fibromyalgia.webp", desc: "Widespread pain with fatigue and cognitive difficulties. Multi-modal treatment can restore quality of life.", href: "#" },
   { name: "Reactive Arthritis", image: "/reactive.jpg", desc: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts.", href: "/reactive-arthritis" },
 ]
@@ -56,7 +76,7 @@ const arthritisConditions = [
   { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
   { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative", href: "/osteoarthritis" },
   { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
-  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
+  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: "/Ankylosing-Spondylitis-overview" },
 ]
 
 const otherConditions = [
@@ -114,7 +134,9 @@ function Conditions() {
           ? "/Living-With-Psoriatic-Arthritis"
           : conditionSlug === "fibromyalgia"
             ? "/Living-With-Fibromyalgia"
-            : null
+            : conditionSlug === "ankylosing-spondylitis"
+              ? "/living-with-ankylosing-spondylitis"
+              : null
   const specialisedHref = isRA
     ? "/Specialised-Treatment-Rheumatoid-Arthritis"
     : conditionSlug === "osteoarthritis"
@@ -138,15 +160,19 @@ function Conditions() {
           ? "/Psoriatic-Arthritis-Symptoms-Warning-Signs"
           : conditionSlug === "fibromyalgia"
             ? "/Fibromyalgia-Symptoms-Warning-Signs"
-            : null
+            : conditionSlug === "reactive-arthritis"
+              ? "/reactive-arthritis-symptoms"
+              : null
   const monitoringHref = isRA ? "/Rheumatoid-Arthritis-Blood-Tests-Monitoring" : null
   const diagnosisHref = conditionSlug === "osteoarthritis"
     ? "/Osteoarthritis-Diagnosis-Treatment"
     : conditionSlug === "psoriatic-arthritis"
       ? "/Psoriatic-Arthritis-Diagnosis"
-      : null
+      : conditionSlug === "reactive-arthritis"
+        ? "/reactive-arthritis-diagnosis"
+        : null
   const featured = buildFeatured(displayName)
-  const categoryLinks = buildCategoryLinks(displayName, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref)
+  const categoryLinks = buildCategoryLinks(displayName, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref, conditionSlug)
 
   const [query, setQuery] = useState("")
   const [current, setCurrent] = useState(0)

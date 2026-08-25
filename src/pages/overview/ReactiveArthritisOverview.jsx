@@ -205,7 +205,7 @@ function ReactiveArthritisOverview() {
                 Food poisoning can be mild. A few rough days and it passes. It can also be serious enough that you would need to visit a hospital. Either way, once it clears, you move on. Then two weeks later, your knee swells up for no known reason, then your ankle, then your heel hurts so much that standing feels like a chore.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                Nothing seems to link the two, and that is exactly why doctors miss this so often. The condition is called reactive arthritis. It is the joint pain and swelling that shows up after an infection occurs somewhere else in your body. Most cases begin in one of two places: the digestive system, as in the example above, or the urinary and genital tract. Here is the confusing part. That first infection is sometimes so mild it causes no symptoms at all, and by the time your joints flare up, it has usually cleared.
+                Nothing seems to link the two, and that is exactly why doctors miss this so often. The condition is called <strong>reactive arthritis</strong>. It is the joint pain and swelling that shows up after an infection occurs somewhere else in your body. Most cases begin in one of two places: the <strong>digestive system</strong>, as in the example above, or the <strong>urinary and genital tract</strong>. Here is the confusing part. That first infection is sometimes so mild it causes no symptoms at all, and by the time your joints flare up, it has usually cleared.
               </p>
               <p className="text-[16px] leading-[1.8] text-navy-muted">
                 This article explains what reactive arthritis is, which infections set it off, how doctors treat it, and how long it tends to last.
@@ -241,10 +241,10 @@ function ReactiveArthritisOverview() {
                 What Reactive Arthritis Is
               </h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Reactive arthritis describes a condition in which your joints become inflamed. Not because they are infected themselves, but because your immune system, while fighting off an earlier infection, has continued to overreact within your joints.
+                <strong>Reactive arthritis</strong> describes a condition in which your joints become inflamed. Not because they are infected themselves, but because your immune system, while fighting off an earlier infection, has continued to overreact within your joints.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Let us understand, for example, your immune system fights off an infection in your gut or urinary tract. It then continues to react inside the joints that were never invaded even after the infection has subsided. This reaction causes swelling and pain. Doctors call this sterile inflammation, meaning inflammation without infection.
+                Let us understand, for example, your immune system fights off an infection in your gut or urinary tract. It then continues to react inside the joints that were never invaded even after the infection has subsided. This reaction causes swelling and pain. Doctors call this <strong>sterile inflammation</strong>, meaning inflammation without infection.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Reactive arthritis is part of a family of conditions called spondyloarthritis. It also includes{" "}
@@ -254,7 +254,7 @@ function ReactiveArthritisOverview() {
                 and{" "}
                 <Link to="/Psoriatic-Arthritis-overview" className="font-semibold underline hover:text-[#1AA3B5]" style={{ color: "#0f616e" }}>
                   psoriatic arthritis
-                </Link>. What sets it apart is timing, since it follows an infection, usually within 1-6 weeks. You may also come across its older name, Reiter syndrome. This described a combination of joint pain, eye inflammation, and urinary symptoms appearing together. Only some people ever develop all three, which is one reason the term has been dropped.
+                </Link>. What sets it apart is timing, since it follows an infection, usually within 1-6 weeks. You may also come across its older name, <strong>Reiter syndrome</strong>. This described a combination of joint pain, eye inflammation, and urinary symptoms appearing together. Only some people ever develop all three, which is one reason the term has been dropped.
               </p>
             </div>
 
@@ -266,10 +266,10 @@ function ReactiveArthritisOverview() {
                 The Infections That Trigger It
               </h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Two groups of infections account for most cases of reactive arthritis. From the digestive tract, the usual causative agents are Salmonella, Shigella, Campylobacter, Yersinia and certain strains of E. coli. Most people would call the illness itself food poisoning or a stomach infection rather than name the organism.
+                Two groups of infections account for most cases of reactive arthritis. From the digestive tract, the usual causative agents are <strong>Salmonella, Shigella, Campylobacter, Yersinia and certain strains of E. coli</strong>. Most people would call the illness itself food poisoning or a stomach infection rather than name the organism.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                From the urinary and genital tract, the commonest trigger is Chlamydia trachomatis, a sexually transmitted infection. Ureaplasma and Mycoplasma are also recognised. Chlamydia frequently causes no symptoms at all, which is why it goes unnoticed until the joints react.
+                From the urinary and genital tract, the commonest trigger is <strong>Chlamydia trachomatis</strong>, a sexually transmitted infection. <strong>Ureaplasma and Mycoplasma</strong> are also recognised. Chlamydia frequently causes no symptoms at all, which is why it goes unnoticed until the joints react.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 There is a third possibility worth knowing about. In roughly 40% of cases, no organism is ever identified. Even in specialist settings, a preceding infection is confirmed in only about 60% of patients.
@@ -319,12 +319,12 @@ function ReactiveArthritisOverview() {
                 Who Gets Reactive Arthritis
               </h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
-                Reactive arthritis is uncommon and occurs most often in young adults, roughly between ages 18 and 40 years. After a gut infection, men and women are affected about equally. However, in sexually transmitted infections, men are affected far more often. HIV also raises the risk.
+                Reactive arthritis is uncommon and occurs most often in young adults, roughly between ages <strong>18 and 40 years</strong>. After a gut infection, men and women are affected about equally. However, in sexually transmitted infections, men are affected far more often. HIV also raises the risk.
               </p>
 
               <h3 style={H3Style}>What HLA-B27 Actually Means</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                HLA-B27 is an inherited genetic marker, found in many people with this family of conditions, and plays two roles here.
+                <strong>HLA-B27</strong> is an inherited genetic marker, found in many people with this family of conditions, and plays two roles here.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 The first is risk. People who carry it are significantly more likely to develop reactive arthritis after an infection.
@@ -399,13 +399,13 @@ function ReactiveArthritisOverview() {
                 Treatment for Reactive Arthritis
               </h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                Treatment works on two fronts. First is treating the original infection, and the second front includes treating the joints.
+                Treatment works on two fronts. First is treating the <strong>original infection</strong>, and the second front includes <strong>treating the joints</strong>.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                When treating the original infection, where Chlamydia is the trigger, antibiotics are recommended, and sexual partners also need to be treated. So that reinfection does not occur. Gut infections are different. Antibiotics do not change the course of arthritis. But they may still be needed for the infection itself.
+                When <strong>treating the original infection</strong>, where Chlamydia is the trigger, antibiotics are recommended, and sexual partners also need to be treated. So that reinfection does not occur. Gut infections are different. Antibiotics do not change the course of arthritis. But they may still be needed for the infection itself.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                While treating the joints, anti-inflammatory medicines are usually the first step. And a steroid injection into a badly affected joint can settle it when only 1 or 2 are involved. If symptoms continue for several weeks, a doctor may add a disease-modifying medicine. And for stubborn cases, biologic treatments are an option.
+                While <strong>treating the joints</strong>, anti-inflammatory medicines are usually the first step. And a steroid injection into a badly affected joint can settle it when only 1 or 2 are involved. If symptoms continue for several weeks, a doctor may add a disease-modifying medicine. And for stubborn cases, biologic treatments are an option.
               </p>
             </div>
 
@@ -490,7 +490,7 @@ function ReactiveArthritisOverview() {
             </div>
 
             {/* MEDICAL DISCLAIMER */}
-            <div className="mt-10 p-5 rounded-lg border border-[#e0e0e0] bg-[#f9fbfb]">
+            <div className="mt-12 mb-8 p-6 rounded-lg border border-[#e0e0e0] bg-[#f9fbfb]">
               <p className="text-[13px] leading-[1.7] text-navy-muted italic">
                 <strong className="font-semibold not-italic text-navy-deep">Medical disclaimer:</strong> This article is for general information only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified doctor about any medical concern.
               </p>

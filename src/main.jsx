@@ -32,6 +32,8 @@ import FibromyalgiaSymptomsDiagnosis from "./pages/FibromyalgiaSymptomsDiagnosis
 import FibromyalgiaTreatment from "./pages/FibromyalgiaTreatment.jsx"
 import AnkylosingSpondylitisGuide from "./pages/AnkylosingSpondylitisGuide.jsx"
 import AnkylosingSpondylitisTreatment from "./pages/AnkylosingSpondylitisTreatment.jsx"
+import AnkylosingSpondylitisSpecialisedProcedures from "./pages/AnkylosingSpondylitisSpecialisedProcedures.jsx"
+import LivingWithAnkylosingSpondylitis from "./pages/LivingWithAnkylosingSpondylitis.jsx"
 import LivingWithFibromyalgia from "./pages/LivingWithFibromyalgia.jsx"
 import RheumatoidArthritisOverview from "./pages/overview/RheumatoidArthritisOverview.jsx"
 import OsteoarthritisOverview from "./pages/overview/OsteoarthritisOverview.jsx"
@@ -41,6 +43,9 @@ import AnkylosingSpondylitisOverview from "./pages/overview/AnkylosingSpondyliti
 import GoutOverview from "./pages/overview/GoutOverview.jsx"
 import FibromyalgiaOverview from "./pages/overview/FibromyalgiaOverview.jsx"
 import ReactiveArthritisOverview from "./pages/overview/ReactiveArthritisOverview.jsx"
+import ReactiveArthritisSymptoms from "./pages/ReactiveArthritisSymptoms.jsx"
+import ReactiveArthritisDiagnosis from "./pages/ReactiveArthritisDiagnosis.jsx"
+import ReactiveArthritisTreatment from "./pages/ReactiveArthritisTreatment.jsx"
 import Arthritis from "./pages/Arthritis.jsx"
 import KnowledgeHub from "./pages/KnowledgeHub.jsx"
 import TreatmentGuides from "./pages/TreatmentGuides.jsx"
@@ -99,6 +104,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Fibromyalgia-Treatment" element={<FibromyalgiaTreatment />} />
         <Route path="/Ankylosing-Spondylitis" element={<AnkylosingSpondylitisGuide />} />
         <Route path="/Ankylosing-Spondylitis-Treatment" element={<AnkylosingSpondylitisTreatment />} />
+        <Route path="/ankylosing-spondylitis-specialised-procedures" element={<AnkylosingSpondylitisSpecialisedProcedures />} />
+        <Route path="/living-with-ankylosing-spondylitis" element={<LivingWithAnkylosingSpondylitis />} />
         <Route path="/Living-With-Fibromyalgia" element={<LivingWithFibromyalgia />} />
         <Route path="/Rheumatoid-Arthritis-overview" element={<RheumatoidArthritisOverview />} />
         <Route path="/Osteoarthritis-overview" element={<OsteoarthritisOverview />} />
@@ -109,6 +116,12 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Fibromyalgia-overview" element={<FibromyalgiaOverview />} />
         <Route path="/reactive-arthritis" element={<ReactiveArthritisOverview />} />
         <Route path="/Reactive-Arthritis-overview" element={<ReactiveArthritisOverview />} />
+        <Route path="/reactive-arthritis-symptoms" element={<ReactiveArthritisSymptoms />} />
+        <Route path="/Reactive-Arthritis-Symptoms-Warning-Signs" element={<ReactiveArthritisSymptoms />} />
+        <Route path="/reactive-arthritis-diagnosis" element={<ReactiveArthritisDiagnosis />} />
+        <Route path="/Reactive-Arthritis-Diagnosis" element={<ReactiveArthritisDiagnosis />} />
+        <Route path="/reactive-arthritis-treatment" element={<ReactiveArthritisTreatment />} />
+        <Route path="/Reactive-Arthritis-Treatment" element={<ReactiveArthritisTreatment />} />
         <Route path="/Reactive-Arthritis" element={<Navigate to="/reactive-arthritis" replace />} />
         <Route path="/rheumatoid-arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/health-guide/Rheumatoid-Arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
