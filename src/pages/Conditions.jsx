@@ -22,6 +22,7 @@ const overviewRouteMap = {
   "ankylosing-spondylitis": "/Ankylosing-Spondylitis-overview",
   "gout": "/Gout-overview",
   "fibromyalgia": "/Fibromyalgia-overview",
+  "reactive-arthritis": "/reactive-arthritis",
 }
 
 const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref) => [
@@ -47,7 +48,7 @@ const conditionCards = [
   { name: "Gout", image: "/condition/Gout.webp", desc: "Caused by uric acid crystal deposits. Prevent flares with medication, diet, and lifestyle strategies.", href: "#" },
   { name: "Ankylosing Spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", desc: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture.", href: "#" },
   { name: "Fibromyalgia", image: "/condition/Fibromyalgia.webp", desc: "Widespread pain with fatigue and cognitive difficulties. Multi-modal treatment can restore quality of life.", href: "#" },
-  { name: "Back & Neck Pain", image: "/condition/back.webp", desc: "Identifying whether spinal pain is mechanical or inflammatory is a critical distinction for treatment.", href: "#" },
+  { name: "Reactive Arthritis", image: "/reactive.jpg", desc: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts.", href: "/reactive-arthritis" },
 ]
 
 /* Condition tiles -mirrors the Knowledge Hub "Know more about Your condition" section */
@@ -64,7 +65,7 @@ const otherConditions = [
   { key: "fibro", name: "Fibromyalgia", href: "/Rheumatoid-Arthritis" },
   { key: "vasculitis", name: "Vasculitis", href: "/Rheumatoid-Arthritis" },
   { key: "lupus", name: "Lupus (SLE)", href: "/Rheumatoid-Arthritis" },
-  { key: "reactive", name: "Reactive Arthritis", href: "/Rheumatoid-Arthritis" },
+  { key: "reactive", name: "Reactive Arthritis", href: "/reactive-arthritis" },
   { key: "sjogrens", name: "Sjögren's Syndrome", href: "/Rheumatoid-Arthritis" },
   { key: "jia", name: "Juvenile Idiopathic Arthritis", href: "/Rheumatoid-Arthritis" },
   { key: "pmr", name: "Polymyalgia Rheumatica", href: "/Rheumatoid-Arthritis" },
@@ -92,7 +93,7 @@ const conditionNameMap = {
   "gout": "Gout",
   "ankylosing-spondylitis": "Ankylosing Spondylitis",
   "fibromyalgia": "Fibromyalgia",
-  "back-neck-pain": "Back & Neck Pain",
+  "reactive-arthritis": "Reactive Arthritis",
   "vasculitis": "Vasculitis",
 }
 

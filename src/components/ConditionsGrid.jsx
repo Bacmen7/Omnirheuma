@@ -28,8 +28,8 @@ const conditions = [
     image: "/condition/Fibromyalgia.webp",
   },
   {
-    name: "Back & Neck Pain",
-    image: "/condition/back.webp",
+    name: "Reactive Arthritis",
+    image: "/reactive.jpg",
   },
 ]
 

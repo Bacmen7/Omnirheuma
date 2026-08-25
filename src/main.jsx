@@ -40,6 +40,7 @@ import PsoriaticArthritisOverview from "./pages/overview/PsoriaticArthritisOverv
 import AnkylosingSpondylitisOverview from "./pages/overview/AnkylosingSpondylitisOverview.jsx"
 import GoutOverview from "./pages/overview/GoutOverview.jsx"
 import FibromyalgiaOverview from "./pages/overview/FibromyalgiaOverview.jsx"
+import ReactiveArthritisOverview from "./pages/overview/ReactiveArthritisOverview.jsx"
 import Arthritis from "./pages/Arthritis.jsx"
 import KnowledgeHub from "./pages/KnowledgeHub.jsx"
 import TreatmentGuides from "./pages/TreatmentGuides.jsx"
@@ -106,6 +107,9 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Ankylosing-Spondylitis-overview" element={<AnkylosingSpondylitisOverview />} />
         <Route path="/Gout-overview" element={<GoutOverview />} />
         <Route path="/Fibromyalgia-overview" element={<FibromyalgiaOverview />} />
+        <Route path="/reactive-arthritis" element={<ReactiveArthritisOverview />} />
+        <Route path="/Reactive-Arthritis-overview" element={<ReactiveArthritisOverview />} />
+        <Route path="/Reactive-Arthritis" element={<Navigate to="/reactive-arthritis" replace />} />
         <Route path="/rheumatoid-arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/health-guide/Rheumatoid-Arthritis" element={<Navigate to="/Rheumatoid-Arthritis" replace />} />
         <Route path="/arthritis" element={<Arthritis />} />

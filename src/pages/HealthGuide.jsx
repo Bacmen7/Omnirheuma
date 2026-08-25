@@ -23,7 +23,7 @@ const conditions = [
   { name: "Gout", slug: "gout", image: "/condition/Gout.webp", description: "Caused by uric acid crystal deposits. Prevent flares with medication, diet, and lifestyle strategies." },
   { name: "Ankylosing Spondylitis", slug: "ankylosing-spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", description: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture." },
   { name: "Fibromyalgia", slug: "fibromyalgia", image: "/condition/Fibromyalgia.webp", description: "Widespread pain with fatigue and cognitive difficulties. Multi-modal treatment can restore quality of life." },
-  { name: "Back & Neck Pain", slug: "back-neck-pain", image: "/condition/back.webp", description: "Identifying whether spinal pain is mechanical or inflammatory is a critical distinction for treatment." },
+  { name: "Reactive Arthritis", slug: "reactive-arthritis", image: "/reactive.jpg", description: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts." },
 ]
 
 const whatIsRheumatology = [
@@ -90,7 +90,7 @@ const otherConditions = [
   { key: "fibro", name: "Fibromyalgia", href: "/Fibromyalgia-overview" },
   { key: "vasculitis", name: "Vasculitis", href: null },
   { key: "lupus", name: "Lupus (SLE)", href: "/Lupus-overview" },
-  { key: "reactive", name: "Reactive Arthritis", href: null },
+  { key: "reactive", name: "Reactive Arthritis", href: "/reactive-arthritis" },
   { key: "sjogrens", name: "Sjögren's Syndrome", href: null },
   { key: "jia", name: "Juvenile Idiopathic Arthritis", href: null },
   { key: "pmr", name: "Polymyalgia Rheumatica", href: null },
