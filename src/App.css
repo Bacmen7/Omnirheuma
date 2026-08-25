@@ -29,18 +29,19 @@
   font-family: var(--font-base) !important;
 }
 
-/* Guide article h2 - bold underline line below, with space */
+/* Guide article h2 - bold underline line below, with extra large top spacing */
 .guide-article-content h2 {
   text-decoration: none !important;
   border-bottom: 2px solid #c8d0dc !important;
   padding-bottom: 1rem !important;
+  margin-top: 5.5rem !important;
   margin-bottom: 2rem !important;
 }
 
 /* Section dividers - breathing room above each section */
 .guide-article-content [data-toc-section]:not(:first-of-type) {
   border-top: none !important;
-  padding-top: 1.75rem !important;
+  padding-top: 3.5rem !important;
 }
 
 /* Modal animations */
@@ -140,11 +141,16 @@
 
 .blog-article-content h2 {
   font-family: var(--font-display);
-  margin: 1.8rem 0 0.8rem;
+  margin-top: 5.5rem !important;
+  margin-bottom: 0.8rem !important;
   font-size: 2.625rem;
   line-height: 1.14286;
   letter-spacing: -0.4px;
   font-weight: 400;
+}
+
+.blog-article-content h2:first-of-type {
+  margin-top: 2rem !important;
 }
 
 .blog-article-content p {
