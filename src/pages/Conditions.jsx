@@ -68,7 +68,7 @@ const conditionCards = [
   { name: "Gout", image: "/condition/Gout.webp", desc: "Caused by uric acid crystal deposits. Prevent flares with medication, diet, and lifestyle strategies.", href: "#" },
   { name: "Ankylosing Spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", desc: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture.", href: "/Ankylosing-Spondylitis-overview" },
   { name: "Fibromyalgia", image: "/condition/Fibromyalgia.webp", desc: "Widespread pain with fatigue and cognitive difficulties. Multi-modal treatment can restore quality of life.", href: "#" },
-  { name: "Reactive Arthritis", image: "/reactive.jpg", desc: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts.", href: "/reactive-arthritis" },
+  { name: "Reactive Arthritis", image: "/Reactivearthirits.png", desc: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts.", href: "/reactive-arthritis" },
 ]
 
 /* Condition tiles -mirrors the Knowledge Hub "Know more about Your condition" section */

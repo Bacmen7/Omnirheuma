@@ -23,7 +23,7 @@ const conditions = [
   { name: "Gout", slug: "gout", image: "/condition/Gout.webp", description: "Caused by uric acid crystal deposits. Prevent flares with medication, diet, and lifestyle strategies." },
   { name: "Ankylosing Spondylitis", slug: "ankylosing-spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", description: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture." },
   { name: "Fibromyalgia", slug: "fibromyalgia", image: "/condition/Fibromyalgia.webp", description: "Widespread pain with fatigue and cognitive difficulties. Multi-modal treatment can restore quality of life." },
-  { name: "Reactive Arthritis", slug: "reactive-arthritis", image: "/reactive.jpg", description: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts." },
+  { name: "Reactive Arthritis", slug: "reactive-arthritis", image: "/Reactivearthirits.png", description: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts." },
 ]
 
 const whatIsRheumatology = [

@@ -29,7 +29,7 @@ const conditions = [
   },
   {
     name: "Reactive Arthritis",
-    image: "/reactive.jpg",
+    image: "/Reactivearthirits.png",
   },
 ]
 

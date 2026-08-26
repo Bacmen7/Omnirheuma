@@ -143,8 +143,8 @@ function ReactiveArthritisOverview() {
             <p style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", color: "#1AA3B5", marginBottom: "16px" }}>
               A Patient Guide for India
             </p>
-            <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(30px, 5vw, 54px)", fontWeight: 400, lineHeight: 1.08, letterSpacing: "-1px", color: "#0f616e", marginBottom: "1rem" }}>
-              Reactive Arthritis: What It Is, Causes and Treatment
+            <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(40px, 8.5vw, 72px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.5px", color: "#0f616e", marginBottom: "1rem" }}>
+              Reactive Arthritis
             </h1>
             <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "620px", marginLeft: "auto", marginRight: "auto" }}>
               Reactive arthritis is joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts.
