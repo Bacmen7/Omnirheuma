@@ -175,7 +175,7 @@ function AnkylosingSpondylitisTreatment() {
                     marginBottom: 0,
                   }}
                 >
-                  Ankylosing Spondylitis:
+                  Ankylosing Spondylitis Treatment -
                   <span
                     style={{
                       display: "block",
@@ -186,7 +186,7 @@ function AnkylosingSpondylitisTreatment() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Treatment: Medications, Therapies, and What to Expect
+                    Medications, Therapies, and What to Expect
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>

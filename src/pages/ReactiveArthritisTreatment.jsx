@@ -163,15 +163,14 @@ function ReactiveArthritisTreatment() {
                     marginBottom: 0,
                   }}
                 >
-                  Reactive Arthritis:
+                  <span className="whitespace-nowrap">Reactive Arthritis:</span>{" "}
                   <span
                     style={{
-                      display: "block",
-                      fontSize: "clamp(26px, 3.4vw, 40px)",
-                      lineHeight: 1.2,
+                      display: "inline",
+                      fontSize: "inherit",
+                      lineHeight: "inherit",
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
-                      marginTop: "0.85rem",
                     }}
                   >
                     Treatment and Recovery

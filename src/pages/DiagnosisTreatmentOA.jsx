@@ -193,7 +193,8 @@ function DiagnosisTreatmentOA() {
                     marginBottom: 0,
                   }}
                 >
-                  Osteoarthritis:
+                  Diagnosis and Treatment of<br />
+                  <span className="whitespace-nowrap">Osteoarthritis:</span>
                   <span
                     style={{
                       display: "block",
@@ -204,7 +205,7 @@ function DiagnosisTreatmentOA() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Diagnosis and Treatment: How It Is Diagnosed and Treated
+                    How It Is Diagnosed and Treated
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>

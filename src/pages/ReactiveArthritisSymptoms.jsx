@@ -155,6 +155,7 @@ function ReactiveArthritisSymptoms() {
             <div className="flex flex-col md:flex-row md:items-stretch gap-8 md:gap-12">
               <div className="flex-1 pb-7 text-left md:pb-0">
                 <h1
+                  className="reactive-arthritis-symptoms-title"
                   style={{
                     fontFamily: "var(--font-display)",
                     fontSize: "clamp(40px, 8.5vw, 72px)",
@@ -165,15 +166,14 @@ function ReactiveArthritisSymptoms() {
                     marginBottom: 0,
                   }}
                 >
-                  Reactive Arthritis:
+                  <span className="whitespace-nowrap">Reactive Arthritis:</span>{" "}
                   <span
                     style={{
-                      display: "block",
-                      fontSize: "clamp(26px, 3.4vw, 40px)",
-                      lineHeight: 1.2,
+                      display: "inline",
+                      fontSize: "inherit",
+                      lineHeight: "inherit",
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
-                      marginTop: "0.85rem",
                     }}
                   >
                     Symptoms and Warning Signs

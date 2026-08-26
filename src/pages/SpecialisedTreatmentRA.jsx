@@ -167,7 +167,7 @@ function SpecialisedTreatmentRA() {
                     marginBottom: 0,
                   }}
                 >
-                  Rheumatoid Arthritis:
+                  Specialised treatment options for <span className="whitespace-nowrap">Rheumatoid arthritis:</span>
                   <span
                     style={{
                       display: "block",
@@ -178,7 +178,7 @@ function SpecialisedTreatmentRA() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Specialised Treatment Options: What can you expect?
+                    What can you expect?
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
