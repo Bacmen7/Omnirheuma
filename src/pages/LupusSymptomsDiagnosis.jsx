@@ -177,7 +177,7 @@ function LupusSymptomsDiagnosis() {
                     marginBottom: 0,
                   }}
                 >
-                  Symptoms and Warning Signs of <span className="whitespace-nowrap">Lupus (SLE):</span>
+                  Symptoms and Diagnosis of <span className="whitespace-nowrap">Lupus (SLE):</span>
                   <span
                     style={{
                       display: "block",

@@ -153,7 +153,7 @@ function FibromyalgiaTreatment() {
                     marginBottom: 0,
                   }}
                 >
-                  Fibromyalgia Treatment:
+                  Fibromyalgia:
                   <span
                     style={{
                       display: "block",
@@ -164,7 +164,7 @@ function FibromyalgiaTreatment() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Medications, Therapies and Specialised Options
+                    Treatment: Medications, Therapies and Specialised Options
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>

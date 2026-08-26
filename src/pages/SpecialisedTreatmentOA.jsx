@@ -169,19 +169,18 @@ function SpecialisedTreatmentOA() {
                     marginBottom: 0,
                   }}
                 >
-                  Specialised Treatment Procedures for<br />
-                  <span className="whitespace-nowrap">Osteoarthritis:</span>
+                  Osteoarthritis:
                   <span
                     style={{
                       display: "block",
                       fontSize: "clamp(26px, 3.4vw, 40px)",
-                      lineHeight: 1.3,
+                      lineHeight: 1.2,
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
                       marginTop: "0.85rem",
                     }}
                   >
-                    Injections, Surgery and What to Expect
+                    Specialised Treatment Procedures: Injections, Surgery and What to Expect
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>

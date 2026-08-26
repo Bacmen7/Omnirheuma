@@ -154,7 +154,7 @@ function PsoriaticArthritisTreatment() {
                     marginBottom: 0,
                   }}
                 >
-                  Psoriatic Arthritis Treatment:
+                  Psoriatic Arthritis:
                   <span
                     style={{
                       display: "block",
@@ -165,7 +165,7 @@ function PsoriaticArthritisTreatment() {
                       marginTop: "0.85rem",
                     }}
                   >
-                    Medications, Therapies and What to Expect
+                    Treatment: Medications, Therapies and What to Expect
                   </span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>

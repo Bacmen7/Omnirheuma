@@ -147,7 +147,7 @@ function ReactiveArthritisOverview() {
               Reactive Arthritis
             </h1>
             <p style={{ fontFamily: "var(--font-base)", fontSize: "clamp(16px, 2vw, 19px)", lineHeight: 1.5, color: "#4a6068", marginBottom: "2.5rem", maxWidth: "620px", marginLeft: "auto", marginRight: "auto" }}>
-              Reactive arthritis is joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts.
+              What it is, symptoms, causes and treatment options, explained for patients and caregivers
             </p>
 
             <div style={{ position: "relative", paddingBottom: "52px" }}>
