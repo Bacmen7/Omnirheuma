@@ -79,22 +79,24 @@ const arthritisConditions = [
   { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: "/Ankylosing-Spondylitis-overview" },
 ]
 
+/* href = condition hub (/conditions?c=slug) for conditions with content; null = disabled tile.
+   Clickable conditions are listed first so they render at the top of the grid. */
 const otherConditions = [
-  { key: "gout", name: "Gout", href: "/gout" },
-  { key: "ctd", name: "Connective Tissue Disease", href: "/Rheumatoid-Arthritis" },
-  { key: "fibro", name: "Fibromyalgia", href: "/Rheumatoid-Arthritis" },
-  { key: "vasculitis", name: "Vasculitis", href: "/Rheumatoid-Arthritis" },
-  { key: "lupus", name: "Lupus (SLE)", href: "/Rheumatoid-Arthritis" },
-  { key: "reactive", name: "Reactive Arthritis", href: "/reactive-arthritis" },
-  { key: "sjogrens", name: "Sjögren's Syndrome", href: "/Rheumatoid-Arthritis" },
-  { key: "jia", name: "Juvenile Idiopathic Arthritis", href: "/Rheumatoid-Arthritis" },
-  { key: "pmr", name: "Polymyalgia Rheumatica", href: "/Rheumatoid-Arthritis" },
-  { key: "scleroderma", name: "Systemic Sclerosis", href: "/Rheumatoid-Arthritis" },
-  { key: "osteoporosis", name: "Osteoporosis", href: "/Rheumatoid-Arthritis" },
-  { key: "septic", name: "Septic Arthritis", href: "/Rheumatoid-Arthritis" },
-  { key: "cppd", name: "Crystal Arthropathies (CPPD)", href: "/Rheumatoid-Arthritis" },
-  { key: "mctd", name: "Mixed Connective Tissue Disease", href: "/Rheumatoid-Arthritis" },
-  { key: "raynauds", name: "Raynaud's Phenomenon", href: "/Rheumatoid-Arthritis" },
+  { key: "gout", name: "Gout", href: "/conditions?c=gout" },
+  { key: "fibro", name: "Fibromyalgia", href: "/conditions?c=fibromyalgia" },
+  { key: "lupus", name: "Lupus (SLE)", href: "/conditions?c=lupus" },
+  { key: "reactive", name: "Reactive Arthritis", href: "/conditions?c=reactive-arthritis" },
+  { key: "ctd", name: "Connective Tissue Disease", href: null },
+  { key: "vasculitis", name: "Vasculitis", href: null },
+  { key: "sjogrens", name: "Sjögren's Syndrome", href: null },
+  { key: "jia", name: "Juvenile Idiopathic Arthritis", href: null },
+  { key: "pmr", name: "Polymyalgia Rheumatica", href: null },
+  { key: "scleroderma", name: "Systemic Sclerosis", href: null },
+  { key: "osteoporosis", name: "Osteoporosis", href: null },
+  { key: "septic", name: "Septic Arthritis", href: null },
+  { key: "cppd", name: "Crystal Arthropathies (CPPD)", href: null },
+  { key: "mctd", name: "Mixed Connective Tissue Disease", href: null },
+  { key: "raynauds", name: "Raynaud's Phenomenon", href: null },
 ]
 
 const BookIcon = ({ size = 28, color = "#0f616e" }) => (
@@ -396,24 +398,42 @@ function Conditions() {
 
             {/* Small tiles */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-[#dde6ee] rounded-lg overflow-hidden mb-4">
-              {otherConditions.map((c, idx) => (
-                <Link
-                  key={c.key}
-                  to={c.href}
-                  className={`flex gap-3 items-center p-5 border-none cursor-pointer text-left transition-colors bg-[#e0f3f5] hover:bg-[#d4ebf8] no-underline ${
-                    !showAllConditions && idx >= 5 ? "hidden sm:flex" : ""
-                  }`}
-                  style={{ fontFamily: "var(--font-base)" }}
-                >
-                  <BookIcon size={22} color="#0f616e" />
-                  <div className="flex-1">
-                    <div className="text-sm font-semibold text-navy-deep">{c.name}</div>
+              {/* Tiles with href navigate to the condition hub; others render as disabled (faded, no arrow) */}
+              {otherConditions.map((c, idx) => {
+                const hideCls = !showAllConditions && idx >= 5 ? "hidden sm:flex" : ""
+                const inner = (
+                  <>
+                    <BookIcon size={22} color={c.href ? "#0f616e" : "#8aa4a8"} />
+                    <div className="flex-1">
+                      <div className={`text-sm font-semibold ${c.href ? "text-navy-deep" : "text-[#7d9296]"}`}>{c.name}</div>
+                    </div>
+                    {c.href && (
+                      <div className="w-7 h-7 rounded-md text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                      </div>
+                    )}
+                  </>
+                )
+                return c.href ? (
+                  <Link
+                    key={c.key}
+                    to={c.href}
+                    className={`flex gap-3 items-center p-5 border-none cursor-pointer text-left transition-colors bg-[#e0f3f5] hover:bg-[#d4ebf8] no-underline ${hideCls}`}
+                    style={{ fontFamily: "var(--font-base)" }}
+                  >
+                    {inner}
+                  </Link>
+                ) : (
+                  <div
+                    key={c.key}
+                    aria-disabled="true"
+                    className={`flex gap-3 items-center p-5 border-none text-left bg-[#eef6f7] select-none ${hideCls}`}
+                    style={{ fontFamily: "var(--font-base)", cursor: "not-allowed", opacity: 0.65 }}
+                  >
+                    {inner}
                   </div>
-                  <div className="w-7 h-7 rounded-md text-white flex items-center justify-center shrink-0" style={{ background: "#0f616e" }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
-                  </div>
-                </Link>
-              ))}
+                )
+              })}
             </div>
 
             <button
