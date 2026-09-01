@@ -151,9 +151,9 @@ function LupusOverview() {
                 ))}
               </div>
 
-              {/* Medically reviewed by */}
+              {/* Written by / Reviewed by / Last Updated */}
               <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
-                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
+                Written by <strong style={{ color: "#0f616e" }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong> | Last Updated: September 2026
               </p>
             </div>
           </div>
@@ -326,7 +326,7 @@ function LupusOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep font-bold">
                 Any warning signs of kidney involvement, such as swollen ankles or foamy urine, need an immediate same-day visit to a rheumatologist without delay.
               </p>
-              <Link to="/Lupus-Symptoms-Warning-Signs" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px", marginTop: "1.5rem" }}>
+              <Link to="/Lupus-Symptoms-Warning-Signs" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px", marginTop: "1.5rem" }}>
                 Read more about symptoms, warning signs and diagnosis
                 <ArrowRight size={14} />
               </Link>
@@ -392,6 +392,10 @@ function LupusOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 For kidney involvement, mycophenolate mofetil or cyclophosphamide is used along with corticosteroids. It is the standard approach. A nephrologist (kidney specialist) works alongside the rheumatologist. It is important to detect kidney damage early because the delay can make the kidney damage irreversible.
               </p>
+              <Link to="/Lupus-Treatment-Options" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about treatment options
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -399,9 +403,13 @@ function LupusOverview() {
             {/* LIVING WITH */}
             <div id="living" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Living With Lupus in India</h2>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Lupus does not go away, but daily habits can make a real difference. Protect yourself from the sun every day, even when you&apos;re indoors near windows. Eat a balanced, anti-inflammatory diet that includes foods rich in omega-3 fatty acids. If your kidneys are affected, reducing salt intake may also help. Counselling and support from family and friends help significantly. Because there is a lot of stigma around long-term illness, especially in India, which can sometimes make things harder.
               </p>
+              <Link to="/Living-With-Lupus" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about living with Lupus
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />

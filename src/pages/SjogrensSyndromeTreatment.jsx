@@ -183,15 +183,14 @@ function SjogrensSyndromeTreatment() {
                     marginBottom: 0,
                   }}
                 >
-                  <span className="whitespace-nowrap">Sjögren's Syndrome:</span>
+                  <span className="whitespace-nowrap">Sjögren's Syndrome:</span>{" "}
                   <span
                     style={{
-                      display: "block",
-                      fontSize: "clamp(26px, 3.4vw, 40px)",
-                      lineHeight: 1.2,
+                      display: "inline",
+                      fontSize: "inherit",
+                      lineHeight: "inherit",
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
-                      marginTop: "0.85rem",
                     }}
                   >
                     Treatment Options: What to Expect

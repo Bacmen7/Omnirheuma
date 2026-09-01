@@ -197,15 +197,14 @@ function SjogrensSyndromeDiagnosis() {
                     marginBottom: 0,
                   }}
                 >
-                  <span className="whitespace-nowrap">Sjögren's Syndrome Diagnosis:</span>
+                  <span className="whitespace-nowrap">Sjögren's Syndrome Diagnosis:</span>{" "}
                   <span
                     style={{
-                      display: "block",
-                      fontSize: "clamp(26px, 3.4vw, 40px)",
-                      lineHeight: 1.2,
+                      display: "inline",
+                      fontSize: "inherit",
+                      lineHeight: "inherit",
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
-                      marginTop: "0.85rem",
                     }}
                   >
                     Tests and What to Expect
@@ -394,7 +393,7 @@ function SjogrensSyndromeDiagnosis() {
                       <strong className="font-semibold">Previous radiotherapy to the head or neck:</strong> It damages the glands.
                     </li>
                   </ul>
-                  <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                  <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
                     Read more about symptoms and warning signs
                     <ArrowRight size={14} />
                   </Link>
@@ -469,7 +468,7 @@ function SjogrensSyndromeDiagnosis() {
                   </p>
 
                   <div style={{ marginBottom: "1.5rem" }}>
-                    <Link to="/sjogrens-syndrome-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                    <Link to="/sjogrens-syndrome-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
                       Read more about treatment options
                       <ArrowRight size={14} />
                     </Link>

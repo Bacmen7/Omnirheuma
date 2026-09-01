@@ -119,9 +119,9 @@ function PsoriaticArthritisOverview() {
                 ))}
               </div>
 
-              {/* Medically reviewed by */}
+              {/* Written by / Reviewed by / Last Updated */}
               <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
-                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
+                Written by <strong style={{ color: "#0f616e" }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong> | Last Updated: September 2026
               </p>
             </div>
           </div>
@@ -256,6 +256,10 @@ function PsoriaticArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Enthesitis is pain at the points where tendons attach to bone. The pain most commonly occurs in the heel, sole of the foot, elbow, and knee. Many patients first consult a doctor for this heel pain without knowing they could be suffering from psoriatic arthritis.
               </p>
+              <Link to="/Psoriatic-Arthritis-Symptoms-Warning-Signs" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about symptoms and warning signs
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -272,6 +276,10 @@ function PsoriaticArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 The CASPAR criteria (Classification criteria for psoriatic arthritis) is an internationally accepted diagnostic checklist. This checklist provides a structured basis for confirming the diagnosis.
               </p>
+              <Link to="/Psoriatic-Arthritis-Diagnosis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about diagnosis
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -289,9 +297,13 @@ function PsoriaticArthritisOverview() {
               </p>
 
               <h3 style={H3Style}>Non-Medication Approaches and Skin Care</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Along with medication, physiotherapy helps maintain joint flexibility and muscle strength. Walking, swimming, and yoga support joint strength without much impact on them. Topical creams and medicated shampoos manage psoriasis patches along with medication. Keeping psoriasis plaques moisturised reduces cracking and infection risk.
               </p>
+              <Link to="/Psoriatic-Arthritis-Treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about treatment options
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -315,6 +327,10 @@ function PsoriaticArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Visiting your rheumatologist early instead of self-medicating can prevent the condition from worsening. Psoriasis is still wrongly believed to be contagious in many Indian communities. As a result, people are pushed toward isolation. Counselling and support from family and friends help significantly. These can help reduce both the physical and emotional weight of managing the condition in the long term.
               </p>
+              <Link to="/Living-With-Psoriatic-Arthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about living with Psoriatic Arthritis
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />

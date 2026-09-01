@@ -359,17 +359,12 @@ const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, sym
   if (conditionSlug === "gout") {
     return [
       { label: "An overview", href: overviewHref },
-      { label: "Causes and Risk Factors", href: overviewHref },
-      { label: "Treatment and Flare Prevention", href: overviewHref },
     ]
   }
 
   if (conditionSlug === "vasculitis") {
     return [
       { label: "An overview", href: overviewHref },
-      { label: "Types and Symptoms", href: overviewHref },
-      { label: "Diagnostic Tests and Biopsy", href: overviewHref },
-      { label: "Treatment and Long-Term Care", href: overviewHref },
     ]
   }
 
