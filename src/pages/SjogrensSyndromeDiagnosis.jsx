@@ -262,18 +262,18 @@ function SjogrensSyndromeDiagnosis() {
                   </p>
 
                   <div className="overflow-x-auto mb-6">
-                    <table className="w-full border-collapse text-left min-w-[500px]">
+                    <table className="w-full table-fixed border-collapse text-left min-w-[380px]">
                       <thead>
                         <tr style={{ backgroundColor: "#e0f3f5" }}>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">What is tested</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Points</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep w-4/5">What is tested</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep w-1/5">Points</th>
                         </tr>
                       </thead>
                       <tbody>
                         {acrCriteria.map((row, idx) => (
                           <tr key={idx} className="border-b border-[#dadfe8]">
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.tested}</td>
-                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.points}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-middle">{row.tested}</td>
+                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-middle">{row.points}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -443,18 +443,18 @@ function SjogrensSyndromeDiagnosis() {
                   </p>
 
                   <div className="overflow-x-auto mb-6">
-                    <table className="w-full border-collapse text-left min-w-[500px]">
+                    <table className="w-full table-fixed border-collapse text-left min-w-[380px]">
                       <thead>
                         <tr style={{ backgroundColor: "#e0f3f5" }}>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Test</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Approximate cost in India</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep w-2/5">Test</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep w-3/5">Approximate cost in India</th>
                         </tr>
                       </thead>
                       <tbody>
                         {testCosts.map((row, idx) => (
                           <tr key={idx} className="border-b border-[#dadfe8]">
-                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.test}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.cost}</td>
+                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-middle">{row.test}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-middle">{row.cost}</td>
                           </tr>
                         ))}
                       </tbody>

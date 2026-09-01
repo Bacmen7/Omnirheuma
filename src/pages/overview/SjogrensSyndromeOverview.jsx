@@ -82,14 +82,13 @@ const DarkDivider = () => (
   <hr style={{ border: "none", borderTop: "2px solid #0a4f5a", margin: "3.5rem 0" }} />
 )
 
-const tabs = ["Overview", "Symptoms and Warning Signs", "Diagnosis and Tests", "Treatment Options", "Living With Sjögren's Syndrome", "How Sjögren's Affects the Rest"]
+const tabs = ["Overview", "Symptoms", "Diagnosis", "Treatment", "Living With"]
 const tabTargets = {
   Overview: "what-sjogrens-syndrome-is",
-  "Symptoms and Warning Signs": "symptoms",
-  "Diagnosis and Tests": "diagnosis",
-  "Treatment Options": "treatment",
-  "Living With Sjögren's Syndrome": "long-term-outlook",
-  "How Sjögren's Affects the Rest": "how-sjogrens-affects-the-rest",
+  Symptoms: "symptoms",
+  Diagnosis: "diagnosis",
+  Treatment: "treatment",
+  "Living With": "long-term-outlook",
 }
 
 const H3Style = {
@@ -174,14 +173,14 @@ function SjogrensSyndromeOverview() {
                     onClick={() => scrollTo(tabTargets[t])}
                     className="nav-tab transition-all hover:-translate-y-1"
                     style={{
-                      flex: "1 1 110px",
-                      maxWidth: "140px",
+                      flex: "1 1 130px",
+                      maxWidth: "180px",
                       backgroundColor: "#ffffff",
                       border: "1px solid #e6ecf1",
                       borderRadius: "6px",
                       color: "#0f616e",
-                      padding: "clamp(14px, 3.5vw, 18px) clamp(6px, 2vw, 10px)",
-                      fontSize: "clamp(11px, 3vw, 13px)",
+                      padding: "clamp(16px, 4vw, 22px) clamp(8px, 3vw, 14px)",
+                      fontSize: "clamp(12px, 3.2vw, 14px)",
                       fontWeight: 700,
                       cursor: "pointer",
                       boxShadow: "0 6px 24px rgba(15,97,110,0.12)",
@@ -193,9 +192,9 @@ function SjogrensSyndromeOverview() {
                 ))}
               </div>
 
-              {/* Medically reviewed by */}
+              {/* Written by / Reviewed by / Last Updated */}
               <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
-                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
+                Written by <strong style={{ color: "#0f616e" }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong> | Last Updated: September 2026
               </p>
             </div>
           </div>

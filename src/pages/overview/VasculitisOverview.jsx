@@ -114,10 +114,9 @@ const DarkDivider = () => (
   <hr style={{ border: "none", borderTop: "2px solid #0a4f5a", margin: "3.5rem 0" }} />
 )
 
-const tabs = ["Overview", "Types", "Causes", "Symptoms", "Diagnosis & Treatment"]
+const tabs = ["Overview", "Causes", "Symptoms", "Diagnosis & Treatment"]
 const tabTargets = {
   Overview: "understanding-vasculitis",
-  Types: "types-of-vasculitis",
   Causes: "causes",
   Symptoms: "symptoms",
   "Diagnosis & Treatment": "diagnosis-treatment",
@@ -224,9 +223,9 @@ function VasculitisOverview() {
                 ))}
               </div>
 
-              {/* Medically reviewed by */}
+              {/* Written by / Reviewed by / Last Updated */}
               <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
-                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
+                Written by <strong style={{ color: "#0f616e" }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong> | Last Updated: September 2026
               </p>
             </div>
           </div>
