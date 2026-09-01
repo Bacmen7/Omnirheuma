@@ -371,9 +371,13 @@ function ReactiveArthritisOverview() {
                 ))}
               </ul>
 
-              <p className="text-[16px] leading-[1.8] text-navy-muted">
+              <p className="text-[16px] leading-[1.8] text-navy-muted" style={{ marginBottom: "1.25rem" }}>
                 These can appear before, during, or after the joint symptoms.
               </p>
+              <Link to="/reactive-arthritis-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about symptoms and warning signs
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -386,9 +390,13 @@ function ReactiveArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 There is no single test for reactive arthritis and no formally agreed set of diagnostic criteria. The diagnosis rests on a pattern: a recent infection, a characteristic joint presentation, and the exclusion of other causes.
               </p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 A doctor will take a history of any infection in the preceding weeks and order blood tests that measure inflammation. Sometimes a test for HLA-B27 is also needed, and fluid is drawn from a swollen joint. That last test carries particular weight. It sets apart reactive arthritis from an infected joint, which is an emergency requiring entirely different treatment.
               </p>
+              <Link to="/reactive-arthritis-diagnosis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about diagnosis, tests and what to expect
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -404,9 +412,13 @@ function ReactiveArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 When <strong>treating the original infection</strong>, where Chlamydia is the trigger, antibiotics are recommended, and sexual partners also need to be treated. So that reinfection does not occur. Gut infections are different. Antibiotics do not change the course of arthritis. But they may still be needed for the infection itself.
               </p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 While <strong>treating the joints</strong>, anti-inflammatory medicines are usually the first step. And a steroid injection into a badly affected joint can settle it when only 1 or 2 are involved. If symptoms continue for several weeks, a doctor may add a disease-modifying medicine. And for stubborn cases, biologic treatments are an option.
               </p>
+              <Link to="/reactive-arthritis-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about treatment and recovery
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />

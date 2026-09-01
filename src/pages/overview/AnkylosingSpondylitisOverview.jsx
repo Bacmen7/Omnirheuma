@@ -269,9 +269,18 @@ function AnkylosingSpondylitisOverview() {
               </p>
 
               <h3 style={H3Style}>Physiotherapy and Exercise</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Regular exercise and physiotherapy are as important as medication in ankylosing spondylitis. Specific stretching and breathing exercises keep the backbone mobile and also maintain chest expansion. Swimming and yoga are particularly beneficial for patients with ankylosing spondylitis. These activities combine flexibility and strength without putting a heavy load on the joints. Gentle activity, such as walking or bending, should be continued even when the symptoms become worse. Stopping the movement will make joint stiffness worse.
               </p>
+              <Link to="/Ankylosing-Spondylitis-Treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about treatment options
+                <ArrowRight size={14} />
+              </Link>
+              <br />
+              <Link to="/ankylosing-spondylitis-specialised-procedures" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "0.75rem", fontSize: "15px" }}>
+                Read more about specialised procedures and surgical options
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -293,9 +302,13 @@ function AnkylosingSpondylitisOverview() {
             {/* LIVING WITH */}
             <div id="living" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Living With Ankylosing Spondylitis in India</h2>
-              <p className="text-[17px] leading-[1.8] text-navy-deep">
+              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Ankylosing spondylitis is a lifelong condition, and most people manage it well. Regular movement, such as morning stretches, swimming, yoga, and walking, helps maintain flexibility and also reduces stiffness. Maintaining a healthy weight also helps protect the joints by reducing the load on them. Following an anti-inflammatory diet and stopping smoking can help prevent the condition from causing further damage to bones. Living with long-term back pain from a young age affects work, relationships and confidence. Therefore, proper counselling and support from friends and family matter, along with medical treatment. Early diagnosis and consistent treatment help most people with ankylosing spondylitis to lead active lives.
               </p>
+              <Link to="/living-with-ankylosing-spondylitis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                Read more about living with Ankylosing Spondylitis
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />

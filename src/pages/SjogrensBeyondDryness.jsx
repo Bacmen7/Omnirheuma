@@ -151,15 +151,14 @@ function SjogrensBeyondDryness() {
                     marginBottom: 0,
                   }}
                 >
-                  <span className="whitespace-nowrap">Beyond Dryness:</span>
+                  <span className="whitespace-nowrap">Beyond Dryness:</span>{" "}
                   <span
                     style={{
-                      display: "block",
-                      fontSize: "clamp(26px, 3.4vw, 40px)",
-                      lineHeight: 1.2,
+                      display: "inline",
+                      fontSize: "inherit",
+                      lineHeight: "inherit",
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
-                      marginTop: "0.85rem",
                     }}
                   >
                     Effects of Sjögren's on the Rest of the Body
@@ -269,7 +268,7 @@ function SjogrensBeyondDryness() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     In the following sections, we will discuss the kidney involvement and the potential risk of lymphoma in Sjögren's.
                   </p>
-                  <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
+                  <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
                     Read more about symptoms and warning signs
                     <ArrowRight size={14} />
                   </Link>
@@ -308,7 +307,7 @@ function SjogrensBeyondDryness() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     It is worth watching for swollen glands that do not subside, swollen lymph nodes lasting more than a few weeks, and unexplained fever, night sweats, or weight loss. This is one of the main reasons your rheumatologist examines your neck and checks your blood counts at appointments that otherwise feel routine.
                   </p>
-                  <Link to="/living-with-sjogrens-syndrome" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px", marginBottom: "1.5rem" }}>
+                  <Link to="/living-with-sjogrens-syndrome" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px", marginBottom: "1.5rem" }}>
                     Read more about living with Sjögren's syndrome
                     <ArrowRight size={14} />
                   </Link>

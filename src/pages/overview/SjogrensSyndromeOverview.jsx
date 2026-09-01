@@ -257,7 +257,7 @@ function SjogrensSyndromeOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 You may notice doctors have recently begun calling this <strong>Sjögren's disease</strong> rather than syndrome. Both terms describe the same condition.
               </p>
-              <Link to="/sjogrens-beyond-dryness" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", marginTop: "1.5rem", fontSize: "15px" }}>
+              <Link to="/sjogrens-beyond-dryness" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "1.5rem", fontSize: "15px" }}>
                 Read more about how Sjögren's affects the rest of the body
                 <ArrowRight size={14} />
               </Link>
@@ -360,12 +360,12 @@ function SjogrensSyndromeOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 In a large patient survey published in 2025, fatigue was the single symptom people said had the greatest negative impact on their lives, ahead of joint pain and brain fog. Dryness is what gets noticed. Fatigue is often what wears people down.
               </p>
-              <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", marginTop: "1.5rem", fontSize: "15px" }}>
+              <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "1.5rem", fontSize: "15px" }}>
                 Read more about symptoms and warning signs
                 <ArrowRight size={14} />
               </Link>
               <br />
-              <Link to="/sjogrens-beyond-dryness" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", marginTop: "0.75rem", fontSize: "15px" }}>
+              <Link to="/sjogrens-beyond-dryness" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "0.75rem", fontSize: "15px" }}>
                 Read more about how Sjögren's affects the rest of the body
                 <ArrowRight size={14} />
               </Link>
@@ -392,7 +392,7 @@ function SjogrensSyndromeOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 A negative result narrows the picture without closing it. This is one of the reasons the diagnosis takes so long for some people. And it is worth knowing if you have been told your blood work was normal, but your symptoms have not gone away.
               </p>
-              <Link to="/sjogrens-syndrome-diagnosis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", marginTop: "1.5rem", fontSize: "15px" }}>
+              <Link to="/sjogrens-syndrome-diagnosis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "1.5rem", fontSize: "15px" }}>
                 Read more about diagnosis, tests and what to expect
                 <ArrowRight size={14} />
               </Link>
@@ -445,7 +445,7 @@ function SjogrensSyndromeOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 One thing is changing. Until recently, there were no treatments for the underlying disease, and previous clinical trials had consistently failed. During 2025, the first targeted treatments reported positive results in large international studies, making this a more hopeful moment than it has been for years.
               </p>
-              <Link to="/sjogrens-syndrome-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", marginTop: "1.5rem", fontSize: "15px" }}>
+              <Link to="/sjogrens-syndrome-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "1.5rem", fontSize: "15px" }}>
                 Read more about treatment options
                 <ArrowRight size={14} />
               </Link>
@@ -467,7 +467,7 @@ function SjogrensSyndromeOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 A small proportion of people go on to develop another autoimmune condition over the following years. This is one of the reasons regular follow-up matters even during stretches when you feel reasonably well.
               </p>
-              <Link to="/living-with-sjogrens-syndrome" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", marginTop: "1.5rem", fontSize: "15px" }}>
+              <Link to="/living-with-sjogrens-syndrome" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "1.5rem", fontSize: "15px" }}>
                 Read more about living with Sjögren's syndrome
                 <ArrowRight size={14} />
               </Link>
