@@ -50,6 +50,7 @@ const tocItems = [
   { id: "effects-on-body", label: "The Effects of Sjögren's on Body Parts" },
   { id: "kidney-involvement", label: "Understanding Kidney Involvement in Sjögren's" },
   { id: "lymphoma", label: "Risk of Lymphoma" },
+  { id: "how-monitored", label: "How This Is Monitored" },
   { id: "references", label: "References" },
   { id: "faq", label: "Frequently Asked Questions" },
 ]
@@ -151,14 +152,15 @@ function SjogrensBeyondDryness() {
                     marginBottom: 0,
                   }}
                 >
-                  <span className="whitespace-nowrap">Beyond Dryness:</span>{" "}
+                  <span className="whitespace-nowrap">Beyond Dryness:</span>
                   <span
                     style={{
-                      display: "inline",
-                      fontSize: "inherit",
-                      lineHeight: "inherit",
+                      display: "block",
+                      fontSize: "clamp(26px, 3.4vw, 40px)",
+                      lineHeight: 1.2,
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
+                      marginTop: "0.85rem",
                     }}
                   >
                     Effects of Sjögren's on the Rest of the Body
@@ -268,7 +270,7 @@ function SjogrensBeyondDryness() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     In the following sections, we will discuss the kidney involvement and the potential risk of lymphoma in Sjögren's.
                   </p>
-                  <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                  <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
                     Read more about symptoms and warning signs
                     <ArrowRight size={14} />
                   </Link>
@@ -304,8 +306,24 @@ function SjogrensBeyondDryness() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     Certain things raise that risk. Persistent swelling of the salivary glands, swollen lymph nodes, Raynaud phenomenon, particular antibodies, and specific blood test results. Most people have none or only one of these.
                   </p>
-                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep">
                     It is worth watching for swollen glands that do not subside, swollen lymph nodes lasting more than a few weeks, and unexplained fever, night sweats, or weight loss. This is one of the main reasons your rheumatologist examines your neck and checks your blood counts at appointments that otherwise feel routine.
+                  </p>
+                </div>
+
+                {/* ── HOW THIS IS MONITORED ── */}
+                <div id="how-monitored" data-toc-section style={{ marginBottom: "2.5rem", marginTop: "0" }}>
+                  <h2
+                    className="text-navy-deep"
+                    style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}
+                  >
+                    How This Is Monitored
+                  </h2>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+                    Knowing what your doctor is actually checking makes routine appointments feels at more ease. Blood tests cover your blood counts, kidney function, inflammation markers and specific proteins, while urine tests look for early signs of kidney involvement. The physical examination includes your neck, jaw and lymph nodes, and if there is any suggestion of lung involvement you may be sent for imaging or breathing tests.
+                  </p>
+                  <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
+                    The questions about breathlessness, cough, numbness and tingling come up every single time for the same reason. Most organ involvement gets found this way, before it causes anything you would notice.
                   </p>
                   <Link to="/living-with-sjogrens-syndrome" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px", marginBottom: "1.5rem" }}>
                     Read more about living with Sjögren's syndrome

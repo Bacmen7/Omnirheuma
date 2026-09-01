@@ -6,11 +6,272 @@ import BriefingFooter from "../components/BriefingFooter"
 
 const defaultConditionName = "Rheumatoid Arthritis"
 
-const buildFeatured = (name) => [
-  { href: "/Rheumatoid-Arthritis", category: "Get started", title: `What is ${name}?`, image: "/c1.webp" },
-  { href: "/Rheumatoid-Arthritis", category: "Early signs", title: `Could morning stiffness be ${name}?`, image: "/c2.webp" },
-  { href: "/Rheumatoid-Arthritis", category: "Diagnosis", title: `How is ${name} diagnosed?`, image: "/c1.webp" },
-]
+const buildFeatured = (slug, name) => {
+  if (slug === "sjogrens-syndrome") {
+    return [
+      {
+        href: "/sjogrens-syndrome",
+        category: "Get started",
+        title: `What is ${name}? Autoimmune Gland Overview`,
+        image: "/sjogren-carousel-overview.jpg",
+      },
+      {
+        href: "/sjogrens-syndrome-symptoms",
+        category: "Early signs",
+        title: "Persistent Dry Eyes, Dry Mouth & Deep Fatigue",
+        image: "/sjogren-carousel-symptoms.jpg",
+      },
+      {
+        href: "/sjogrens-syndrome-diagnosis",
+        category: "Diagnosis",
+        title: "Schirmer Test, Antibody Blood Panels & Biopsy",
+        image: "/treatmnetguide/blood_test.webp",
+      },
+      {
+        href: "/sjogrens-syndrome-treatment",
+        category: "Treatment",
+        title: "Moisture Therapies, Tear Substitutes & Immune Care",
+        image: "/drysyndrome.jpg",
+      },
+    ]
+  }
+
+  if (slug === "ankylosing-spondylitis") {
+    return [
+      {
+        href: "/Ankylosing-Spondylitis-overview",
+        category: "Get started",
+        title: `What is ${name}? Spine Inflammation & Mobility`,
+        image: "/condition-cards/akrlysis/spine-inflammation-3d.webp",
+      },
+      {
+        href: "/Ankylosing-Spondylitis-Treatment",
+        category: "Early signs",
+        title: "Chronic Inflammatory Back Pain & Morning Stiffness",
+        image: "/condition-cards/akrlysis/morning-back-stiffness.webp",
+      },
+      {
+        href: "/Ankylosing-Spondylitis-overview",
+        category: "Diagnosis & Imaging",
+        title: "HLA-B27 Testing, Pelvic MRI & Spine Evaluation",
+        image: "/condition-cards/akrlysis/mri-spine-diagnosis.webp",
+      },
+      {
+        href: "/ankylosing-spondylitis-specialised-procedures",
+        category: "Specialised care",
+        title: "Posture Preservation, Biologics & Surgical Procedures",
+        image: "/condition-cards/akrlysis/biologic-injection-therapy.webp",
+      },
+    ]
+  }
+
+  if (slug === "reactive-arthritis") {
+    return [
+      {
+        href: "/reactive-arthritis",
+        category: "Get started",
+        title: `What is ${name}? Post-Infection Joint Swelling`,
+        image: "/condition-cards/reaxr/swollen-ankle-joint.webp",
+      },
+      {
+        href: "/reactive-arthritis-symptoms",
+        category: "Warning signs",
+        title: "Joint Pain & Inflammation Following Infection",
+        image: "/condition-cards/reaxr/joint-pain-examination.webp",
+      },
+      {
+        href: "/reactive-arthritis-diagnosis",
+        category: "Diagnosis & tests",
+        title: "Clinical Evaluation, Synovial Tests & Recovery Plan",
+        image: "/condition-cards/reaxr/synovial-lab-tests.webp",
+      },
+    ]
+  }
+
+  if (slug === "osteoarthritis") {
+    return [
+      {
+        href: "/Osteoarthritis-overview",
+        category: "Get started",
+        title: `What is ${name}? Cartilage Health & Joint Wear`,
+        image: "/condition-cards/osestoarthis/cartilage-joint-wear.webp",
+      },
+      {
+        href: "/Osteoarthritis-Symptoms-Causes",
+        category: "Early signs",
+        title: "Joint Stiffness, Crepitus & Activity-Related Pain",
+        image: "/condition-cards/osestoarthis/physiotherapy-knee-care.webp",
+      },
+      {
+        href: "/Osteoarthritis-Diagnosis-Treatment",
+        category: "Diagnosis & Care",
+        title: "Targeted Physiotherapy, Joint Preservation & Pain Relief",
+        image: "/treatmnetguide/knee.webp",
+      },
+      {
+        href: "/Specialised-Treatment-Osteoarthritis",
+        category: "Specialised Care",
+        title: "Viscosupplementation, Injections & Joint Restoration",
+        image: "/treatmnetguide/xray.webp",
+      },
+    ]
+  }
+
+  if (slug === "psoriatic-arthritis") {
+    return [
+      {
+        href: "/Psoriatic-Arthritis-overview",
+        category: "Get started",
+        title: `What is ${name}? Where Skin Meets Joints`,
+        image: "/condition-cards/psoritc/skin-joint-psoriasis-patch.webp",
+      },
+      {
+        href: "/Psoriatic-Arthritis-Symptoms-Warning-Signs",
+        category: "Early signs",
+        title: "Dactylitis (Sausage Digits), Nail Pitting & Swollen Joints",
+        image: "/condition-cards/psoritc/nail-pitting-changes.webp",
+      },
+    ]
+  }
+
+  if (slug === "lupus") {
+    return [
+      {
+        href: "/Lupus-overview",
+        category: "Get started",
+        title: `What is ${name}? Multi-System Autoimmune Disease`,
+        image: "/condition-cards/luous/forearm-skin-rash.webp",
+      },
+      {
+        href: "/Lupus-Symptoms-Warning-Signs",
+        category: "Warning signs",
+        title: "Malar Rash, Joint Pain, Sun Sensitivity & Flares",
+        image: "/condition-cards/luous/malar-butterfly-rash.webp",
+      },
+      {
+        href: "/Lupus-overview",
+        category: "Diagnosis",
+        title: "ANA, Anti-dsDNA Antibody Panels & Organ Protection",
+        image: "/treatmnetguide/blood_test.webp",
+      },
+      {
+        href: "/Lupus-Treatment-Options",
+        category: "Treatment",
+        title: "Modern Flare Management & Vital Organ Preservation",
+        image: "/condition-cards/luous/medication-flare-management.webp",
+      },
+    ]
+  }
+
+  if (slug === "gout") {
+    return [
+      {
+        href: "/Gout-overview",
+        category: "Get started",
+        title: `What is ${name}? Uric Acid Crystals & Inflammatory Attacks`,
+        image: "/condition-cards/gout/swollen-toe-inflammation.webp",
+      },
+      {
+        href: "/Gout-overview",
+        category: "Early signs",
+        title: "Sudden Intense Big Toe Pain & Night Flare Management",
+        image: "/condition/symptom-gout.webp",
+      },
+      {
+        href: "/Gout-overview",
+        category: "Diagnosis",
+        title: "Serum Uric Acid Levels & Joint Fluid Analysis",
+        image: "/condition-cards/gout/blood-test-diagnosis.webp",
+      },
+      {
+        href: "/Gout-overview",
+        category: "Prevention",
+        title: "Urate-Lowering Therapy & Dietary Lifestyle Strategies",
+        image: "/condition-cards/gout/diet-prevention-plate.webp",
+      },
+    ]
+  }
+
+  if (slug === "fibromyalgia") {
+    return [
+      {
+        href: "/Fibromyalgia-overview",
+        category: "Get started",
+        title: `What is ${name}? Central Sensitization & Chronic Pain`,
+        image: "/condition-cards/fiberoo/widespread-pain-neck.webp",
+      },
+      {
+        href: "/Fibromyalgia-Symptoms-Warning-Signs",
+        category: "Early signs",
+        title: "Tender Points, Chronic Fatigue & Cognitive Brain Fog",
+        image: "/condition-cards/fiberoo/tender-points-anatomy.webp",
+      },
+      {
+        href: "/Fibromyalgia-Symptoms-Warning-Signs",
+        category: "Diagnosis",
+        title: "Widespread Pain Index (WPI) & Symptom Evaluation",
+        image: "/condition-cards/fiberoo/tender-point-exam.webp",
+      },
+      {
+        href: "/Fibromyalgia-Treatment",
+        category: "Treatment",
+        title: "Multimodal Care, Physical Conditioning & Pain Relief",
+        image: "/condition-cards/fiberoo/multimodal-care-items.webp",
+      },
+    ]
+  }
+
+  if (slug === "vasculitis") {
+    return [
+      {
+        href: "/vasculitis",
+        category: "Get started",
+        title: `What is ${name}? Blood Vessel Wall Inflammation`,
+        image: "/Vasculitis.jpg",
+      },
+      {
+        href: "/vasculitis",
+        category: "Warning signs",
+        title: "Recognizing Organ Involvement, Purpura & Vessel Changes",
+        image: "/vasculitis.jpg",
+      },
+      {
+        href: "/vasculitis",
+        category: "Diagnosis",
+        title: "ANCA Serology, Blood Panels & Tissue Biopsy",
+        image: "/treatmnetguide/blood_test.webp",
+      },
+      {
+        href: "/vasculitis",
+        category: "Treatment",
+        title: "Targeted Immunotherapy & Long-Term Vascular Health",
+        image: "/treatmnetguide/joint.webp",
+      },
+    ]
+  }
+
+  // Default / Rheumatoid Arthritis
+  return [
+    {
+      href: "/Rheumatoid-Arthritis-overview",
+      category: "Get started",
+      title: `What is ${name}? Autoimmune Joint Overview`,
+      image: "/condition-cards/what-is-condition.webp",
+    },
+    {
+      href: "/Rheumatoid-Arthritis-Symptoms-Warning-Signs",
+      category: "Early signs",
+      title: `Could Morning Stiffness & Swollen Joints be ${name}?`,
+      image: "/condition-cards/early-signs-symptoms.webp",
+    },
+    {
+      href: "/Rheumatoid-Arthritis-Blood-Tests-Monitoring",
+      category: "Diagnosis",
+      title: `Anti-CCP, RF Blood Tests & Monitoring ${name}`,
+      image: "/condition-cards/diagnosis-xray.webp",
+    },
+  ]
+}
 
 /* slug (from ?c=) → overview page route */
 const overviewRouteMap = {
@@ -33,7 +294,7 @@ const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, sym
       { label: "An overview", href: overviewHref },
       { label: "Treatment options", href: "/Ankylosing-Spondylitis-Treatment" },
       { label: "Specialised procedures and surgical options", href: "/ankylosing-spondylitis-specialised-procedures" },
-      { label: `Living with ${name}`, href: livingHref },
+      { label: `Living with ${name}`, href: "/living-with-ankylosing-spondylitis" },
     ]
   }
 
@@ -57,13 +318,68 @@ const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, sym
     ]
   }
 
+  if (conditionSlug === "lupus") {
+    return [
+      { label: "An overview", href: overviewHref },
+      { label: "Symptoms and Warning Signs", href: "/Lupus-Symptoms-Warning-Signs" },
+      { label: "Treatment Options", href: "/Lupus-Treatment-Options" },
+      { label: `Living with ${name}`, href: "/Living-With-Lupus" },
+    ]
+  }
+
+  if (conditionSlug === "osteoarthritis") {
+    return [
+      { label: "An overview", href: overviewHref },
+      { label: "Symptoms and Causes", href: "/Osteoarthritis-Symptoms-Causes" },
+      { label: "Diagnosis and Treatment", href: "/Osteoarthritis-Diagnosis-Treatment" },
+      { label: "Specialised treatment options", href: "/Specialised-Treatment-Osteoarthritis" },
+      { label: `Living with ${name}`, href: "/Living-With-Osteoarthritis" },
+    ]
+  }
+
+  if (conditionSlug === "psoriatic-arthritis") {
+    return [
+      { label: "An overview", href: overviewHref },
+      { label: "Symptoms and Warning Signs", href: "/Psoriatic-Arthritis-Symptoms-Warning-Signs" },
+      { label: "Diagnosis: Tests and What to Expect", href: "/Psoriatic-Arthritis-Diagnosis" },
+      { label: "Treatment Options", href: "/Psoriatic-Arthritis-Treatment" },
+      { label: `Living with ${name}`, href: "/Living-With-Psoriatic-Arthritis" },
+    ]
+  }
+
+  if (conditionSlug === "fibromyalgia") {
+    return [
+      { label: "An overview", href: overviewHref },
+      { label: "Symptoms and Warning Signs", href: "/Fibromyalgia-Symptoms-Warning-Signs" },
+      { label: "Treatment Options", href: "/Fibromyalgia-Treatment" },
+      { label: `Living with ${name}`, href: "/Living-With-Fibromyalgia" },
+    ]
+  }
+
+  if (conditionSlug === "gout") {
+    return [
+      { label: "An overview", href: overviewHref },
+      { label: "Causes and Risk Factors", href: overviewHref },
+      { label: "Treatment and Flare Prevention", href: overviewHref },
+    ]
+  }
+
+  if (conditionSlug === "vasculitis") {
+    return [
+      { label: "An overview", href: overviewHref },
+      { label: "Types and Symptoms", href: overviewHref },
+      { label: "Diagnostic Tests and Biopsy", href: overviewHref },
+      { label: "Treatment and Long-Term Care", href: overviewHref },
+    ]
+  }
+
+  // Rheumatoid Arthritis / default
   return [
     { label: "An overview", href: overviewHref },
-    ...(symptomsHref ? [{ label: "Symptoms and Warning Signs", href: symptomsHref }] : []),
-    ...(monitoringHref ? [{ label: "How It Is Diagnosed and Treated", href: monitoringHref }] : []),
-    ...(diagnosisHref ? [{ label: "How It Is Diagnosed and Treated", href: diagnosisHref }] : []),
-    ...(specialisedHref ? [{ label: "Specialised treatment options", href: specialisedHref }] : []),
-    ...(livingHref ? [{ label: `Living with ${name}`, href: livingHref }] : []),
+    { label: "Symptoms and Warning Signs", href: "/Rheumatoid-Arthritis-Symptoms-Warning-Signs" },
+    { label: "Blood Tests and Monitoring", href: "/Rheumatoid-Arthritis-Blood-Tests-Monitoring" },
+    { label: "Specialised treatment options", href: "/Specialised-Treatment-Rheumatoid-Arthritis" },
+    { label: `Living with ${name}`, href: "/Living-With-Rheumatoid-Arthritis" },
   ]
 }
 
@@ -74,24 +390,24 @@ const videos = [
 ]
 
 const conditionCards = [
-  { name: "Rheumatoid Arthritis", image: "/condition/Rheumatoid Arthritis (RA).webp", desc: "Autoimmune joint inflammation affecting 1.3M+ Americans. Learn about early diagnosis and modern treatments.", href: "/Rheumatoid-Arthritis" },
-  { name: "Psoriatic Arthritis", image: "/condition/Psoriatic Arthritis.webp", desc: "Where skin meets joints. Understanding the psoriasis-arthritis connection and targeted therapies.", href: "#" },
-  { name: "Osteoarthritis", image: "/condition/Osteoarthritis.webp", desc: "The most common form of arthritis. Evidence-based approaches to manage cartilage loss and pain.", href: "#" },
-  { name: "Lupus", image: "/condition/Lupus.webp", desc: "A complex autoimmune disease affecting multiple organ systems. Expert guidance for flare management.", href: "#" },
-  { name: "Gout", image: "/condition/Gout.webp", desc: "Caused by uric acid crystal deposits. Prevent flares with medication, diet, and lifestyle strategies.", href: "#" },
-  { name: "Ankylosing Spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", desc: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture.", href: "/Ankylosing-Spondylitis-overview" },
-  { name: "Fibromyalgia", image: "/condition/Fibromyalgia.webp", desc: "Widespread pain with fatigue and cognitive difficulties. Multi-modal treatment can restore quality of life.", href: "#" },
-  { name: "Reactive Arthritis", image: "/Reactivearthirits.png", desc: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts.", href: "/reactive-arthritis" },
-  { name: "Sjögren's Syndrome", image: "/drysyndrome.jpg", desc: "An immune system overreaction that attacks the glands that make tears and saliva. Dry eyes, dry mouth, fatigue, and joint pain.", href: "/sjogrens-syndrome" },
-  { name: "Vasculitis", image: "/Vasculitis.jpg", desc: "Swelling of the blood vessel walls that reduces blood flow to the organs. Types, causes, symptoms, and treatment.", href: "/vasculitis" },
+  { name: "Rheumatoid Arthritis", image: "/condition/Rheumatoid Arthritis (RA).webp", desc: "Autoimmune joint inflammation affecting 1.3M+ Americans. Learn about early diagnosis and modern treatments.", href: "/conditions?c=rheumatoid-arthritis" },
+  { name: "Psoriatic Arthritis", image: "/condition/Psoriatic Arthritis.webp", desc: "Where skin meets joints. Understanding the psoriasis-arthritis connection and targeted therapies.", href: "/conditions?c=psoriatic-arthritis" },
+  { name: "Osteoarthritis", image: "/condition/Osteoarthritis.webp", desc: "The most common form of arthritis. Evidence-based approaches to manage cartilage loss and pain.", href: "/conditions?c=osteoarthritis" },
+  { name: "Lupus", image: "/condition/Lupus.webp", desc: "A complex autoimmune disease affecting multiple organ systems. Expert guidance for flare management.", href: "/conditions?c=lupus" },
+  { name: "Gout", image: "/condition/Gout.webp", desc: "Caused by uric acid crystal deposits. Prevent flares with medication, diet, and lifestyle strategies.", href: "/conditions?c=gout" },
+  { name: "Ankylosing Spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", desc: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture.", href: "/conditions?c=ankylosing-spondylitis" },
+  { name: "Fibromyalgia", image: "/condition/Fibromyalgia.webp", desc: "Widespread pain with fatigue and cognitive difficulties. Multi-modal treatment can restore quality of life.", href: "/conditions?c=fibromyalgia" },
+  { name: "Reactive Arthritis", image: "/Reactivearthirits.png", desc: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts.", href: "/conditions?c=reactive-arthritis" },
+  { name: "Sjögren's Syndrome", image: "/drysyndrome.jpg", desc: "An immune system overreaction that attacks the glands that make tears and saliva. Dry eyes, dry mouth, fatigue, and joint pain.", href: "/conditions?c=sjogrens-syndrome" },
+  { name: "Vasculitis", image: "/Vasculitis.jpg", desc: "Swelling of the blood vessel walls that reduces blood flow to the organs. Types, causes, symptoms, and treatment.", href: "/conditions?c=vasculitis" },
 ]
 
 /* Condition tiles -mirrors the Knowledge Hub "Know more about Your condition" section */
 const arthritisConditions = [
-  { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
-  { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative", href: "/osteoarthritis" },
-  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune", href: "/Rheumatoid-Arthritis" },
-  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: "/Ankylosing-Spondylitis-overview" },
+  { key: "ra", name: "Rheumatoid Arthritis", typeLabel: "Autoimmune", href: "/conditions?c=rheumatoid-arthritis" },
+  { key: "oa", name: "Osteoarthritis", typeLabel: "Degenerative", href: "/conditions?c=osteoarthritis" },
+  { key: "psa", name: "Psoriatic Arthritis", typeLabel: "Autoimmune", href: "/conditions?c=psoriatic-arthritis" },
+  { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: "/conditions?c=ankylosing-spondylitis" },
 ]
 
 /* href = condition hub (/conditions?c=slug) for conditions with content; null = disabled tile.
@@ -189,7 +505,7 @@ function Conditions() {
       : conditionSlug === "reactive-arthritis"
         ? "/reactive-arthritis-diagnosis"
         : null
-  const featured = buildFeatured(displayName)
+  const featured = buildFeatured(conditionSlug, displayName)
   const categoryLinks = buildCategoryLinks(displayName, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref, conditionSlug)
 
   const [query, setQuery] = useState("")
@@ -205,12 +521,19 @@ function Conditions() {
   const next = () => setCurrent((i) => (i === featured.length - 1 ? 0 : i + 1))
 
   useEffect(() => {
+    setCurrent(0)
+  }, [conditionSlug])
+
+  useEffect(() => {
+    if (!featured.length) return
     const intervalId = window.setInterval(() => {
-      setCurrent((i) => (i === featured.length - 1 ? 0 : i + 1))
-    }, 4500)
+      setCurrent((i) => (i + 1) % featured.length)
+    }, 5000)
 
     return () => window.clearInterval(intervalId)
-  }, [])
+  }, [featured.length, conditionSlug])
+
+  const activeSlide = featured[current % featured.length] || featured[0]
 
   return (
     <div className="min-h-screen bg-ghost" style={{ fontFamily: "var(--font-base)" }}>
@@ -253,44 +576,44 @@ function Conditions() {
         </section>
 
         {/* ── 2. FEATURED CAROUSEL ── */}
-        {query === "" && (
+        {query === "" && activeSlide && (
           <section style={{ padding: "48px 0", background: "#f5f5f5" }}>
             <div style={{ maxWidth: "800px", margin: "0 auto", padding: "0 24px" }}>
               <div style={{ position: "relative", borderRadius: "20px", overflow: "hidden", height: "380px", background: "#0f616e" }}>
 
                 {/* Slide image */}
                 <img
-                  src={featured[current].image}
-                  alt={featured[current].title}
+                  src={activeSlide.image}
+                  alt={activeSlide.title}
                   style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "opacity 0.5s" }}
                 />
-                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)" }} />
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15, 46, 51, 0.94) 0%, rgba(15, 46, 51, 0.48) 55%, rgba(0,0,0,0.2) 100%)" }} />
 
                 {/* Prev */}
                 <button onClick={prev} aria-label="Previous"
-                  style={{ position: "absolute", left: "16px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.85)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 10 }}>
+                  style={{ position: "absolute", left: "16px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.9)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 10, boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
                   <ChevronLeft size={20} color="#0f2e33" />
                 </button>
 
                 {/* Next */}
                 <button onClick={next} aria-label="Next"
-                  style={{ position: "absolute", right: "16px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.85)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 10 }}>
+                  style={{ position: "absolute", right: "16px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.9)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 10, boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
                   <ChevronRight size={20} color="#0f2e33" />
                 </button>
 
                 {/* Text overlay */}
-                <Link to={featured[current].href} style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "32px", textDecoration: "none", zIndex: 10 }}>
-                  <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: "8px" }}>
-                    {featured[current].category}
+                <Link to={activeSlide.href} style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "32px", textDecoration: "none", zIndex: 10 }}>
+                  <p style={{ color: "#a0e2e4", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: "8px" }}>
+                    {activeSlide.category}
                   </p>
-                  <h2 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 300, lineHeight: 1.2, marginBottom: "20px" }}>
-                    {featured[current].title}
+                  <h2 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "clamp(1.35rem,2.8vw,1.9rem)", fontWeight: 500, lineHeight: 1.25, marginBottom: "20px", maxWidth: "92%" }}>
+                    {activeSlide.title}
                   </h2>
                   <div style={{ display: "flex", gap: "8px" }}>
                     {featured.map((_, i) => (
                       <button key={i}
                         onClick={(e) => { e.preventDefault(); setCurrent(i) }}
-                        style={{ width: "10px", height: "10px", borderRadius: "50%", border: "none", cursor: "pointer", background: i === current ? "#fff" : "rgba(255,255,255,0.35)", padding: 0, transition: "background 0.2s" }}
+                        style={{ width: "10px", height: "10px", borderRadius: "50%", border: "none", cursor: "pointer", background: i === (current % featured.length) ? "#fff" : "rgba(255,255,255,0.35)", padding: 0, transition: "background 0.2s" }}
                         aria-label={`Slide ${i + 1}`}
                       />
                     ))}

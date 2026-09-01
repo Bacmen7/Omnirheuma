@@ -314,7 +314,7 @@ function LivingWithSjogrensSyndrome() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     A saline spray overnight helps if your nose dries out. For skin, use an emollient rather than soap and moisturise while your skin is still damp. Vaginal dryness is common with this condition, and is entirely treatable. It is crucial to mention these symptoms to your doctor rather than suffering in silence.
                   </p>
-                  <Link to="/sjogrens-syndrome-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                  <Link to="/sjogrens-syndrome-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
                     Read more about treatment options
                     <ArrowRight size={14} />
                   </Link>
@@ -337,7 +337,7 @@ function LivingWithSjogrensSyndrome() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     You are also allowed to decline things without explaining or apologising. If bad days are becoming more frequent, or your usual approach has stopped working, you should consult with your rheumatologist at the earliest.
                   </p>
-                  <Link to="/sjogrens-beyond-dryness" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                  <Link to="/sjogrens-beyond-dryness" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
                     Read more about how Sjögren's affects the rest of the body
                     <ArrowRight size={14} />
                   </Link>

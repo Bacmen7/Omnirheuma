@@ -121,9 +121,9 @@ function OsteoarthritisOverview() {
                 ))}
               </div>
 
-              {/* Written by / Reviewed by / Last Updated */}
+              {/* Medically reviewed by */}
               <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
-                Written by <strong style={{ color: "#0f616e" }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong> | Last Updated: September 2026
+                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
               </p>
             </div>
           </div>
@@ -259,7 +259,7 @@ function OsteoarthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 When the pain starts disturbing sleep and the stiffness hinders daily activities, you should definitely consider seeing a doctor in the near future.
               </p>
-              <Link to="/Osteoarthritis-Symptoms-Causes" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+              <Link to="/Osteoarthritis-Symptoms-Causes" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
                 Read more about symptoms and causes
                 <ArrowRight size={14} />
               </Link>
@@ -281,7 +281,7 @@ function OsteoarthritisOverview() {
 
               <h3 className="text-navy-deep" style={{ letterSpacing: "-0.2px", color: "#0f616e", marginTop: "2rem", marginBottom: "1rem", textDecoration: "underline", textDecorationColor: "#1AA3B5", textDecorationThickness: "2px", textUnderlineOffset: "6px" }}>Blood Tests</h3>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>There is no specific blood test for osteoarthritis. Tests are mainly done to rule out other conditions like rheumatoid arthritis.</p>
-              <Link to="/Osteoarthritis-Diagnosis-Treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+              <Link to="/Osteoarthritis-Diagnosis-Treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
                 Read more about how it is diagnosed and treated
                 <ArrowRight size={14} />
               </Link>
@@ -317,7 +317,7 @@ function OsteoarthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 Knee replacement surgeries are covered under government schemes like PM-JAY for eligible patients, such as central government employees. Consult your doctor to know more.
               </p>
-              <Link to="/Specialised-Treatment-Osteoarthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+              <Link to="/Specialised-Treatment-Osteoarthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
                 Read more about specialised treatment options
                 <ArrowRight size={14} />
               </Link>
@@ -337,7 +337,7 @@ function OsteoarthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                 Managing emotional health is absolutely important. Long-term pain can affect your mood and disturb your sleep, so seeking support when needed is always recommended.
               </p>
-              <Link to="/Living-With-Osteoarthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+              <Link to="/Living-With-Osteoarthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
                 Read more about living with Osteoarthritis
                 <ArrowRight size={14} />
               </Link>

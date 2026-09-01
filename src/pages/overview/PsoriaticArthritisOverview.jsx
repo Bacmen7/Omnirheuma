@@ -119,9 +119,9 @@ function PsoriaticArthritisOverview() {
                 ))}
               </div>
 
-              {/* Written by / Reviewed by / Last Updated */}
+              {/* Medically reviewed by */}
               <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
-                Written by <strong style={{ color: "#0f616e" }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong> | Last Updated: September 2026
+                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
               </p>
             </div>
           </div>
@@ -253,13 +253,9 @@ function PsoriaticArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 The swelling occurs on the entire finger or toe, not just at one joint, which is referred to as Dactylitis. Tendons are tight cords which attach muscle of the finger to bone. The tissue is present along the whole length of the finger. The inflammation occurs in the tissue tendons. Therefore, the swelling occurs in the entire finger or toe, which gives them the characteristic sausage appearance. This typical appearance helps differentiate psoriatic arthritis from other types of arthritis.
               </p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Enthesitis is pain at the points where tendons attach to bone. The pain most commonly occurs in the heel, sole of the foot, elbow, and knee. Many patients first consult a doctor for this heel pain without knowing they could be suffering from psoriatic arthritis.
               </p>
-              <Link to="/Psoriatic-Arthritis-Symptoms-Warning-Signs" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                Read more about symptoms and warning signs
-                <ArrowRight size={14} />
-              </Link>
             </div>
 
             <DarkDivider />
@@ -273,13 +269,9 @@ function PsoriaticArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Doctors advise various tests to detect the condition and pattern of the disease. They advise blood tests to measure inflammation through ESR and CRP. An X-ray to check bone changes and an MRI for soft tissue and the spine. Ultrasound is also advised to check for enthesitis before it is visible on an X-ray. The HLA-B27 (Human Leukocyte antigen B27 gene) test is done to detect the presence of this gene. This is suggested mainly when spine involvement is suspected. RF (rheumatoid factor) is usually negative in psoriatic arthritis, which helps separate it from rheumatoid arthritis.
               </p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
                 The CASPAR criteria (Classification criteria for psoriatic arthritis) is an internationally accepted diagnostic checklist. This checklist provides a structured basis for confirming the diagnosis.
               </p>
-              <Link to="/Psoriatic-Arthritis-Diagnosis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                Read more about diagnosis
-                <ArrowRight size={14} />
-              </Link>
             </div>
 
             <DarkDivider />
@@ -297,13 +289,9 @@ function PsoriaticArthritisOverview() {
               </p>
 
               <h3 style={H3Style}>Non-Medication Approaches and Skin Care</h3>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Along with medication, physiotherapy helps maintain joint flexibility and muscle strength. Walking, swimming, and yoga support joint strength without much impact on them. Topical creams and medicated shampoos manage psoriasis patches along with medication. Keeping psoriasis plaques moisturised reduces cracking and infection risk.
               </p>
-              <Link to="/Psoriatic-Arthritis-Treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                Read more about treatment options
-                <ArrowRight size={14} />
-              </Link>
             </div>
 
             <DarkDivider />
@@ -324,13 +312,9 @@ function PsoriaticArthritisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Psoriatic arthritis is a long-term condition. With small lifestyle and dietary changes, you can live an active life. A healthy, anti-inflammatory diet with foods such as turmeric, mustard oil, flaxseeds, and fish needs to be incorporated. Reduce intake of refined sugar and processed foods. Stay in a healthy weight range, as it can reduce joint load and help medication work better. Walking, swimming, and yoga are the best options. A physiotherapist can suggest modified positions for floor-sitting to protect the knees and hips.
               </p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Visiting your rheumatologist early instead of self-medicating can prevent the condition from worsening. Psoriasis is still wrongly believed to be contagious in many Indian communities. As a result, people are pushed toward isolation. Counselling and support from family and friends help significantly. These can help reduce both the physical and emotional weight of managing the condition in the long term.
               </p>
-              <Link to="/Living-With-Psoriatic-Arthritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                Read more about living with Psoriatic Arthritis
-                <ArrowRight size={14} />
-              </Link>
             </div>
 
             <DarkDivider />

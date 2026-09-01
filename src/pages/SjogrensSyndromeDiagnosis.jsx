@@ -197,14 +197,15 @@ function SjogrensSyndromeDiagnosis() {
                     marginBottom: 0,
                   }}
                 >
-                  <span className="whitespace-nowrap">Sjögren's Syndrome Diagnosis:</span>{" "}
+                  <span className="whitespace-nowrap">Sjögren's Syndrome Diagnosis:</span>
                   <span
                     style={{
-                      display: "inline",
-                      fontSize: "inherit",
-                      lineHeight: "inherit",
+                      display: "block",
+                      fontSize: "clamp(26px, 3.4vw, 40px)",
+                      lineHeight: 1.2,
                       letterSpacing: "0px",
                       color: "rgba(255,255,255,0.92)",
+                      marginTop: "0.85rem",
                     }}
                   >
                     Tests and What to Expect
@@ -261,18 +262,18 @@ function SjogrensSyndromeDiagnosis() {
                   </p>
 
                   <div className="overflow-x-auto mb-6">
-                    <table className="w-full table-fixed border-collapse text-left min-w-[380px]">
+                    <table className="w-full border-collapse text-left min-w-[500px]">
                       <thead>
                         <tr style={{ backgroundColor: "#e0f3f5" }}>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep w-4/5">What is tested</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep w-1/5">Points</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">What is tested</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Points</th>
                         </tr>
                       </thead>
                       <tbody>
                         {acrCriteria.map((row, idx) => (
                           <tr key={idx} className="border-b border-[#dadfe8]">
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-middle">{row.tested}</td>
-                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-middle">{row.points}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.tested}</td>
+                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.points}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -393,7 +394,7 @@ function SjogrensSyndromeDiagnosis() {
                       <strong className="font-semibold">Previous radiotherapy to the head or neck:</strong> It damages the glands.
                     </li>
                   </ul>
-                  <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                  <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
                     Read more about symptoms and warning signs
                     <ArrowRight size={14} />
                   </Link>
@@ -442,18 +443,18 @@ function SjogrensSyndromeDiagnosis() {
                   </p>
 
                   <div className="overflow-x-auto mb-6">
-                    <table className="w-full table-fixed border-collapse text-left min-w-[380px]">
+                    <table className="w-full border-collapse text-left min-w-[500px]">
                       <thead>
                         <tr style={{ backgroundColor: "#e0f3f5" }}>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep w-2/5">Test</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep w-3/5">Approximate cost in India</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Test</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep">Approximate cost in India</th>
                         </tr>
                       </thead>
                       <tbody>
                         {testCosts.map((row, idx) => (
                           <tr key={idx} className="border-b border-[#dadfe8]">
-                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-middle">{row.test}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-middle">{row.cost}</td>
+                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top">{row.test}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.cost}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -468,7 +469,7 @@ function SjogrensSyndromeDiagnosis() {
                   </p>
 
                   <div style={{ marginBottom: "1.5rem" }}>
-                    <Link to="/sjogrens-syndrome-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                    <Link to="/sjogrens-syndrome-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", fontSize: "15px" }}>
                       Read more about treatment options
                       <ArrowRight size={14} />
                     </Link>

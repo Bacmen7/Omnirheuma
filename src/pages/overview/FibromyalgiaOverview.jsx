@@ -121,9 +121,9 @@ function FibromyalgiaOverview() {
                 ))}
               </div>
 
-              {/* Written by / Reviewed by / Last Updated */}
+              {/* Medically reviewed by */}
               <p style={{ marginTop: "28px", fontSize: "14px", color: "#4a6068", fontFamily: "var(--font-base)" }}>
-                Written by <strong style={{ color: "#0f616e" }}>Dr. Chaitali Waghmore</strong> | Reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong> | Last Updated: September 2026
+                Medically reviewed by <strong style={{ color: "#0f616e" }}>Dr. Raghavendra H</strong>
               </p>
             </div>
           </div>
@@ -224,13 +224,9 @@ function FibromyalgiaOverview() {
                   </li>
                 ))}
               </ul>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Most of the symptoms of fibromyalgia are invisible to others. That is why many people live with this condition without getting a proper diagnosis.
               </p>
-              <Link to="/Fibromyalgia-Symptoms-Warning-Signs" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                Read more about symptoms and warning signs
-                <ArrowRight size={14} />
-              </Link>
             </div>
 
             <DarkDivider />
@@ -295,13 +291,9 @@ function FibromyalgiaOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 Doctors recommend regular low-impact exercise, such as walking, swimming, and yoga. These exercises can gradually make the body less sensitive to pain. They usually advise starting with gentle exercise and increasing the intensity gradually as the symptoms improve. Pushing too hard early can trigger pain and make it harder to continue exercising.
               </p>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Doctors may also recommend cognitive behavioural therapy (CBT). It is a therapy that helps patients manage the daily impact of fibromyalgia by talking. The therapy helps change how the brain responds to pain. It does not mean the pain is psychological. Mindfulness meditation and stress management can also help reduce symptoms. Many of these programmes are now available through apps and online platforms for patients across India.
               </p>
-              <Link to="/Fibromyalgia-Treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                Read more about treatment options
-                <ArrowRight size={14} />
-              </Link>
             </div>
 
             <DarkDivider />
@@ -309,13 +301,9 @@ function FibromyalgiaOverview() {
             {/* LIVING WITH */}
             <div id="living" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>Living With Fibromyalgia in India</h2>
-              <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
+              <p className="text-[17px] leading-[1.8] text-navy-deep">
                 Fibromyalgia is a long-term condition, but it can be managed with the right treatment and healthy lifestyle habits. Taking medicines as prescribed, staying physically active, and following a regular sleep routine can help reduce symptoms. Managing stress and eating a balanced diet can also help. If vitamin D levels are low, the doctor may also recommend supplements. Support from family and friends can make living with fibromyalgia easier. Early diagnosis by a rheumatologist and regular follow-up help most people manage their symptoms and continue with their daily activities.
               </p>
-              <Link to="/Living-With-Fibromyalgia" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                Read more about living with Fibromyalgia
-                <ArrowRight size={14} />
-              </Link>
             </div>
 
             <DarkDivider />
