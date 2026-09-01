@@ -240,18 +240,18 @@ function SjogrensSyndromeSymptoms() {
                   </p>
 
                   <div className="overflow-x-auto mb-6">
-                    <table className="w-full border-collapse text-left min-w-[500px]">
+                    <table className="w-full table-fixed border-collapse text-center min-w-[380px]">
                       <thead>
                         <tr style={{ backgroundColor: "#e0f3f5" }}>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Symptom</th>
-                          <th className="p-4 text-[14px] font-bold text-navy-deep">Proportion of people reporting it</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep w-1/2">Symptom</th>
+                          <th className="p-4 text-[14px] font-bold text-navy-deep w-1/2">Proportion reporting it</th>
                         </tr>
                       </thead>
                       <tbody>
                         {commonSymptoms.map((row) => (
                           <tr key={row.symptom} className="border-b border-[#dadfe8]">
-                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-top whitespace-nowrap">{row.symptom}</td>
-                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-top">{row.proportion}</td>
+                            <td className="p-4 text-[16px] font-semibold text-navy-deep align-middle">{row.symptom}</td>
+                            <td className="p-4 text-[16px] leading-[1.7] text-navy-deep align-middle">{row.proportion}</td>
                           </tr>
                         ))}
                       </tbody>
