@@ -82,15 +82,14 @@ const DarkDivider = () => (
   <hr style={{ border: "none", borderTop: "2px solid #0a4f5a", margin: "3.5rem 0" }} />
 )
 
-/* "How Sjögren's Affects the Rest" tab commented out */
-const tabs = ["Overview", "Symptoms and Warning Signs", "Diagnosis and Tests", "Treatment Options", "Living With Sjögren's Syndrome" /*, "How Sjögren's Affects the Rest" */]
+const tabs = ["Overview", "Symptoms and Warning Signs", "Diagnosis and Tests", "Treatment Options", "Living With Sjögren's Syndrome", "How Sjögren's Affects the Rest"]
 const tabTargets = {
   Overview: "what-sjogrens-syndrome-is",
   "Symptoms and Warning Signs": "symptoms",
   "Diagnosis and Tests": "diagnosis",
   "Treatment Options": "treatment",
   "Living With Sjögren's Syndrome": "long-term-outlook",
-  // "How Sjögren's Affects the Rest": "how-sjogrens-affects-the-rest",
+  "How Sjögren's Affects the Rest": "how-sjogrens-affects-the-rest",
 }
 
 const H3Style = {
@@ -168,21 +167,21 @@ function SjogrensSyndromeOverview() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-4" style={{ position: "relative", marginTop: "-40px", padding: "0 clamp(4px, 3vw, 24px)" }}>
+              <div className="flex flex-wrap justify-center gap-3" style={{ position: "relative", marginTop: "-40px", padding: "0 clamp(4px, 3vw, 24px)" }}>
                 {tabs.map((t) => (
                   <button
                     key={t}
                     onClick={() => scrollTo(tabTargets[t])}
                     className="nav-tab transition-all hover:-translate-y-1"
                     style={{
-                      flex: "1 1 130px",
-                      maxWidth: "180px",
+                      flex: "1 1 110px",
+                      maxWidth: "140px",
                       backgroundColor: "#ffffff",
                       border: "1px solid #e6ecf1",
                       borderRadius: "6px",
                       color: "#0f616e",
-                      padding: "clamp(16px, 4vw, 22px) clamp(8px, 3vw, 14px)",
-                      fontSize: "clamp(12px, 3.2vw, 14px)",
+                      padding: "clamp(14px, 3.5vw, 18px) clamp(6px, 2vw, 10px)",
+                      fontSize: "clamp(11px, 3vw, 13px)",
                       fontWeight: 700,
                       cursor: "pointer",
                       boxShadow: "0 6px 24px rgba(15,97,110,0.12)",
@@ -215,7 +214,7 @@ function SjogrensSyndromeOverview() {
                 Your eyes feel gritty and sore, making you visit an eye specialist. An unexpected tooth decay is found by your dentist. They link it to a dry mouth. Somewhere alongside this, there is exhaustion that sleep does not fulfill, and joints that ache without looking swollen. Each doctor treats the concern presented to them, and connecting together can be also challenging.
               </p>
               <p className="text-[17px] leading-[1.8] text-navy-deep">
-                These are not separate problems. They are all one condition, called <strong>Sjögren's syndrome</strong>, and it is a disease in which the body's immune system mistakenly attacks its own healthy tissues. This is why it is managed by a rheumatologist rather than by an eye doctor or dentist alone. This article covers what the condition is, who gets it, how it is diagnosed and treated, and why the diagnosis so often takes years.
+                These are not separate problems. They are all one condition, called <strong>Sjögren's syndrome</strong>, and it is a <strong>disease in which the body's immune system mistakenly attacks its own healthy tissues</strong>. This is why it is managed by a rheumatologist rather than by an eye doctor or dentist alone. This article covers what the condition is, who gets it, how it is diagnosed and treated, and why the diagnosis so often takes years.
               </p>
             </div>
 
@@ -366,6 +365,11 @@ function SjogrensSyndromeOverview() {
                 Read more about symptoms and warning signs
                 <ArrowRight size={14} />
               </Link>
+              <br />
+              <Link to="/sjogrens-beyond-dryness" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#0f616e", marginTop: "0.75rem", fontSize: "15px" }}>
+                Read more about how Sjögren's affects the rest of the body
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -373,7 +377,7 @@ function SjogrensSyndromeOverview() {
             {/* DIAGNOSING SJOGREN'S SYNDROME */}
             <div id="diagnosis" style={{ scrollMarginTop: "80px" }}>
               <h2 className="text-navy-deep" style={{ letterSpacing: "-0.8px", color: "#0f616e", marginBottom: "1.5rem" }}>
-                Diagnosing Sjögren's Syndrome
+                Diagnosing Sjögren's syndrome
               </h2>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                 There is no single test that confirms Sjögren's syndrome. The diagnosis is made by combining other signs and symptoms, blood tests, and how much tear and saliva you produce. And sometimes a small biopsy from inside the lower lip.
