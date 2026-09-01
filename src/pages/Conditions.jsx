@@ -23,6 +23,8 @@ const overviewRouteMap = {
   "gout": "/Gout-overview",
   "fibromyalgia": "/Fibromyalgia-overview",
   "reactive-arthritis": "/reactive-arthritis",
+  "sjogrens-syndrome": "/sjogrens-syndrome",
+  "vasculitis": "/vasculitis",
 }
 
 const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, symptomsHref, monitoringHref, diagnosisHref, conditionSlug) => {
@@ -41,6 +43,17 @@ const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, sym
       { label: "Symptoms and Warning Signs", href: "/reactive-arthritis-symptoms" },
       { label: "Diagnosis: Tests and What to Expect", href: "/reactive-arthritis-diagnosis" },
       { label: "Treatment and Recovery", href: "/reactive-arthritis-treatment" },
+    ]
+  }
+
+  if (conditionSlug === "sjogrens-syndrome") {
+    return [
+      { label: "An overview", href: overviewHref },
+      { label: "Symptoms and Warning Signs", href: "/sjogrens-syndrome-symptoms" },
+      { label: "Diagnosis: Tests and What to Expect", href: "/sjogrens-syndrome-diagnosis" },
+      { label: "Treatment Options", href: "/sjogrens-syndrome-treatment" },
+      { label: "Living with Sjögren's Syndrome", href: "/living-with-sjogrens-syndrome" },
+      { label: "Beyond Dryness: Effects on the Rest of the Body", href: "/sjogrens-beyond-dryness" },
     ]
   }
 
@@ -69,6 +82,8 @@ const conditionCards = [
   { name: "Ankylosing Spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", desc: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture.", href: "/Ankylosing-Spondylitis-overview" },
   { name: "Fibromyalgia", image: "/condition/Fibromyalgia.webp", desc: "Widespread pain with fatigue and cognitive difficulties. Multi-modal treatment can restore quality of life.", href: "#" },
   { name: "Reactive Arthritis", image: "/Reactivearthirits.png", desc: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts.", href: "/reactive-arthritis" },
+  { name: "Sjögren's Syndrome", image: "/drysyndrome.jpg", desc: "An immune system overreaction that attacks the glands that make tears and saliva. Dry eyes, dry mouth, fatigue, and joint pain.", href: "/sjogrens-syndrome" },
+  { name: "Vasculitis", image: "/Vasculitis.jpg", desc: "Swelling of the blood vessel walls that reduces blood flow to the organs. Types, causes, symptoms, and treatment.", href: "/vasculitis" },
 ]
 
 /* Condition tiles -mirrors the Knowledge Hub "Know more about Your condition" section */
@@ -86,9 +101,9 @@ const otherConditions = [
   { key: "fibro", name: "Fibromyalgia", href: "/conditions?c=fibromyalgia" },
   { key: "lupus", name: "Lupus (SLE)", href: "/conditions?c=lupus" },
   { key: "reactive", name: "Reactive Arthritis", href: "/conditions?c=reactive-arthritis" },
+  { key: "sjogrens", name: "Sjögren's Syndrome", href: "/conditions?c=sjogrens-syndrome" },
+  { key: "vasculitis", name: "Vasculitis", href: "/conditions?c=vasculitis" },
   { key: "ctd", name: "Connective Tissue Disease", href: null },
-  { key: "vasculitis", name: "Vasculitis", href: null },
-  { key: "sjogrens", name: "Sjögren's Syndrome", href: null },
   { key: "jia", name: "Juvenile Idiopathic Arthritis", href: null },
   { key: "pmr", name: "Polymyalgia Rheumatica", href: null },
   { key: "scleroderma", name: "Systemic Sclerosis", href: null },
@@ -116,6 +131,7 @@ const conditionNameMap = {
   "ankylosing-spondylitis": "Ankylosing Spondylitis",
   "fibromyalgia": "Fibromyalgia",
   "reactive-arthritis": "Reactive Arthritis",
+  "sjogrens-syndrome": "Sjögren's Syndrome",
   "vasculitis": "Vasculitis",
 }
 

@@ -24,6 +24,8 @@ const conditions = [
   { name: "Ankylosing Spondylitis", slug: "ankylosing-spondylitis", image: "/condition/Ankylosing Spondylitis (AS).webp", description: "Chronic spinal inflammation that can fuse vertebrae. Early treatment preserves mobility and posture." },
   { name: "Fibromyalgia", slug: "fibromyalgia", image: "/condition/Fibromyalgia.webp", description: "Widespread pain with fatigue and cognitive difficulties. Multi-modal treatment can restore quality of life." },
   { name: "Reactive Arthritis", slug: "reactive-arthritis", image: "/Reactivearthirits.png", description: "Joint pain and swelling that follows a gut or urinary infection. Causes, symptoms, treatment, and how long it lasts." },
+  { name: "Sjögren's Syndrome", slug: "sjogrens-syndrome", image: "/drysyndrome.jpg", description: "An immune system overreaction that attacks the glands that make tears and saliva. Dry eyes, dry mouth, fatigue, and joint pain." },
+  { name: "Vasculitis", slug: "vasculitis", image: "/Vasculitis.jpg", description: "Swelling of the blood vessel walls that reduces blood flow to the organs. Types, causes, symptoms, and treatment." },
 ]
 
 const whatIsRheumatology = [
@@ -84,14 +86,15 @@ const arthritisConditions = [
   { key: "as", name: "Ankylosing Spondylitis", typeLabel: "Autoimmune", href: "/Ankylosing-Spondylitis-overview" },
 ]
 
+/* Clickable conditions (with pages) are listed first so they render at the top of the grid. */
 const otherConditions = [
   { key: "gout", name: "Gout", href: "/Gout-overview" },
-  { key: "ctd", name: "Connective Tissue Disease", href: null },
   { key: "fibro", name: "Fibromyalgia", href: "/Fibromyalgia-overview" },
-  { key: "vasculitis", name: "Vasculitis", href: null },
   { key: "lupus", name: "Lupus (SLE)", href: "/Lupus-overview" },
   { key: "reactive", name: "Reactive Arthritis", href: "/reactive-arthritis" },
-  { key: "sjogrens", name: "Sjögren's Syndrome", href: null },
+  { key: "sjogrens", name: "Sjögren's Syndrome", href: "/sjogrens-syndrome" },
+  { key: "vasculitis", name: "Vasculitis", href: "/vasculitis" },
+  { key: "ctd", name: "Connective Tissue Disease", href: null },
   { key: "jia", name: "Juvenile Idiopathic Arthritis", href: null },
   { key: "pmr", name: "Polymyalgia Rheumatica", href: null },
   { key: "scleroderma", name: "Systemic Sclerosis", href: null },

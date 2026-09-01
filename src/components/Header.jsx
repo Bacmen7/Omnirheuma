@@ -32,9 +32,10 @@ function Header() {
     "Osteoarthritis",
     "Gout",
     "Fibromyalgia",
-    // "Vasculitis",
+    "Vasculitis",
     // "Spondyloarthritis",
     "Ankylosing Spondylitis",
+    "Sjögren's Syndrome",
   ]
 
   const conditionRoutes = {
@@ -44,7 +45,9 @@ function Header() {
     "Osteoarthritis": "/Osteoarthritis-overview",
     "Gout": "/Gout-overview",
     "Fibromyalgia": "/Fibromyalgia-overview",
+    "Vasculitis": "/vasculitis",
     "Ankylosing Spondylitis": "/Ankylosing-Spondylitis-overview",
+    "Sjögren's Syndrome": "/sjogrens-syndrome",
   }
 
   // Track scroll for header shadow

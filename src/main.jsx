@@ -43,6 +43,13 @@ import AnkylosingSpondylitisOverview from "./pages/overview/AnkylosingSpondyliti
 import GoutOverview from "./pages/overview/GoutOverview.jsx"
 import FibromyalgiaOverview from "./pages/overview/FibromyalgiaOverview.jsx"
 import ReactiveArthritisOverview from "./pages/overview/ReactiveArthritisOverview.jsx"
+import SjogrensSyndromeOverview from "./pages/overview/SjogrensSyndromeOverview.jsx"
+import VasculitisOverview from "./pages/overview/VasculitisOverview.jsx"
+import SjogrensSyndromeSymptoms from "./pages/SjogrensSyndromeSymptoms.jsx"
+import SjogrensSyndromeDiagnosis from "./pages/SjogrensSyndromeDiagnosis.jsx"
+import SjogrensSyndromeTreatment from "./pages/SjogrensSyndromeTreatment.jsx"
+import LivingWithSjogrensSyndrome from "./pages/LivingWithSjogrensSyndrome.jsx"
+import SjogrensBeyondDryness from "./pages/SjogrensBeyondDryness.jsx"
 import ReactiveArthritisSymptoms from "./pages/ReactiveArthritisSymptoms.jsx"
 import ReactiveArthritisDiagnosis from "./pages/ReactiveArthritisDiagnosis.jsx"
 import ReactiveArthritisTreatment from "./pages/ReactiveArthritisTreatment.jsx"
@@ -114,6 +121,19 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Ankylosing-Spondylitis-overview" element={<AnkylosingSpondylitisOverview />} />
         <Route path="/Gout-overview" element={<GoutOverview />} />
         <Route path="/Fibromyalgia-overview" element={<FibromyalgiaOverview />} />
+        <Route path="/vasculitis" element={<VasculitisOverview />} />
+        <Route path="/Vasculitis-overview" element={<VasculitisOverview />} />
+        <Route path="/sjogrens-syndrome" element={<SjogrensSyndromeOverview />} />
+        <Route path="/Sjogrens-Syndrome-overview" element={<SjogrensSyndromeOverview />} />
+        <Route path="/sjogrens-syndrome-symptoms" element={<SjogrensSyndromeSymptoms />} />
+        <Route path="/Sjogrens-Syndrome-Symptoms-Warning-Signs" element={<SjogrensSyndromeSymptoms />} />
+        <Route path="/sjogrens-syndrome-diagnosis" element={<SjogrensSyndromeDiagnosis />} />
+        <Route path="/Sjogrens-Syndrome-Diagnosis" element={<SjogrensSyndromeDiagnosis />} />
+        <Route path="/sjogrens-syndrome-treatment" element={<SjogrensSyndromeTreatment />} />
+        <Route path="/Sjogrens-Syndrome-Treatment" element={<SjogrensSyndromeTreatment />} />
+        <Route path="/living-with-sjogrens-syndrome" element={<LivingWithSjogrensSyndrome />} />
+        <Route path="/Living-With-Sjogrens-Syndrome" element={<LivingWithSjogrensSyndrome />} />
+        <Route path="/sjogrens-beyond-dryness" element={<SjogrensBeyondDryness />} />
         <Route path="/reactive-arthritis" element={<ReactiveArthritisOverview />} />
         <Route path="/Reactive-Arthritis-overview" element={<ReactiveArthritisOverview />} />
         <Route path="/reactive-arthritis-symptoms" element={<ReactiveArthritisSymptoms />} />
