@@ -268,7 +268,7 @@ function SjogrensSyndromeTreatment() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     Treatment progresses in steps, and many people never move past the first one.
                   </p>
-                  <ul className="space-y-2.5 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                  <ul className="space-y-2.5 mb-6" style={{ listStyleType: "decimal", paddingLeft: "1.5rem" }}>
                     {dryEyeTreatments.map((item, idx) => (
                       <li key={idx} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
                         <strong className="font-semibold">{item.label}</strong> {item.text}

@@ -235,7 +235,7 @@ function SjogrensSyndromeDiagnosis() {
                     </Link>. The doctor makes a definite diagnosis from the symptoms, blood tests, measurements of how much tear and saliva you actually produce, and sometimes a small biopsy taken from inside your lip.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
-                    There is also a formal checklist that doctors refer to, called the 2016 ACR-EULAR classification criteria. It is crucial to know about it as the diagnosis of Sjögren's syndrome is based upon it.
+                    There is also a formal checklist that doctors refer to, called the <strong>2016 ACR-EULAR classification criteria</strong>. It is crucial to know about it as the diagnosis of Sjögren's syndrome is based upon it.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep">
                     This article covers what each test involves, why a negative blood test does not confirm a diagnosis, when a lip biopsy is preferred, and what else your doctor is ruling out along the way.
@@ -257,7 +257,7 @@ function SjogrensSyndromeDiagnosis() {
                     The results checks them against the point system, which is ACR-EULAR. This helps explain why certain tests are more important than others, and why a biopsy might be necessary for some people but not for everyone.
                   </p>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
-                    The 2016 ACR-EULAR classification criteria work on points.
+                    The <strong>2016 ACR-EULAR classification criteria</strong> work on points.
                   </p>
 
                   <div className="overflow-x-auto mb-6">
@@ -301,7 +301,7 @@ function SjogrensSyndromeDiagnosis() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     There are 3 antibody tests for the diagnosis. These look for proteins in your blood to see if your immune system is overactive. Out of these 3 tests, only one contributes to the official classification score:
                   </p>
-                  <ul className="space-y-2.5 mb-6" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                  <ul className="space-y-2.5 mb-6" style={{ listStyleType: "decimal", paddingLeft: "1.5rem" }}>
                     {bloodTests.map((item, idx) => (
                       <li key={idx} className="text-[17px] leading-[1.75] text-navy-deep pl-1">
                         <strong className="font-semibold">{item.label}</strong> {item.text}

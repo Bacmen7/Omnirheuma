@@ -233,35 +233,35 @@ function SjogrensBeyondDryness() {
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Joints and Muscles
+                    1. Joints and Muscles
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
                     Joint pain is common in around half of people with Sjögren's, and about 1 in 5 people develop actual joint inflammation (arthritis). However, this type of arthritis usually does not damage the joints the way rheumatoid arthritis does.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Skin and Circulation
+                    2. Skin and Circulation
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
                     Some people develop skin changes such as rashes and small blood vessel inflammation (vasculitis) that can appear as purple spots or bruising, particularly on the lower legs. Cold hands are another common complaint. Fingers can turn pale and go numb or tingly in response to cold or stress, a phenomenon known as Raynaud's phenomenon. Some people also notice hair thinning.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Lungs
+                    3. Lungs
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
                     Persistent dryness can extend to the airways. In some patients, Sjögren's affects the lungs directly. Lung involvement, including a scarring condition called interstitial lung disease, develops in roughly 1 in 5 patients over the course of the disease. This is one of the reasons doctors keep an eye on breathing symptoms like a dry cough or shortness of breath, even when they seem unrelated to the dryness.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Kidneys
+                    4. Kidneys
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.75rem" }}>
                     Sjögren's can occasionally affect the kidneys' ability to regulate acid and minerals in the body, a condition called renal tubular acidosis. If left unaddressed, it can lead to low potassium levels, kidney stones, and inflammation within the kidney. Kidney involvement is one reason routine blood and urine tests matter.
                   </p>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
-                    Nerves
+                    5. Nerves
                   </h3>
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     Nerve involvement can be subtle and significant. Small blood vessel inflammation can injure larger nerves, causing tingling, numbness, or weakness in the hands and feet. It can also affect the brain and spinal cord, such as inflammation of the optic nerve or spinal cord. Many people also describe a general brain fog, trouble concentrating, or word-finding.
