@@ -209,10 +209,6 @@ function VasculitisTreatmentOptions() {
                     Your rheumatologist usually leads your treatment, along with a kidney or lung specialist joining in if those organs are involved.
                   </p>
                   <div style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}>
-                    <Link to="/vasculitis-diagnosis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                    Read more about diagnosis and tests
-                    <ArrowRight size={14} />
-                  </Link>
                   </div>
                 </div>
 
@@ -311,8 +307,8 @@ function VasculitisTreatmentOptions() {
                     Your doctor determines which approach is right for you based on the type of vasculitis you have and whether it is affecting your organs, which is why your initial diagnostic tests are so important.
                   </p>
                   <div style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}>
-                    <Link to="/vasculitis-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                    Read more about symptoms and warning signs
+                    <Link to="/vasculitis-diagnosis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
+                    Read more about diagnosis and tests
                     <ArrowRight size={14} />
                   </Link>
                   </div>
@@ -343,9 +339,9 @@ function VasculitisTreatmentOptions() {
                     <p className="text-[15px] font-bold text-navy-deep" style={{ marginTop: "1.25rem", marginBottom: "0.5rem" }}>
                       Standing sources for this cluster
                     </p>
-                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "2.75rem" }}>
+                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.25rem", marginTop: "1.25rem" }}>
                       {standingReferences.map((r, i) => (
-                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ paddingLeft: "0.5rem" }} style={{ wordBreak: "break-word" }}>
+                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ wordBreak: "break-word" }}>
                           {r}
                         </li>
                       ))}
@@ -353,9 +349,9 @@ function VasculitisTreatmentOptions() {
                     <p className="text-[15px] font-bold text-navy-deep" style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
                       Additional sources for this page
                     </p>
-                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "2.75rem" }}>
+                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.25rem", marginTop: "1.25rem" }}>
                       {additionalReferences.map((r, i) => (
-                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ paddingLeft: "0.5rem" }} style={{ wordBreak: "break-word" }}>
+                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ wordBreak: "break-word" }}>
                           {r}
                         </li>
                       ))}

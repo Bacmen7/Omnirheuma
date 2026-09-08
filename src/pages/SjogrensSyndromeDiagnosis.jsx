@@ -468,10 +468,6 @@ function SjogrensSyndromeDiagnosis() {
                   </p>
 
                   <div style={{ marginBottom: "1.5rem" }}>
-                    <Link to="/sjogrens-syndrome-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                      Read more about treatment options
-                      <ArrowRight size={14} />
-                    </Link>
                   </div>
 
                   <Link

@@ -269,10 +269,6 @@ function SjogrensBeyondDryness() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem" }}>
                     In the following sections, we will discuss the kidney involvement and the potential risk of lymphoma in Sjögren's.
                   </p>
-                  <Link to="/sjogrens-syndrome-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                    Read more about symptoms and warning signs
-                    <ArrowRight size={14} />
-                  </Link>
                 </div>
 
                 {/* ── UNDERSTANDING KIDNEY INVOLVEMENT ── */}
@@ -324,10 +320,6 @@ function SjogrensBeyondDryness() {
                   <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.5rem" }}>
                     The questions about breathlessness, cough, numbness and tingling come up every single time for the same reason. Most organ involvement gets found this way, before it causes anything you would notice.
                   </p>
-                  <Link to="/living-with-sjogrens-syndrome" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px", marginBottom: "1.5rem" }}>
-                    Read more about living with Sjögren's syndrome
-                    <ArrowRight size={14} />
-                  </Link>
                   <div>
                     <Link
                       to="/book-appointment"

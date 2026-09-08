@@ -42,15 +42,6 @@ const standingReferences = [
   "Vasculitis. ScienceDirect Topics, Immunology and Microbiology.",
 ]
 
-const additionalReferences = [
-  "Armstrong A, Pugh D, Basu N, Dhaun N. Current and Future Treatments for Takayasu Arteritis: Toward Cardiovascular Risk Modification. Circulation, 2026;153(4):266-281.",
-  "Trinidad B, Surmachevska N, Lala V. Takayasu Arteritis. StatPearls.",
-  "Takayasu Arteritis: JACC Focus Seminar 3/4. Journal of the American College of Cardiology, 2023.",
-  "Moriwaki R, Noda M, Yajima M, et al. Clinical manifestations of Takayasu arteritis in India and Japan: new classification of angiographic findings. Angiology, 1997.",
-  "Prevalence of cardiovascular risk factors, the use of statins and of aspirin in Takayasu arteritis.",
-  "Maz M, Chung SA, Abril A, et al. 2021 American College of Rheumatology/Vasculitis Foundation Guideline for the Management of Giant Cell Arteritis and Takayasu Arteritis. Arthritis and Rheumatology, 2021.",
-]
-
 /* ─────────────────────────────────────────────
    COMPONENT
    ───────────────────────────────────────────── */
@@ -353,22 +344,9 @@ function TakayasuArteritis() {
                       View Sources
                       <svg className="transition-transform group-open:rotate-180" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f616e" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>
                     </summary>
-                    <p className="text-[15px] font-bold text-navy-deep" style={{ marginTop: "1.25rem", marginBottom: "0.5rem" }}>
-                      Standing sources for this cluster
-                    </p>
-                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "2.75rem" }}>
+                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.25rem", marginTop: "1.25rem" }}>
                       {standingReferences.map((r, i) => (
-                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ paddingLeft: "0.5rem" }} style={{ wordBreak: "break-word" }}>
-                          {r}
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="text-[15px] font-bold text-navy-deep" style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
-                      Additional sources for this page
-                    </p>
-                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "2.75rem" }}>
-                      {additionalReferences.map((r, i) => (
-                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ paddingLeft: "0.5rem" }} style={{ wordBreak: "break-word" }}>
+                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ wordBreak: "break-word" }}>
                           {r}
                         </li>
                       ))}

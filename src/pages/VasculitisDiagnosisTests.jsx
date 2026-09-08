@@ -223,10 +223,6 @@ function VasculitisDiagnosisTests() {
                     A urine test is also significant, as many forms of vasculitis affect the kidneys, and blood or protein appearing in the urine is often the first sign. It is quick and non-invasive.
                   </p>
                   <div style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}>
-                    <Link to="/vasculitis-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", fontSize: "15px" }}>
-                    Read more about symptoms and warning signs
-                    <ArrowRight size={14} />
-                  </Link>
                   </div>
 
                   <h3 style={{ letterSpacing: "-0.2px", color: "#0f616e", marginBottom: "1rem" }}>
@@ -321,9 +317,9 @@ function VasculitisDiagnosisTests() {
                       View Sources
                       <svg className="transition-transform group-open:rotate-180" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f616e" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>
                     </summary>
-                    <ul className="space-y-2 mt-4" style={{ listStyleType: "disc", paddingLeft: "2.75rem" }}>
+                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.25rem", marginTop: "1.25rem" }}>
                       {references.map((r, i) => (
-                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ paddingLeft: "0.5rem" }} style={{ wordBreak: "break-word" }}>
+                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ wordBreak: "break-word" }}>
                           {r}
                         </li>
                       ))}

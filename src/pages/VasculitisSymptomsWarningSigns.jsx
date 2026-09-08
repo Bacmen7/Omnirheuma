@@ -492,9 +492,9 @@ function VasculitisSymptomsWarningSigns() {
                       View Sources
                       <svg className="transition-transform group-open:rotate-180" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f616e" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>
                     </summary>
-                    <ul className="space-y-2 mt-4" style={{ listStyleType: "disc", paddingLeft: "2.75rem" }}>
+                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.25rem", marginTop: "1.25rem" }}>
                       {references.map((r, i) => (
-                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ paddingLeft: "0.5rem" }} style={{ wordBreak: "break-word" }}>
+                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ wordBreak: "break-word" }}>
                           {r}
                         </li>
                       ))}

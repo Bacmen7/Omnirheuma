@@ -257,10 +257,6 @@ function SjogrensSyndromeOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 You may notice doctors have recently begun calling this <strong>Sjögren's disease</strong> rather than syndrome. Both terms describe the same condition.
               </p>
-              <Link to="/sjogrens-beyond-dryness" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "1.5rem", fontSize: "15px" }}>
-                Read more about how Sjögren's affects the rest of the body
-                <ArrowRight size={14} />
-              </Link>
             </div>
 
             <DarkDivider />

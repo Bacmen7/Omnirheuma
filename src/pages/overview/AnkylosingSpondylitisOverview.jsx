@@ -276,11 +276,6 @@ function AnkylosingSpondylitisOverview() {
                 Read more about treatment options
                 <ArrowRight size={14} />
               </Link>
-              <br />
-              <Link to="/ankylosing-spondylitis-specialised-procedures" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "0.75rem", fontSize: "15px" }}>
-                Read more about specialised procedures and surgical options
-                <ArrowRight size={14} />
-              </Link>
             </div>
 
             <DarkDivider />
