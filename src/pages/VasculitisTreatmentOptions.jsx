@@ -38,13 +38,6 @@ const standingReferences = [
   "Vasculitis. ScienceDirect Topics, Immunology and Microbiology.",
 ]
 
-const additionalReferences = [
-  "Hellmich B, Sanchez-Alamo B, Schirmer JH, et al. EULAR recommendations for the management of ANCA-associated vasculitis: 2022 update. Annals of the Rheumatic Diseases, 2024;83:30-47.",
-  "KDIGO 2024 Clinical Practice Guideline for the Management of Antineutrophil Cytoplasmic Antibody-Associated Vasculitis. Kidney International, 2024;105:S71-S116.",
-  "Chung SA, Langford CA, Maz M, et al. 2021 American College of Rheumatology/Vasculitis Foundation Guideline for the Management of ANCA-Associated Vasculitis. Arthritis and Rheumatology, 2021;73:1366-1383.",
-  "ANCA-associated vasculitis: treatment standard. Nephrology Dialysis Transplantation, 2024;39(6):944.",
-]
-
 /* ─────────────────────────────────────────────
    COMPONENT
    ───────────────────────────────────────────── */
@@ -336,21 +329,8 @@ function VasculitisTreatmentOptions() {
                       View Sources
                       <svg className="transition-transform group-open:rotate-180" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f616e" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>
                     </summary>
-                    <p className="text-[15px] font-bold text-navy-deep" style={{ marginTop: "1.25rem", marginBottom: "0.5rem" }}>
-                      Standing sources for this cluster
-                    </p>
                     <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.25rem", marginTop: "1.25rem" }}>
                       {standingReferences.map((r, i) => (
-                        <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ wordBreak: "break-word" }}>
-                          {r}
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="text-[15px] font-bold text-navy-deep" style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
-                      Additional sources for this page
-                    </p>
-                    <ul className="space-y-2" style={{ listStyleType: "disc", paddingLeft: "1.25rem", marginTop: "1.25rem" }}>
-                      {additionalReferences.map((r, i) => (
                         <li key={i} className="text-[14px] leading-[1.7] text-navy-muted" style={{ wordBreak: "break-word" }}>
                           {r}
                         </li>
