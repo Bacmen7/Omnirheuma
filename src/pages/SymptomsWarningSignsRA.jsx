@@ -155,19 +155,7 @@ function SymptomsWarningSignsRA() {
                     marginBottom: 0,
                   }}
                 >
-                  Symptoms of <span className="whitespace-nowrap">Rheumatoid Arthritis:</span>
-                  <span
-                    style={{
-                      display: "block",
-                      fontSize: "clamp(26px, 3.4vw, 40px)",
-                      lineHeight: 1.2,
-                      letterSpacing: "0px",
-                      color: "rgba(255,255,255,0.92)",
-                      marginTop: "0.85rem",
-                    }}
-                  >
-                    Symptoms and Warning Signs
-                  </span>
+                  Symptoms of <span className="whitespace-nowrap">Rheumatoid Arthritis</span>
                 </h1>
                 <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.68)", marginTop: "16px" }}>
                   Written by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Shafali Nagpal</strong> | Reviewed by <strong style={{ color: "#ffffff", fontWeight: 700 }}>Dr. Raghavendra</strong> | Last Updated: July 29, 2026

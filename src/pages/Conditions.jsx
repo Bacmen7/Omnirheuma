@@ -227,25 +227,25 @@ const buildFeatured = (slug, name) => {
         href: "/vasculitis",
         category: "Get started",
         title: `What is ${name}? Blood Vessel Wall Inflammation`,
-        image: "/Vasculitis.jpg",
+        image: "/condition-cards/vasculaties/what-is-vasculitis.webp",
       },
       {
-        href: "/vasculitis",
+        href: "/vasculitis-symptoms",
         category: "Warning signs",
         title: "Recognizing Organ Involvement, Purpura & Vessel Changes",
-        image: "/vasculitis.jpg",
+        image: "/condition-cards/vasculaties/purpura-glass-test.webp",
       },
       {
-        href: "/vasculitis",
+        href: "/vasculitis-diagnosis",
         category: "Diagnosis",
         title: "ANCA Serology, Blood Panels & Tissue Biopsy",
-        image: "/treatmnetguide/blood_test.webp",
+        image: "/condition-cards/vasculaties/clinical-examination.webp",
       },
       {
-        href: "/vasculitis",
+        href: "/vasculitis-treatment",
         category: "Treatment",
         title: "Targeted Immunotherapy & Long-Term Vascular Health",
-        image: "/treatmnetguide/joint.webp",
+        image: "/condition-cards/vasculaties/iv-infusion-therapy.webp",
       },
     ]
   }
@@ -365,6 +365,10 @@ const buildCategoryLinks = (name, overviewHref, livingHref, specialisedHref, sym
   if (conditionSlug === "vasculitis") {
     return [
       { label: "An overview", href: overviewHref },
+      { label: "Symptoms and Warning Signs", href: "/vasculitis-symptoms" },
+      { label: "Diagnosis and Tests", href: "/vasculitis-diagnosis" },
+      { label: "Treatment Options", href: "/vasculitis-treatment" },
+      { label: "Takayasu Arteritis: A Distinct Type of Vasculitis", href: "/takayasu-arteritis" },
     ]
   }
 
@@ -585,14 +589,14 @@ function Conditions() {
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15, 46, 51, 0.94) 0%, rgba(15, 46, 51, 0.48) 55%, rgba(0,0,0,0.2) 100%)" }} />
 
                 {/* Prev */}
-                <button onClick={prev} aria-label="Previous"
-                  style={{ position: "absolute", left: "16px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.9)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 10, boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
+                <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); prev() }} aria-label="Previous"
+                  style={{ position: "absolute", left: "16px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.9)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 20, boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
                   <ChevronLeft size={20} color="#0f2e33" />
                 </button>
 
                 {/* Next */}
-                <button onClick={next} aria-label="Next"
-                  style={{ position: "absolute", right: "16px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.9)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 10, boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
+                <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); next() }} aria-label="Next"
+                  style={{ position: "absolute", right: "16px", top: "50%", transform: "translateY(-50%)", width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.9)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 20, boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
                   <ChevronRight size={20} color="#0f2e33" />
                 </button>
 

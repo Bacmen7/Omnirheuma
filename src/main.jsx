@@ -45,6 +45,10 @@ import FibromyalgiaOverview from "./pages/overview/FibromyalgiaOverview.jsx"
 import ReactiveArthritisOverview from "./pages/overview/ReactiveArthritisOverview.jsx"
 import SjogrensSyndromeOverview from "./pages/overview/SjogrensSyndromeOverview.jsx"
 import VasculitisOverview from "./pages/overview/VasculitisOverview.jsx"
+import VasculitisSymptomsWarningSigns from "./pages/VasculitisSymptomsWarningSigns.jsx"
+import VasculitisDiagnosisTests from "./pages/VasculitisDiagnosisTests.jsx"
+import VasculitisTreatmentOptions from "./pages/VasculitisTreatmentOptions.jsx"
+import TakayasuArteritis from "./pages/TakayasuArteritis.jsx"
 import SjogrensSyndromeSymptoms from "./pages/SjogrensSyndromeSymptoms.jsx"
 import SjogrensSyndromeDiagnosis from "./pages/SjogrensSyndromeDiagnosis.jsx"
 import SjogrensSyndromeTreatment from "./pages/SjogrensSyndromeTreatment.jsx"
@@ -123,6 +127,14 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Fibromyalgia-overview" element={<FibromyalgiaOverview />} />
         <Route path="/vasculitis" element={<VasculitisOverview />} />
         <Route path="/Vasculitis-overview" element={<VasculitisOverview />} />
+        <Route path="/vasculitis-symptoms" element={<VasculitisSymptomsWarningSigns />} />
+        <Route path="/Vasculitis-Symptoms-Warning-Signs" element={<VasculitisSymptomsWarningSigns />} />
+        <Route path="/vasculitis-diagnosis" element={<VasculitisDiagnosisTests />} />
+        <Route path="/Vasculitis-Diagnosis" element={<VasculitisDiagnosisTests />} />
+        <Route path="/vasculitis-treatment" element={<VasculitisTreatmentOptions />} />
+        <Route path="/Vasculitis-Treatment-Options" element={<VasculitisTreatmentOptions />} />
+        <Route path="/takayasu-arteritis" element={<TakayasuArteritis />} />
+        <Route path="/Takayasu-Arteritis" element={<TakayasuArteritis />} />
         <Route path="/sjogrens-syndrome" element={<SjogrensSyndromeOverview />} />
         <Route path="/Sjogrens-Syndrome-overview" element={<SjogrensSyndromeOverview />} />
         <Route path="/sjogrens-syndrome-symptoms" element={<SjogrensSyndromeSymptoms />} />

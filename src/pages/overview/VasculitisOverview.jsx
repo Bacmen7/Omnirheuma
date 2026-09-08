@@ -296,6 +296,10 @@ function VasculitisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "2rem" }}>
                 Takayasu arteritis, a large vessel type, is seen more often in India, Japan, Korea and Thailand than in the West, and it mostly affects women under 40 years of age. In children, IgA vasculitis is the commonest form.
               </p>
+              <Link to="/takayasu-arteritis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "0.5rem", marginBottom: "2rem", fontSize: "15px" }}>
+                Read more about Takayasu arteritis
+                <ArrowRight size={14} />
+              </Link>
 
               <div id="types-of-vasculitis" style={{ scrollMarginTop: "80px" }}>
                 <h3 style={H3Style}>Types of Vasculitis</h3>
@@ -392,6 +396,10 @@ function VasculitisOverview() {
               <p className="text-[17px] leading-[1.8] text-navy-deep">
                 In India, high blood pressure in a young person, a pulse that cannot be felt at the wrist, or clearly different blood pressure readings between the two arms can be the first sign of Takayasu arteritis. If this describes you or someone in your family, ask for a rheumatology opinion rather than just treating the blood pressure.
               </p>
+              <Link to="/vasculitis-symptoms" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "1.5rem", fontSize: "15px" }}>
+                Read more about symptoms and warning signs
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
@@ -414,6 +422,10 @@ function VasculitisOverview() {
                   </li>
                 ))}
               </ul>
+              <Link to="/vasculitis-diagnosis" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "0.5rem", marginBottom: "2rem", fontSize: "15px" }}>
+                Read more about diagnosis and tests
+                <ArrowRight size={14} />
+              </Link>
               <p className="text-[17px] leading-[1.8] text-navy-deep" style={{ marginBottom: "1.25rem", fontWeight: 600 }}>
                 The treatment options usually include:
               </p>
@@ -424,6 +436,10 @@ function VasculitisOverview() {
                   </li>
                 ))}
               </ul>
+              <Link to="/vasculitis-treatment" className="inline-flex items-center gap-1.5 font-semibold hover:opacity-80 transition-opacity" style={{ color: "#E86531", marginTop: "0.5rem", marginBottom: "2rem", fontSize: "15px" }}>
+                Read more about treatment options
+                <ArrowRight size={14} />
+              </Link>
             </div>
 
             <DarkDivider />
